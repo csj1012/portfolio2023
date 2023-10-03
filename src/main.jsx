@@ -4,19 +4,31 @@ import {
   createBrowserRouter,
   RouterProvider
 } from 'react-router-dom'
-import App from './App.jsx'
-import './index.css'
+import Root from './routes/root'
+import Error from './error'
+import Contact from './routes/contact'
+import Project from './routes/project'
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <div>Hello world!</div>
+    element: <Root />,
+    errorElement: <Error />,
+    children: [
+      {
+        path: '/contact',
+        element: <Contact />,
+      },
+      {
+        path: '/projects/:projectID',
+        element: <Project />,
+      }
+    ]
   }
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    {/* <App /> */}
     <RouterProvider router={router} />
   </React.StrictMode>,
 )

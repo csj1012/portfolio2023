@@ -1,4 +1,15 @@
-# React + Vite
+# Portfolio 2023!
+
+Just a bare-bones portfolio site :)
+
+## Notes to self
+
+### Stack
+
+- Vite for build stuff (using Vite-React template)
+- React-router-dom for routing: https://reactrouter.com/en/main/start/tutorial
+
+### React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 

@@ -11,9 +11,9 @@ export default function ProjectsList() {
   const { projects } = useLoaderData()
     return (
         <div style={{ border: 'solid 1px purple' }}>
+            <Outlet />
             <h2>All Projects</h2>
             <ProjectsMenu items={ projects }/>
-            <Outlet />
         </div>
     )
 }

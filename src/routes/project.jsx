@@ -1,5 +1,6 @@
 import { useLoaderData } from "react-router-dom"
 import { getProjects } from "../projects"
+import ProjectDetail from "../components/ProjectDetail"
 
 export async function loader({ params }) {    
     const project = await getProject(params.slug)
@@ -13,11 +14,7 @@ export async function getProject(slug) {
 
 export default function Project() {
     const data = useLoaderData()
-    const { title } = data
     return (
-        <div style={{border: 'solid 1px red'}}>
-            <h2>{title}</h2>
-            <p>{title}</p>
-        </div>
+        <ProjectDetail {...data} />
     )
 }

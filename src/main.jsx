@@ -7,7 +7,8 @@ import {
 import Root from './routes/root'
 import Error from './error'
 import Contact from './routes/contact'
-import Project from './routes/project'
+import Project, { loader as projectLoader } from './routes/project'
+import ProjectsList, {loader as projectsListLoader} from './routes/projectsList'
 
 const router = createBrowserRouter([
   {
@@ -20,8 +21,16 @@ const router = createBrowserRouter([
         element: <Contact />,
       },
       {
-        path: '/projects/:projectID',
-        element: <Project />,
+        path: '/projects',
+        element: <ProjectsList />,
+        loader: projectsListLoader,
+        children: [
+          {
+            path: '/projects/:slug',
+            element: <Project />,
+            loader: projectLoader
+          }
+        ]
       }
     ]
   }

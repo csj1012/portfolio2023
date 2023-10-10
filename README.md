@@ -4,6 +4,16 @@ Just a bare-bones portfolio site :)
 
 ## Notes to self
 
+### Todo
+
+@todo fix architecture (move projects.js to some dir) (?)
+@todo use reusable "ProjectsList" component for "OtherProjects" and "AllProjects" menus (?)
+@todo build projects.json using a node process (?)
+@todo add index path
+@todo use real data (?)
+@todo make Menu components reusable
+@todo abstract Root loader to Loaders dir (?)
+
 ### Stack
 
 - Vite for build stuff (using Vite-React template)

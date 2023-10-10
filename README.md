@@ -6,13 +6,12 @@ Just a bare-bones portfolio site :)
 
 ### Todo
 
-@todo fix architecture (move projects.js to some dir) (?)
-@todo use reusable "ProjectsList" component for "OtherProjects" and "AllProjects" menus (?)
-@todo build projects.json using a node process (?)
-@todo add index path
-@todo use real data (?)
-@todo make Menu components reusable
-@todo abstract Root loader to Loaders dir (?)
+* @todo fix architecture (move projects.js to some dir) (?)
+* @todo use reusable "ProjectsList" component for "OtherProjects" and "AllProjects" menus (?)
+* @todo add index path
+* @todo use real data (?)
+* @todo make Menu components reusable
+* @todo abstract Root loader to Loaders dir (?)
 
 ### Stack
 

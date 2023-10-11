@@ -6,17 +6,15 @@ export default function ProjectsMenu({ items, current }) {
 
   // if we're currently viewing a project, don't include it in the menu
   if (current) {
-    items = items.filter(item => item.slug !== current)
+    items = items.filter((item) => item.slug !== current)
     heading = 'More Projects'
   }
 
-  items = items.map(item => (
-    { 
-      ...item,
-      title: item.title, 
-      href: `/projects/${item.slug}` 
-    }
-  ))
+  items = items.map((item) => ({
+    ...item,
+    title: item.title,
+    href: `/projects/${item.slug}`,
+  }))
 
-  return <Menu items={ items } title={ heading } ItemComponent = { ProjectTeaser } />
+  return <Menu items={items} title={heading} ItemComponent={ProjectTeaser} />
 }

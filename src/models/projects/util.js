@@ -2,7 +2,7 @@ const toSlug = (title) => {
   return title.toLowerCase().split(' ').join('-')
 }
 
-const buildImage = (img, title) => {  
+const buildImage = (img, title) => {
   const { alt, caption } = img
   const src = img.src || `${toSlug(title)}.png`
   return { src, alt, caption }
@@ -21,7 +21,7 @@ export function buildItem(item) {
 
     const project = {
       slug: toSlug(title),
-      ...item
+      ...item,
     }
 
     return project

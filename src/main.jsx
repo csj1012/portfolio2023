@@ -6,6 +6,7 @@ import Error from '@routes/error'
 import Contact from '@routes/contact'
 import Project, { loader as projectLoader } from './controllers/routes/project'
 import ProjectsList, { loader as projectsListLoader } from './controllers/routes/projectsList'
+import '/src/index.css'
 
 const router = createBrowserRouter([
   {

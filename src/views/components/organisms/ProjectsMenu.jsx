@@ -1,5 +1,5 @@
-import ProjectTeaser from './ProjectTeaser'
-import Menu from './Menu'
+import ProjectTeaser from '@components/organisms/ProjectTeaser'
+import Menu from '@components/molecules/Menu'
 
 export default function ProjectsMenu({ items, current }) {
   let heading = 'Projects (Selected)'

@@ -1,5 +1,5 @@
-import Image from '../components/Image'
-import UnorderedList from './UnorderedList'
+import Image from '@components/atoms/Image'
+import UnorderedList from '../atoms/UnorderedList'
 
 export default function ProjectDetail(
   { 

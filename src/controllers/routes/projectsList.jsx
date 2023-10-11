@@ -1,4 +1,4 @@
-import ProjectsMenu from '@components/ProjectsMenu'
+import ProjectsMenu from '@components/organisms/ProjectsMenu'
 import { getProjects } from "@controllers/projects"
 import { Outlet, useLoaderData, useParams } from 'react-router-dom'
 

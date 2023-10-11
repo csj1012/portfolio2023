@@ -10,6 +10,7 @@ export default defineConfig({
       '@models': path.resolve('/src/models'),
       '@controllers': path.resolve('/src/controllers'),
       '@routes': path.resolve('/src/controllers/routes'),
+      '@views': path.resolve('/src/views'),
       '@components': path.resolve('/src/views/components')
     }
   }

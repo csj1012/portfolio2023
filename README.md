@@ -7,8 +7,6 @@ Just a bare-bones portfolio site :)
 ### Todo
 
 * @todo use real data (?)
-* @todo install Prettier/ESLint
-* @todo preliminary a11y check
 
 ### Stack
 

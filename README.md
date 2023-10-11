@@ -8,7 +8,6 @@ Just a bare-bones portfolio site :)
 
 * @todo use real data (?)
 * @todo install Prettier/ESLint
-* @todo atomize components w/ namespacing
 * @todo preliminary a11y check
 
 ### Stack

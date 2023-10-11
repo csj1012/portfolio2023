@@ -6,10 +6,7 @@ Just a bare-bones portfolio site :)
 
 ### Todo
 
-* @todo fix architecture (move projects.js to some dir) (?)
-* @todo add index path
 * @todo use real data (?)
-* @todo abstract Root loader to Loaders dir (?)
 * @todo install Prettier/ESLint
 * @todo atomize components w/ namespacing
 * @todo preliminary a11y check

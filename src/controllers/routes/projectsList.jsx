@@ -1,5 +1,5 @@
-import ProjectsMenu from '../components/ProjectsMenu'
-import { getProjects } from "../projects"
+import ProjectsMenu from '@components/ProjectsMenu'
+import { getProjects } from "@controllers/projects"
 import { Outlet, useLoaderData, useParams } from 'react-router-dom'
 
 export async function loader() {

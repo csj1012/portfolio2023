@@ -1,6 +1,6 @@
 import { useLoaderData } from "react-router-dom"
-import { getProjects } from "../projects"
-import ProjectDetail from "../components/ProjectDetail"
+import { getProjects } from "@controllers/projects"
+import ProjectDetail from "@components/ProjectDetail"
 
 export async function loader({ params }) {    
     const project = await getProject(params.slug)

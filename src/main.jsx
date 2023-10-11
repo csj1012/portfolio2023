@@ -4,11 +4,11 @@ import {
   createBrowserRouter,
   RouterProvider
 } from 'react-router-dom'
-import Root from './routes/root'
-import Error from './error'
-import Contact from './routes/contact'
-import Project, { loader as projectLoader } from './routes/project'
-import ProjectsList, {loader as projectsListLoader} from './routes/projectsList'
+import Root from '@routes/root'
+import Error from '@routes/error'
+import Contact from '@routes/contact'
+import Project, { loader as projectLoader } from './controllers/routes/project'
+import ProjectsList, {loader as projectsListLoader} from './controllers/routes/projectsList'
 
 const router = createBrowserRouter([
   {

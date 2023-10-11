@@ -1,4 +1,4 @@
-import projects from "./data/projects/projects.json"
+import projects from "@models/projects/projects.json"
 
 export async function getProjects() {  
   return projects

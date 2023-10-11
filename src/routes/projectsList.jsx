@@ -1,6 +1,6 @@
 import ProjectsMenu from '../components/ProjectsMenu'
 import { getProjects } from "../projects"
-import { Outlet, useLoaderData } from 'react-router-dom'
+import { Outlet, useLoaderData, useParams } from 'react-router-dom'
 
 export async function loader() {
   const projects = await getProjects()
@@ -8,12 +8,13 @@ export async function loader() {
 }
 
 export default function ProjectsList() {
+  const { slug } = useParams()
   const { projects } = useLoaderData()
-    return (
-        <div style={{ border: 'solid 1px purple' }}>
-            <Outlet />
-            <h2>All Projects</h2>
-            <ProjectsMenu items={ projects }/>
-        </div>
-    )
+
+  return (
+      <div style={{ border: 'solid 1px purple' }}>
+          <Outlet />
+          <ProjectsMenu items={ projects } current={ slug }/>
+      </div>
+  )
 }

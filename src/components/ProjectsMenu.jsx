@@ -1,5 +1,5 @@
-import { NavLink } from "react-router-dom"
 import ProjectTeaser from './ProjectTeaser'
+import Menu from './Menu'
 
 export default function ProjectsMenu({ items, current }) {
   let heading = 'Projects (Selected)'
@@ -10,22 +10,13 @@ export default function ProjectsMenu({ items, current }) {
     heading = 'More Projects'
   }
 
-  return (
-    <>
-      <h2>{ heading }</h2>
-      <ul>
-        {
-          items.map(item => {
-            return (
-              <li key={ item.slug }>
-                <NavLink to={ `/projects/${item.slug}` }>
-                  <ProjectTeaser { ...item }/>
-                </NavLink>
-              </li>
-            )          
-          })
-        }
-      </ul>
-    </>
-  )
+  items = items.map(item => (
+    { 
+      ...item,
+      title: item.title, 
+      href: `/projects/${item.slug}` 
+    }
+  ))
+
+  return <Menu items={ items } title={ heading } ItemComponent = { ProjectTeaser } />
 }

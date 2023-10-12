@@ -1,6 +1,6 @@
-export default function UnorderedList({ items }) {
+export default function UnorderedList({ items, ...props }) {
   return (
-    <ul>
+    <ul {...props}>
       {items.map((item, index) => (
         <li key={index}>{item}</li>
       ))}

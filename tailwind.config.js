@@ -24,8 +24,8 @@ export default {
       // --sage: #B8B58Bff;
     },
     fontFamily: {
-      title: ['Alata', 'Helvetica', 'sans-serif'],
-      subheading: ['"Goudy Bookletter 1911"', 'Georgia', 'serif'],
+      sans: ['Alata', 'Helvetica', 'sans-serif'],
+      serif: ['"Goudy Bookletter 1911"', 'Georgia', 'serif'],
       body: ['Raleway', 'Helvetica', 'sans-serif'],
     },
     keyframes: {

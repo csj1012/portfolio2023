@@ -2,7 +2,7 @@ import { LayoutContext, useLayout } from '@views/LayoutContext'
 
 export const Layout = ({ children }) => (
   <LayoutContext.Provider value={true}>
-    <div style={{ border: 'solid 1px blue' }}>{children}</div>
+    {children}
   </LayoutContext.Provider>
 )
 

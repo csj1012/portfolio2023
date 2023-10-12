@@ -12,7 +12,7 @@ export default function ProjectsList() {
   const { projects } = useLoaderData()
 
   return (
-    <div style={{ border: 'solid 1px purple' }}>
+    <div>
       <Outlet />
       <ProjectsMenu items={projects} current={slug} />
     </div>

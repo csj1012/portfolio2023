@@ -1,3 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&family=Raleway:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Goudy+Bookletter+1911&family=Raleway:wght@600&display=swap');
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-floralwhite;
+  }
+ 
+  h1 {
+    text-shadow: 0 0 80px rgba(255,255,255,.5);
+    background: url('/src/assets/images/textbg.png') repeat-y;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    @apply animate-textBackground;
+  }
+}

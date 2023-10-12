@@ -1,4 +1,3 @@
-export default function Image({ src, alt }) {
-  src = '/src/images/' + src
-  return <img src={src} alt={alt} style={{ maxWidth: '100%' }} />
+export default function Image({ src, alt, ...props } ) {
+  return <img { ...props } src={src} alt={alt} style={{ maxWidth: '100%' }} />
 }

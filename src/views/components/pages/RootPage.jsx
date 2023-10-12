@@ -1,6 +1,7 @@
 import { Layout, Header, Nav, Main, Footer } from '@components/templates/Layout'
 import MainMenu from '@components/organisms/MainMenu'
 import { useLocation } from 'react-router-dom'
+import Masthead from '@components/molecules/Masthead'
 
 export default function RootPage({ outlet }) {
   const { pathname } = useLocation()
@@ -8,12 +9,20 @@ export default function RootPage({ outlet }) {
   return (
     <Layout>
       <Header>
-        <h1>Chelsie Johnston</h1>
+        <Masthead />       
       </Header>
-      <Nav>
-        <MainMenu />
-      </Nav>
       <Main>{ outlet }</Main>
+      <div style={{ display: 'flex' }}>
+          <div className='bg-moss h-24 w-24'>test</div>
+          <div className='bg-licorice h-24 w-24'>test</div>
+          <div className='bg-blackbean h-24 w-24'>test</div>
+          <div className='bg-floralwhite h-24 w-24'>test</div>
+          <div className='bg-licorice h-24 w-24'>test</div>
+          <div className='bg-tawny h-24 w-24'>test</div>
+          <div className='bg-yellow h-24 w-24'>test</div>
+          <div className='bg-citrine h-24 w-24'>test</div>
+          <div className='bg-frenchgray h-24 w-24'>test</div>
+        </div>
       { pathname !== '/' && (
         <Footer>
           <MainMenu />

@@ -3,6 +3,120 @@ const src =
   // or by running `node transform.js` manually.
   [
     {
+      organization: 'New England Foundation for the Arts',
+      title: 'CreativeGround - Last Call Media',
+      shortDescription: 'A headless Drupal theme made with React, helping artists and patrons in New England foster creative partnerships',
+      image: {
+        src: '/src/assets/images/creativeground.png',
+        alt: 'Image alt.',
+        caption: 'Screenshot of creativeground.org'
+      },
+      year: '2022',
+      teaser: {
+        alt: 'Teaser image for CreativeGround.',
+        teaser: true,
+        src: '/src/assets/images/teaser/teaser-creativeground.png'
+      },
+      description: "We built a decoupled React front end theme for the nonprofit's Creativeground.org Drupal site, helping artists and patrons in New England foster creative partnerships.",
+      techs: [
+        'Drupal 9',
+        'React',
+        'Mannequin',        
+        'SCSS',
+        'Circle CI',
+        'Javascript',      
+        'HTML'
+      ],
+      role: 'Front end development',
+      links: [
+        {
+          href: 'https://creativeground.org',
+          text: 'View a live site example'
+        },
+        {
+          href: 'https://www.lastcallmedia.com',
+          text: 'Visit Last Call Media\'s website'
+        }
+      ]
+    }
+    ,
+    {
+      organization: 'Instant Brands',
+      title: 'Last Call Media',
+      shortDescription: 'A flexible, customizable look and feel for the Instant Brands (formerly Corelle) family of products',
+      image: {
+        src: '/src/assets/images/instantbrands.png',
+        alt: 'Image alt.',
+        caption: 'Screenshot of instantbrands.com'
+      },
+      year: '2021',
+      teaser: {
+        alt: 'Teaser image for Instant Brands.',
+        teaser: true,
+        src: '/src/assets/images/teaser/teaser-instant-brands.png'
+      },
+      description: "We enhanced the ecommerce site’s styling using SCSS and JS to accommodate the dynamic addition of new brands, ensuring a cohesive user experience during a pivotal sales period.",
+      techs: [
+        'Drupal 8',        
+        'SCSS',        
+        'Javascript',        
+        'HTML'
+      ],
+      role: 'Front end development',
+      links: [
+        {
+          href: 'https://www.instantbrands.com',
+          text: 'View a live site example'
+        },
+        {
+          href: 'https://www.lastcallmedia.com',
+          text: 'Visit Last Call Media\'s website'
+        }
+      ]
+    },
+    {
+      organization: 'Blackboard Corporate Rebranding',
+      title: 'Last Call Media',
+      shortDescription: 'Accessible, atomically-designed component library and Drupal theme for Blackboard\'s corporate rebranding effort.',
+      image: {
+        src: '/src/assets/images/blackboard.png',
+        alt: 'Image alt.',
+        caption: 'Screenshot of Blackboard.com'
+      },
+      year: '2020',
+      teaser: {
+        alt: 'Teaser image for Blackboard.',
+        teaser: true,
+        src: '/src/assets/images/teaser/teaser-blackboard.png'
+      },
+      description: "We crafted a WCAG 2.1 compliant component library and Drupal theme using atomic design principles, SCSS, Twig, and JS, leading to a lower bounce rate on the site’s homepage and an increase in free trial signups.",
+      techs: [
+        'Drupal 9',
+        'Mannequin',
+        'Twig',
+        'SCSS',
+        'Circle CI',
+        'Javascript',
+        'PHP',
+        'HTML'
+      ],
+      role: 'Front end development',
+      links: [
+        {
+          href: 'https://www.blackboard.com',
+          text: 'View a live site example'
+        },
+        {
+          href: 'https://lastcallmedia.com/clients/blackboard',
+          text: 'Read the case studies about the rebranding and user testing efforts from Colin Panetta at Last Call Media'
+        },
+        {
+          href: 'https://www.lastcallmedia.com',
+          text: 'Visit Last Call Media\'s website'
+        }
+      ]
+    },
+    {
       organization: 'American Medical Association',
       title: 'AMA Topic Pages',
       shortDescription: 'Drupal 8 minisites to act as a hub for the AMA to promote specialized content using AMA Style Guide elements',
@@ -153,7 +267,7 @@ const src =
     {
       id: 'university-of-chicago-it-services',
       year: '2015',
-      title: 'UChicago IT Services',
+      title: 'UChicago IT Services Site',
       role: 'Design Lead, Design, Front end development, Drupal development',
       techs: [
         'Drupal 7',

@@ -12,7 +12,7 @@ export default function RootPage({ outlet }) {
         <Masthead />       
       </Header>
       <Main>{ outlet }</Main>
-      <div style={{ display: 'flex' }}>
+      <div style={{ display: 'none' }}>
           <div className='bg-moss h-24 w-24'>test</div>
           <div className='bg-licorice h-24 w-24'>test</div>
           <div className='bg-blackbean h-24 w-24'>test</div>

@@ -8,7 +8,7 @@ export default function ProjectTeaser({ title, organization, shortDescription, y
         Project {title} for {organization}
       </h2>
       <h3 className="smallcaps">
-        Project: {title} ({year})
+        {title} ({year})
       </h3>
       <div className="card__image-container relative">
         {teaser ? (

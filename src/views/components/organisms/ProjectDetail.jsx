@@ -21,16 +21,16 @@ export default function ProjectDetail({
   }
 
   return (
-    <div className='bg-offwhite shadow-sm border-2 p-10 rounded-sm grid grid-cols-6 mx-auto w-2/3 space-y-8 mt-24 mb-24 text-title'>
+    <div className='bg-offwhite shadow-sm border-2 border-tawny p-10 rounded-sm grid grid-cols-6 mx-auto w-2/3 space-y-8 mt-24 mb-24 text-title'>
       <div className='col-span-6 row-span-1'>
       <h2 className="text-4xl mx-auto text-center">
           {organization}
         </h2>
         <h2 className="sr-only">
-          Project {title} for {organization}
+          {title}, organization: {organization}
         </h2>
         <h3 className="text-xl mx-auto text-center smallcaps">
-          Project: {title} ({year})
+          {title} ({year})
         </h3>  
       </div>
       <div className='col-span-2 bg-offwhite pr-12 space-y-4'>

@@ -1,4 +1,4 @@
-import Menu from '@components/molecules/Menu'
+import { NavLink } from 'react-router-dom'
 
 export default function MainMenu() {
   const items = [
@@ -8,14 +8,30 @@ export default function MainMenu() {
   ]
   const ItemComponent = ( {text } ) => {
     return (
-      <span className="ml-2 mr-2 p-10 pt-5 pb-5 rounded-sm bg-yellow hover:bg-tawny font-subheading text-2xl">{ text }</span>
+      <span className="button">{ text }</span>
     )
   }
-  return <Menu 
-    className='flex justify-center pt-24' 
-    items={items} 
-    title={'Main Menu'} 
-    showTitle={ false } 
-    ItemComponent={ ItemComponent }
-  />
+  const menuItems = items.map((item) => {
+    return (
+      <li key={item.href}>
+        <NavLink to={item.href}>
+          <ItemComponent {...item} />
+        </NavLink>
+      </li>
+    )
+  })
+ 
+  const HeadingElement = () => (
+    <h2 className='sr-only'>
+      Main Menu
+    </h2>
+  )
+  return (
+    <div>
+    { < HeadingElement /> } 
+    <ul className='flex justify-center pt-24' >{menuItems}</ul>
+    </div>
+  )
+  
 }
+

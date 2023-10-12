@@ -7,6 +7,7 @@
 @layer base {
   body {
     @apply bg-floralwhite;
+    @apply font-body text-licorice font-title;
   }
  
   h1 {
@@ -16,5 +17,57 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;
     @apply animate-textBackground;
+  }
+
+  main a {
+    @apply text-moss hover:text-tawny;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-floralwhite shadow-lg rounded-lg overflow-hidden;  
+    @apply font-normal;
+    @apply block p-10 space-y-3;
+  }
+
+  .card h2 {
+    @apply font-title text-3xl text-licorice;    
+  }
+  
+  .card .button {
+    @apply invisible;
+  }
+
+  .card:hover {
+    @apply text-licorice;
+  }
+
+  .card:hover img {
+    @apply opacity-50;
+    @apply transition-opacity ease-in duration-300
+  }
+
+  .card:hover .button {
+    @apply visible;
+  }
+
+  .projects-menu a {
+    @apply text-licorice hover:text-tawny;
+  }
+}
+
+@layer utility {
+  .smallcaps {
+    @apply text-xs uppercase tracking-widest font-title text-licorice text-center;
+  }
+
+  .button {
+    @apply ml-2 mr-2 p-10 pt-5 pb-5 rounded-sm bg-yellow hover:bg-tawny font-subheading text-2xl;
+  }
+
+  .card:hover .button {
+    @apply visible;
+    @apply ml-2 mr-2 p-10 pt-5 pb-5 rounded-sm bg-citrine hover:bg-citrine text-licorice font-subheading text-2xl;
   }
 }

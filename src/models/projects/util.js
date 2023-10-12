@@ -4,7 +4,7 @@ const toSlug = (title) => {
 
 const buildImage = (img, title) => {
   const { alt, caption } = img
-  const src = img.src || `${toSlug(title)}.png`
+  const src = img.src || `${toSlug(title)}.png`  
   return { src, alt, caption }
 }
 

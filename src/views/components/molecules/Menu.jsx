@@ -1,25 +1,29 @@
 import { NavLink } from 'react-router-dom'
 
+import classNames from 'classnames'
+
 export default function Menu({   
     items, 
-    title, 
-    showTitle = true, 
+    HeadingElement = () => <h2>Menu</h2>,
+    LinkElement = () => <NavLink {...props}/>,
     ItemComponent = ({ text, className }) => <span className={className}>{text}</span>,
     ...props
 }) {
   const menuItems = items.map((item) => {
     return (
       <li key={item.href}>
-        <NavLink to={item.href}>
+        <LinkElement to={item.href} {...props}>
           <ItemComponent {...item} />
-        </NavLink>
+        </LinkElement>
       </li>
     )
   })
 
   return (
     <div>
-      <h2 className={showTitle ? '' : 'sr-only'}>{title}</h2>
+      {/* <h2 className={showTitle ? '' : 'sr-only'}>{title}</h2> */}
+      {/* { showTitle ? title : ''} */}
+      { < HeadingElement /> } 
       <ul { ...props } >{menuItems}</ul>
     </div>
   )

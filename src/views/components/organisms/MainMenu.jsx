@@ -1,22 +1,18 @@
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 export default function MainMenu() {
-  const items = [
-    { text: 'Home', href: '/' },
+  const items = [    
+    { text: 'About', href: '/about' },
     { text: 'Projects', href: '/projects' },
-    { text: 'Contact', href: '/contact' },
+    { text: 'Github', href: 'https://github.com/csj1012', external: true }
   ]
-  const ItemComponent = ( {text } ) => {
-    return (
-      <span className="button">{ text }</span>
-    )
-  }
   const menuItems = items.map((item) => {
+    const LinkElement = item.external ? Link : NavLink
     return (
-      <li key={item.href}>
-        <NavLink to={item.href}>
-          <ItemComponent {...item} />
-        </NavLink>
+      <li className='main-menu__item' key={item.href}>
+        <LinkElement to={item.href}>
+          { item.text }
+        </LinkElement>
       </li>
     )
   })
@@ -28,8 +24,8 @@ export default function MainMenu() {
   )
   return (
     <div>
-    { < HeadingElement /> } 
-    <ul className='flex justify-center pt-24' >{menuItems}</ul>
+      { < HeadingElement /> } 
+      <ul className='main-menu'>{menuItems}</ul>
     </div>
   )
   

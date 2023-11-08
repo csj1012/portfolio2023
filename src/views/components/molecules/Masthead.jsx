@@ -20,9 +20,6 @@ export default function Masthead() {
         src={divider}
         className="mt-12 mx-auto sm:w-2/3 lg:w-1/3"
       />
-      <Nav>
-        <MainMenu />
-      </Nav>
     </div>
   )
 }

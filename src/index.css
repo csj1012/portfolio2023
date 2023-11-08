@@ -55,6 +55,17 @@
   .projects-menu a {
     @apply text-licorice hover:text-tawny;
   }
+
+  .main-menu {
+    @apply flex;
+    @apply justify-center md:justify-end;
+    @apply px-3
+  }
+
+  .main-menu__item {
+    @apply p-5;
+    @apply text-xl;
+  }
 }
 
 @layer utility {

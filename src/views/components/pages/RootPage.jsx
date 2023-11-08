@@ -9,6 +9,9 @@ export default function RootPage({ outlet }) {
   return (
     <Layout>
       <Header>
+        <Nav>
+          <MainMenu />
+        </Nav>
         <Masthead />       
       </Header>
       <Main>{ outlet }</Main>

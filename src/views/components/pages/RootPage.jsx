@@ -1,10 +1,10 @@
-import { Layout, Header, Nav, Main, Footer } from '@components/templates/Layout'
+import { Layout, Header, Nav, Main } from '@components/templates/Layout'
 import MainMenu from '@components/organisms/MainMenu'
-import Intro from '@components/organisms/Intro'
-import { useLocation } from 'react-router-dom'
+// import Intro from '@components/organisms/Intro'
+// import { useLocation } from 'react-router-dom'
 
 export default function RootPage({ outlet }) {
-  const { pathname } = useLocation()
+  // const { pathname } = useLocation()
 
   return (
     <Layout>
@@ -13,15 +13,14 @@ export default function RootPage({ outlet }) {
           <MainMenu />
         </Nav>
       </Header>
-      <Main>
-        <Intro />  
+      <Main>        
         { outlet }
       </Main>
-      { pathname !== '/' && (
+      {/* { pathname !== '/' && (
         <Footer>
           <MainMenu />
         </Footer>
-      )}
+      )} */}
     </Layout>
   )
 }

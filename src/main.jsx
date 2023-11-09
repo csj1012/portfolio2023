@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Root from '@routes/root'
 import Error from '@routes/error'
-import Contact from '@routes/contact'
+// import About from '@routes/about'
+import Intro from '@components/organisms/Intro'
 import Project, { loader as projectLoader } from './controllers/routes/project'
 import ProjectsList, { loader as projectsListLoader } from './controllers/routes/projectsList'
 import '/src/index.css'
@@ -15,9 +16,13 @@ const router = createBrowserRouter([
     errorElement: <Error />,
     children: [
       {
-        path: '/contact',
-        element: <Contact />,
+        path: '/',
+        element: <Intro />
       },
+      // {
+      //   path: '/about',
+      //   element: <About />,
+      // },
       {
         path: '/projects',
         element: <ProjectsList />,

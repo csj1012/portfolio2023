@@ -22,6 +22,13 @@ export default {
       // --mahogany: #BD4D14ff;
       // --black-bean: #321212ff;
       // --sage: #B8B58Bff;
+      haze: '#dfd4d8',
+      hazelight: '#f8f4f6',
+      jade: '#437254',
+      grape: '#453f67',
+      tomato: '#c14c4f',
+      root: '#3D3131'
+      
     },
     fontFamily: {
       sans: ['Alata', 'Helvetica', 'sans-serif'],
@@ -36,7 +43,25 @@ export default {
     },
     animation: {
       textBackground: 'textBackground 4s ease-in-out infinite alternate',
+      linkHover: 'all .4s ease-in-out'
     },
   },
   plugins: [],
 }
+
+
+/*
+
+57602B
+161413
+311102
+F6F4ED
+CD5B09
+F4BD18
+D1D11C
+C8CCD1
+f5f4f2
+E6CFA5
+f2e1c3
+
+*/

@@ -10,14 +10,14 @@
     @apply font-body text-licorice font-sans;
   }
  
-  h1 {
+  /* h1 {
     text-shadow: 0 0 80px rgba(255,255,255,.5);
     background: url('/src/assets/images/textbg.png') repeat-y;
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     @apply animate-textBackground;
-  }
+  } */
 
   main a {
     @apply text-moss hover:text-tawny;
@@ -25,6 +25,10 @@
 }
 
 @layer components {
+  :root {
+    --main-menu-height: 68px;
+  }
+
   .card {
     @apply bg-floralwhite shadow-lg rounded-lg overflow-hidden;  
     @apply font-normal;
@@ -59,12 +63,86 @@
   .main-menu {
     @apply flex;
     @apply justify-center md:justify-end;
-    @apply px-3
+    @apply px-3;
+    @apply bg-hazelight;
+    @apply border-jade border-b-2;
+    @apply h-[--masthead-height];
   }
 
   .main-menu__item {
     @apply p-5;
-    @apply text-xl;
+    @apply text-xl;    
+  }
+
+  .main-menu__item a {
+    @apply animate-linkHover;
+    @apply border-haze border-b-2;
+  }
+
+  .main-menu__item a:hover {
+    @apply text-jade;
+    @apply border-jade border-b-2;
+    @apply animate-linkHover;
+    /* @apply underline;
+    @apply underline-offset-4; */
+  }
+
+  .masthead {
+    @apply px-5;
+    @apply pb-24;
+    @apply bg-haze;
+    @apply pt-12;
+    @apply md:grid;
+    @apply md:grid-cols-3;
+    @apply lg:px-24;
+    /* @apply h-[--masthead-height]; */
+    /* height: calc(100000% - var(--main-menu-height)); */
+  }
+
+  .masthead__title {   
+   @apply text-hazelight;
+   @apply font-sans; 
+   @apply text-5xl;
+   @apply md:text-3xl;
+   @apply lg:text-4xl;
+   @apply font-serif;    
+  }
+
+  .masthead__title__highlight {
+    @apply bg-jade;
+    @apply inline-block;
+    @apply p-2;
+  }
+
+  .masthead__copy {
+    @apply text-root;
+    @apply space-y-8;
+    @apply pt-12;
+    @apply md:pt-0;
+    @apply font-serif;
+    @apply text-2xl;
+    @apply md:col-span-2;
+    /* @apply md:w-1/2; */
+    /* @apply lg:mx-auto; */
+  }
+
+  .masthead__copy--special {
+    @apply text-3xl
+  }
+
+  .masthead__cta {
+    @apply text-jade;
+    @apply underline;
+    @apply underline-offset-4;
+    @apply font-serif;
+    @apply text-2xl;
+    @apply font-bold;
+    @apply mt-6;
+    @apply inline-block;    
+  }
+
+  .masthead__cta:hover {
+    @apply no-underline;
   }
 }
 

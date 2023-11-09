@@ -1,6 +1,5 @@
 import ProjectTeaser from '@components/organisms/ProjectTeaser'
 import { NavLink } from 'react-router-dom'
-import Link from '@components/atoms/Link'
 
 export default function ProjectsMenu({ items, current }) {
   let headingText = 'Projects (Selected)'
@@ -12,13 +11,6 @@ export default function ProjectsMenu({ items, current }) {
   }
 
   const HeadingElement = () => <h2 className="bg-frenchgray text-3xl pt-24 text-center">{headingText}</h2>
-
-  const LinkElement = (props) => (
-    <Link
-      className="text-yellow"
-      {...props}
-    />
-  )
 
   items = items.map((item) => ({
     ...item,

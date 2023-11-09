@@ -26,7 +26,7 @@
 
 @layer components {
   :root {
-    --main-menu-height: 68px;
+    --main-menu-height: 70px;
   }
 
   .card {
@@ -83,8 +83,6 @@
     @apply text-jade;
     @apply border-jade border-b-2;
     @apply animate-linkHover;
-    /* @apply underline;
-    @apply underline-offset-4; */
   }
 
   .masthead {
@@ -94,9 +92,8 @@
     @apply pt-12;
     @apply md:grid;
     @apply md:grid-cols-3;
-    @apply lg:px-24;
-    /* @apply h-[--masthead-height]; */
-    /* height: calc(100000% - var(--main-menu-height)); */
+    @apply lg:px-24;    
+    height: calc(100vh - var(--main-menu-height));
   }
 
   .masthead__title {   

@@ -1,7 +1,5 @@
 import { NavLink } from 'react-router-dom'
 
-import classNames from 'classnames'
-
 export default function Menu({   
     items, 
     HeadingElement = () => <h2>Menu</h2>,

@@ -19,9 +19,9 @@
     @apply animate-textBackground;
   } */
 
-  main a {
+  /* main a {
     @apply text-moss hover:text-tawny;
-  }
+  } */
 }
 
 @layer components {
@@ -66,7 +66,7 @@
     @apply px-3;
     @apply bg-hazelight;
     @apply border-jade border-b-2;
-    @apply h-[--masthead-height];
+    @apply h-[--intro-height];
   }
 
   .main-menu__item {
@@ -85,7 +85,7 @@
     @apply animate-linkHover;
   }
 
-  .masthead {
+  .intro {
     @apply px-5;
     @apply pb-24;
     @apply bg-haze;
@@ -96,7 +96,7 @@
     height: calc(100vh - var(--main-menu-height));
   }
 
-  .masthead__title {   
+  .intro__title {   
    @apply text-hazelight;
    @apply font-sans; 
    @apply text-5xl;
@@ -105,13 +105,13 @@
    @apply font-serif;    
   }
 
-  .masthead__title__highlight {
+  .intro__title__highlight {
     @apply bg-jade;
     @apply inline-block;
     @apply p-2;
   }
 
-  .masthead__copy {
+  .intro__copy {
     @apply text-root;
     @apply space-y-8;
     @apply pt-12;
@@ -119,26 +119,23 @@
     @apply font-serif;
     @apply text-2xl;
     @apply md:col-span-2;
-    /* @apply md:w-1/2; */
-    /* @apply lg:mx-auto; */
   }
 
-  .masthead__copy--special {
+  .intro__copy--special {
     @apply text-3xl
   }
 
-  .masthead__cta {
+  .intro__cta {
     @apply text-jade;
     @apply underline;
     @apply underline-offset-4;
     @apply font-serif;
     @apply text-2xl;
-    @apply font-bold;
-    @apply mt-6;
+    @apply font-bold;    
     @apply inline-block;    
   }
 
-  .masthead__cta:hover {
+  .intro__cta:hover {
     @apply no-underline;
   }
 }

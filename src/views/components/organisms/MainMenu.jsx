@@ -24,6 +24,9 @@ export default function MainMenu() {
   )
   return (
     <div>
+      <h1 className="intro__title">
+        <span className="intro__title__highlight">Chelsie Johnston</span>
+      </h1>
       { < HeadingElement /> } 
       <ul className='main-menu'>{menuItems}</ul>
     </div>

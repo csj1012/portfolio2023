@@ -1,6 +1,6 @@
 import { Layout, Header, Nav, Main, Footer } from '@components/templates/Layout'
 import MainMenu from '@components/organisms/MainMenu'
-import Masthead from '@components/organisms/Masthead'
+import Intro from '@components/organisms/Intro'
 import { useLocation } from 'react-router-dom'
 
 export default function RootPage({ outlet }) {
@@ -12,9 +12,11 @@ export default function RootPage({ outlet }) {
         <Nav>
           <MainMenu />
         </Nav>
-        <Masthead />       
       </Header>
-      <Main>{ outlet }</Main>
+      <Main>
+        <Intro />  
+        { outlet }
+      </Main>
       { pathname !== '/' && (
         <Footer>
           <MainMenu />

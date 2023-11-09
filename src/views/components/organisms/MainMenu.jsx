@@ -24,7 +24,7 @@ export default function MainMenu() {
   )
   return (
     <div>
-      <h1 className="intro__title">
+      <h1 className="intro__title hidden">
         <span className="intro__title__highlight">Chelsie Johnston</span>
       </h1>
       { < HeadingElement /> } 

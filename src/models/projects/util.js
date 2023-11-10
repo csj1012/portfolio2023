@@ -1,5 +1,8 @@
-const toSlug = (title) => {
-  return title.toLowerCase().split(' ').join('-')
+const toSlug = (title, abbreviation) => {
+  let slug = title.toLowerCase().split(' ').join('-')
+  slug = abbreviation ? `${abbreviation}--${slug}` : slug
+  console.log(slug)
+  return slug
 }
 
 const buildImage = (img, title) => {
@@ -10,7 +13,7 @@ const buildImage = (img, title) => {
 
 export function buildItem(item) {
   try {
-    const { image, teaser, title } = item
+    const { image, teaser, title, abbreviation } = item
     if (item.image) {
       item.image = buildImage(image, title)
     }
@@ -20,7 +23,7 @@ export function buildItem(item) {
     }
 
     const project = {
-      slug: toSlug(title),
+      slug: toSlug(title, abbreviation),
       ...item,
     }
 

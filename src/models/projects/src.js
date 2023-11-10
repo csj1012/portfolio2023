@@ -43,6 +43,7 @@ const src =
     {
       organization: 'Instant Brands',
       title: 'Last Call Media',
+      abbreviation: 'instant-brands',
       shortDescription: 'A flexible, customizable look and feel for the Instant Brands (formerly Corelle) family of products',
       image: {
         src: '/src/assets/images/instantbrands.png',
@@ -77,6 +78,7 @@ const src =
     {
       organization: 'Blackboard Corporate Rebranding',
       title: 'Last Call Media',
+      abbreviation: 'blackboard',
       shortDescription: 'Accessible, atomically-designed component library and Drupal theme for Blackboard\'s corporate rebranding effort.',
       image: {
         src: '/src/assets/images/blackboard.png',

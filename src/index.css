@@ -58,6 +58,10 @@
     @apply no-underline;
   }
 
+  .image-border {
+    @apply border-2 border-haze;
+  }
+
   .card {
     @apply bg-floralwhite shadow-lg rounded-lg overflow-hidden;  
     @apply font-normal;
@@ -174,8 +178,7 @@
 
   .intro img {
     @apply md:mr-4;
-    @apply border-4;
-    @apply border-haze;
+    @apply image-border;
     transform: scaleX(-1);
     @apply w-1/2;
     @apply md:w-full;
@@ -287,7 +290,7 @@
     /* @apply brightness-100; */
     /* @apply blur-sm; */
     @apply opacity-75;
-    transition: opacity .5s ease;
+    transition: opacity .5s ease;    
   }
 
   .projects__menu__link:hover .teaser__featured {
@@ -319,6 +322,7 @@
 
   .teaser__image {
     @apply rounded-sm;    
+    @apply image-border;
   }
 
   .teaser__image-wrapper {
@@ -358,6 +362,14 @@
 
   .detail__basics__list li {
     @apply text-sm;
+  }
+
+  .detail__image-wrapper {    
+    @apply mt-6 mr-6;
+  }
+
+  .detail__image-wrapper img {
+    @apply image-border;
   }
 
 }

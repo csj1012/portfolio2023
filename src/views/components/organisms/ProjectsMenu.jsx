@@ -10,7 +10,7 @@ export default function ProjectsMenu({ items, current }) {
     headingText = 'More Projects'
   }
 
-  const HeadingElement = () => <h2 className="projects__title"><span className="projects__title__highlight">{headingText}</span></h2>
+  const HeadingElement = () => <h2 className="projects__title sticky top-0 bg-hazelight z-10"><span className="projects__title__highlight">{headingText}</span></h2>
 
   items = items.map((item) => ({
     ...item,

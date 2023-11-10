@@ -3,8 +3,9 @@ const src =
   // or by running `node transform.js` manually.
   [
     {
-      organization: 'New England Foundation for the Arts',
-      title: 'CreativeGround - Last Call Media',
+      organization: 'Last Call Media',
+      id: 'creativeground',
+      title: 'CreativeGround: New England Foundation for the Arts',      
       shortDescription: 'A headless Drupal theme made with React, helping artists and patrons in New England foster creative partnerships',
       image: {
         src: '/src/assets/images/creativeground.png',
@@ -41,8 +42,8 @@ const src =
     }
     ,
     {
-      organization: 'Instant Brands',
-      title: 'Last Call Media',
+      organization: 'Last Call Media',
+      title: 'Instant Brands',
       abbreviation: 'instant-brands',
       shortDescription: 'A flexible, customizable look and feel for the Instant Brands (formerly Corelle) family of products',
       image: {
@@ -76,8 +77,8 @@ const src =
       ]
     },
     {
-      organization: 'Blackboard Corporate Rebranding',
-      title: 'Last Call Media',
+      organization: 'Last Call Media',
+      title: 'Blackboard Corporate Rebrand',
       abbreviation: 'blackboard',
       featured: true,
       shortDescription: 'Accessible, atomically-designed component library and Drupal theme for Blackboard\'s corporate rebranding effort.',
@@ -196,8 +197,7 @@ const src =
     },
     {
       id: 'university-of-chicago-news',
-      organization: 'The University of Chicago',
-      department: 'Web Services',
+      organization: 'The University of Chicago, Web Services',
       shortDescription: 'D6 to D7 migration project encompassing a total website redesign and major content reorganization',
       title: 'UChicago News',
       year: '2016',
@@ -237,7 +237,7 @@ const src =
     },
     {
       id: 'university-of-chicago-masters-arts-social-sciences',
-      organization: 'The University of Chicago',
+      organization: 'The University of Chicago, Web Services',
       title: 'UChicago Master of Arts in the Social Sciences',
       year: '2016',
       techs: [
@@ -270,7 +270,8 @@ const src =
     {
       id: 'university-of-chicago-it-services',
       year: '2015',
-      title: 'UChicago IT Services Site',
+      title: 'UChicago IT Services Portal',
+      organization: 'The University of Chicago, Web Services',
       role: 'Design Lead, Design, Front end development, Drupal development',
       techs: [
         'Drupal 7',

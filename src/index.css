@@ -7,7 +7,7 @@
 @layer base {
   body {
     @apply bg-haze;
-    @apply font-body text-licorice font-sans;
+    @apply font-body text-root font-sans;
   }
 }
 
@@ -31,6 +31,11 @@
     @apply p-2;
   }
 
+  .special {
+    @apply font-serif;
+    @apply text-3xl;
+  }
+
   .section {
     @apply px-5;
     @apply pb-24;
@@ -47,6 +52,10 @@
     @apply text-2xl;
     @apply font-bold;    
     @apply inline-block;   
+  }
+
+  .link-hover {
+    @apply no-underline;
   }
 
   .card {
@@ -142,7 +151,7 @@
   }
 
   .intro__copy--special {
-    @apply text-3xl
+    @apply special;
   }
 
   .intro__cta {
@@ -156,7 +165,7 @@
   }
 
   .intro__cta:hover {
-    @apply no-underline;
+    @apply hover:link-hover;
   }
 
   .projects {
@@ -215,12 +224,27 @@
     @apply rounded-sm;
   }
 
-  /* .projects__title__highlight {
-    @apply title-highlight;
-    @apply text-2xl;
-    @apply bg-grape;
-  } */
-  
+  .detail__basics__links {
+    @apply space-y-3;
+  }
+
+  .detail__basics__list li {
+    display: inline-block;
+    @apply bg-tomato;
+    @apply rounded-sm;
+    @apply text-hazelight;
+    @apply p-1;
+    @apply m-1;
+    @apply text-xs;
+    @apply lg:text-base;
+  }
+
+  .detail__basics__links a {
+    @apply link;
+    @apply text-lg lg:text-xl 2xl:text-2xl;
+    @apply hover:link-hover;
+  }
+
 }
 
 @layer utility {

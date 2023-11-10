@@ -30,7 +30,8 @@ export default function ProjectDetail({
       </div>
       {/* <div ></div> */}
       <div className='detail__image-wrapper order-1 md:order-2 md:col-span-2'>
-        {image ? <Image {...image} className='detail__masthead' /> : ''}
+        {image ? <Image {...image} className='detail__masthead delay-700' /> : ''}
+        <p className="text-xs">{image.caption}</p>
         <UnorderedList items={techs} className='detail__basics__list mt-2' />
       </div>
       
@@ -38,28 +39,5 @@ export default function ProjectDetail({
       <p className='order-4 mx-6'>In partnership with {organization}</p>
       <p className='order-5 mx-6 mt-6 md:mt-0 mb-12 font-serif text-lg md:col-span-2 md:pl-6 md:border-l-2 border-haze'>{description}</p>
     </div>
-    // <div className='detail grid grid-col-1 md:grid-col-3'>
-    //   <div className='md:col-span-2 space-y-4'>
-    //     {image ? <Image {...image} className='detail__masthead' /> : ''}
-    //     <p>{shortDescription}</p>  
-    //     <UnorderedList items={linkList(links)} />
-    //     {credits ? <p>Special thanks to: {credits}</p> : null}
-    //   </div>  
-    //   <div className='col-span-6 row-span-1'>
-    //   <h2 className="text-4xl mx-auto text-center">
-    //       {organization}
-    //     </h2>
-    //     <h2 className="sr-only">
-    //       {title}, organization: {organization}
-    //     </h2>
-    //     <h3 className="text-xl mx-auto text-center smallcaps">
-    //       {title}
-    //     </h3>  
-    //   </div>
-    //   <div className='col-span-2 bg-offwhite pr-12 space-y-4'>
-    //     <p>Role: {role}</p>    
-    //     <UnorderedList items={techs} className='list-disc list-inside' />
-    //   </div>
-    // </div>
   )
 }

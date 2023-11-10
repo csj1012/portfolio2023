@@ -29,6 +29,39 @@
     --main-menu-height: 70px;
   }
 
+  .title {
+    @apply text-hazelight;
+    @apply font-sans; 
+    @apply text-5xl;
+    @apply md:text-3xl;
+    @apply lg:text-4xl;
+    @apply font-serif;   
+  }
+
+  .title-highlight {
+    @apply bg-jade;
+    @apply inline-block;
+    @apply p-2;
+  }
+
+  .section {
+    @apply px-5;
+    @apply pb-24;
+    @apply bg-haze;
+    @apply pt-12;
+    @apply lg:px-24;  
+  }
+
+  .link {
+    @apply text-jade;
+    @apply underline;
+    @apply underline-offset-4;
+    @apply font-serif;
+    @apply text-2xl;
+    @apply font-bold;    
+    @apply inline-block;   
+  }
+
   .card {
     @apply bg-floralwhite shadow-lg rounded-lg overflow-hidden;  
     @apply font-normal;
@@ -86,14 +119,10 @@
   }
 
   .intro {
-    @apply px-5;
-    @apply pb-24;
-    @apply bg-haze;
-    @apply pt-12;
+    @apply section;
     @apply md:grid;
-    @apply md:grid-cols-3;
-    @apply lg:px-24;    
-    height: calc(100vh - var(--main-menu-height));
+    @apply md:grid-cols-3;  
+    min-height: calc(100vh - var(--main-menu-height));
   }
 
   .intro__title {   
@@ -138,6 +167,69 @@
   .intro__cta:hover {
     @apply no-underline;
   }
+
+  .projects {
+    @apply section;
+  }
+
+  .projects__menu {
+    @apply flex;
+    @apply flex-col;
+    @apply md:grid;
+    @apply md:grid-cols-2;
+    @apply mt-6;
+    /* @apply bg-hazelight; */
+    /* @apply p-2; */
+  }
+
+  .projects__menu li {
+    order: 2;
+  }
+
+  .projects__menu .featured {
+    @apply order-1;
+    @apply md:col-span-2;
+  }
+
+  .projects__title {
+    @apply title;
+    @apply text-root;
+    @apply text-3xl;
+  }
+
+  .projects__title__highlight {
+    @apply bg-grape;
+    @apply text-haze;
+  }
+
+  .projects__menu__link {
+    @apply block;
+    /* @apply font-serif; */
+    /* @apply p-6; */
+    @apply border-b-2;
+    @apply py-6;
+  }
+
+  .teaser__title {
+    @apply title;
+    @apply text-3xl;
+    @apply text-root;
+  }
+
+  .teaser {
+    @apply space-y-3;
+  }
+
+  .teaser__image {
+    @apply rounded-sm;
+  }
+
+  /* .projects__title__highlight {
+    @apply title-highlight;
+    @apply text-2xl;
+    @apply bg-grape;
+  } */
+  
 }
 
 @layer utility {

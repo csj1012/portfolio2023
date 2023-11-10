@@ -79,6 +79,7 @@ const src =
       organization: 'Blackboard Corporate Rebranding',
       title: 'Last Call Media',
       abbreviation: 'blackboard',
+      featured: true,
       shortDescription: 'Accessible, atomically-designed component library and Drupal theme for Blackboard\'s corporate rebranding effort.',
       image: {
         src: '/src/assets/images/blackboard.png',

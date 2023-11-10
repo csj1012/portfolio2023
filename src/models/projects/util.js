@@ -23,7 +23,7 @@ export function buildItem(item) {
     }
 
     const project = {
-      slug: toSlug(title, abbreviation),
+      slug: toSlug(title, abbreviation),       
       ...item,
     }
 

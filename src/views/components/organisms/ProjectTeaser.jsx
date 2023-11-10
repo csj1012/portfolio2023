@@ -1,26 +1,26 @@
 import Image from '@components/atoms/Image'
 
-export default function ProjectTeaser({ title, organization, shortDescription, year, teaser, role }) {
+export default function ProjectTeaser({ title, organization, shortDescription, teaser, role }) {
   return (
-    <div className="card">
-      <h2 className="sr-hidden text-center">{organization}</h2>
-      <h2 className="sr-only">
+    <div className="teaser">
+      <h3 className="teaser__title sr-hidden">{organization}</h3>
+      <h3 className="sr-only">
         Project {title} for {organization}
-      </h2>
-      <h3 className="smallcaps">
-        {title} ({year})
       </h3>
-      <div className="card__image-container relative">
+      <p className="teaser__heading">
+        {title}
+      </p>
+      <div className="teaser__image-wrapper">
         {teaser ? (
           <Image
-            {...teaser}
-            className="rounded-sm"
+            className="teaser__image"
+            {...teaser}            
           />
         ) : (
           ''
         )}
-        <span className="absolute inset-0 flex items-center">
-          <span className="button mx-auto">View Project</span>
+        <span className="">
+          <span className="">View Project</span>
         </span>
       </div>
       <p>{shortDescription}</p>

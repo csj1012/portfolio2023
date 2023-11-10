@@ -6,22 +6,9 @@
 
 @layer base {
   body {
-    @apply bg-floralwhite;
+    @apply bg-haze;
     @apply font-body text-licorice font-sans;
   }
- 
-  /* h1 {
-    text-shadow: 0 0 80px rgba(255,255,255,.5);
-    background: url('/src/assets/images/textbg.png') repeat-y;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    @apply animate-textBackground;
-  } */
-
-  /* main a {
-    @apply text-moss hover:text-tawny;
-  } */
 }
 
 @layer components {

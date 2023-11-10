@@ -31,8 +31,10 @@ export default function ProjectsMenu({ items, current }) {
 
   return (
     <section className="projects">
-      { < HeadingElement /> } 
-      <ul className='projects__menu'>{menuItems}</ul>
+      <span className="projects--inset-wrapper">
+        { < HeadingElement /> } 
+        <ul className='projects__menu'>{menuItems}</ul>
+      </span>      
     </section>
   )
 }

@@ -62,33 +62,6 @@
     @apply border-2 border-haze;
   }
 
-  .card {
-    @apply bg-floralwhite shadow-lg rounded-lg overflow-hidden;  
-    @apply font-normal;
-    @apply block p-10 space-y-3;
-  }
-
-  .card h2 {
-    @apply font-sans text-3xl text-licorice;    
-  }
-  
-  .card .button {
-    @apply invisible;
-  }
-
-  .card:hover {
-    @apply text-licorice;
-  }
-
-  .card:hover img {
-    @apply opacity-50;
-    @apply transition-opacity ease-in duration-300
-  }
-
-  .card:hover .button {
-    @apply visible;
-  }
-
   .projects-menu a {
     @apply text-licorice hover:text-tawny;
   }
@@ -244,11 +217,7 @@
   .projects__menu {
     @apply flex;
     @apply flex-col;
-    /* @apply lg:grid; */
-    /* @apply lg:grid-cols-2; */
     @apply mt-6;
-    /* @apply bg-hazelight; */
-    /* @apply p-2; */
   }
 
   .projects__menu li {
@@ -267,16 +236,8 @@
     @apply pb-2;    
   }
 
-  /* .projects__title__highlight {
-    @apply bg-grape;
-    @apply text-haze;
-  } */
-
   .projects__menu__link {
     @apply block;
-    /* @apply font-serif; */
-    /* @apply p-6; */
-    /* @apply border-b-2; */
     @apply py-6;
   }
 
@@ -287,8 +248,6 @@
   }
 
   .projects__menu__link:hover .teaser__image {
-    /* @apply brightness-100; */
-    /* @apply blur-sm; */
     @apply opacity-75;
     transition: opacity .5s ease;    
   }
@@ -300,8 +259,7 @@
   .teaser__title {
     @apply title;
     @apply text-2xl;
-    @apply text-root;
-    /* @apply inline-block;     */
+    @apply text-root;    
   }
 
   .custom-rows {
@@ -375,20 +333,8 @@
   .detail__image-wrapper img {
     @apply image-border;
   }
-
 }
 
 @layer utility {
-  .smallcaps {
-    @apply text-xs uppercase tracking-widest font-sans text-licorice text-center;
-  }
-
-  .button {
-    @apply ml-2 mr-2 p-10 pt-5 pb-5 rounded-sm bg-yellow hover:bg-tawny font-serif text-2xl;
-  }
-
-  .card:hover .button {
-    @apply visible;
-    @apply ml-2 mr-2 p-10 pt-5 pb-5 rounded-sm bg-citrine hover:bg-citrine text-licorice font-serif text-2xl;
-  }
+  
 }

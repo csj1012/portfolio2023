@@ -1,8 +1,7 @@
 import Image from '@components/atoms/Image'
 import UnorderedList from '@components/atoms/UnorderedList'
 
-export default function ProjectTeaser({ title, organization, shortDescription, teaser, role, techs, featured }) {
-  // console.log(techs)
+export default function ProjectTeaser({ title, organization, shortDescription, teaser, role, techs, featured }) {  
   return (
     <div className="teaser border-b-2 border-haze pb-12">
       <h3 className="teaser__title sr-hidden">{title} &#187;</h3>

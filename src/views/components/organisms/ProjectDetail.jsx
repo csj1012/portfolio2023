@@ -4,8 +4,7 @@ import UnorderedList from '../atoms/UnorderedList'
 export default function ProjectDetail({
   title,
   organization,
-  shortDescription,
-  year,
+  shortDescription,  
   image,
   techs,
   role,
@@ -27,8 +26,7 @@ export default function ProjectDetail({
         <h2 className='text-3xl lg:text-4xl font-serif'>{title}</h2>
         <p className='detail__involvement lg:text-xl'>Involvement: {role}</p>        
         <UnorderedList items={linkList(links)} className='detail__basics__links' />
-      </div>
-      {/* <div ></div> */}
+      </div>      
       <div className='detail__image-wrapper order-1 md:order-2 md:col-span-2'>
         {image ? <Image {...image} className='detail__masthead delay-700' /> : ''}
         <p className="text-xs">{image.caption}</p>
@@ -36,8 +34,13 @@ export default function ProjectDetail({
       </div>
       
       <p className='special order-3 my-12 mx-6 text-2xl 2xl:text-3xl md:col-span-3 italic text-root border-y-2 border-haze py-8'>{shortDescription}</p>
-      <p className='order-4 mx-6'>In partnership with {organization}</p>
-      <p className='order-5 mx-6 mt-6 md:mt-0 mb-12 font-serif text-lg md:col-span-2 md:pl-6 md:border-l-2 border-haze'>{description}</p>
+      <div className='order-4 mx-6 space-y-3'>
+        <p>In partnership with {organization}</p>
+        { credits ? (
+          <p>Special thanks to: {credits}</p>
+        ) : ''}
+      </div>
+      <div className='order-5 mx-6 mt-6 md:mt-0 mb-12 font-serif text-lg md:col-span-2 md:pl-6 md:border-l-2 border-haze'>{description}</div>      
     </div>
   )
 }

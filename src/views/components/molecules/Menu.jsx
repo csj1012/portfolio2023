@@ -19,8 +19,6 @@ export default function Menu({
 
   return (
     <div>
-      {/* <h2 className={showTitle ? '' : 'sr-only'}>{title}</h2> */}
-      {/* { showTitle ? title : ''} */}
       { < HeadingElement /> } 
       <ul { ...props } >{menuItems}</ul>
     </div>

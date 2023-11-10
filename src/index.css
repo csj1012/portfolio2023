@@ -105,6 +105,10 @@
     @apply animate-linkHover;
   }
 
+  .main-menu__item a.active {
+    @apply border-jade;
+  }
+
   .intro {
     @apply section;
     @apply md:grid;

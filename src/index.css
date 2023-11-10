@@ -138,6 +138,8 @@
   .intro {
     @apply fade-in;
     @apply section;
+    @apply flex;
+    @apply flex-col;
     @apply md:grid;
     @apply md:grid-cols-3;
     @apply bg-hazelight;
@@ -171,19 +173,25 @@
   }
 
   .intro img {
-    @apply mt-4 md:mr-4;
+    @apply md:mr-4;
     @apply border-4;
     @apply border-haze;
     transform: scaleX(-1);
     @apply w-1/2;
     @apply md:w-full;
     @apply rounded-sm;
+    @apply order-2;
+  }
+
+  .intro__art {
+    @apply mt-12 md:m-4 md:mt-0;
+    @apply order-2;
+    @apply md:order-1;
   }
 
   .intro__copy {
     @apply text-root;
     @apply space-y-8;
-    @apply pt-12;
     @apply md:pt-0;
     @apply font-serif;
     @apply text-2xl;
@@ -191,10 +199,12 @@
     @apply md:border-l-2;
     @apply border-haze;
     @apply md:pl-6;
+    @apply order-1;
   }
 
   .intro__copy--special {
     @apply special;
+    @apply order-1;
   }
 
   .intro__cta {
@@ -204,7 +214,8 @@
     @apply font-serif;
     @apply text-2xl;
     @apply font-bold;    
-    @apply inline-block;    
+    @apply inline-block;  
+    @apply order-1;  
   }
 
   .intro__cta:hover {

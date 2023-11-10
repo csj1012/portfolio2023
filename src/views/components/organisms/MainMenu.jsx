@@ -1,4 +1,5 @@
 import { Link, NavLink } from 'react-router-dom'
+import bgImage from '@assets/images/nouveau-menu-bg.png'
 
 export default function MainMenu() {
   const items = [    
@@ -22,10 +23,13 @@ export default function MainMenu() {
       Main Menu
     </h2>
   )
+  
   return (
-    <div>
-      <h1 className="intro__title hidden">
-        <span className="intro__title__highlight">Chelsie Johnston</span>
+    <div className="grid bg-jade main-menu-wrapper" style={{backgroundImage: `url(${bgImage})`}}>
+      <h1 className="intro__title">
+        {/* <span className="intro__title__highlight"> */}
+          <Link to="/" className='hover:opacity-50'>Chelsie Johnston</Link>
+        {/* </span> */}
       </h1>
       { < HeadingElement /> } 
       <ul className='main-menu'>{menuItems}</ul>

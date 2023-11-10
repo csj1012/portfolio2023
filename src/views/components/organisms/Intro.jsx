@@ -1,11 +1,14 @@
 import { Link } from 'react-router-dom'
+import Image from '@components/atoms/Image'
+import Nouveau from '@assets/images/nouveau.png'
 
 export default function Intro() {
   return (
-    <div className="intro">
-      <h1 className="intro__title">
-        <span className="intro__title__highlight">Chelsie Johnston</span>
-      </h1>        
+    <div className="intro">    
+      <div>
+        <Image src={Nouveau} alt='art nouveau Chelsie by Zach Henderson'></Image>
+        <p className="text-xs mt-1">"Art Nouveau Chelsie" by Zach Henderson</p>
+      </div>
       <div className="intro__copy">
         <p className="intro__copy--special">Hi! I’m a developer with an <em>affinity for front end</em>.</p>
         <p>My journey through code & design has been shaped by the continuous joy I find in crafting experiences that evoke emotion and connection, a passion kindled from an early start with coding at age 10.</p>

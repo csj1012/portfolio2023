@@ -2,7 +2,13 @@
 export default {
   content: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   theme: {
-    extend: {},
+    extend: {
+      animation: {
+        textBackground: 'textBackground 4s ease-in-out infinite alternate',
+        linkHover: 'all .4s ease-in-out',
+        fadeIn: 'opacity .4s ease-in'
+      },
+    },
     colors: {
       moss: '#57602B',
       licorice: '#161413',
@@ -26,7 +32,7 @@ export default {
       hazelight: '#f8f4f6',
       jade: '#437254',
       grape: '#453f67',
-      tomato: '#c14c4f',
+      tomato: '#6f7fb2',
       root: '#3D3131'
       
     },
@@ -40,10 +46,10 @@ export default {
         '0%': { backgroundPosition: '0% 50%' },
         '100%': { backgroundPosition: '100% 50%' },
       },
-    },
-    animation: {
-      textBackground: 'textBackground 4s ease-in-out infinite alternate',
-      linkHover: 'all .4s ease-in-out'
+      fadeIn: {
+        '0%': { opacity: 0 },
+        '100%': { opacity: 1 }
+      }
     },
   },
   plugins: [],

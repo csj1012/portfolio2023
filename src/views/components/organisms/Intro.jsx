@@ -7,7 +7,7 @@ export default function Intro() {
     <div className="intro">    
       <div className="intro__art">
         <Image src={Nouveau} alt='art nouveau Chelsie by Zach Henderson'></Image>
-        <p className="intro__caption">"Art Nouveau Chelsie" by Zach Henderson</p>
+        <p className="intro__caption">"Chelsie and Maurice, Art Nouveau" by Zach Henderson</p>
       </div>
       <div className="intro__copy">
         <p className="intro__copy--special"><em>Hello! I'm a developer with a love for all things front end. A little about  me:</em></p>

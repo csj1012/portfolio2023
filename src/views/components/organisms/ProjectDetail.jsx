@@ -1,4 +1,5 @@
 import Image from '@components/atoms/Image'
+import Video from '@components/atoms/Video'
 import UnorderedList from '../atoms/UnorderedList'
 
 export default function ProjectDetail({
@@ -6,12 +7,14 @@ export default function ProjectDetail({
   organization,
   shortDescription,  
   image,
+  video,
   techs,
   role,
   links,
   credits,
   description
 }) {
+  console.log(video)
   const linkList = (links) => {
     const list = []
     for (const link of links) {
@@ -28,7 +31,8 @@ export default function ProjectDetail({
         <UnorderedList items={linkList(links)} className='detail__basics__links' />
       </div>      
       <div className='detail__image-wrapper'>
-        {image ? <Image {...image} className='detail__masthead' /> : ''}
+        {/* {image ? <Image {...image} className='detail__masthead' /> : ''} */}
+        { video ? <Video src={video.src} className='detail__masthead' /> : '' }
         <p className="text-xs">{image.caption}</p>
         <UnorderedList items={techs} className='detail__list' />
       </div>

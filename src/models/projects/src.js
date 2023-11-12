@@ -18,6 +18,9 @@ const src =
         teaser: true,
         src: '/src/assets/images/teaser/teaser-creativeground.png'
       },
+      video: {
+        src: '/assets/test.mp4'
+      },
       description: "We built a decoupled React front end theme for the nonprofit's Creativeground.org Drupal site, helping artists and patrons in New England foster creative partnerships.",
       techs: [
         'Drupal 9',

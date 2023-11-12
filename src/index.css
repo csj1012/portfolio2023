@@ -271,7 +271,7 @@
   }
 
   .detail__image-wrapper {    
-    @apply mt-6 mr-6 order-1 md:order-2 md:col-span-2;
+    @apply ml-6 md:ml-0 mt-6 mr-6 order-1 md:order-2 md:col-span-2;
   }
 
   .detail__image-wrapper img {

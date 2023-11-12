@@ -9,8 +9,8 @@ const src =
       shortDescription: 'A headless Drupal theme made with React, helping artists and patrons in New England foster creative partnerships',
       image: {
         src: '/src/assets/images/creativeground.png',
-        alt: 'Image alt.',
-        caption: 'Screenshot of creativeground.org'
+        alt: 'Screenshot of the CreativeGround.org website.',
+        caption: 'An interactive web app to connect New England creatives and patrons.'
       },
       year: '2022',
       teaser: {

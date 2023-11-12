@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Alata&family=Goudy+Bookletter+1911&family=Raleway:wght@600&display=swap');
 
+/** NOTE: Was using @apply everywhere the right approach? 
+*** Pros: faster; BEM looks cleaner; easier to design in the browser (moving utility classes from markup to this file when solidified)
+*** Cons: is technically an anti-pattern/writing CSS with extra steps
+*** Probably okay for this project since it's solo and small?
+**/ 
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

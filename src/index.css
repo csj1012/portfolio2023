@@ -62,11 +62,15 @@
     @apply border-2 border-haze;
   }
 
-  .projects-menu a {
-    @apply text-licorice hover:text-tawny;
+  .caption {
+    @apply text-xs;
   }
 
-  .main-menu {
+  .main-menu-wrapper {
+    @apply grid bg-jade;
+  }
+
+  .main-menu__menu {
     @apply flex;
     @apply justify-center md:justify-end;
     @apply px-3;
@@ -125,7 +129,7 @@
     min-height: calc(100vh - var(--main-menu-height));
   }
 
-  .intro__title {   
+  .main-menu__title {   
    @apply text-hazelight/75;
    transition: opacity .3s ease;
    @apply font-sans; 
@@ -137,6 +141,14 @@
    letter-spacing: 1px;
    @apply ml-6;   
    @apply py-6
+  }
+
+  .main-menu__title__link {
+    @apply hover:opacity-50;
+  }
+
+  .intro__caption {
+    @apply caption;
   }
   
   .intro__title a:hover {
@@ -298,14 +310,27 @@
   }
 
   .detail {
+    @apply grid md:grid-cols-3 md:gap-x-12 bg-hazelight m-1;
     @apply fade-in;
+  }
+
+  .detail__basics {
+    @apply mt-12 ml-6 order-2 md:order-1 md:col-span-1 space-y-3;
+  }
+
+  .detail__basics__title {
+    @apply text-3xl lg:text-4xl font-serif;
+  }
+
+  .detail__basics__involvement {
+    @apply lg:text-xl;
   }
 
   .detail__basics__links {
     @apply space-y-3;
   }
 
-  .detail__basics__list li {
+  .detail__list li {
     display: inline-block;
     @apply bg-tomato;
     @apply rounded-sm;
@@ -314,6 +339,7 @@
     @apply m-1;
     @apply text-xs;
     @apply lg:text-base;
+    @apply lg:text-sm;
   }
 
   .detail__basics__links a {
@@ -322,16 +348,33 @@
     @apply hover:link-hover;
   }
 
-  .detail__basics__list li {
-    @apply text-sm;
+  .detail__list {
+    @apply mt-2;
   }
 
   .detail__image-wrapper {    
     @apply mt-6 mr-6;
+    @apply order-1 md:order-2 md:col-span-2;
   }
 
   .detail__image-wrapper img {
     @apply image-border;
+  }
+
+  .detail__masthead {
+    @apply delay-700;
+  }
+
+  .detail__short-description {
+    @apply special order-3 my-12 mx-6 text-2xl 2xl:text-3xl md:col-span-3 italic text-root border-y-2 border-haze py-8;
+  }
+
+  .detail__credits {
+    @apply order-4 mx-6 space-y-3;
+  }
+
+  .detail__description {
+    @apply order-5 mx-6 mt-6 md:mt-0 mb-12 font-serif text-lg md:col-span-2 md:pl-6 md:border-l-2 border-haze;
   }
 }
 

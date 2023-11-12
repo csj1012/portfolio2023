@@ -25,12 +25,12 @@ export default function MainMenu() {
   )
   
   return (
-    <div className="grid bg-jade main-menu-wrapper" style={{backgroundImage: `url(${bgImage})`}}>
-      <h1 className="intro__title">        
-        <Link to="/" className='hover:opacity-50'>Chelsie Johnston</Link>        
+    <div className="main-menu-wrapper" style={{backgroundImage: `url(${bgImage})`}}>
+      <h1 className="main-menu__title">        
+        <Link to="/" className='main-menu__title__link'>Chelsie Johnston</Link>        
       </h1>
       { < HeadingElement /> } 
-      <ul className='main-menu'>{menuItems}</ul>
+      <ul className='main-menu__menu'>{menuItems}</ul>
     </div>
   )
   

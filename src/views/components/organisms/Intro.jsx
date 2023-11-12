@@ -10,10 +10,10 @@ export default function Intro() {
         <p className="intro__caption">"Art Nouveau Chelsie" by Zach Henderson</p>
       </div>
       <div className="intro__copy">
-        <p className="intro__copy--special">Hi! I’m a developer with an <em>affinity for front end</em>.</p>
-        <p>My journey through code & design has been shaped by the continuous joy I find in crafting experiences that evoke emotion and connection, a passion kindled from an early start with coding at age 10.</p>
-        <p>Over the years I’ve cultivated a deep appreciation for design systems, valuing their ability to unify visual aesthetics with functional coherence and elevate the developer experience.</p>
-        <p><Link to="about" className='intro__cta'>Read about my career so far &#187;</Link></p>
+        <p className="intro__copy--special"><em>Hello! I'm a developer with a love for all things front end. A little about  me:</em></p>
+        <p>My journey through code & design has been shaped by the continuous joy I've found in crafting experiences that evoke emotion and foster a sense of connection—a passion kindled from an early start with coding at age 10.</p>
+        <p>Throughout my time as a developer I’ve cultivated a deep appreciation for design systems for their ability to marry visual and functional coherence. And on the human side of things, I'm always interested in the "hows" and "whys" of web work (and love a good retro). </p>
+        <p><Link to="about" className='intro__cta'>Check out some of my past work &#187;</Link></p>
       </div>
     </div>
   )

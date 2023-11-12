@@ -124,13 +124,13 @@
     @apply caption;
   }
   
-  .intro img {
-    @apply md:mr-4 image-border w-1/2 md:w-full rounded-sm order-2;
-    transform: scaleX(-1);
+  .intro__art {
+    @apply border-t-2 border-haze pt-6 md:pt-0 md:border-0 mt-12 md:m-4 md:mt-0 order-2 md:order-1;
   }
 
-  .intro__art {
-    @apply mt-12 md:m-4 md:mt-0 order-2 md:order-1;
+  .intro img {
+    @apply md:mr-4 image-border w-full rounded-sm order-2;
+    transform: scaleX(-1);
   }
 
   .intro__copy {

@@ -3,7 +3,7 @@ import bgImage from '@assets/images/nouveau-bg.png'
 
 export default function MainMenu() {
   const items = [    
-    { text: 'About', href: '/about' },
+    { text: 'About', href: '/' },
     { text: 'Work', href: '/work' },
     { text: 'Github', href: 'https://github.com/csj1012', external: true }
   ]

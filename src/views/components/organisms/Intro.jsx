@@ -6,7 +6,7 @@ export default function Intro() {
   return (
     <div className="intro">    
       <div className="intro__art">
-        <Image src={Nouveau} alt='art nouveau Chelsie by Zach Henderson'></Image>
+        <Image src={Nouveau} dimensions={{'height': 968, 'width': 774}} alt='art nouveau Chelsie by Zach Henderson'></Image>
         <p className="intro__caption">"Chelsie and Maurice, Art Nouveau" by Zach Henderson</p>
       </div>
       <div className="intro__copy">

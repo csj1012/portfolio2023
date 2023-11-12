@@ -7,7 +7,7 @@ export default function ProjectsMenu({ items, current }) {
   // if we're currently viewing a project, don't include it in the menu
   if (current) {
     items = items.filter((item) => item.slug !== current)
-    headingText = 'More Projects'
+    headingText = 'More Project Highlights'
   }
 
   const HeadingElement = () => <h2 className="projects__title">{headingText}</h2>
@@ -15,7 +15,7 @@ export default function ProjectsMenu({ items, current }) {
   items = items.map((item) => ({
     ...item,
     title: item.title,
-    href: `/projects/${item.slug}`,
+    href: `/work/${item.slug}`,
   }))
 
   const menuItems = items.map((item) => { 

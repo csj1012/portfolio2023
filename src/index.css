@@ -75,8 +75,7 @@
   /** MAIN MENU **/
 
   .main-menu-wrapper {
-    @apply grid bg-jade;
-    background: src('/assets/images/nouveau-bg.png');
+    @apply grid bg-jade;    
   }
 
   .main-menu__title {   

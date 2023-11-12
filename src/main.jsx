@@ -23,12 +23,12 @@ const router = createBrowserRouter([
         element: <Intro />,
       },
       {
-        path: '/projects',
+        path: '/work',
         element: <ProjectsList />,
         loader: projectsListLoader,
         children: [
           {
-            path: '/projects/:slug',
+            path: '/work/:slug',
             element: <Project />,
             loader: projectLoader,
           },

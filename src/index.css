@@ -16,6 +16,8 @@
     --main-menu-height: 70px;
   }
 
+  /** COMMON STYLES **/
+
   .title {
     @apply text-hazelight;
     @apply font-sans; 
@@ -78,8 +80,43 @@
     @apply lg:text-sm;
   }
 
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .fade-in {
+    animation: fadeIn .1s ease-in;
+  }  
+
+  /** MAIN MENU **/
+
   .main-menu-wrapper {
     @apply grid bg-jade;
+    background: src('/assets/images/nouveau-bg.png');
+  }
+
+  .main-menu__title {   
+    @apply text-hazelight/75;
+    transition: opacity .3s ease;
+    @apply font-sans; 
+    @apply text-2xl;
+    @apply font-serif; 
+    letter-spacing: 1px;
+    @apply ml-6;   
+    @apply py-6;
+   }
+ 
+   .main-menu__title__link {
+     @apply hover:opacity-50;
+   }
+
+   .main-menu__title__link:hover {
+    transition: opacity .3s ease;
   }
 
   .main-menu__menu {
@@ -105,27 +142,12 @@
     @apply border-jade border-b-2;
     @apply animate-linkHover;
   }
-
+  
   .main-menu__item a.active {
     @apply border-jade;
   }
 
-  .main-menu-wrapper {
-    background: src('/assets/images/nouveau-bg.png');
-  }
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-
-  .fade-in {
-    animation: fadeIn .1s ease-in;
-  }  
+  /** INTRO **/
 
   .intro {
     @apply fade-in;
@@ -139,34 +161,10 @@
     min-height: calc(100vh - var(--main-menu-height));
   }
 
-  .main-menu__title {   
-   @apply text-hazelight/75;
-   transition: opacity .3s ease;
-   @apply font-sans; 
-   @apply text-2xl;
-   @apply font-serif; 
-   letter-spacing: 1px;
-   @apply ml-6;   
-   @apply py-6;
-  }
-
-  .main-menu__title__link {
-    @apply hover:opacity-50;
-  }
-
   .intro__caption {
     @apply caption;
   }
   
-  .intro__title a:hover {
-    transition: opacity .3s ease;
-  }
-
-  .intro__title__highlight {
-    @apply bg-jade;
-    @apply inline-block;    
-  }
-
   .intro img {
     @apply md:mr-4;
     @apply image-border;
@@ -216,6 +214,8 @@
     @apply hover:link-hover;
   }
 
+  /** PROJECTS MENU **/
+
   .projects {
     @apply fade-in;
     @apply section;
@@ -232,14 +232,18 @@
     @apply p-6;
   }
 
+  .projects__title {    
+    @apply text-root;
+    @apply border-b-2;
+    @apply border-tomato;
+    @apply pb-2;
+    @apply lg:sticky top-0 bg-hazelight z-20;
+  }
+
   .projects__menu {
     @apply flex;
     @apply flex-col;
     @apply mt-6;
-  }
-
-  .projects__menu li {
-    order: 2;
   }
 
   .projects__menu .featured {
@@ -247,18 +251,14 @@
     @apply md:col-span-2;
   }
 
-  .projects__title {    
-    @apply text-root;
-    @apply border-b-2;
-    @apply border-tomato;
-    @apply pb-2;
-    @apply lg:sticky top-0 bg-hazelight z-10;
+  .projects__menu li {
+    order: 2;
   }
 
   .projects__menu__link {
     @apply block;
     @apply py-6;
-  }
+  }  
 
   .projects__menu__link:hover .teaser__title {
     @apply underline;
@@ -275,20 +275,22 @@
     z-index: 1;
   }
 
+  /** TEASER **/
+
   .teaser__title {
     @apply title;
     @apply text-2xl;
     @apply text-root;    
   }
 
-  .custom-rows {
+  .teaser-custom-rows {
     grid-template-rows: 1fr 4fr;
   }
 
   .teaser {
     @apply space-y-3;
     @apply lg:grid;
-    @apply lg:custom-rows;
+    @apply lg:teaser-custom-rows;
     @apply lg:grid-cols-2;
     @apply content-start;
     @apply border-b-2 border-haze pb-12;
@@ -299,7 +301,7 @@
   }
   
   .teaser__featured-chiclet {
-    @apply inline-block bg-grape text-hazelight p-1 rounded-sm absolute;
+    @apply inline-block bg-grape text-hazelight p-1 rounded-sm absolute z-10;
   }
 
   .teaser__image {
@@ -313,10 +315,6 @@
     @apply lg:mt-0;
   }
 
-  .teaser__list {
-    @apply mt-2;
-  }
-
   .featured .teaser__image-wrapper {
     @apply lg:ml-0;
   }
@@ -324,6 +322,16 @@
   .featured .teaser__title {
     @apply text-3xl lg:text-4xl;
   }
+
+  .teaser__list {
+    @apply mt-2;
+  }
+
+  .teaser__list li {
+    @apply list-chiclets;
+  }
+
+  /** DETAIL **/
 
   .detail {
     @apply grid md:grid-cols-3 md:gap-x-12 bg-hazelight m-1;
@@ -346,20 +354,18 @@
     @apply space-y-3;
   }
 
-  .detail__list li,
-  .teaser__list li {
-    @apply list-chiclets;
-  }
-
   .detail__basics__links a {
     @apply link;
     @apply text-lg lg:text-xl 2xl:text-2xl;
     @apply hover:link-hover;
   }
 
-  .detail__list,
-  .teaser__list {
+  .detail__list {
     @apply mt-2;
+  }
+
+  .detail__list li {
+    @apply list-chiclets;
   }
 
   .detail__image-wrapper {    

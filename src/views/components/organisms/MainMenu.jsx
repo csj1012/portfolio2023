@@ -1,5 +1,5 @@
 import { Link, NavLink } from 'react-router-dom'
-import bgImage from '@assets/images/nouveau-bg.png'
+import bgImage from '/assets/images/nouveau-bg.png'
 
 export default function MainMenu() {
   const items = [    

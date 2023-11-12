@@ -8,7 +8,7 @@ const src =
       title: 'CreativeGround: New England Foundation for the Arts',      
       shortDescription: 'A headless Drupal theme made with React, helping artists and patrons in New England foster creative partnerships',
       image: {
-        src: '/src/assets/images/creativeground.png',
+        src: '/assets/images/creativeground.png',
         alt: 'Image alt.',
         caption: 'Screenshot of creativeground.org'
       },
@@ -16,7 +16,7 @@ const src =
       teaser: {
         alt: 'Teaser image for CreativeGround.',
         teaser: true,
-        src: '/src/assets/images/teaser/teaser-creativeground.png'
+        src: '/assets/images/teaser/teaser-creativeground.png'
       },
       description: "We built a decoupled React front end theme for the nonprofit's Creativeground.org Drupal site, helping artists and patrons in New England foster creative partnerships.",
       techs: [
@@ -47,7 +47,7 @@ const src =
       abbreviation: 'instant-brands',
       shortDescription: 'A flexible, customizable look and feel for the Instant Brands (formerly Corelle) family of products',
       image: {
-        src: '/src/assets/images/instantbrands.png',
+        src: '/assets/images/instantbrands.png',
         alt: 'Image alt.',
         caption: 'Screenshot of instantbrands.com'
       },
@@ -55,7 +55,7 @@ const src =
       teaser: {
         alt: 'Teaser image for Instant Brands.',
         teaser: true,
-        src: '/src/assets/images/teaser/teaser-instant-brands.png'
+        src: '/assets/images/teaser/teaser-instant-brands.png'
       },
       description: "We enhanced the ecommerce site’s styling using SCSS and JS to accommodate the dynamic addition of new brands, ensuring a cohesive user experience during a pivotal sales period.",
       techs: [
@@ -83,7 +83,7 @@ const src =
       featured: true,
       shortDescription: 'Accessible, atomically-designed component library and Drupal theme for Blackboard\'s corporate rebranding effort.',
       image: {
-        src: '/src/assets/images/blackboard.png',
+        src: '/assets/images/blackboard.png',
         alt: 'Image alt.',
         caption: 'Screenshot of Blackboard.com'
       },
@@ -91,7 +91,7 @@ const src =
       teaser: {
         alt: 'Teaser image for Blackboard.',
         teaser: true,
-        src: '/src/assets/images/teaser/teaser-blackboard.png'
+        src: '/assets/images/teaser/teaser-blackboard.png'
       },
       description: "We crafted a WCAG 2.1 compliant component library and Drupal theme using atomic design principles, SCSS, Twig, and JS, leading to a lower bounce rate on the site’s homepage and an increase in free trial signups.",
       techs: [
@@ -125,7 +125,7 @@ const src =
       title: 'AMA Topic Pages',
       shortDescription: 'Drupal 8 minisites to act as a hub for the AMA to promote specialized content using AMA Style Guide elements',
       image: {
-        src: '/src/assets/images/ama-topic-pages.png',
+        src: '/assets/images/ama-topic-pages.png',
         alt: 'Image alt.',
         caption: 'A scaleable drag-and-drop interface using Drupal 8’s Layout Builder allows content editors to create unique pages for each topic. The theme needed to maintain the integrity of the design without sacrificing flexibility for editors.'
       },
@@ -133,7 +133,7 @@ const src =
       teaser: {
         alt: 'Teaser image for AMA Topic Pages.',
         teaser: true,
-        src: '/src/assets/images/teaser/teaser-ama-topic-pages.png'
+        src: '/assets/images/teaser/teaser-ama-topic-pages.png'
       },
       description: "We used the Panelizer and Panels In Place Editor contrib modules (and later, Layout Builder in a newer version of the theme) to provide an interface where editors can drag and drop custom blocks from a CMS-controlled list of block types. Need to add a Promo Block? Just drag it into place and customize it with text. We were pleased to be able to make the content team’s editing experience a little easier (a much welcomed improvement over the tedium and confusion of the previous Drupal 7 interface). ",
       techs: [
@@ -185,12 +185,12 @@ const src =
       year: '2018',
       role: 'Project Lead (v1), Front end development, design systems thinking',
       image: {
-        src: '/src/assets/images/ama-styleguides.png',
+        src: '/assets/images/ama-styleguides.png',
         alt: 'Image alt.',
         caption: 'The pattern library showcases reusable variants of design components. '
       },
       teaser: {
-        src: '/src/assets/images/teaser/teaser-ama-styleguide.png',
+        src: '/assets/images/teaser/teaser-ama-styleguide.png',
         alt: 'Image alt.'
       },
       caption: 'The pattern library showcases reusable variants of design components.'
@@ -202,12 +202,12 @@ const src =
       title: 'UChicago News',
       year: '2016',
       image: {
-        src: '/src/assets/images/uc-news.png',
+        src: '/assets/images/uc-news.png',
         alt: 'Image alt.',
         caption: 'The UChicago News home page. '
       },
       teaser: {
-        src: '/src/assets/images/teaser/teaser-uc-news.png',
+        src: '/assets/images/teaser/teaser-uc-news.png',
         alt: 'The UChicago News home page.'
       },
       techs: [
@@ -257,13 +257,13 @@ const src =
       ],
       role: 'Front end development, Drupal/module development',
       image: {
-        src: '/src/assets/images/uc-mapss.png',
+        src: '/assets/images/uc-mapss.png',
         alt: 'Image alt.',
       },
       caption: 'The MAPSS home page.',
       credits: 'University of Chicago Web Services (link)',
       teaser: {
-        src: '/src/assets/images/teaser/teaser-uc-mapss.png',
+        src: '/assets/images/teaser/teaser-uc-mapss.png',
         alt: 'Screenshot of the MAPSS home page.'
       },
     },
@@ -281,7 +281,7 @@ const src =
         'Javascript/JQuery'
       ],
       image: {
-        src: '/src/assets/images/uc-itservices.png',
+        src: '/assets/images/uc-itservices.png',
         alt: 'Image alt.',
         caption: 'The IT Services home page.'
       },
@@ -296,7 +296,7 @@ const src =
       caption: 'The IT Services home page.',
       organization: 'The University of Chicago',
       teaser: {
-        src: '/src/assets/images/teaser/teaser-uc-itservices.png',
+        src: '/assets/images/teaser/teaser-uc-itservices.png',
         alt: 'Alt text.'
       }
     },
@@ -306,7 +306,7 @@ const src =
       title: 'Horizon RPG',
       role: 'Creator, Administrator (previously), Design, Custom ExpressionEngine module development',
       image: {
-        src: '/src/assets/images/horizon.png',
+        src: '/assets/images/horizon.png',
         alt: 'A screenshot of the Horizon home page.',
         caption: 'The Horizon home page. '
       },
@@ -315,7 +315,7 @@ const src =
       caption: 'A screenshot of the Horizon home page.',
       organization: 'Personal Project',
       teaser: {
-        src: '/src/assets/images/teaser/teaser-horizon-rpg.png',
+        src: '/assets/images/teaser/teaser-horizon-rpg.png',
         alt: 'Alt text.'
       }
     },

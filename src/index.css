@@ -40,7 +40,7 @@
   }
 
   .link {
-    @apply text-jade underline underline-offset-4 font-serif text-2xl font-bold inline-block;   
+    @apply text-jade underline underline-offset-4 font-serif text-2xl inline-block;   
   }
 
   .link-hover {

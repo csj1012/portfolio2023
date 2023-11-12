@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import Image from '@components/atoms/Image'
-import Nouveau from '@assets/images/nouveau.png'
+import Nouveau from '/assets/images/nouveau.png'
 
 export default function Intro() {
   return (

@@ -3,14 +3,14 @@ import UnorderedList from '@components/atoms/UnorderedList'
 
 export default function ProjectTeaser({ title, organization, shortDescription, teaser, role, techs, featured }) {  
   return (
-    <div className="teaser border-b-2 border-haze pb-12">
+    <div className="teaser">
       <h3 className="teaser__title sr-hidden">{title} &#187;</h3>
       <h3 className="sr-only">
         Project {title} for {organization}
       </h3>
       <div className="teaser__image-wrapper">
       {featured ? (
-          <span className='teaser__featured inline-block bg-grape text-hazelight p-1 rounded-sm absolute'>Featured</span>
+          <span className='teaser__featured-chiclet'>Featured</span>
         ) : (
           ''
         )}
@@ -26,7 +26,7 @@ export default function ProjectTeaser({ title, organization, shortDescription, t
       <div>
         {shortDescription}
         {techs ? (
-          <UnorderedList items={techs} className='detail__basics__list mt-2' />
+          <UnorderedList items={techs} className='teaser__list' />
         ) : ''}
         </div>
     </div>

@@ -14,7 +14,7 @@ export default {
       hazelight: '#f8f4f6',
       jade: '#437254',
       grape: '#453f67',
-      tomato: '#6f7fb2',
+      tomato: '#52649e',
       root: '#3D3131'
       
     },

@@ -47,7 +47,7 @@ export default function ProjectDetail({
       </div>      
       <div className='detail__image-wrapper'>
         { video ? <Video src={video.src} className='detail__masthead' /> : '' }
-        <p className="text-xs">{image.caption}</p>
+        <p className="detail__masthead-caption">{image.caption}</p>
         <UnorderedList items={techs} className='detail__list' />
       </div>
       <p className='detail__short-description'>{shortDescription}</p>

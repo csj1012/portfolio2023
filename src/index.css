@@ -52,7 +52,7 @@
   }
 
   .caption {
-    @apply text-xs;
+    @apply text-xs md:text-sm m-1 mt-2;
   }
 
   .list-chiclets {
@@ -285,11 +285,15 @@
   }
 
   .detail__masthead {
-    @apply border-4;
+    @apply border-2;
     @apply border-haze;
     @apply bg-haze;
     @apply rounded-sm;
     @apply delay-700;
+  }
+
+  .detail__masthead-caption {
+    @apply caption;
   }
 
   .detail__short-description {

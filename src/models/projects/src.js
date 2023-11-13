@@ -3,14 +3,17 @@ const src =
   // or by running `node transform.js` manually.
   [
     {
-      organization: 'Last Call Media',
+      organization: {
+        name: 'Last Call Media',
+        url: 'https://lastcallmedia.com'
+      },
       id: 'creativeground',
       title: 'CreativeGround: New England Foundation for the Arts',      
-      shortDescription: 'A headless Drupal theme made with React, helping artists and patrons in New England foster creative partnerships',
+      shortDescription: 'A headless Drupal theme made with React, helping artists and patrons in New England foster creative partnerships.',
       image: {
         src: '/src/assets/images/creativeground.png',
         alt: 'Image alt.',
-        caption: 'Screenshot of creativeground.org'
+        caption: 'Desktop view of CreativeGround\'s extensive profile search filtered to show a specific subset of artist profiles.'
       },
       year: '2022',
       teaser: {
@@ -21,38 +24,51 @@ const src =
       video: {
         src: '/assets/test.mp4'
       },
-      description: "We built a decoupled React front end theme for the nonprofit's Creativeground.org Drupal site, helping artists and patrons in New England foster creative partnerships.",
+      description: [
+        'Made possible by the New England Foundation for the Arts, CreativeGround hosts online profiles for thousands of artists in a robust, searchable database.',
+        'This web app is powered by Drupal and leverages a custom headless React theme. The app allows artists to access a custom React UI to manage their profiles and promote their work. Patrons can then search the public-facing extensive digital database to find and contact artists. Meanwhile, NEFA staff administrates the profiles via the Drupal admin interface and guides artists in using the site.',
+        'The diverse nature of the content demanded a simple UI to mask its complexity. It was important to standardize artist profiles while letting their unique qualities shine. Much of the front-end work centered around the editor experience for artists: once signed in, artists can curate photo galleries, update contact information, and describe their art with ease.',
+        'This project also involved migrating from a previous version of Drupal. Our team invested considerable effort to keep the app well-organized in the process. We saved effort by using CircleCI for process automation and BackstopJS for visual regression testing. We also paid special attention to accessibility, auditing our own work closely. Amidst many moving pieces, the CreativeGround site is easy and pleasant to use.'
+      ],
+      aside: {
+        src: '/assets/images/cg-mobile.png',
+        alt: 'Mobile screenshot showing an artist-managed media gallery in a profile.',
+        caption: 'Mobile view of an artist-managed media gallery in a profile.'
+      },
       techs: [
-        'Drupal 9',
+        'Drupal',
         'React',
-        'Mannequin',        
-        'SCSS',
+        'Headless theme',
+        'Material UI',        
+        'CSS-in-JS',
         'Circle CI',
-        'Javascript',      
-        'HTML'
+        'Backstop JS',
+        'Javascript'
       ],
       role: 'Front end development',
       links: [
         {
           href: 'https://creativeground.org',
-          text: 'View a live site example'
-        },
-        {
-          href: 'https://www.lastcallmedia.com',
-          text: 'Visit Last Call Media\'s website'
+          text: 'View the live site'
         }
       ]
     }
     ,
     {
-      organization: 'Last Call Media',
+      organization: {
+        name: 'Last Call Media',
+        url: 'https://www.lastcallmedia.com'
+      },
       title: 'Instant Brands',
       abbreviation: 'instant-brands',
-      shortDescription: 'A flexible, customizable look and feel for the Instant Brands (formerly Corelle) family of products',
+      shortDescription: 'A flexible, customizable look and feel for the Instant Brands (formerly Corelle) family of products.',
       image: {
         src: '/src/assets/images/instantbrands.png',
         alt: 'Image alt.',
-        caption: 'Screenshot of instantbrands.com'
+        caption: 'The Instant family of brands (formerly Corelle Brands) required a highly robust and customizable online space to showcase products and highlight important promotions.'
+      },
+      video: {
+        src: '/assets/instantbrands.mp4'
       },
       year: '2021',
       teaser: {
@@ -88,7 +104,10 @@ const src =
       image: {
         src: '/src/assets/images/blackboard.png',
         alt: 'Image alt.',
-        caption: 'Screenshot of Blackboard.com'
+        caption: 'The rebranded corporate-facing Drupal site empowered content editors to easily keep Blackboard’s customers in the loop via their complex portfolio of marketing content.'
+      },
+      video: {
+        src: '/assets/blackboard.mp4'
       },
       year: '2020',
       teaser: {

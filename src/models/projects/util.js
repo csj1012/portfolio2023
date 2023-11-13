@@ -12,7 +12,7 @@ const toSlug = (title, abbreviation) => {
 const getImageDimensions = async (src) => {
   const readFileAsAsync = promisify(fs.readFile)
   try {
-    const data = await readFileAsAsync(`../../../public/${src}`)
+    const data = await readFileAsAsync(`../../../public${src}`)
     const dimensions = sizeOf(data)
     return dimensions
   } catch (err) {

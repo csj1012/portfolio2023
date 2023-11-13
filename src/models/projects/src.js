@@ -11,7 +11,7 @@ const src =
       title: 'CreativeGround: New England Foundation for the Arts',      
       shortDescription: 'A headless Drupal theme made with React, helping artists and patrons in New England foster creative partnerships.',
       image: {
-        src: '/src/assets/images/creativeground.png',
+        src: '/assets/images/creativeground.png',
         alt: 'Image alt.',
         caption: 'Desktop view of CreativeGround\'s extensive profile search filtered to show a specific subset of artist profiles.'
       },
@@ -19,7 +19,7 @@ const src =
       teaser: {
         alt: 'Teaser image for CreativeGround.',
         teaser: true,
-        src: '/src/assets/images/teaser/teaser-creativeground.png'
+        src: '/assets/images/teaser/teaser-creativeground.png'
       },
       video: {
         src: '/assets/creativeground.mp4'
@@ -63,7 +63,7 @@ const src =
       abbreviation: 'instant-brands',
       shortDescription: 'A flexible, customizable look and feel for the Instant Brands (formerly Corelle) family of products.',
       image: {
-        src: '/src/assets/images/instantbrands.png',
+        src: '/assets/images/instantbrands.png',
         alt: 'Image alt.',
         caption: 'The Instant family of brands (formerly Corelle Brands) required a highly robust and customizable online space to showcase products and highlight important promotions.'
       },
@@ -74,7 +74,7 @@ const src =
       teaser: {
         alt: 'Teaser image for Instant Brands.',
         teaser: true,
-        src: '/src/assets/images/teaser/teaser-instant-brands.png'
+        src: '/assets/images/teaser/teaser-instant-brands.png'
       },
       description: [
         "We enhanced the ecommerce site’s styling using SCSS and JS to accommodate the dynamic addition of new brands, ensuring a cohesive user experience during a pivotal sales period."
@@ -107,7 +107,7 @@ const src =
       featured: true,
       shortDescription: 'Accessible, atomically-designed component library and Drupal theme for Blackboard\'s corporate rebranding effort.',
       image: {
-        src: '/src/assets/images/blackboard.png',
+        src: '/assets/images/blackboard.png',
         alt: 'Image alt.',
         caption: 'The rebranded corporate-facing Drupal site empowered content editors to easily keep Blackboard’s customers in the loop via their complex portfolio of marketing content.'
       },
@@ -118,7 +118,7 @@ const src =
       teaser: {
         alt: 'Teaser image for Blackboard.',
         teaser: true,
-        src: '/src/assets/images/teaser/teaser-blackboard.png'
+        src: '/assets/images/teaser/teaser-blackboard.png'
       },
       description: [
         "Blackboard's corporate website educates clients about their expanding range of platform services. Our team's work involved migrating the site to a new major version of Drupal, as well as executing a major rebrand. To this end, we crafted a WCAG 2.1 compliant component library and Drupal theme using atomic design principles.",
@@ -155,7 +155,7 @@ const src =
       title: 'AMA Topic Pages and Style Guide',
       shortDescription: 'Drupal 8 minisites to act as a hub for the American Medical Association to promote specialized content using a bespoke pattern library.',
       image: {
-        src: '/src/assets/images/ama-topic-pages.png',
+        src: '/assets/images/ama-topic-pages.png',
         alt: 'Image alt.',
         caption: 'A scaleable drag-and-drop interface using Drupal 8’s Layout Builder allows content editors to create unique pages for each topic. The theme needed to maintain the integrity of the design without sacrificing flexibility for editors.'
       },
@@ -166,7 +166,7 @@ const src =
       teaser: {
         alt: 'Teaser image for AMA Topic Pages.',
         teaser: true,
-        src: '/src/assets/images/teaser/teaser-ama-styleguide.png',
+        src: '/assets/images/teaser/teaser-ama-styleguide.png',
       },
       role: 'Project Lead (v1), Front end development',
       description: [
@@ -212,12 +212,12 @@ const src =
       title: 'UChicago News',
       year: '2016',
       image: {
-        src: '/src/assets/images/uc-news.png',
+        src: '/assets/images/uc-news.png',
         alt: 'Image alt.',
         caption: 'The UChicago News home page. '
       },
       teaser: {
-        src: '/src/assets/images/teaser/teaser-uc-news.png',
+        src: '/assets/images/teaser/teaser-uc-news.png',
         alt: 'The UChicago News home page.'
       },
       video: {

@@ -52,19 +52,19 @@ export default function ProjectDetail({
       </div>
       <p className='detail__short-description'>{shortDescription}</p>
       <aside className='detail__aside'>
-      <p className='detail__aside__partnership'>In partnership with <Link to={orgUrl}>{orgName}</Link></p>
-        { credits ? (
-          <p>Special thanks to: {credits}</p>
-        ) : ''}
-        {aside ? 
-          <div>
-            <Image {...aside} /> 
+      {aside ? 
+          <div className='border-haze p-3'>
+            <Image {...aside} className='border-2 border-haze ' /> 
             <p className='detail__aside__caption'>{aside.caption}</p>
           </div>
-        : ''}     
+        : ''}       
       </aside>
       <div className='detail__description'>
-        { description ? Description() : '' }
+        { description ? Description() : '' }   
+        <p className='detail__aside__partnership'>In partnership with <Link to={orgUrl}>{orgName}</Link></p>
+        { credits ? (
+          <p>Special thanks to: {credits}</p>
+        ) : ''} 
       </div>      
     </div>
   )

@@ -24,9 +24,10 @@ const getImageDimensions = async (src) => {
 const buildImage = async (img, title) => {
   const { alt, caption } = img
   const src = img.src || `${toSlug(title)}.png`
+  const webp = src.replace(/\.png$/i, '.webp')
   try {
     const dimensions = await getImageDimensions(src)
-    return { src, alt, caption, dimensions }
+    return { src, alt, caption, dimensions, webp }
   } catch (error) {
     console.error(error);
   }  

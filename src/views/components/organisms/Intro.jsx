@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom'
 import Image from '@components/atoms/Image'
-import Nouveau from '/assets/images/nouveau.png'
+import NouveauPNG from '/assets/images/nouveau.png'
+import NouveauWebP from '/assets/images/nouveau.webp'
 
 export default function Intro() {
   return (
     <div className="intro">    
       <div className="intro__art">
-        <Image src={Nouveau} dimensions={{'height': 968, 'width': 774}} alt='art nouveau Chelsie by Zach Henderson'></Image>
+        <Image src={NouveauPNG} webp={NouveauWebP} dimensions={{'height': 968, 'width': 774}} alt='art nouveau Chelsie by Zach Henderson'></Image>
         <p className="intro__caption">"Chelsie and Maurice, Art Nouveau" by Zach Henderson</p>
       </div>
       <div className="intro__copy">

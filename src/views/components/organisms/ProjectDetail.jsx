@@ -39,8 +39,16 @@ export default function ProjectDetail({
         { credits ? (
           <p>Special thanks to: {credits}</p>
         ) : ''}
-      </div>
-      <div className='detail__description'>{description}</div>      
+        {aside ? 
+          <div>
+            <Image {...aside} /> 
+            <p className='detail__aside__caption'>{aside.caption}</p>
+          </div>
+        : ''}     
+      </aside>
+      <div className='detail__description'>
+        { description ? Description() : '' }
+      </div>      
     </div>
   )
 }

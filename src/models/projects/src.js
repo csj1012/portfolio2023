@@ -96,11 +96,7 @@ const src =
       links: [
         {
           href: 'https://www.instantbrands.com',
-          text: 'View a live site example'
-        },
-        {
-          href: 'https://www.lastcallmedia.com',
-          text: 'Visit Last Call Media\'s website'
+          text: 'View the live site'
         }
       ]
     },
@@ -112,7 +108,7 @@ const src =
       title: 'Blackboard Corporate Rebrand',
       abbreviation: 'blackboard',
       featured: true,
-      shortDescription: 'Accessible, atomically-designed component library and Drupal theme for Blackboard\'s corporate rebranding effort.',
+      shortDescription: 'An accessible, atomically-designed component library and Drupal theme for Blackboard\'s corporate rebranding effort.',
       image: {
         src: '/assets/images/blackboard.png',
         alt: 'Image alt.',
@@ -163,7 +159,10 @@ const src =
       ]
     },
     {
-      organization: 'American Medical Association',
+      organization: {
+        name: 'The American Medical Association',
+        url: 'https://ama-assn.org'
+      },
       title: 'AMA Topic Pages and Style Guide',
       shortDescription: 'Drupal 8 minisites to act as a hub for the American Medical Association to promote specialized content using a bespoke pattern library.',
       image: {
@@ -208,7 +207,11 @@ const src =
       links: [
         {
           href: 'https://www.ama-assn.org/topic/advocating-patients-and-physicians',
-          text: 'View a live site example'
+          text: 'View the live site'
+        },
+        {
+          href: 'https://americanmedicalassociation.github.io/AMA-style-guide/',
+          text: 'View the PatternLab instance on Github Pages'
         },
         {
           href: 'https://www.drupal.org/case-study/american-medical-association-topics-pages',
@@ -217,17 +220,16 @@ const src =
         {
           href: 'https://www.midcamp.org/topic/american-medical-association-topic-landing-pages-d8-case-study',
           text: 'Watch the Midcamp 2018 talk about this project'
-        },
-        {
-          href: 'https://americanmedicalassociation.github.io/AMA-style-guide/',
-          text: 'View the PatternLab instance on Github Pages'
         }
       ]
     },
     {
       id: 'university-of-chicago-news',
-      organization: 'The University of Chicago, Web Services',
-      shortDescription: 'D6 to D7 migration project encompassing a total website redesign and major content reorganization',
+      organization: {
+        name: 'The University of Chicago',
+        url: 'https://uchicago.edu'
+      },
+      shortDescription: 'A Drupal 6 to Drupal 7 migration project encompassing a total website redesign and major content reorganization.',
       title: 'UChicago News',
       year: '2016',
       image: {
@@ -275,7 +277,7 @@ const src =
           text: 'Read the Drupal.org case study about this project'
         }
       ],
-      credits: 'University of Chicago Web Services (link)',
+      credits: 'UChicago Web Services',
     }
   ]
 

@@ -11,7 +11,7 @@ export default defineConfig({
       '@controllers': path.resolve('/src/controllers'),
       '@routes': path.resolve('/src/controllers/routes'),
       '@views': path.resolve('/src/views'),
-      '@components': path.resolve('/src/views/components')
+      '@components': path.resolve('/src/views/components'),
     }
   }
 })

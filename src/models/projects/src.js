@@ -235,7 +235,7 @@ const src =
       image: {
         src: '/assets/images/uc-news.png',
         alt: 'Image alt.',
-        caption: 'The UChicago News home page. '
+        caption: 'The UChicago News home page (Wayback Machine).'
       },
       teaser: {
         src: '/assets/images/teaser/teaser-uc-news.png',

@@ -44,6 +44,10 @@ export async function buildItem(item) {
       item.teaser = await buildImage(teaser, title)
     }
 
+    if (item.aside) {
+      item.aside = await buildImage(aside, title)
+    }
+
     const project = {
       slug: toSlug(title, abbreviation),       
       ...item,

@@ -340,6 +340,22 @@
     left: 0;
   }
 
+  .video__control {
+    @apply w-full h-full absolute top-0 z-40;
+  }
+
+  .video__control:hover .video__buttons img {
+    @apply opacity-100;
+  }
+
+  .video__control img {
+    @apply opacity-60;
+  }
+
+  .video__buttons {
+    @apply top-0 left-0 absolute bg-haze text-root p-2 inline-block rounded-sm w-14 h-14 items-center flex justify-center;
+  }
+
   picture {
     @apply block;
   }

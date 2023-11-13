@@ -33,7 +33,7 @@ const buildImage = async (img, title) => {
 
 export async function buildItem(item) {
   try {
-    const { image, teaser, title, abbreviation } = item
+    const { image, teaser, title, abbreviation, aside } = item
     if (item.image) {
       item.image = await buildImage(image, title)
     }

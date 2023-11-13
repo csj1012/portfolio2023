@@ -7,6 +7,10 @@ const src =
         name: 'Last Call Media',
         url: 'https://lastcallmedia.com'
       },
+      organization: {
+        name: 'Last Call Media',
+        url: 'https://lastcallmedia.com'
+      },
       id: 'creativeground',
       title: 'CreativeGround: New England Foundation for the Arts',      
       shortDescription: 'A headless Drupal theme made with React, helping artists and patrons in New England foster creative partnerships.',

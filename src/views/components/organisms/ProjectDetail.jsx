@@ -1,16 +1,20 @@
 import Image from '@components/atoms/Image'
-import UnorderedList from '../atoms/UnorderedList'
+import Video from '@components/atoms/Video'
+import UnorderedList from '@components/atoms/UnorderedList'
+import { Link } from 'react-router-dom'
 
 export default function ProjectDetail({
   title,
   organization,
   shortDescription,  
   image,
+  video,
   techs,
   role,
   links,
   credits,
-  description
+  description,
+  aside
 }) {
   const linkList = (links) => {
     const list = []
@@ -20,6 +24,20 @@ export default function ProjectDetail({
     return list
   }
 
+  console.log(description)
+
+  function Description() {
+    return (
+      description.map((item, index) => (
+        <p key={index}>{item}</p>
+      ))
+    )
+  }
+  
+  const orgName = organization.name
+  const orgUrl = organization.url
+
+
   return (
     <div className='detail'>
       <div className='detail__basics'>
@@ -28,14 +46,14 @@ export default function ProjectDetail({
         <UnorderedList items={linkList(links)} className='detail__basics__links' />
       </div>      
       <div className='detail__image-wrapper'>
-        {image ? <Image {...image} className='detail__masthead' /> : ''}
+        {/* {image ? <Image {...image} className='detail__masthead' /> : ''} */}
+        { video ? <Video src={video.src} className='detail__masthead' /> : '' }
         <p className="text-xs">{image.caption}</p>
         <UnorderedList items={techs} className='detail__list' />
       </div>
-      
       <p className='detail__short-description'>{shortDescription}</p>
-      <div className='detail__credits'>
-        <p>In partnership with {organization}</p>
+      <aside className='detail__aside'>
+      <p className='detail__aside__partnership'>In partnership with <Link to={orgUrl}>{orgName}</Link></p>
         { credits ? (
           <p>Special thanks to: {credits}</p>
         ) : ''}

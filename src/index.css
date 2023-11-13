@@ -244,7 +244,7 @@
   /** DETAIL **/
 
   .detail {
-    @apply grid md:grid-cols-3 md:gap-x-12 bg-hazelight m-1 fade-in;
+    @apply grid md:grid-cols-3 md:gap-x-12 bg-hazelight m-1 mb-12 fade-in;
   }
 
   .detail__basics {
@@ -284,6 +284,10 @@
   }
 
   .detail__masthead {
+    @apply border-4;
+    @apply border-haze;
+    @apply bg-[#fff];
+    @apply rounded-sm;
     @apply delay-700;
   }
 
@@ -291,12 +295,43 @@
     @apply special order-3 my-12 mx-6 text-2xl 2xl:text-3xl md:col-span-3 italic text-root border-y-2 border-haze py-8;
   }
 
-  .detail__credits {
-    @apply order-4 mx-6 space-y-3;
+  .detail__aside {
+    @apply order-5 md:order-4 mx-6 space-y-3;
+  }
+
+  .detail__aside img {
+    @apply border-4;
+    @apply border-haze;
+  }
+
+  .detail__aside__caption {
+    @apply caption;
+  }
+
+  .detail__aside__partnership {
+    @apply mb-6;
+  }
+
+  .detail__aside__partnership a {
+    @apply text-jade;
+    @apply underline;
+    @apply underline-offset-2;
+    @apply hover:no-underline;
   }
 
   .detail__description {
-    @apply order-5 mx-6 mt-6 md:mt-0 mb-12 font-serif text-lg md:col-span-2 md:pl-6 md:border-l-2 border-haze;
+    @apply max-w-prose order-4 md:order-5 mx-6 md:mt-6 md:mt-0 mb-12 text-base md:col-span-2 md:pl-6 md:border-l-2 border-haze space-y-6 font-sans  border-b-2 border-haze md:border-0 pb-6 md:pb-0;
+  }
+
+  .player-wrapper {
+    position: relative;
+    padding-top: 56.25%; /* Player ratio: 100 / (1280 / 720) */
+  }
+  
+  .react-player {
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 }
 

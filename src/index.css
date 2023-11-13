@@ -286,7 +286,7 @@
   .detail__masthead {
     @apply border-4;
     @apply border-haze;
-    @apply bg-[#fff];
+    @apply bg-haze;
     @apply rounded-sm;
     @apply delay-700;
   }

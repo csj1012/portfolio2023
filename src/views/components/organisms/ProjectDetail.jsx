@@ -46,7 +46,6 @@ export default function ProjectDetail({
         <UnorderedList items={linkList(links)} className='detail__basics__links' />
       </div>      
       <div className='detail__image-wrapper'>
-        {/* {image ? <Image {...image} className='detail__masthead' /> : ''} */}
         { video ? <Video src={video.src} className='detail__masthead' /> : '' }
         <p className="text-xs">{image.caption}</p>
         <UnorderedList items={techs} className='detail__list' />

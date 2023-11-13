@@ -65,7 +65,7 @@ const src =
       image: {
         src: '/assets/images/instantbrands.png',
         alt: 'Image alt.',
-        caption: 'The Instant family of brands (formerly Corelle Brands) required a highly robust and customizable online space to showcase products and highlight important promotions.'
+        caption: 'We enhanced Instant Brands\' ecommerce site theming to accommodate the dynamic addition of new brands, ensuring a cohesive user experience during a pivotal sales period.'
       },
       video: {
         src: '/assets/instantbrands.mp4'
@@ -76,8 +76,15 @@ const src =
         teaser: true,
         src: '/assets/images/teaser/teaser-instant-brands.png'
       },
+      aside: {
+        src: '/assets/images/ib-tablet.png',
+        alt: 'Tablet screenshot showing a product page and sale masthead.',
+        caption: 'Tablet screenshot showing an Instant Brands product page and sale masthead.'
+      },
       description: [
-        "We enhanced the ecommerce site’s styling using SCSS and JS to accommodate the dynamic addition of new brands, ensuring a cohesive user experience during a pivotal sales period."
+        'Instant Brands, which encompasses seven distinct brands, wanted to simplify their marketing approach. They needed to keep each brand\'s e-commerce site visually unique. At the same time, the sites needed to be interconnected for ease of publication and management. Each site was also the source for customer support info, so it was crucial to display data in an organized manner.',
+        'A wide variety of content required a theming overhaul to make everything consistent. With product manuals, warranty information, and product purchase points added into the mix, the site’s once-organized, SMACSS-based codebase had grown difficult to maintain. Mismatched styles were the norm rather than the exception. We worked to streamline the existing Drupal subtheme structure, sharing template files across brand multisites while unique stylesheets and template overrides defined each brand\'s more individual look and feel.',
+        'At the end of this effort, customers could effortlessly locate and compare different models, and marketers could efficiently execute campaigns for brands and promote sales across the entire family.'
       ],
       techs: [
         'Drupal 8',        
@@ -119,6 +126,11 @@ const src =
         alt: 'Teaser image for Blackboard.',
         teaser: true,
         src: '/assets/images/teaser/teaser-blackboard.png'
+      },
+      aside: {
+        src: '/assets/images/blackboard-mobile.png',
+        alt: 'Mobile screenshot.',
+        caption: 'Mobile screenshot of Blackboard.com.'
       },
       description: [
         "Blackboard's corporate website educates clients about their expanding range of platform services. Our team's work involved migrating the site to a new major version of Drupal, as well as executing a major rebrand. To this end, we crafted a WCAG 2.1 compliant component library and Drupal theme using atomic design principles.",
@@ -168,9 +180,16 @@ const src =
         teaser: true,
         src: '/assets/images/teaser/teaser-ama-styleguide.png',
       },
+      aside: {
+        src: '/assets/images/ama-mobile.png',
+        alt: 'Mobile screenshot of the AMA\'s PatternLab instance',
+        caption: 'Mobile screenshot of the AMA\'s PatternLab instance.'
+      },
       role: 'Project Lead (v1), Front end development',
       description: [
-        "We used the Panelizer and Panels In Place Editor contrib modules (and later, Layout Builder in a newer version of the theme) to provide an interface where editors can drag and drop custom blocks from a CMS-controlled list of block types. Need to add a Promo Block? Just drag it into place and customize it with text. We were pleased to be able to make the content team’s editing experience a little easier (a much welcomed improvement over the tedium and confusion of the previous Drupal 7 interface)."
+        "The American Medical Association provides medical professionals and the public with quality information about the latest topics in medicine. Our goal as their in-house team was to build, in addition to a new theme for their massive Drupal site, a component library that could be absorbed into digital projects organization-wide.",
+        "We started with a component library, built in Pattern Lab. This \"living style guide\" (not to be confused with the AMA manual of style!) was created in a directory alongside the Drupal implementation. From there, the custom Drupal theme imported the template files. Template files were built to be flexible in displaying both Twig example data in PatternLab and and real data in the Drupal theme. This added some overhead to the development process, but the payoff was a strict level of visual consistency across both places that used the code. A strong adherence to best practices for writing CSS helped the team write better quality code that was more easily maintainable.",
+        "On the Drupal implementation side, we used the Panelizer and Panels In Place Editor contrib modules (and later, Layout Builder in a newer version of the theme) to provide an interface where editors can drag and drop custom blocks from a CMS-controlled list of block types. Need to add a Promo Block? Just drag it into place and customize it with text. We were pleased to be able to make the content team’s editing experience a little easier (a much welcomed improvement over the tedium and confusion of the previous Drupal 7 interface)."
       ],
       techs: [
         'Drupal 8',
@@ -223,6 +242,11 @@ const src =
       video: {
         src: '/assets/news.mp4'
       },
+      aside: {
+        src: '/assets/images/news-mobile.png',
+        alt: 'Mobile screenshot of an article on the UChicago news site',
+        caption: 'Mobile screenshot of an article on the UChicago news site.'
+      },
       techs: [
         'Rapid prototyping',
         'Adobe Photoshop',
@@ -233,6 +257,7 @@ const src =
         'PHP',
         'Javascript/JQuery'
       ],
+      
       description: [
         'Our main design goal was to give the site a sleek, responsive look that allowed the client to feature big stories in a captivating way.',
         'This design phase spanned two months. I worked closely (usually hands-on in Photoshop) with the client over a series of eight weekly meetings. Meeting with the clients one-on-one was at times exhausting for both parties, but we made tangible progress quickly. We could answer questions and test drive ideas easily in person, avoiding email back-and-forth that might take days otherwise. In meetings, we focused on solidifying the basic layout first, and then built up the brand\'s look and feel (working in conjunction with the University’s existing brand guidelines). We did this by beginning with low-fi, grayscale mockups to represent layout and Style Tiles to represent look and feel, and worked our way up to detailed, colorful comps.',

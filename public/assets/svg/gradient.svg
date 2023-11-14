@@ -10,4 +10,4 @@
           0 1 0 0 0
           0 0 1 0 0
           0 0 0 19 -11"></feColorMatrix>
-  </filter></defs><g><rect width="100%" height="100%" fill="#dfd4d8"></rect><rect width="100%" height="100%" fill="url(#gggrain-gradient3)"></rect><rect width="100%" height="100%" fill="url(#gggrain-gradient2)"></rect><rect width="100%" height="100%" fill="transparent" filter="url(#gggrain-filter)" opacity="0.34" style="mix-blend-mode: soft-light"></rect></g></svg>
+  </filter></defs><g><rect width="100%" height="100%" fill="#dfd4d8"></rect><rect width="100%" height="100%" fill="url(#gggrain-gradient3)"></rect><rect width="100%" height="100%" fill="url(#gggrain-gradient2)"></rect><rect width="100%" height="100%" fill="transparent" filter="url(#gggrain-filter)" opacity="0.23" style="mix-blend-mode: soft-light"></rect></g></svg>

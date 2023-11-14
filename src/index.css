@@ -373,7 +373,7 @@
   }
 
   .workstyle { 
-    @apply inset-wrapper px-0 mt-6 md:pb-12 font-serif text-root text-2xl bg-haze rounded-sm border-2 border-grape/10 md:border-l-2 space-y-8; 
+    @apply inset-wrapper px-0 mt-6 md:pb-12 font-serif text-root text-2xl bg-haze rounded-sm space-y-8; 
   }
 
   .workstyle p {

@@ -1,6 +1,5 @@
 import { Link, NavLink } from 'react-router-dom'
 import bgImage from '/assets/images/nouveau-bg.png'
-import gradient from '/assets/svg/gradient.svg'
 
 export default function MainMenu() {
   const items = [    

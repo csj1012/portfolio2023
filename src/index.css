@@ -363,9 +363,13 @@
   picture {
     @apply block;
   }
+  
+  .footer-wrapper {
+    @apply tracking-wide h-full flex font-sans text-xs justify-center bg-hazelight text-root/75 border-t-2 border-haze;
+  }
 
-  .footer {
-    /* margin-top: auto; */
+  .footer__heart {
+    @apply w-[12px] fill-root/50 inline-block mb-[3px];
   }
 }
 

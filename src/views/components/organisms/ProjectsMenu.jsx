@@ -1,4 +1,6 @@
 import ProjectTeaser from '@components/organisms/ProjectTeaser'
+import WorkStyle from '@components/organisms/WorkStyle'
+import gradient from '/assets/svg/gradient.svg'
 import { NavLink } from 'react-router-dom'
 
 export default function ProjectsMenu({ items, current }) {
@@ -30,11 +32,12 @@ export default function ProjectsMenu({ items, current }) {
   })
 
   return (
-    <section className="projects">
+    <section className="projects" style={{backgroundImage: `url(${gradient})`}}>
       <span className="projects--inset-wrapper">
         { < HeadingElement /> } 
         <ul className='projects__menu'>{menuItems}</ul>
       </span>      
+      <WorkStyle />
     </section>
   )
 }

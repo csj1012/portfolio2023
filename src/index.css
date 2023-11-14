@@ -59,6 +59,10 @@
     @apply inline-block bg-tomato rounded-sm text-[#faf8f9] p-1 m-1 text-xs lg:text-base lg:text-sm;
   }
 
+  .inset-wrapper {
+    @apply p-6 rounded-sm;
+  }
+
   @keyframes fadeIn {
     from {
       opacity: 0;
@@ -70,7 +74,7 @@
 
   .fade-in {
     animation: fadeIn .1s ease-in;
-  }  
+  } 
 
   /** MAIN MENU **/
 
@@ -101,7 +105,7 @@
   }
 
   .main-menu__item a {
-    @apply animate-linkHover border-haze border-b-2;
+    @apply animate-linkHover border-hazelight/50 border-b-2;
   }
 
   .main-menu__item a:hover {
@@ -133,7 +137,7 @@
   }
 
   .intro__copy {
-    @apply text-root space-y-8 md:pt-0 font-serif text-2xl md:col-span-2 md:border-l-2 border-haze md:pl-6 order-1;
+    @apply text-root space-y-8 md:pt-0 font-serif text-2xl max-w-prose md:col-span-2 md:border-l-2 border-haze md:pl-6 order-1;
   }
 
   .intro__copy--special {
@@ -151,7 +155,7 @@
   /** PROJECTS MENU **/
 
   .projects {
-    @apply fade-in section bg-hazelight;
+    @apply fade-in section bg-hazelight bg-cover;
   }
 
   .detail + .projects {
@@ -159,7 +163,7 @@
   }
 
   .projects--inset-wrapper {
-    @apply block bg-hazelight p-6 rounded-sm;
+    @apply inset-wrapper block bg-hazelight;
   }
 
   .projects__title {    
@@ -176,6 +180,10 @@
 
   .projects__menu li {
     order: 2;
+  }
+
+  .projects__menu li:last-child .teaser {
+    @apply border-0;
   }
 
   .projects__menu__link {
@@ -363,7 +371,30 @@
   picture {
     @apply block;
   }
+
+  .workstyle { 
+    @apply inset-wrapper px-0 mt-6 md:pb-12 font-serif text-root text-2xl bg-haze rounded-sm border-2 border-grape/10 md:border-l-2 space-y-8; 
+  }
+
+  .workstyle p {
+    @apply col-span-3 md:col-span-1;
+  }
   
+  .workstyle ul {
+    list-style-type: square;
+    text-indent: -1.8rem;
+    margin-left: 1.8rem;
+    @apply max-w-prose col-span-3 md:col-span-2 text-xl space-y-3 list-inside;
+  }
+
+  .workstyle--inset-wrapper {
+    @apply bg-haze inset-wrapper space-y-8 grid grid-cols-3 md:gap-x-10;
+  }
+
+  .workstyle__title {
+    @apply col-span-3 font-sans text-base text-root border-b-2 border-root/70 pb-2 lg:sticky top-0 bg-haze z-20;
+  }
+
   .footer-wrapper {
     @apply tracking-wide h-full flex font-sans text-xs justify-center bg-hazelight text-root/75 border-t-2 border-haze;
   }

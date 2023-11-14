@@ -1,4 +1,5 @@
-import { Layout, Header, Nav, Main } from '@components/templates/Layout'
+import { Layout, Header, Nav, Main, Footer } from '@components/templates/Layout'
+import FooterBar from '@components/organisms/Footer'
 import MainMenu from '@components/organisms/MainMenu'
 import { ScrollRestoration } from 'react-router-dom'
 
@@ -14,6 +15,9 @@ export default function RootPage({ outlet }) {
       <Main>        
         { outlet }
       </Main>
+      <Footer>
+        <FooterBar />
+      </Footer>
     </Layout>
   )
 }

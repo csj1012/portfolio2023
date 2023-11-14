@@ -13,14 +13,14 @@
 @layer base {
   body {    
     @apply bg-hazelight font-body text-root font-sans;
+    grid-template-rows: 1fr auto;
   }
 }
 
 @layer components {
-  :root {
-    --main-menu-height: 70px;
+  #root {
+    @apply grid min-h-[100vh];
   }
-
   /** COMMON STYLES **/
 
   .title {
@@ -56,7 +56,7 @@
   }
 
   .list-chiclets {
-    @apply inline-block bg-tomato rounded-sm text-hazelight p-1 m-1 text-xs lg:text-base lg:text-sm;
+    @apply inline-block bg-tomato rounded-sm text-[#faf8f9] p-1 m-1 text-xs lg:text-base lg:text-sm;
   }
 
   @keyframes fadeIn {
@@ -93,7 +93,7 @@
   }
 
   .main-menu__menu {
-    @apply flex justify-center md:justify-end px-3 bg-haze h-[--intro-height];
+    @apply flex justify-center md:justify-end px-3 bg-haze;
   }
 
   .main-menu__item {
@@ -116,7 +116,7 @@
 
   .intro {
     @apply fade-in section flex flex-col md:grid md:grid-cols-3 bg-hazelight border-haze;
-    min-height: calc(100vh - var(--main-menu-height));
+    /* min-height: calc(100vh - var(--main-menu-height)); */
   }
 
   .intro__caption {
@@ -159,7 +159,7 @@
   }
 
   .projects--inset-wrapper {
-    @apply block bg-hazelight p-6;
+    @apply block bg-hazelight p-6 rounded-sm;
   }
 
   .projects__title {    
@@ -245,7 +245,7 @@
   /** DETAIL **/
 
   .detail {
-    @apply grid grid-cols-2 md:grid-cols-6 bg-hazelight m-1 mb-12 fade-in;
+    @apply grid grid-cols-2 md:grid-cols-6 bg-hazelight m-1 mb-12 fade-in rounded-sm;
   }
 
   .detail__basics {
@@ -362,6 +362,10 @@
 
   picture {
     @apply block;
+  }
+
+  .footer {
+    /* margin-top: auto; */
   }
 }
 

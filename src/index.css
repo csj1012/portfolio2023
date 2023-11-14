@@ -79,7 +79,7 @@
   /** MAIN MENU **/
 
   .main-menu-wrapper {
-    @apply grid bg-jade;    
+    @apply grid bg-jade border-b-[1px] border-[#d4c7cb];    
   }
 
   .main-menu__title {   
@@ -105,7 +105,7 @@
   }
 
   .main-menu__item a {
-    @apply animate-linkHover border-hazelight/50 border-b-2;
+    @apply animate-linkHover border-haze border-b-2;
   }
 
   .main-menu__item a:hover {
@@ -396,7 +396,7 @@
   }
 
   .footer-wrapper {
-    @apply tracking-wide h-full flex font-sans text-xs justify-center bg-hazelight text-root/75 border-t-2 border-haze;
+    @apply tracking-wide h-full flex font-sans text-xs justify-center bg-hazelight text-root/75 border-t-[1px] border-haze;
   }
 
   .footer__heart {

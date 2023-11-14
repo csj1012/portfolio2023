@@ -36,18 +36,18 @@ export default function ProjectDetail({
   const orgUrl = organization.url
 
   return (
-    <div className='detail'>
-      <div className='detail__basics'>
+    <article className='detail'>
+      <section className='detail__basics'>
         <h2 className='detail__basics__title'>{title}</h2>
         <p className='detail__basics__involvement'>Involvement: {role}</p>        
         <UnorderedList items={linkList(links)} className='detail__basics__links' />
-      </div>      
-      <div className='detail__image-wrapper'>
+      </section>      
+      <aside className='detail__image-wrapper'>
         { video ? <Video src={video.src} className='detail__masthead' /> : '' }
         <p className="detail__masthead-caption">{image.caption}</p>
         <UnorderedList items={techs} className='detail__list' />
-      </div>
-      <p className='detail__short-description'>{shortDescription}</p>
+      </aside>
+      <aside className='detail__short-description'>{shortDescription}</aside>
       <aside className='detail__aside'>
       {aside ? 
           <div className='border-haze p-3'>
@@ -56,13 +56,13 @@ export default function ProjectDetail({
           </div>
         : ''}       
       </aside>
-      <div className='detail__description'>
+      <section className='detail__description'>
         { description ? Description() : '' }   
         <p className='detail__aside__partnership'>In partnership with <Link to={orgUrl}>{orgName}</Link></p>
         { credits ? (
           <p>Special thanks to: {credits}</p>
         ) : ''} 
-      </div>      
-    </div>
+      </section>      
+    </article>
   )
 }

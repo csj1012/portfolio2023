@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createHashRouter, RouterProvider } from 'react-router-dom'
 import Root from '@routes/root'
 import Error from '@routes/error'
 import Intro from '@components/organisms/Intro'
@@ -8,7 +8,7 @@ import Project, { loader as projectLoader } from './controllers/routes/project'
 import ProjectsList, { loader as projectsListLoader } from './controllers/routes/projectsList'
 import '/src/index.css'
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: '/',
     element: <Root />,

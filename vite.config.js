@@ -5,13 +5,14 @@ import path from 'path'
 // https://vitejs.dev/config/
 export default defineConfig({  
   plugins: [react()],
+  base: '/portfolio2023/',
   resolve: {
     alias: {
-      '@models': path.resolve('/src/models'),
-      '@controllers': path.resolve('/src/controllers'),
-      '@routes': path.resolve('/src/controllers/routes'),
-      '@views': path.resolve('/src/views'),
-      '@components': path.resolve('/src/views/components'),
+      '@models': path.resolve('src/models'),
+      '@controllers': path.resolve('src/controllers'),
+      '@routes': path.resolve('src/controllers/routes'),
+      '@views': path.resolve('src/views'),
+      '@components': path.resolve('src/views/components'),
     }
   }
 })

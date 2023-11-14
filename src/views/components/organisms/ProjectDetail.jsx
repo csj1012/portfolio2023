@@ -24,8 +24,6 @@ export default function ProjectDetail({
     return list
   }
 
-  console.log(description)
-
   function Description() {
     return (
       description.map((item, index) => (
@@ -36,7 +34,6 @@ export default function ProjectDetail({
   
   const orgName = organization.name
   const orgUrl = organization.url
-
 
   return (
     <div className='detail'>

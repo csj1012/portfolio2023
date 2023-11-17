@@ -5,7 +5,7 @@ export default function WorkStyle() {
     <aside className='workstyle'>
       <div className='workstyle--inset-wrapper'>
       <h2 className='workstyle__title'>How I Work</h2>
-      <p className='workstyle_intro'>My favorite teams to be part of are ones made of people who consciously:</p>
+      <p className='workstyle__intro'>My favorite teams to be part of are ones made of people who consciously:</p>
       <ul>
         <li>Lead by example (and team building exercises)</li>
         <li>Maintain clean, sensible markup and styling (using BEM, SMACSS, modular CSS—whichever methodology fits the project)</li>

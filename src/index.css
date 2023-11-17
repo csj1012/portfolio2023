@@ -170,7 +170,7 @@
     @apply font-sans text-lg md:text-base lg:text-xl;
   }
 
-  .contact__info li {
+  .contact__info a {
     @apply link text-xl lg:text-2xl hover:no-underline;
   }
 
@@ -403,10 +403,10 @@
   }
 
   .workstyle { 
-    @apply inset-wrapper px-0 mt-6 md:pb-12 font-serif text-root text-2xl bg-haze rounded-sm space-y-8; 
+    @apply inset-wrapper px-0 mt-6 pb-0 font-serif text-root text-2xl bg-haze rounded-sm space-y-8; 
   }
 
-  .workstyle p {
+  .workstyle__intro {
     @apply col-span-3 md:col-span-1;
   }
   
@@ -415,6 +415,14 @@
     text-indent: -1.8rem;
     margin-left: 1.8rem;
     @apply max-w-prose col-span-3 md:col-span-2 text-xl space-y-3 list-inside;
+  }
+
+  .workstyle__cta {
+    @apply col-span-3 text-center px-12 py-6 border-y-2 border-y-root/25;
+  }
+
+  .workstyle a {
+    @apply link text-root hover:link-hover;
   }
 
   .workstyle--inset-wrapper {

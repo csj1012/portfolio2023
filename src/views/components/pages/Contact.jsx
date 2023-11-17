@@ -7,7 +7,7 @@ export default function Contact() {
   return (
     <section className='contact'>    
       <div className='contact__info'>
-        <p>Let's get in touch!</p>
+        <p>Let's chat:</p>
         <ul>
           <li>LinkedIn: <Link to='https://www.linkedin.com/in/chelsiesjohnston/'>chelsiesjohnston</Link></li>
           <li>GitHub: <Link to='https://github.com/csj1012'>csj1012</Link></li>

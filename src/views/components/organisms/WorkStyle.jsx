@@ -14,7 +14,7 @@ export default function WorkStyle() {
         <li>Iterate upon nimble project methodologies that think outside the box</li>
         <li>Solve problems at the root</li>
         <li>Use the right tools for the job (next time, I&#39;ll probably build this in Astro...)</li>
-        <li>Do what works and improving what doesn&#39;t</li>
+        <li>Do what works and improve what doesn&#39;t</li>
         <li>Deliver quality (pull requests, code reviews, writing, and web projects) as painlessly as possible</li>
       </ul>
       </div>

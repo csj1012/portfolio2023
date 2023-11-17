@@ -6,6 +6,7 @@ import Error from '@routes/error'
 import Intro from '@components/organisms/Intro'
 import Project, { loader as projectLoader } from './controllers/routes/project'
 import ProjectsList, { loader as projectsListLoader } from './controllers/routes/projectsList'
+import Contact from '@components/pages/Contact'
 import '/src/index.css'
 
 const router = createHashRouter([
@@ -30,6 +31,10 @@ const router = createHashRouter([
           },
         ],
       },
+      {
+        path: '/contact',
+        element: <Contact />
+      }
     ],
   },
 ])

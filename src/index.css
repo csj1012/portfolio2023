@@ -128,7 +128,7 @@
   }
   
   .intro__art {
-    @apply border-t-2 border-haze pt-6 md:pt-0 md:border-0 mt-12 md:m-4 md:mt-0 order-2 md:order-1;
+    @apply border-t-2 border-haze pt-6 md:pt-0 md:border-0 mt-12 md:m-8 md:mt-0 order-2 md:order-1;
   }
 
   .intro img {
@@ -150,6 +150,36 @@
 
   .intro__cta:hover {
     @apply hover:link-hover;
+  }
+
+  /** CONTACT **/
+
+  .contact {
+    @apply fade-in section bg-hazelight border-jade md:border-y-2 md:grid grid-cols-4 md:grid-cols-3 lg:grid-cols-4 mx-6 md:mx-24;
+  }
+
+  .contact__info {
+    @apply text-root font-serif space-y-8 text-2xl md:text-right order-1 max-w-prose md:col-span-2 md:pt-0 col-span-2 pr-6 md:pr-12 border-l-0 md:border-r-2 border-haze; 
+  }
+
+  .contact__info p {
+    @apply special text-3xl md:text-4xl;
+  }
+
+  .contact__info ul {
+    @apply font-sans text-lg md:text-base lg:text-xl;
+  }
+
+  .contact__info li {
+    @apply link text-xl lg:text-2xl hover:no-underline;
+  }
+
+  .contact__art {
+    @apply rounded-sm order-2 w-[260px] md:w-full md:ml-6 lg:ml-12;
+  }
+
+  .contact picture {
+    @apply rounded-sm image-border border-2 border-haze md:pt-6 md:pt-0 mt-12 md:mt-0 order-2 md:order-1;
   }
 
   /** PROJECTS MENU **/

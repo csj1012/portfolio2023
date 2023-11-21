@@ -43,7 +43,8 @@ const src =
         'CSS-in-JS',
         'Circle CI',
         'Backstop JS',
-        'Javascript'
+        'Javascript',
+        'Typescript'
       ],
       role: 'Front end development',
       links: [
@@ -83,14 +84,15 @@ const src =
       },
       description: [
         'Instant Brands, which encompasses seven distinct brands, wanted to simplify their marketing approach. They needed to keep each brand\'s e-commerce site visually unique. At the same time, the sites needed to be interconnected for ease of publication and management. Each site was also the source for customer support info, so it was crucial to display data in an organized manner.',
-        'A wide variety of content required a theming overhaul to make everything consistent. With product manuals, warranty information, and product purchase points added into the mix, the site’s once-organized, SMACSS-based codebase had grown difficult to maintain. Mismatched styles were the norm rather than the exception. We worked to streamline the existing Drupal subtheme structure, sharing template files across brand multisites while unique stylesheets and template overrides defined each brand\'s more individual look and feel.',
+        'A wide variety of content required a theming overhaul to make everything consistent. With product manuals, warranty information, and product purchase points added into the mix, the site’s once-organized, OOCSS-based codebase had grown difficult to maintain. Mismatched styles were the norm rather than the exception. We worked to streamline the existing Drupal subtheme structure, sharing template files across brand multisites while unique stylesheets and template overrides defined each brand\'s more individual look and feel.',
         'At the end of this effort, customers could effortlessly locate and compare different models, and marketers could efficiently execute campaigns for brands and promote sales across the entire family.'
       ],
       techs: [
         'Drupal 8',        
         'SCSS',        
         'Javascript',        
-        'HTML'
+        'HTML',
+        'OOCSS'
       ],
       role: 'Front end development',
       links: [

@@ -1,0 +1,10 @@
+@mixin image-with-caption {
+  img {
+    @include border-haze-2;
+  }
+  
+  p {
+    @include sans-sm;
+    margin-top: var(--space-2xs);
+  }
+}

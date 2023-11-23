@@ -7,7 +7,7 @@ import Intro from '@components/organisms/Intro'
 import Project, { loader as projectLoader } from './controllers/routes/project'
 import ProjectsList, { loader as projectsListLoader } from './controllers/routes/projectsList'
 import Contact from '@components/pages/Contact'
-import '/src/index.css'
+import '/src/styles/index.scss'
 
 const router = createHashRouter([
   {

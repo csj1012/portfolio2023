@@ -1,0 +1,16 @@
+.intro {
+  @include container;
+}
+
+/*** DEBUG ***/
+.intro__art {
+  @include image-with-caption;
+}
+
+.intro__art {
+  picture {
+    @include border-haze-2;
+    @include aspect-home;
+    background: gray;
+  }
+}

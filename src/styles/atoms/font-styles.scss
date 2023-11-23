@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&family=Mulish:wght@300;400&display=swap');
+
+/** SANS **/
+:root {
+  --font-family-sans: 'Mulish', sans-serif;
+}
+
+@mixin sans-sm {
+  font-family: var(--font-family-sans);
+  font-size: var(--sans-sm);
+  letter-spacing: .3px;
+}
+
+@mixin sans-base {
+  font-family: var(--font-family-sans);
+  font-size: var(--sans-base);
+  line-height: var(--space-md);
+}
+
+/** SERIF **/
+:root {
+  --font-family-serif: 'Goudy Bookletter 1911', sans-serif;
+}

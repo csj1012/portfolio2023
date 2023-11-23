@@ -9,7 +9,7 @@ export const Layout = ({ children }) => (
 const HeaderElement = ({ children }) => <header>{children}</header>
 const NavElement = ({ children }) => <nav>{children}</nav>
 const MainElement = ({ children }) => <main>{children}</main>
-const FooterElement = ({ children }) => <footer>{children}</footer>
+const FooterElement = ({ children }) => <footer className='footer'>{children}</footer>
 
 // HOC for wrapping each section of the layout in the LayoutContext.
 // This is probably overkill for now.

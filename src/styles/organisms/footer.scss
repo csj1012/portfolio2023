@@ -1,0 +1,15 @@
+.footer {
+  @include sans-sm;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  padding: var(--space-xs);
+  border-top: var(--border-haze-1);
+  margin-top: auto;
+
+  &__heart {
+    margin-bottom: -2px;
+    display: inline-block;
+    width: var(--sans-sm);
+  }
+}

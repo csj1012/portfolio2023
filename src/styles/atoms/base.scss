@@ -1,8 +1,18 @@
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 body {
   @include sans-base;
   background: var(--color-hazelight);
   color: var(--color-root);
   overflow-x: hidden;
+}
+
+main {
+  margin-bottom: var(--space-2xl);
 }
 
 p:not(:last-child) {
@@ -30,3 +40,4 @@ a {
   white-space: nowrap;
   border-width: 0;
 }
+

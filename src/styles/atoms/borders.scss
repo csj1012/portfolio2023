@@ -1,5 +1,4 @@
-@mixin border-haze-2 {
-  border-width: 2px;
-  border-color: var(--color-haze);
-  border-style: solid;
+:root {
+  --border-haze-2: 2px solid var(--color-haze);
+  --border-jade-2: 2px solid var(--color-jade);
 }

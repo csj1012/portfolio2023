@@ -1,5 +1,19 @@
 body {
   @include sans-base;
   background: var(--color-hazelight);
+  color: var(--color-root);
 }
 
+p:not(:last-child) {
+  margin-bottom: var(--space-md);
+}
+
+a {
+  color: var(--color-jade);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+
+  &:hover {
+    text-decoration: none;
+  }
+}

@@ -8,16 +8,29 @@
 @mixin sans-sm {
   font-family: var(--font-family-sans);
   font-size: var(--sans-sm);
+  line-height: var(--line-height-base);
   letter-spacing: .3px;
 }
 
 @mixin sans-base {
   font-family: var(--font-family-sans);
   font-size: var(--sans-base);
-  line-height: var(--space-md);
+  line-height: var(--line-height-base);
 }
 
 /** SERIF **/
 :root {
   --font-family-serif: 'Goudy Bookletter 1911', sans-serif;
+}
+
+@mixin serif-base {
+  font-family: var(--font-family-serif);
+  font-size: var(--serif-base);
+  line-height: var(--line-height-base);
+}
+
+@mixin serif-lg {
+  font-family: var(--font-family-serif);
+  font-size: var(--serif-lg);
+  line-height: clamp(var(--line-height-base), var(--line-height-base) + 0.1vw, var(--line-height-sm));
 }

@@ -25,7 +25,7 @@ export default function MainMenu() {
   )
   
   return (
-    <menu className="main-menu-wrapper" style={{backgroundImage: `url(${bgImage})`}}>
+    <menu className="main-menu" style={{backgroundImage: `url(${bgImage})`}}>
       <h1 className="main-menu__title">        
         <Link to="/" className='main-menu__title__link'>Chelsie Johnston</Link>        
       </h1>

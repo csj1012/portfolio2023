@@ -1,3 +1,87 @@
 .main-menu {
+  padding-inline-start: 0;
   margin-bottom: var(--space-2xl-3xl);
+
+  > * {
+    @include container;
+  }
+
+  &__title {
+    a {
+      @include serif-base;
+      display: inline-block;
+      padding-top: var(--space-lg);
+      padding-bottom: var(--space-lg);
+      color: var(--color-haze);
+      opacity: .9;
+      text-decoration: none;
+      letter-spacing: var(--letter-spacing-lg);
+
+      &:hover {
+        opacity: .5;
+        transition: var(--fade);
+      }
+    }
+  }
+
+  &__menu {
+    @include list-inline;
+    justify-content: center;
+    background: var(--color-haze);
+    border-bottom: var(--border-hazedark-1);
+    position: relative;
+
+    @media screen and (min-width: 768px) {
+      justify-content: flex-end;
+    }
+
+    a {
+      @include sans-lg;
+      display: inline-block;
+      padding: var(--space-lg) var(--space-xs);
+      color: var(--color-root);
+      font-weight: 600;
+      text-decoration: none;
+      transition: var(--padding);
+
+      @media screen and (min-width: 768px) {
+        padding: var(--space-sm) var(--space-md);
+        transition: var(--padding);
+      }
+
+      &:hover {
+        text-decoration: underline;
+        text-decoration-color: var(--color-jade);
+        text-underline-offset: 5px;
+        color: var(--color-jade);
+      }
+
+      /* Active class provided by react-router-dom. */
+      &.active {
+        text-decoration: underline;
+        text-decoration-color: var(--color-jade);
+        text-underline-offset: 5px;
+      }
+    }
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: calc(100% + 1px); // accommodate border.
+      background: var(--color-haze);
+      border-bottom: var(--border-hazedark-1);
+    }
+
+    &:before {
+      top: 0;
+      left: -100%;
+    }
+    
+    &:after {
+      top: 0;
+      left: 100%;
+    }
+  }
 }

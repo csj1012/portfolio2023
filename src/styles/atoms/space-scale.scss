@@ -53,3 +53,8 @@
   /* Space 2xl-3xl: 56px → 96px */
   --space-2xl-3xl: clamp(3.5rem, 2.7593rem + 3.7037vw, 6rem);
 }
+
+:root {
+  --letter-spacing-sm: calc(var(--space-3xs) / 12);
+  --letter-spacing-lg: calc(var(--space-3xs) / 3);
+}

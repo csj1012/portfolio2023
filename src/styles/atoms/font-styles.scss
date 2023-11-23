@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&family=Mulish:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&family=Mulish:wght@300;400;600&display=swap');
 
 /** SANS **/
 :root {
@@ -9,12 +9,18 @@
   font-family: var(--font-family-sans);
   font-size: var(--sans-sm);
   line-height: var(--line-height-base);
-  letter-spacing: .3px;
+  letter-spacing: var(--letter-spacing-sm);
 }
 
 @mixin sans-base {
   font-family: var(--font-family-sans);
   font-size: var(--sans-base);
+  line-height: var(--line-height-base);
+}
+
+@mixin sans-lg {
+  font-family: var(--font-family-sans);
+  font-size: var(--sans-lg);
   line-height: var(--line-height-base);
 }
 

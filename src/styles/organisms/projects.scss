@@ -1,5 +1,6 @@
 .projects {
-  @include container-top-padding;
+  @include container-with-insets;  
+  display: flow-root;
   background-color: var(color--haze);
   background-size: cover;
 
@@ -8,30 +9,75 @@
     grid-column: 1 / span 12;
   }
 
-  &__inset {
-    @include container;
-    margin-inline: var(--grid-gutter);
-    padding-top: var(--space-lg);
-    background: var(--color-hazelight);
+  &__menu {
+    @include grid;
+    @include list-vertical-full;
+  }
 
-    @media screen and (min-width: 1350px) {
-      margin-inline: auto;
+  &__menu > li {
+    grid-column: 1 / span 12;
+    padding-bottom: var(--space-sm);
+    border-bottom: var(--border-haze-2);
+    order: 2;
+
+    &.featured {
+      order: 1;
     }
 
-    &__menu {
-      @include grid;
-      @include list-vertical-full;
-    }
-
-    &__menu > li {
-      grid-column: 1 / span 12;
-      padding-bottom: var(--space-sm);
-      border-bottom: var(--border-haze-2);
-      order: 2;
-
-      &.featured {
-        order: 1;
-      }
+    &:last-of-type {
+      border-bottom: none;
     }
   }
+
+  .inset {
+    @include container-inset-margins;
+    @include container-bottom-margin;
+    background: var(--color-hazelight);
+  }
+
+  .workstyle {
+    @include container;
+    @include container-inset-margins;
+    @include grid;
+    @include serif-base;
+    margin-inline: var(--grid-gutter);
+    padding-top: var(--space-lg);
+    background: var(--color-haze);
+
+    > * {
+      grid-column: 1 / span 12;
+    }
+
+    @media screen and (min-width: 768px) {
+      &__intro {
+        grid-column: 1 / span 4;
+      }
+
+      ul {
+        grid-column: 5 / span 8;
+      }
+      
+    }
+
+    &__title {
+      @include heading-underline;
+      border-color: var(--color-rootlight);
+    }
+
+    &__intro {
+      @include serif-lg;
+    }
+
+    ul {
+      @include list-bullets;
+      max-width: var(--max-width-text);
+    }
+
+    &__cta {
+      @include pull-text;
+      display: inline-block;
+      margin-bottom: var(--space-lg);
+    }
+  }
+
 }

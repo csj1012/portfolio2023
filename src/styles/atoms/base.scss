@@ -11,10 +11,6 @@ body {
   overflow-x: hidden;
 }
 
-main {
-  margin-bottom: var(--space-2xl);
-}
-
 p:not(:last-of-type) {
   margin-bottom: var(--space-md);
 }

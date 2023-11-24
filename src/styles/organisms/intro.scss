@@ -1,6 +1,7 @@
 .intro {
   @include container;
   @include container-top-padding;
+  @include container-bottom-margin;
   @include grid;
 
   &__copy {
@@ -9,7 +10,7 @@
     @include serif-base;
 
     p {
-      max-width: calc(var(--serif-base) * 25);
+      max-width: var(--max-width-text);
     }
 
     p:first-child {

@@ -64,3 +64,7 @@
 @mixin container-top-padding {
   padding-top: var(--space-2xl-3xl);
 }
+
+@mixin container-bottom-margin {
+  margin-bottom: var(--space-2xl);
+}

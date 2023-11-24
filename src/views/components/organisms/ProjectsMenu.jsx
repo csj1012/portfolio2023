@@ -33,9 +33,9 @@ export default function ProjectsMenu({ items, current }) {
 
   return (
     <section className="projects" style={{backgroundImage: `url(${gradient})`}}>
-      <div className="projects__inset">
+      <div className="inset">
         { < HeadingElement /> } 
-        <ul className='projects__inset__menu'>{menuItems}</ul>
+        <ul className='projects__menu'>{menuItems}</ul>
       </div>      
       <WorkStyle />
     </section>

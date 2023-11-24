@@ -2,8 +2,7 @@ import { Link } from 'react-router-dom'
 
 export default function WorkStyle() {
   return (
-    <aside className='workstyle'>
-      <div className='workstyle--inset-wrapper'>
+    <aside className='workstyle inset'>
       <h2 className='workstyle__title'>How I Work</h2>
       <p className='workstyle__intro'>My favorite teams to be part of are ones made of people who consciously:</p>
       <ul>
@@ -20,7 +19,6 @@ export default function WorkStyle() {
         <li>Deliver quality (pull requests, code reviews, writing, and web projects) as painlessly as possible</li>
       </ul>
       <p className='workstyle__cta'>If we think the same, <Link to='/contact'>I'd love to get in touch!</Link></p>
-      </div>
     </aside>
   )
 }

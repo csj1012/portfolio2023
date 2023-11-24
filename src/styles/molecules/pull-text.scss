@@ -1,0 +1,7 @@
+@mixin pull-text {
+  border: var(--border-rootlight-2);
+  border-left: 0;
+  border-right: 0;
+  padding: var(--space-sm) var(--space-md);
+  text-align: center;
+}

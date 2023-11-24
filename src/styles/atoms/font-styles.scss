@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&family=Mulish:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&family=Mulish:wght@400;700&display=swap');
+/* Mirra OTF font for heading is inlined to reduce FOUC - see index.html. */
 
 /** SANS **/
 :root {
@@ -39,4 +40,12 @@
   font-family: var(--font-family-serif);
   font-size: var(--serif-lg);
   line-height: clamp(var(--line-height-base), var(--line-height-base) + 0.1vw, var(--line-height-sm));
+}
+
+/** DISPLAY **/
+
+@mixin display {
+  font-family: "Mirra", sans-serif;
+  font-size: var(--sans-2xl);
+  line-height: var(--line-height-base);
 }

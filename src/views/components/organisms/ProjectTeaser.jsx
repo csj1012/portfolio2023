@@ -1,14 +1,11 @@
 import Image from '@components/atoms/Image'
 import UnorderedList from '@components/atoms/UnorderedList'
 
-export default function ProjectTeaser({ title, organization, shortDescription, teaser, techs, featured }) {  
-  const { orgName } = organization
+export default function ProjectTeaser({ title, shortDescription, teaser, techs, featured }) {  
   return (
-    <div className="teaser">
+    <>
       <h3 className="teaser__title sr-hidden">{title} &#187;</h3>
-      <h3 className="sr-only">
-        Project {title} for {orgName}
-      </h3>
+      <p className="teaser__short-description">{shortDescription}</p>
       <div className="teaser__image-wrapper">
       {featured ? (
           <span className='teaser__featured-chiclet'>Featured</span>
@@ -23,13 +20,10 @@ export default function ProjectTeaser({ title, organization, shortDescription, t
         ) : (
           ''
         )}
-      </div>
-      <div>
-        {shortDescription}
-        {techs ? (
-          <UnorderedList items={techs} className='teaser__list' />
-        ) : ''}
-        </div>
-    </div>
+      </div>      
+      {techs ? (
+        <UnorderedList items={techs} className='teaser__list' />
+      ) : ''}
+    </>
   )
 }

@@ -1,6 +1,5 @@
 .main-menu {
   padding-inline-start: 0;
-  margin-bottom: var(--space-2xl-3xl);
 
   > * {
     @include container;
@@ -8,11 +7,13 @@
 
   &__title {
     a {
-      @include serif-base;
-      display: inline-block;
-      padding-top: var(--space-lg);
-      padding-bottom: var(--space-lg);
-      color: var(--color-haze);
+      @include display;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      width: fit-content;
+      padding-top: var(--space-2xs);
+      color: #020d0d;
       opacity: .9;
       text-decoration: none;
       letter-spacing: var(--letter-spacing-lg);
@@ -20,6 +21,15 @@
       &:hover {
         opacity: .5;
         transition: var(--fade);
+      }
+
+      &:after {
+        content: 'Chelsie Johnston';
+        font-family: "Mirra";
+        position: absolute;
+        color: #2a5b47;
+        z-index: -1;
+
       }
     }
   }
@@ -40,7 +50,7 @@
       display: inline-block;
       padding: var(--space-lg) var(--space-xs);
       color: var(--color-root);
-      font-weight: 600;
+      font-weight: 300;
       text-decoration: none;
       transition: var(--padding);
 

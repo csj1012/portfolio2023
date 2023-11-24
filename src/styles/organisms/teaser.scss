@@ -1,0 +1,79 @@
+.teaser {
+  @include grid;
+  gap: calc(var(--space-sm) / 2);
+  padding: var(--space-lg) 0;
+  color: var(--color-root);
+  text-decoration: none;
+
+  > * {
+    grid-column: 1 / span 12;
+  }
+
+  &__title {
+    @include serif-base;    
+    font-weight: 400;
+  }
+
+  // @todo: move me to a molecule
+  &__list {    
+    @include chiclet-list;
+  }
+
+  &__image {
+    border: var(--border-haze-2);    
+  }
+
+  &__short-description {
+    @include sans-base;
+    margin-bottom: var(--space-xs);
+  }
+
+    @media screen and (min-width: 1024px) {
+    gap: var(--space-sm);
+    padding
+    &__title,
+    &__short-description,
+    &__list {
+      grid-column: 1 / span 6;      
+    }
+
+    &__title {
+      grid-row-start: 1;
+    }
+    
+    &__image-wrapper {
+      grid-column: 7 / span 6;
+      grid-row: 1 / 6;
+    }
+
+    &__short-description {          
+      grid-row-start: 2;
+    }
+
+    &__list {
+      grid-row-start: 3;
+    
+    }
+  }
+
+  &:hover {
+    .teaser__title {
+      text-decoration: underline;
+      color: var(--color-jade);
+    }
+    .teaser__image-wrapper {
+      opacity: .5;
+      transition: var(--fade);
+    }
+  }
+}
+
+.featured .teaser {  
+  &__featured-chiclet {
+    @include featured-chiclet;
+  }
+
+  &__title {
+    @include serif-lg;
+  }
+}

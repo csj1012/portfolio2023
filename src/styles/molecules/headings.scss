@@ -1,0 +1,6 @@
+@mixin heading-underline {
+  @include sans-base;
+  padding-bottom: var(--space-2xs);
+  border-bottom: var(--border-lilac-2);
+  font-weight: 700;
+}

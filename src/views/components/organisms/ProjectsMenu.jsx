@@ -24,7 +24,7 @@ export default function ProjectsMenu({ items, current }) {
     const featuredClass = item.featured ? 'featured' : ''
     return (
       <li key={item.href} className={featuredClass}>
-        <NavLink to={item.href} className='projects__menu__link'>
+        <NavLink to={item.href} className='teaser'>
           <ProjectTeaser {...item} />
         </NavLink>
       </li>
@@ -33,10 +33,10 @@ export default function ProjectsMenu({ items, current }) {
 
   return (
     <section className="projects" style={{backgroundImage: `url(${gradient})`}}>
-      <span className="projects--inset-wrapper">
+      <div className="projects__inset">
         { < HeadingElement /> } 
-        <ul className='projects__menu'>{menuItems}</ul>
-      </span>      
+        <ul className='projects__inset__menu'>{menuItems}</ul>
+      </div>      
       <WorkStyle />
     </section>
   )

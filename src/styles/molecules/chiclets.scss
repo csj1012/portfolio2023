@@ -1,0 +1,20 @@
+@mixin chiclet {
+  @include sans-sm;
+  letter-spacing: calc(var(--letter-spacing-lg) / 2);
+  background: var(--color-lilac);
+  color: var(--color-hazelight);
+  padding: var(--space-2xs);
+  border-radius: 2px;
+  font-weight: 700;
+}
+
+@mixin featured-chiclet {
+  @include sans-sm;
+  letter-spacing: calc(var(--letter-spacing-lg) / 2);
+  position: absolute;
+  background: var(--color-grape);
+  color: var(--color-hazelight);
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: 1px;
+  font-weight: 700;
+}

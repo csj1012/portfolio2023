@@ -1,0 +1,7 @@
+@mixin chiclet-list {
+  @include list-inline;
+  gap: var(--space-xs);
+  li {
+    @include chiclet;
+  }
+}

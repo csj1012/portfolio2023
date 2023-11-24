@@ -1,0 +1,37 @@
+.projects {
+  @include container-top-padding;
+  background-color: var(color--haze);
+  background-size: cover;
+
+  &__title {
+    @include heading-underline;
+    grid-column: 1 / span 12;
+  }
+
+  &__inset {
+    @include container;
+    margin-inline: var(--grid-gutter);
+    padding-top: var(--space-lg);
+    background: var(--color-hazelight);
+
+    @media screen and (min-width: 1350px) {
+      margin-inline: auto;
+    }
+
+    &__menu {
+      @include grid;
+      @include list-vertical-full;
+    }
+
+    &__menu > li {
+      grid-column: 1 / span 12;
+      padding-bottom: var(--space-sm);
+      border-bottom: var(--border-haze-2);
+      order: 2;
+
+      &.featured {
+        order: 1;
+      }
+    }
+  }
+}

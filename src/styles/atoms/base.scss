@@ -15,7 +15,7 @@ main {
   margin-bottom: var(--space-2xl);
 }
 
-p:not(:last-child) {
+p:not(:last-of-type) {
   margin-bottom: var(--space-md);
 }
 

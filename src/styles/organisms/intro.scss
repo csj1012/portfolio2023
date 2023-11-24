@@ -1,5 +1,6 @@
 .intro {
   @include container;
+  @include container-top-padding;
   @include grid;
 
   &__copy {
@@ -59,7 +60,7 @@
 .intro__art {
   picture {
     border: var(--border-haze-2);
-    @include aspect-home;
-    background: gray;
+    // @include aspect-home;
+    // background: gray;
   }
 }

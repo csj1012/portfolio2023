@@ -2,3 +2,11 @@
   width: calc(var(--space-3xs) * 96.75);
   height: calc(var(--space-3xs) * 121); 
 }
+
+@mixin aspect-teaser {
+  // DEBUG 
+  width: 1400px;
+  height: 600px;
+  // width: calc(var(--space-3xs) * 96.75);
+  // height: calc(var(--space-3xs) * 121); 
+}

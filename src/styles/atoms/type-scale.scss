@@ -10,6 +10,12 @@
 
   /* Step 1: 19.80px → 22.62px */
   --sans-lg: clamp(1.2375rem, 1.1853rem + 0.2611vw, 1.4138rem);
+
+  /* Step 3: 33.93px → 39.58px */
+  --sans-xl: clamp(2.1206rem, 2.016rem + 0.5231vw, 2.4738rem);
+
+  /* Step 4: 47.97px → 55.97px */
+  --sans-2xl: clamp(2.9981rem, 2.85rem + 0.7407vw, 3.4981rem);
 }
 
 /** SERIF SIZES **/

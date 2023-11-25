@@ -77,6 +77,10 @@
       @include pull-text;
       display: inline-block;
       margin-bottom: var(--space-lg);
+
+      a {
+        color: var(--color-root);
+      }
     }
   }
 

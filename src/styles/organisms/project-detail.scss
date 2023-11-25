@@ -1,0 +1,126 @@
+.detail {
+  @include container;
+  @include container-top-padding;
+  @include container-bottom-margin;
+  @include grid;
+
+  > * {
+    grid-column: 1 / span 12;
+    order: 2;
+  }
+
+  @media screen and (min-width: 768px) {
+    .detail__basics {
+      grid-column: 1 / span 4;
+      grid-row: 1;
+      order: 1;
+    }
+
+    &__image-wrapper {
+      grid-column: 5 / span 8;
+      grid-row: 1;
+      order: 2;
+    }
+
+    &__aside {
+      grid-column: 1 / span 4;
+      grid-row: 3;
+      // order: 3;
+    }
+
+    &__description {
+      grid-column: 5 / span 8;
+      grid-row: 3;
+      // order: 4;
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    &__aside {
+      grid-column-start: 2;
+      grid-column-end: 5;
+    }
+
+    &__description {
+      grid-column-start: 5;
+      grid-column-end: 12;
+    }
+  }
+
+  &__image-wrapper {
+    @include image-with-caption;
+    order: 0;
+  
+    p {
+      @include sans-sm;
+      margin-bottom: var(--space-xs);
+
+      @media screen and (min-width: 1024px) {
+        @include sans-base; 
+      }
+    }
+  }
+
+  &__list {
+    @include chiclet-list;
+    margin-bottom: var(--space-md);
+  }
+
+  &__basics {
+    &__title {
+      @include serif-xl;
+      margin-bottom: var(--space-xs);
+
+      @media screen and (min-width: 768px) {
+        line-height: var(--line-height-sm);
+      }
+    }
+
+    &__involvement {
+      margin-bottom: var(--space-xs);
+    }
+
+    &__links {
+      @include list-bullets;
+      @include serif-base;
+    }
+  }
+
+  &__short-description {
+    @include pull-text;
+    @include serif-lg;
+    border-color: var(--color-haze);
+    text-align: left;
+    padding-left: 0;
+    font-style: italic;
+    margin-bottom: var(--space-md);
+
+    @media screen and (min-width: 768px) {
+      text-align: center;
+      padding: var(--space-lg-xl);
+    }
+  }
+
+  &__description {
+    max-width: var(--max-width-text);
+
+    p:first-of-type {
+      @include sans-lg;
+    }
+
+    @media screen and (min-width: 768px) {
+      padding-left: var(--grid-gutter);
+      border-left: var(--border-haze-2);
+    }
+  }
+
+  &__aside {
+    @include image-with-caption;
+    max-width: 66%;
+    order: 5;
+
+    @media screen and (min-width: 768px) {
+      max-width: 100%;
+      padding-top: var(--space-3xs);
+    }
+  }
+}

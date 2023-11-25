@@ -39,7 +39,7 @@ export default function ProjectDetail({
     <article className='detail'>
       <section className='detail__basics'>
         <h2 className='detail__basics__title'>{title}</h2>
-        <p className='detail__basics__involvement'>Involvement: {role}</p>        
+        <p className='detail__basics__involvement'><strong>Involvement &middot;</strong> {role}</p>        
         <UnorderedList items={linkList(links)} className='detail__basics__links' />
       </section>      
       <aside className='detail__image-wrapper'>
@@ -50,10 +50,10 @@ export default function ProjectDetail({
       <aside className='detail__short-description'>{shortDescription}</aside>
       <aside className='detail__aside'>
       {aside ? 
-          <div className='border-haze p-3'>
-            <Image {...aside} className='border-2 border-haze ' /> 
+          <>
+            <Image {...aside} /> 
             <p className='detail__aside__caption'>{aside.caption}</p>
-          </div>
+          </>
         : ''}       
       </aside>
       <section className='detail__description'>

@@ -27,7 +27,7 @@ export default function Video({ src, ...props } ) {
   const updatedSrc = getVideoUrl(src)
 
   return (
-    <div className='player-wrapper relative'>
+    <div className='player-wrapper video'>
       <ReactPlayer
         className={classes}
         url={updatedSrc}        

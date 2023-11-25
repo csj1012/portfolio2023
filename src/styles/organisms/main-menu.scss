@@ -10,13 +10,16 @@
       @include display;
       position: relative;
       display: flex;
-      justify-content: center;
-      width: fit-content;
+      justify-content: center;      
       padding-top: var(--space-2xs);
       color: #020d0d;
       opacity: .9;
       text-decoration: none;
       letter-spacing: var(--letter-spacing-lg);
+
+      @media screen and (min-width: 768px) {
+        width: fit-content;
+      }
 
       &:hover {
         opacity: .5;

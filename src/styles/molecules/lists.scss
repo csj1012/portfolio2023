@@ -19,8 +19,8 @@
 }
 
 @mixin list-bullets {
-
+  margin-block-start: 0;
   > li {
-    margin-bottom: var(--space-sm);
+    margin-bottom: var(--space-xs);
   }
 }

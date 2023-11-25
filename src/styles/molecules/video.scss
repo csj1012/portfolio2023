@@ -1,0 +1,42 @@
+.video {
+  position: relative;
+  border: var(--border-haze-2);
+
+  &__control {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 40;
+    background: transparent;
+    border: 0;
+    outline: 0;
+
+    img {
+      width: 60%;
+      opacity: .6;
+    }
+
+    &:hover {
+      cursor: pointer;
+      
+      img {
+        opacity: 100%;
+      }
+    }
+  }
+
+  &__buttons {
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+    height: 3.5rem;
+    width: 3.5rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.125rem;
+    background-color: var(--color-haze);
+    padding: var(--space-2xs);
+  }
+}

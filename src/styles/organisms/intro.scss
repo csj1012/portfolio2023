@@ -1,8 +1,13 @@
 .intro {
   @include container;
-  @include container-top-padding;
   @include container-bottom-margin;
   @include grid;
+  padding-top: var(--space-2xl-3xl);
+  animation: var(--fadeIn);
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
 
   &__copy {
     grid-column: 1 / span 12;
@@ -29,7 +34,29 @@
       grid-column: 5 / span 9;
       grid-row: 1;
       padding-left: var(--grid-gutter);
-      border-left: var(--border-haze-2);    
+      position: relative;
+
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        width: 2px;
+        background: var(--color-jade);
+        @include animation--border-vertical;
+      }
+
+      p {
+        opacity: 0;
+        animation: var(--fadeInSlow);
+        animation-delay: .2s;
+
+        @media (prefers-reduced-motion: reduce) {
+          animation: none;
+          opacity: 1;
+        }
+      }
     }
     
     &__art {
@@ -42,8 +69,8 @@
     &__copy {
       grid-column: 6 / 12;
       grid-row: 1;
-      padding-left: var(--grid-gutter);
-      border-left: var(--border-haze-2);    
+      // padding-left: var(--grid-gutter);
+      // border-left: var(--border-haze-2);    
     }
     
     &__art {

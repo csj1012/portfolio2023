@@ -3,6 +3,12 @@
   display: flow-root;
   background-color: var(color--haze);
   background-size: cover;
+  animation: var(--fadeIn);
+  animation-duration: .4s;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
 
   &__title {
     @include heading-underline;

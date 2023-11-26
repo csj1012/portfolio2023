@@ -1,4 +1,64 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes keyframes--border-vertical {
+  from {
+    height: 50px;
+    top: 40%;
+    bottom: 40%;
+  }
+  to {
+    height: 100%;
+    top: 0;
+    bottom: 40%;
+  }
+}
+
+@keyframes keyframes--border-horizontal {
+  from {
+    width: 50px;
+    left: 40%;
+    right: 40%;
+  }
+  to {
+    width: 100%;
+    left: 0;
+    right: 40%;
+  }
+}
+
+@mixin animation--border-vertical {
+  animation: keyframes--border-vertical .9s var(--cubic-bezier) forwards;
+  animation-delay: .4s;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+    height: 100%;
+  }
+}
+
+@mixin animation--border-horizontal {
+  animation: keyframes--border-horizontal .9s var(--cubic-bezier) forwards;
+  animation-delay: .4s;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+    width: 100%;
+  }
+}
+
 :root {
+  --cubic-bezier: cubic-bezier(0.165, 0.84, 0.0165, 1);
+  --cubic-bezier-slow: cubic-bezier(0.165, 0.84, .525, 1);
+  
   --fade: opacity 0.15s ease-in-out;
+  --fadeIn: fadeIn .15s ease-in forwards;
+  --fadeInSlow: fadeIn .75s var(--cubic-bezier-slow) forwards;
   --padding: padding .2s ease .2s;
 }

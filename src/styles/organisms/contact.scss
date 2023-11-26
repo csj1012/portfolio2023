@@ -3,13 +3,34 @@
   @include container-with-insets;
   @include container-top-padding;
 
+  animation: var(--fadeIn);
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
+
   .inset {
     @include grid;
     padding-bottom: var(--space-2xl-3xl);
     padding-top: var(--space-2xl-3xl);
-    border: var(--border-jade-2);
-    border-right: 0;
-    border-left: 0;
+    position: relative;
+
+    &:before, &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      height: 2px;
+      background: var(--color-haze);
+      @include animation--border-horizontal;
+      animation-duration: 1s;
+      animation-delay: 0;
+    }
+
+    &:after {
+      top: 100%;
+    }
 
     .contact__info {
       grid-column: 1 / span 12;

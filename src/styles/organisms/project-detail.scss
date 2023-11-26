@@ -4,6 +4,12 @@
   @include container-bottom-margin;
   @include grid;
 
+  animation: var(--fadeIn);
+  
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
+
   > * {
     grid-column: 1 / span 12;
     order: 2;

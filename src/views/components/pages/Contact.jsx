@@ -11,7 +11,7 @@ export default function Contact() {
     <section className='contact'>
       <div className='inset'>
         <div className='contact__info'>
-          <p>Let's chat:</p>
+          <p>Let's chat?</p>
           <ul>
             <li><span style={{ 'backgroundImage': `url(${Linkedin})`}} alt='Linkedin logo' /> <Link to='https://www.linkedin.com/in/chelsiesjohnston/'>chelsiesjohnston</Link></li>
             <li><span style={{ 'backgroundImage': `url(${Github})`}} alt='Github logo' /> <Link to='https://github.com/csj1012'>csj1012</Link></li>

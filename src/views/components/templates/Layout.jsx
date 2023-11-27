@@ -1,10 +1,20 @@
 import { LayoutContext, useLayout } from '@views/LayoutContext'
+import { ThemeContext } from '@views/ThemeContext'
+import { useState } from 'react'
 
-export const Layout = ({ children }) => (
-  <LayoutContext.Provider value={true}>
-    {children}
-  </LayoutContext.Provider>
-)
+export const Layout = ({ children }) => {
+  const [theme, setTheme] = useState('system')
+
+  return (
+    <LayoutContext.Provider value={true}>
+      <ThemeContext.Provider value={{ theme, setTheme }}>
+        <div className={theme}>
+          {children}
+        </div>
+      </ThemeContext.Provider>
+    </LayoutContext.Provider>
+  )
+}
 
 const HeaderElement = ({ children }) => <header>{children}</header>
 const NavElement = ({ children }) => <nav>{children}</nav>

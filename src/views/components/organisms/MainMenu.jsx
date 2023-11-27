@@ -1,5 +1,6 @@
 import { Link, NavLink } from 'react-router-dom'
 import bgImage from '/assets/images/nouveau-bg.png'
+import DarkModeSelect from '@components/molecules/DarkModeSelect'
 
 export default function MainMenu() {
   const items = [    
@@ -27,7 +28,8 @@ export default function MainMenu() {
   return (
     <menu className="main-menu" style={{backgroundImage: `url(${bgImage})`}}>
       <h1 className="main-menu__title">        
-        <Link to="/" className='main-menu__title__link'>Chelsie Johnston</Link>        
+        <Link to="/" className='main-menu__title__link'>Chelsie Johnston</Link>     
+        <DarkModeSelect />   
       </h1>
       { < HeadingElement /> } 
       <ul className='main-menu__menu bg-cover'>{menuItems}</ul>

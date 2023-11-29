@@ -26,22 +26,19 @@ export default function DarkModeSelect() {
     const options = ['system', 'light', 'dark']
     return (
       <form className='main-menu__darkmode'>
-        {
-          options.map(option => {
-            return (
-              <label key={option}>
-                <input
-                  type="radio"
-                  name="myOptions"
-                  value={option}
-                  checked={theme === option}
-                  onChange={handleChange}
-                />
-                {option}
-              </label>
-            )
-          })
-        }      
+        <select                 
+          name='dark-mode-select'
+          value={ theme }
+          onChange={ handleChange }
+        >
+          {
+            options.map(option => {
+              return (
+                <option key={ option } value={ option }>{ option }</option>
+              )
+            })
+          } 
+        </select>        
       </form>
     )
   }
@@ -50,3 +47,5 @@ export default function DarkModeSelect() {
     <SelectElement />
   )
 }
+
+

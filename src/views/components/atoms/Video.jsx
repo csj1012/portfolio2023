@@ -1,6 +1,6 @@
 import ReactPlayer from 'react-player'
 import classNames from 'classnames'
-import usePrefersReducedMotion from '@components/util/prefersReducedMotion'
+import { usePrefersReducedMotion, isMobile } from '@components/util/mediaqueries'
 import { useState } from 'react'
 import Pause from '/assets/svg/pause.svg'
 import Play from '/assets/svg/play.svg'
@@ -9,7 +9,7 @@ const PauseButton = () => <img alt='Pause video' className='w-2/3' src={Pause} /
 const PlayButton = () => <img alt='Play video' className='w-2/3' src={Play} />
 
 export default function Video({ src, ...props } ) {
-  const [playing, setPlaying] = useState(usePrefersReducedMotion() ? false : true)
+  const [playing, setPlaying] = useState((usePrefersReducedMotion() || isMobile()) ? false : true)
   const { className } = props
   const classes = className ? classNames('react-player', className) : 'react-player'
 
@@ -25,6 +25,8 @@ export default function Video({ src, ...props } ) {
   }
 
   const updatedSrc = getVideoUrl(src)
+
+  
 
   return (
     <div className='player-wrapper video'>
@@ -43,3 +45,4 @@ export default function Video({ src, ...props } ) {
     </div>
   )
 }
+

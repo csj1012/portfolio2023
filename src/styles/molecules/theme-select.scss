@@ -1,4 +1,38 @@
 .theme-select {
+  position: absolute;
+  width: fit-content;
+  height: var(--space-3xl);
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-flow: row-reverse;
+  justify-content: flex-end;
+  align-items: flex-start;
+  z-index: 1;
+
+  button {
+    --button-padding-y: calc(calc((var(--space-3xl) - var(--space-md))) / 2);
+    background: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 0;
+    background-size: var(--space-md);
+    width: var(--space-md);
+    height: var(--space-md);
+    padding: var(--button-padding-y) var(--space-md);
+    
+    &:hover {
+      opacity: .5;
+      cursor: pointer;
+    }
+
+    @media screen and (min-width: 768px) {
+      &:first-of-type {
+        padding-right: 0;
+      }
+    }
+  }
+  
   &__label--sr-only {
     position: absolute;
     width: 1px;

@@ -1,8 +1,16 @@
 .main-menu {
   padding-inline-start: 0;
+  background-position-x: right;
 
-  > * {
+  > *:not(.theme-select) {
     @include container;
+  }
+
+  @media screen and (min-width: 768px) {
+    background-position-x: center;
+    > .theme-select {
+      @include container;
+    }
   }
 
   &__title {
@@ -63,6 +71,10 @@
       @media screen and (min-width: 768px) {
         padding: var(--space-sm) var(--space-md);
         transition: var(--padding);
+
+        &:last-child {
+          padding-right: 0;
+        }
       }
 
       &:hover {
@@ -79,25 +91,5 @@
         text-underline-offset: 5px;
       }
     }
-
-    // &:before,
-    // &:after {
-    //   content: '';
-    //   position: absolute;
-    //   width: 100%;
-    //   height: calc(100% + 1px); // accommodate border.
-    //   background: var(--color-haze);
-    //   border-bottom: var(--border-hazedark-1);
-    // }
-
-    // &:before {
-    //   top: 0;
-    //   left: -100%;
-    // }
-    
-    // &:after {
-    //   top: 0;
-    //   left: 100%;
-    // }
   }
 }

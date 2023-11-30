@@ -16,6 +16,7 @@ export default function ThemeSelect() {
   function handleClick() {
     const newTheme = theme === 'dark' ? 'light' : 'dark'
     setTheme(newTheme)
+    window.localStorage.setItem('userDarkModePreference', newTheme)
     setShowResetButton(true)
   }
 

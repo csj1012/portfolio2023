@@ -47,8 +47,6 @@
   &__menu {
     @include list-inline;
     justify-content: center;
-    background: var(--color-haze);
-    border-bottom: var(--border-hazedark-1);
     position: relative;
 
     @media screen and (min-width: 768px) {
@@ -63,7 +61,6 @@
       @include sans-lg;
       display: inline-block;
       padding: var(--space-lg) var(--space-xs);
-      color: var(--color-root);
       font-weight: 300;
       text-decoration: none;
       transition: var(--padding);
@@ -79,17 +76,60 @@
 
       &:hover {
         text-decoration: underline;
-        text-decoration-color: var(--color-jade);
         text-underline-offset: 5px;
-        color: var(--color-jade);
       }
 
       /* Active class provided by react-router-dom. */
       &.active {
         text-decoration: underline;
-        text-decoration-color: var(--color-jade);
         text-underline-offset: 5px;
       }
     }
   }
+}
+
+.light .main-menu {
+  &__menu {
+    background: var(--color-haze);
+    border-bottom: var(--border-hazedark-1);
+
+    a {
+      color: var(--color-root);
+
+      &:hover {
+        text-decoration-color: var(--color-jade);
+        color: var(--color-jade);
+      }
+
+      /* Active class provided by react-router-dom. */
+      &.active {
+        text-decoration-color: var(--color-jade);
+      }
+    }
+  }
+}
+
+.dark .main-menu {
+  &__menu {
+    background: var(--color-oceandark);
+    border-bottom: solid 1px #041313;
+
+    a {
+      color: #98b7a3;
+
+      &:hover {
+        text-decoration-color: var(--color-periwinkle);
+        color: var(--color-periwinkle);
+      }
+
+      /* Active class provided by react-router-dom. */
+      &.active {
+        text-decoration-color: var(--color-periwinkle);
+      }
+    }
+  }
+
+  // a {
+  //   color: #98b7a3;
+  // }
 }

@@ -39,6 +39,11 @@
   --line-height-base: 1.2;
 }
 
+.dark {
+  --line-height-sm: 1.4;
+  --line-height-base: 1.5;
+}
+
 /** MAX WIDTH **/
 :root {
   --max-width-text: calc(var(--serif-base) * 25);

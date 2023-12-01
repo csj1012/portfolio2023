@@ -1,10 +1,18 @@
 @mixin image-with-caption {
-  img {
-    border: var(--border-haze-2);
-  }
-  
   p {
     @include sans-sm;
     margin-top: var(--space-2xs);
+  }
+}
+
+@mixin image-with-caption--light {
+  img {
+    border: var(--border-haze-2);
+  }
+}
+
+@mixin image-with-caption--dark {
+  img {
+    border: var(--border-oceandark-2);
   }
 }

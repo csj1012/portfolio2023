@@ -24,6 +24,7 @@
       opacity: .9;
       text-decoration: none;
       letter-spacing: var(--letter-spacing-lg);
+      line-height: var(--line-height-base);
 
       @media screen and (min-width: 768px) {
         width: fit-content;

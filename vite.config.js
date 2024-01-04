@@ -1,17 +1,36 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import path from 'path'
+import { fileURLToPath } from 'node:url'
+import { resolve, dirname } from 'path'
+
+const __dirname = typeof __dirname !== 'undefined'
+  ? __dirname
+  : dirname(fileURLToPath(import.meta.url))
 
 // https://vitejs.dev/config/
 export default defineConfig({  
   plugins: [react()],
   resolve: {
-    alias: {
-      '@models': path.resolve('src/models'),
-      '@controllers': path.resolve('src/controllers'),
-      '@routes': path.resolve('src/controllers/routes'),
-      '@views': path.resolve('src/views'),
-      '@components': path.resolve('src/views/components'),
-    }
+    alias: [
+      {
+        find: '@models',
+        replacement: resolve(__dirname, 'src/models'),
+      },
+      {
+        find: '@controllers',
+        replacement: resolve(__dirname, 'src/controllers'),
+      },
+      {
+        find: '@routes',
+        replacement: resolve(__dirname, 'src/controllers/routes'),
+      },
+      {
+        find: '@views',
+        replacement: resolve(__dirname, 'src/views'),
+      },
+      {
+        find: '@components',
+        replacement: resolve(__dirname, 'src/views/components'),
+      }]
   }
 })

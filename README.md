@@ -1,5 +1,5 @@
-# Portfolio 2023!
+# My humble lil' online home.
 
-[csj1012.github.io/portfolio2023](csj1012.github.io/portfolio2023)
+View live @ [https://chelsie.dev](chelsie.dev).
 
 @todo: Move config to /config dir.

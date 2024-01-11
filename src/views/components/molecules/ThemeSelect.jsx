@@ -34,8 +34,9 @@ export default function ThemeSelect() {
           setShowResetButton(false)
           }
         }
-        style={{ backgroundImage: `url(${ reset })` }}
+        // style={{ backgroundImage: `url(${ reset })` }}
       >
+        Use default
       </button>
     )    
   }
@@ -43,13 +44,28 @@ export default function ThemeSelect() {
   const ThemeControls = () => {
     return (
       <div role='group' aria-labelledby='theme-select-label' className='theme-select'>
-        <p id='theme-select-label' className='theme-select__label--sr-only'>Select theme</p>
-        <button 
+        {/* <p id='theme-select-label' className='theme-select__label--sr-only'>Select theme</p> */}
+        {/* <button 
           className='theme-select__theme-toggle'
           onClick={ handleClick }
           style={{ backgroundImage: (theme === 'light' ? `url(${ sun })` : `url(${ moon })`) }}
         >
-        </button>
+        </button> */}
+        {/* <input
+          name="darkmode"
+          type="checkbox" 
+          className='theme-select__theme-toggle'
+          onClick={ handleClick }
+          checked = { theme === 'dark' ? true : false }
+        />
+        <label htmlFor="darkmode">Dark Mode</label> */}
+        <div className="switch">
+          <input type="checkbox" id="toggle" className="toggle-input" onClick={ handleClick } checked = { theme === 'dark' ? true : false }/>
+          <label htmlFor="toggle" className="toggle-label">
+            {/* <span className="toggle-inner"></span> */}
+            <span className="toggle-switch"></span>
+          </label>
+        </div>
         <ResetThemeElement />
       </div>
     )

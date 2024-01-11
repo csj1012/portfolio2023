@@ -5,6 +5,7 @@ import webp from '/assets/images/dill.webp'
 import Github from '/assets/github.png'
 import Linkedin from '/assets/linkedin.png'
 import Email from '/assets/svg/email.png'
+import List from '/assets/list.png'
 
 export default function Contact() {
   return (
@@ -16,6 +17,7 @@ export default function Contact() {
             <li><span style={{ 'backgroundImage': `url(${Linkedin})`}} alt='Linkedin logo' /> <Link to='https://www.linkedin.com/in/chelsiesjohnston/'>chelsiesjohnston</Link></li>
             <li><span style={{ 'backgroundImage': `url(${Github})`}} alt='Github logo' /> <Link to='https://github.com/csj1012'>csj1012</Link></li>
             <li><span style={{ 'backgroundImage': `url(${Email})`}} alt='Email icon' /> <Link to='mailto:chelsiesjohnston@gmail.com'>chelsiesjohnston@gmail.com</Link></li>
+            <li><span style={{ 'backgroundImage': `url(${List})`}} alt='Email icon' /> <a href='/files/Resume_ChelsieJohnston_2024.pdf'>résumé (PDF download)</a></li>
           </ul>
         </div>
         <aside className="contact__art">

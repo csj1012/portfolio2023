@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&family=Mulish:wght@400;700&display=swap');
 /* Mirra OTF font for heading is inlined to reduce FOUC - see index.html. */
+@import "@fontsource/goudy-bookletter-1911";
+@import "@fontsource-variable/mulish";
 
 /** SANS **/
 :root {
-  --font-family-sans: 'Mulish', sans-serif;
+  --font-family-sans: 'Mulish Variable', sans-serif;
 }
 
 @mixin sans-sm {

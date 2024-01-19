@@ -30,11 +30,6 @@
         width: fit-content;
       }
 
-      &:hover {        
-        background-position: 23rem;  /* magic number used for text effect */ 
-        transition: var(--bgFade);        
-      }
-
       &:after {
         content: 'Chelsie Johnston';
         font-family: "Mirra";

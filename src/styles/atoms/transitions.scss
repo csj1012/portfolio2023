@@ -58,6 +58,7 @@
   --cubic-bezier-slow: cubic-bezier(0.165, 0.84, .525, 1);
   
   --fade: opacity 0.15s ease-in-out;
+  --bgFade: background-position .5s var(--cubic-bezier-slow);  
   --fadeIn: fadeIn .15s ease-in forwards;
   --fadeInSlow: fadeIn .75s var(--cubic-bezier-slow) forwards;
   --padding: padding .2s ease .2s;

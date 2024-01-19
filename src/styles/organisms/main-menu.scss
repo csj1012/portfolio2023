@@ -1,5 +1,6 @@
 .main-menu {
-  padding-inline-start: 0;
+  padding-inline-start: 0;  
+  background-blend-mode: overlay;
 
   > * {
     @include container;
@@ -12,18 +13,20 @@
       display: flex;
       justify-content: center;      
       padding-top: var(--space-2xs);
-      color: #020d0d;
-      opacity: .9;
       text-decoration: none;
-      letter-spacing: var(--letter-spacing-lg);
+      letter-spacing: var(--letter-spacing-lg);            
+      background-clip: text;
+      color: transparent;
+      background-position: 0;
+      background-size: 43rem; /* magic number used for text effect */ 
 
       @media screen and (min-width: 768px) {
         width: fit-content;
       }
 
-      &:hover {
-        opacity: .5;
-        transition: var(--fade);
+      &:hover {        
+        background-position: 23rem;  /* magic number used for text effect */ 
+        transition: var(--bgFade);        
       }
 
       &:after {

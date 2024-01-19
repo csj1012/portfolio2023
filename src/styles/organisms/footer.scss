@@ -6,6 +6,9 @@
   padding: var(--space-xs);
   border-top: var(--border-haze-1);
   margin-top: auto;
+  background-attachment: fixed;
+  background-color: var(--color-jade);
+  opacity: .8;
 
   &__heart {
     margin-bottom: -2px;

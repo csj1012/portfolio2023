@@ -2,9 +2,9 @@
   @include container-with-insets;  
   display: flow-root;
   background-color: var(color--haze);
-  background-size: cover;
+  background-attachment: fixed;  
   animation: var(--fadeIn);
-  animation-duration: .4s;
+  animation-duration: .2s;
 
   @media (prefers-reduced-motion: reduce) {
     animation: none;

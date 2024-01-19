@@ -1,6 +1,6 @@
 import ProjectTeaser from '@components/organisms/ProjectTeaser'
 import WorkStyle from '@components/organisms/WorkStyle'
-import gradient from '/assets/svg/gradient.svg'
+import gradient from '/assets/svg/noiseHaze.svg'
 import { NavLink } from 'react-router-dom'
 
 export default function ProjectsMenu({ items, current }) {

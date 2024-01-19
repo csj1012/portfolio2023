@@ -2,6 +2,7 @@ import { Link, NavLink } from 'react-router-dom'
 import bgImage from '/assets/svg/noise.svg'
 import fgImage from '/assets/svg/noiseOverlay.svg'
 import textImage from '/assets/svg/noiseDark.svg'
+import gradient from '/assets/svg/noiseHaze.svg'
 
 export default function MainMenu() {
   const items = [    
@@ -32,7 +33,7 @@ export default function MainMenu() {
         <Link to="/" className='main-menu__title__link'  style={{backgroundImage: `url(${textImage})`}}>Chelsie Johnston</Link>        
       </h1>
       { < HeadingElement /> } 
-      <ul className='main-menu__menu bg-cover'>{menuItems}</ul>
+      <ul className='main-menu__menu bg-cover'  style={{backgroundImage: `url(${gradient})`}}>{menuItems}</ul>
     </menu>
   )
   

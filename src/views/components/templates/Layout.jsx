@@ -7,7 +7,7 @@ export const Layout = ({ children }) => (
   </LayoutContext.Provider>
 )
 
-const HeaderElement = ({ children }) => <header>{children}</header>
+const HeaderElement = ({ children }) => <header className='header'>{children}</header>
 const NavElement = ({ children }) => <nav>{children}</nav>
 const MainElement = ({ children }) => <main>{children}</main>
 const FooterElement = ({ children }) => <footer className='footer' style={{backgroundImage: `url(${gradient})`}}>{children}</footer>

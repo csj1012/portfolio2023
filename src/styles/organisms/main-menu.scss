@@ -21,21 +21,12 @@
       padding-top: var(--space-2xs);
       text-decoration: none;
       letter-spacing: var(--letter-spacing-lg);            
-      background-clip: text;
-      color: transparent;
+      color: #05020e;
       background-position: 0;
       background-size: 43rem; /* magic number used for text effect */ 
 
       @media screen and (min-width: 768px) {
         width: fit-content;
-      }
-
-      &:after {
-        content: 'Chelsie Johnston';
-        font-family: "Mirra";
-        position: absolute;
-        color: #2a5b47;
-        z-index: -1;
       }
     }
   }

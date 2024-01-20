@@ -1,6 +1,5 @@
 import { Link, NavLink } from 'react-router-dom'
 import textImage from '/assets/svg/noiseDark.svg'
-import gradient from '/assets/svg/noiseHaze.svg'
 import ComputedBg from '@components/atoms/ComputedBg'
 
 export default function MainMenu() {
@@ -29,7 +28,7 @@ export default function MainMenu() {
   return (
     <menu className="main-menu" style={{backgroundImage: ComputedBg()}}>    
       <h1 className="main-menu__title">        
-        <Link to="/" className='main-menu__title__link' style={{backgroundImage: `url(${textImage})`}}>Chelsie Johnston</Link>        
+        <Link to="/" className='main-menu__title__link'>Chelsie Johnston</Link>        
       </h1>
       { < HeadingElement /> } 
       <ul className='main-menu__menu bg-cover'  style={{backgroundImage: ComputedBg('haze')}}>{menuItems}</ul>

@@ -2,6 +2,7 @@
   @include container-with-insets;  
   display: flow-root;
   background-color: var(color--haze);
+  background-position-x: center;
   background-attachment: fixed;  
   animation: var(--fadeIn);
   animation-duration: .2s;

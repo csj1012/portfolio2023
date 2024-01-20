@@ -32,7 +32,7 @@ export default function MainMenu() {
         <Link to="/" className='main-menu__title__link' style={{backgroundImage: `url(${textImage})`}}>Chelsie Johnston</Link>        
       </h1>
       { < HeadingElement /> } 
-      <ul className='main-menu__menu bg-cover'  style={{backgroundImage: `url(${gradient})`}}>{menuItems}</ul>
+      <ul className='main-menu__menu bg-cover'  style={{backgroundImage: ComputedBg('haze')}}>{menuItems}</ul>
     </menu>
   )
   

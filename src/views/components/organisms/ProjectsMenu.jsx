@@ -2,6 +2,7 @@ import ProjectTeaser from '@components/organisms/ProjectTeaser'
 import WorkStyle from '@components/organisms/WorkStyle'
 import gradient from '/assets/svg/noiseHaze.svg'
 import { NavLink } from 'react-router-dom'
+import ComputedBg from '@components/atoms/ComputedBg'
 
 export default function ProjectsMenu({ items, current }) {
   let headingText = 'Project Highlights'
@@ -32,7 +33,7 @@ export default function ProjectsMenu({ items, current }) {
   })
 
   return (
-    <section className="projects" style={{backgroundImage: `url(${gradient})`}}>
+    <section className="projects" style={{backgroundImage: ComputedBg('haze')}}>
       <div className="inset">
         { < HeadingElement /> } 
         <ul className='projects__menu'>{menuItems}</ul>

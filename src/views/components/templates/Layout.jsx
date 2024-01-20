@@ -1,5 +1,5 @@
 import { LayoutContext, useLayout } from '@views/LayoutContext'
-import gradient from '/assets/svg/noiseHaze.svg'
+import ComputedBg from '@components/atoms/ComputedBg'
 
 export const Layout = ({ children }) => (
   <LayoutContext.Provider value={true}>
@@ -10,7 +10,7 @@ export const Layout = ({ children }) => (
 const HeaderElement = ({ children }) => <header className='header'>{children}</header>
 const NavElement = ({ children }) => <nav>{children}</nav>
 const MainElement = ({ children }) => <main>{children}</main>
-const FooterElement = ({ children }) => <footer className='footer' style={{backgroundImage: `url(${gradient})`}}>{children}</footer>
+const FooterElement = ({ children }) => <footer className='footer' style={{backgroundImage: ComputedBg('haze')}}>{children}</footer>
 
 // HOC for wrapping each section of the layout in the LayoutContext.
 // This is probably overkill for now.

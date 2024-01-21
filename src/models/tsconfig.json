@@ -12,8 +12,9 @@
     "module": "ESNext",
     "moduleResolution": "Node",
     "resolveJsonModule": true,
-    "isolatedModules": true,    
+    "isolatedModules": true,
+    "typeRoots": ["./types", "./node_modules/@types"]
   },
-  "include":  ["**/*.ts"],
+  "include": ["**/*.ts", "**/*.tsx", "**/*.d.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

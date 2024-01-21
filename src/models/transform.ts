@@ -1,5 +1,5 @@
 import { buildItem } from './util.js'
-import src from './src.js'
+import projectsSrc from './projects/src.js'
 import fs from 'fs'
 import path, { dirname } from 'path'
 import { fileURLToPath } from 'url'
@@ -7,7 +7,7 @@ import { fileURLToPath } from 'url'
 // Transform the projects to add slugs, build image objects, etc.
 const transformProjects = async () => {
   const errors = []
-  const proms = src.map((project, index) => {
+  const proms = projectsSrc.map((project, index) => {
     return buildItem(project).catch(e => {
       const str = project.title ? project.title.toUpperCase() : `PROJECT ${index}`
       errors.push(`TRANSFORM ERROR: Could not process ${str}: ${e}`)

@@ -1,6 +1,10 @@
 import fs from 'fs'
 import sizeOf from 'image-size'
 import { promisify } from 'util'
+import path from 'path'
+
+const currentFileUrl = new URL(import.meta.url);
+const currentDir = path.dirname(currentFileUrl.pathname);
 
 const toSlug = (title, abbreviation) => {
   let slug = title.toLowerCase().split(' ').join('-')
@@ -13,7 +17,8 @@ const toSlug = (title, abbreviation) => {
 const getImageDimensions = async (src) => {
   const readFileAsAsync = promisify(fs.readFile)
   try {
-    const data = await readFileAsAsync(`../../../public${src}`)
+    const imagePath = path.resolve(currentDir, `../../public${src}`);
+    const data = await readFileAsAsync(imagePath)
     const dimensions = sizeOf(data)
     return dimensions
   } catch (err) {

@@ -10,7 +10,7 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "deploy": "gh-pages -d dist",
-    "test": "vitest"
+    "test": "tsc && vitest"
   },
   "dependencies": {
     "classnames": "^2.3.2",

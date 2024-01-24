@@ -4,7 +4,7 @@ import fs from 'fs';
 import path, { dirname } from 'path';
 import { fileURLToPath } from 'url';
 // Transform the projects to add slugs, build image objects, etc.
-const transformProjects = async () => {
+export const transformProjects = async () => {
     const errors = [];
     const proms = projectsSrc.map((project, index) => {
         return buildItem(project).catch(e => {

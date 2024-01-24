@@ -4,7 +4,7 @@ import { promisify } from 'util'
 
 const toSlug = (title, abbreviation) => {
   let slug = title.toLowerCase().split(' ').join('-')
-  slug = slug.replace(/[:\.]/g, '')
+  slug = slug.replace(/[:.]/g, '')
   slug = abbreviation ? `${abbreviation}--${slug}` : slug  
   console.log(slug)
   return slug

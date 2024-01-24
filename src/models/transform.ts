@@ -5,8 +5,8 @@ import path, { dirname } from 'path'
 import { fileURLToPath } from 'url'
 
 // Transform the projects to add slugs, build image objects, etc.
-const transformProjects = async () => {
-  const errors = []
+export const transformProjects = async (): Promise<void> => {
+  const errors: string[] = []
   const proms = projectsSrc.map((project, index) => {
     return buildItem(project).catch(e => {
       const str = project.title ? project.title.toUpperCase() : `PROJECT ${index}`

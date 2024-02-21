@@ -1,0 +1,71 @@
+import fs from 'fs'
+import sizeOf from 'image-size'
+import { promisify } from 'util'
+import path from 'path'
+import { IItem, IBuildItemReturn } from './UtilTypes'
+import { IProject } from './projects/ProjectTypes'
+
+const currentFileUrl = new URL(import.meta.url);
+const currentDir = path.dirname(currentFileUrl.pathname);
+
+const toSlug = (title: string, abbreviation?: string) => {
+  let slug = title.toLowerCase().split(' ').join('-')
+  slug = slug.replace(/[:.]/g, '')
+  slug = abbreviation ? `${abbreviation}--${slug}` : slug  
+  console.log(slug)
+  return slug
+}
+
+const getImageDimensions = async (src: string) => {
+  const readFileAsAsync = promisify(fs.readFile)
+  try {
+    const imagePath = path.resolve(currentDir, `../../public${src}`);
+    const data = await readFileAsAsync(imagePath)
+    const dimensions = sizeOf(data)
+    return dimensions
+  } catch (err) {
+    throw new Error(`Failed to get aspect ratio for img.src: ${err}`)
+  }
+}
+
+const buildImage = async (img: {
+  src: string
+  alt: string
+  caption: string
+}, title: string) => {
+  const { alt, caption } = img
+  const src = img.src || `${toSlug(title)}.png`
+  const webp = src.replace(/\.png$/i, '.webp')
+  try {
+    const dimensions = await getImageDimensions(src)
+    return { src, alt, caption, dimensions, webp }
+  } catch (error) {
+    console.error(error);
+  }  
+}
+
+export async function buildItem(item: IItem): Promise<IProject> {
+  try {
+    const { image, teaser, title, abbreviation, aside } = item
+    if (item.image) {
+      item.image = await buildImage(image, title)
+    }
+
+    if (item.teaser) {
+      item.teaser = await buildImage(teaser, title)
+    }
+
+    if (item.aside) {
+      item.aside = await buildImage(aside, title)
+    }
+
+    const project = {
+      slug: toSlug(title, abbreviation),       
+      ...item,
+    }
+    
+    return project
+  } catch (e) {
+    console.error(`ITEM BUILD ERROR: Could not build ${item.title.toUpperCase()}: ${e}`)
+  }
+}

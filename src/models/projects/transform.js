@@ -1,10 +1,10 @@
-import { buildItem } from './util.js';
-import projectsSrc from './projects/src.js';
+import { buildItem } from '../util.js';
+import projectsSrc from './src.js';
 import fs from 'fs';
 import path, { dirname } from 'path';
 import { fileURLToPath } from 'url';
 // Transform the projects to add slugs, build image objects, etc.
-export const transformProjects = async () => {
+export const transformProjects = async (data = projectsSrc) => {
     const errors = [];
     const proms = projectsSrc.map((project, index) => {
         return buildItem(project).catch(e => {

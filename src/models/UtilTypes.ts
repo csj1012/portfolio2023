@@ -3,7 +3,7 @@ export interface IItem {
   image?: {
     src: string
     alt: string
-    caption: string
+    caption: string | null
   }
   teaser?: {
     alt: string
@@ -39,3 +39,15 @@ export interface IBuildItemReturn {
     caption: string
   }
 }
+
+export interface IBuildImageReturn {
+  src: string;
+  alt: string;
+  caption: string | null;
+  dimensions: {
+    width: number
+    height: number
+    type: string;
+  };
+  webp: string;
+};

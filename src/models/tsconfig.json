@@ -13,8 +13,7 @@
     "moduleResolution": "Node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    // "typeRoots": ["./types", "./node_modules/@types"]
+    "composite": false,
   },
   "include": ["**/*.ts", "**/*.tsx", "**/*.d.ts"],
-  "references": [{ "path": "./tsconfig.node.json" }]
 }

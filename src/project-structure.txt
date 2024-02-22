@@ -1,0 +1,28 @@
+.
+├── controllers
+│   ├── projects.js
+│   └── routes
+├── main.jsx
+├── models
+│   ├── posts
+│   ├── projects
+│   ├── tsconfig.json
+│   ├── tsconfig.node.json
+│   ├── types
+│   ├── util.d.ts
+│   └── util.js
+├── project-structure.txt
+├── project_structure.txt
+├── projects.json
+├── styles
+│   ├── atoms
+│   ├── index.scss
+│   ├── molecules
+│   └── organisms
+├── views
+│   ├── LayoutContext.jsx
+│   └── components
+├── vite-env.d.ts
+└── x_index.css
+
+13 directories, 13 files

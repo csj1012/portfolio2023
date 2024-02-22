@@ -3,6 +3,7 @@ import projectsSrc from './src.js';
 import fs from 'fs';
 import path, { dirname } from 'path';
 import { fileURLToPath } from 'url';
+console.log(typeof projectsSrc); // object
 // Transform the projects to add slugs, build image objects, etc.
 export const transformProjects = async (data = projectsSrc) => {
     const errors = [];

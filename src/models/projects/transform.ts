@@ -1,4 +1,4 @@
-import { buildItem } from '../UtilTypes.js'
+import { buildItem } from '../util.js'
 import projectsSrc from './src.js'
 import fs from 'fs'
 import path, { dirname } from 'path'
@@ -6,6 +6,7 @@ import { fileURLToPath } from 'url'
 import { IProjectsSrcList } from './ProjectTypes'
 
 // Transform the projects to add slugs, build image objects, etc.
+// outputPath is flexbile for testing purposes.
 export const transformProjects = async (data: IProjectsSrcList = projectsSrc, outputPath: string = null): Promise<void> => {
   const errors: string[] = []
   const proms: Promise<any>[] = data.map((project, index) => {
@@ -20,13 +21,18 @@ export const transformProjects = async (data: IProjectsSrcList = projectsSrc, ou
   errors.forEach((error) => console.error(error))
 
   if (outputPath) {
-    fs.writeFileSync(outputPath, JSON.stringify(processed))
+    try {
+      fs.writeFileSync(outputPath, JSON.stringify(processed))
+      console.log('--- File write success at ' + outputPath)
+    } catch (error) {
+      console.error(error)
+    }
+  } else {
+    console.log('--- outputPath not specified.')
   }
-
-  // Write the processed projects to projects.json (to be consumed by the app)
-  const directory = dirname(fileURLToPath(import.meta.url))
-  const localPath = path.join(directory, 'projects.json')
-  fs.writeFileSync(localPath, JSON.stringify(processed))
 }
 
-transformProjects()
+// Write the processed projects to projects.json (to be consumed by the app)
+const directory = dirname(fileURLToPath(import.meta.url))
+const localPath = path.join(directory, 'projects.json')
+transformProjects(projectsSrc, localPath)

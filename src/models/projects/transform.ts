@@ -1,5 +1,6 @@
 import { buildItem } from '../util.js'
 import projectsSrc from './src.js'
+import projectSrcDummy from './srcDummy.js'
 import fs from 'fs'
 import path, { dirname } from 'path'
 import { fileURLToPath } from 'url'
@@ -33,6 +34,6 @@ export const transformProjects = async (data: IProjectsSrcList = projectsSrc, ou
 }
 
 // Write the processed projects to projects.json (to be consumed by the app)
-const directory = dirname(fileURLToPath(import.meta.url))
-const localPath = path.join(directory, 'projects.json')
-transformProjects(projectsSrc, localPath)
+// const directory = dirname(fileURLToPath(import.meta.url))
+// const localPath = path.join(directory, 'projectsDummy.json')
+// transformProjects(projectSrcDummy, localPath)

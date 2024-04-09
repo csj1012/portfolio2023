@@ -1,8 +1,6 @@
 import { buildItem } from '../util.js';
 import projectsSrc from './src.js';
 import fs from 'fs';
-import path, { dirname } from 'path';
-import { fileURLToPath } from 'url';
 // Transform the projects to add slugs, build image objects, etc.
 // outputPath is flexbile for testing purposes.
 export const transformProjects = async (data = projectsSrc, outputPath = null) => {
@@ -30,6 +28,6 @@ export const transformProjects = async (data = projectsSrc, outputPath = null) =
     }
 };
 // Write the processed projects to projects.json (to be consumed by the app)
-const directory = dirname(fileURLToPath(import.meta.url));
-const localPath = path.join(directory, 'projects.json');
-transformProjects(projectsSrc, localPath);
+// const directory = dirname(fileURLToPath(import.meta.url))
+// const localPath = path.join(directory, 'projectsDummy.json')
+// transformProjects(projectSrcDummy, localPath)

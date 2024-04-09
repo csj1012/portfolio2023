@@ -20,9 +20,9 @@ const getImageDimensions = async (src) => {
         if (dimensions.width === undefined || dimensions.height === undefined) {
             throw new Error('Image dimensions are missing');
         }
-        if (dimensions.type !== 'string') {
-            dimensions.type = 'string';
-        }
+        // if (dimensions.type !== 'string') {
+        //   dimensions.type = 'string'
+        // }
         return dimensions;
     }
     catch (err) {

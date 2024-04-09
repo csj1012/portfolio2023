@@ -27,8 +27,8 @@ test('transformProjects should transform projects correctly', async () => {
   // compare the response to the expectedProjects
   expect(actualProjects).toEqual(expectedProjects)
 
-  // File exists in correct spot and is not empty
-  // File has correct number of projects
-  // Each project has correct properties
-  // No errors happened? 
+  // File exists in correct spot and is not empty (is this worth it, or redundant?)
+  // File has correct number of projects (is this redundant?)
+  // Each project has correct properties (is this redundant?)
+  // No errors happened? (is this the right place to log this?)
 });

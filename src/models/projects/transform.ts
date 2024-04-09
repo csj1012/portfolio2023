@@ -1,14 +1,10 @@
 import { buildItem } from '../util.js'
-import projectsSrc from './src.js'
-import projectSrcDummy from './srcDummy.js'
 import fs from 'fs'
-import path, { dirname } from 'path'
-import { fileURLToPath } from 'url'
 import { IProjectsSrcList } from './ProjectTypes'
 
 // Transform the projects to add slugs, build image objects, etc.
 // outputPath is flexbile for testing purposes.
-export const transformProjects = async (data: IProjectsSrcList = projectsSrc, outputPath: string = null): Promise<void> => {
+export const transformProjects = async (data: IProjectsSrcList, outputPath: string = null): Promise<void> => {
   const errors: string[] = []
   const proms: Promise<any>[] = data.map((project, index) => {
     return buildItem(project).catch(e => {
@@ -32,8 +28,3 @@ export const transformProjects = async (data: IProjectsSrcList = projectsSrc, ou
     console.log('--- outputPath not specified.')
   }
 }
-
-// Write the processed projects to projects.json (to be consumed by the app)
-// const directory = dirname(fileURLToPath(import.meta.url))
-// const localPath = path.join(directory, 'projectsDummy.json')
-// transformProjects(projectSrcDummy, localPath)

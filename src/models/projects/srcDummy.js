@@ -19,7 +19,6 @@ const projectsSrc = [
     year: '2022',
     teaser: {
       alt: 'Teaser image for Example Project.',
-      teaser: true,
       src: '/assets/images/teaser/teaser-blackboard.png'
       },
     aside: {
@@ -77,7 +76,6 @@ const projectsSrc = [
     year: '2022',
     teaser: {
       alt: 'Teaser image for Example Project.',
-      teaser: true,
       src: '/assets/images/teaser/teaser-blackboard.png'
       },
     aside: {
@@ -135,7 +133,6 @@ const projectsSrc = [
     year: '2022',
     teaser: {
       alt: 'Teaser image for Example Project.',
-      teaser: true,
       src: '/assets/images/teaser/teaser-blackboard.png'
       },
     aside: {

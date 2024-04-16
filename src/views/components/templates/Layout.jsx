@@ -1,4 +1,5 @@
 import { LayoutContext, useLayout } from '@views/LayoutContext'
+import ComputedBg from '@components/atoms/ComputedBg'
 
 export const Layout = ({ children }) => (
   <LayoutContext.Provider value={true}>
@@ -6,10 +7,10 @@ export const Layout = ({ children }) => (
   </LayoutContext.Provider>
 )
 
-const HeaderElement = ({ children }) => <header>{children}</header>
+const HeaderElement = ({ children }) => <header className='header'>{children}</header>
 const NavElement = ({ children }) => <nav>{children}</nav>
 const MainElement = ({ children }) => <main>{children}</main>
-const FooterElement = ({ children }) => <footer className='footer'>{children}</footer>
+const FooterElement = ({ children }) => <footer className='footer' style={{backgroundImage: ComputedBg('haze')}}>{children}</footer>
 
 // HOC for wrapping each section of the layout in the LayoutContext.
 // This is probably overkill for now.

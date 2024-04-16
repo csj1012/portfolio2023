@@ -12,6 +12,8 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@fontsource-variable/mulish": "^5.0.17",
+    "@fontsource/goudy-bookletter-1911": "^5.0.18",
     "classnames": "^2.3.2",
     "eslint-config-prettier": "^9.0.0",
     "image-size": "^1.0.2",

@@ -1,8 +1,8 @@
-import { test, expect, vi } from 'vitest'
+import { test, expect, vi, beforeEach } from 'vitest'
 import fs from 'fs'
 import { promisify } from 'util'
 import sizeOf from 'image-size'
-import { getImageDimensions, buildImage } from './util'
+import { getImageDimensions, buildImage, isValidImageSrc } from './util'
 import { Buffer } from 'buffer'
 import path from 'path'
 
@@ -20,6 +20,24 @@ vi.mock('fs', async (importOriginal) => {
     }
   }
 });
+
+vi.mock('util.js', () => {
+  return {
+    toSlug: vi.fn.mockImplementation('example-image-title'),
+    getImageDimensions: vi.fn.mockReturnValue({
+    'width': 1,
+    'height': 1,
+    'type': 'png'
+    }),
+    isValidImageSrc: vi.fn.mockImplementation(true)
+  }
+})
+
+
+// beforeEach(() => {
+//   vi.clearModules();  // Clear module cache if necessary
+//   vi.resetModules();  // Reset the state of all modules
+// });
 
 // Setup a default mock for image-size
 // vi.mock('image-size', () => ({
@@ -48,18 +66,6 @@ test('buildImage builds an image object containing the correct data in the corre
     caption: "Example caption, lorem ipsum dolor sit amet."
   }
   const dummyTitle = 'Example Image Title'
-
-  vi.mock('util.js', () => {
-    return {
-      toSlug: vi.fn.mockImplementation('example-image-title'),
-      getImageDimensions: vi.fn.mockReturnValue({
-      'width': 1,
-      'height': 1,
-      'type': 'png'
-      })
-    }
-  })
-
   const actualBuildImageResult = await buildImage(dummyImg, dummyTitle)
   const expectedBuildImageResult = {
     src: '../tests/images/dummy.png',
@@ -72,3 +78,22 @@ test('buildImage builds an image object containing the correct data in the corre
   expect(actualBuildImageResult).toEqual(expectedBuildImageResult)
 
 })
+
+// test('isValidImageSrc correctly validates a valid .png path ', () => {
+//   // arrange
+//   const validSrc = '/assets/images/example-image-file.png'
+//   const validExtension = '.png'
+
+//   // act
+//   console.log(validSrc, validExtension)
+//   const actualResult = isValidImageSrc('/assets/images/example-image-file.png', '.png')
+
+//   // assert
+//   expect(actualResult).toBeTruthy()
+// })
+
+// test('isValidImageSrc correctly flags an invalid .png path ', () => {
+//   // arrange
+//   // act
+//   // assert
+// })

@@ -9,7 +9,7 @@ export const transformProjects = async (data: IProjectsSrcList, outputPath: stri
   const proms: Promise<any>[] = data.map((project, index) => {
     return buildItem(project).catch(e => {
       const str = project.title ? project.title.toUpperCase() : `PROJECT ${index}`
-      errors.push(`TRANSFORM ERROR: Could not process ${str}: ${e}`)
+      errors.push(`--- TRANSFORM ERROR in ${str}: ${e}`)
       return null
     })
   })

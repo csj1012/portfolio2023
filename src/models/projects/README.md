@@ -4,6 +4,8 @@
 
 To run tests (will also watch) using vitest, use command `npm run vitest`
 
+Errors bubble up to transform operation functions. 
+
 ---
 
 ### Why not use mocks for file I/O operations?

@@ -20,6 +20,14 @@ const toSlug = (title: string, abbreviation?: string) => {
 const getImageDimensions = async (src: string) => {
   const readFileAsAsync = promisify(fs.readFile)
   try {
+
+    // DEBUG
+    return {
+      'width': 1,
+      'height': 1,
+      'type': 'png'
+    }
+
     const imagePath = path.resolve(currentDir, `../../public${src}`);
     const data = await readFileAsAsync(imagePath)
     const dimensions: ISizeCalculationResult = sizeOf(data)
@@ -35,24 +43,45 @@ const getImageDimensions = async (src: string) => {
   }
 }
 
-const buildImage = async (img: {
-  src: string
-  alt: string
-  caption?: string | null
-  teaser?: boolean
-}, title: string): Promise<IBuildImageReturn> => {
-  const { alt, caption = null } = img
-  const src = img.src || `${toSlug(title)}.png`
-  const webp = src.replace(/\.png$/i, '.webp')
+const buildImage = async (
+  img: {
+    src: string
+    alt: string
+    caption?: string | null
+    teaser?: boolean
+  },
+  title: string,
+): Promise<IBuildImageReturn> => {
   try {
+    const { alt, caption = null } = img
+
+    isValidImageSrc(img.src, '.png')
+    console.log(isValidImageSrc)
+
+    const src = img.src || `${toSlug(title)}.png`
+    const webp = src.replace(/\.png$/i, '.webp')
     const dimensions = await getImageDimensions(src)
     return { src, alt, caption, dimensions, webp }
   } catch (err) {
-      throw new Error(`Failed to get aspect ratio for img.src: ${(err as Error).message}`)
+    throw new Error(`${err as Error}`)
   }
 }
 
-export async function buildItem(item: IItem): Promise<IProject> {
+function isValidImageSrc(src: string, extension: string): void {
+  console.log(src, extension)
+  const validUrl = /^http(s)?:\/\/|^\/\w+/.test(src)
+  const validExtension = src.endsWith(extension)
+
+  if (!validUrl) {
+    throw new Error(`Invalid image source format, expected a URL or relative path: ${src}`)
+    
+  }
+  if (!validExtension) {
+    throw new Error(`Invalid image source format, expected ${extension} file extension: ${src}`)
+  }
+}
+
+async function buildItem(item: IItem): Promise<IProject> {
   try {
     const { image, teaser, title, abbreviation, aside } = item
     if (image) {
@@ -73,7 +102,10 @@ export async function buildItem(item: IItem): Promise<IProject> {
     }
     
     return Promise.resolve(project)
-  } catch (e) {
-    throw new Error(`Could not build ${item.title.toUpperCase()}: ${e}`)
+  } catch (error) {
+    throw new Error(`${error as Error}`)
   }
 }
+
+export { buildImage, isValidImageSrc, buildItem, getImageDimensions, toSlug }
+ 

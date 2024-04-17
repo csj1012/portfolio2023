@@ -1,6 +1,6 @@
+/** SANS SERIF SIZES **/
 /* @link https://utopia.fyi/type/calculator?c=320,12,1.414,1400,14,1.414,1,0,768&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
 
-/** SANS SERIF SIZES **/
 :root {
   /* Step -1: 9.90px → 11.32px */
   --sans-sm: clamp(0.7075rem, 0.5925rem + 0.1315vw, 0.7075rem);
@@ -19,6 +19,8 @@
 }
 
 /** SERIF SIZES **/
+// /* @link https://utopia.fyi/type/calculator?c=320,20,1.414,1400,24,1.414,5,0,768&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
 :root {
   /* Step -1: 14.14px → 16.97px */
   --serif-sm: clamp(0.8838rem, 0.8313rem + 0.262vw, 1.0606rem);
@@ -31,6 +33,10 @@
 
   /* Step 2: 39.99px → 47.99px */
   --serif-xl: clamp(2.4994rem, 2.3512rem + 0.7407vw, 2.9994rem);
+
+  --serif-2xl: clamp(3.5339rem, 3.3245rem + 1.0471vi, 4.2407rem);
+
+  --serif-3xl: clamp(4.997rem, 4.7009rem + 1.4806vi, 5.9964rem);
 }
 
 /** LINE HEIGHTS **/

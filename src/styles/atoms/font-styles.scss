@@ -26,9 +26,21 @@
   line-height: var(--line-height-base);
 }
 
+@mixin sans-xl {
+  font-family: var(--font-family-sans);
+  font-size: var(--sans-xl);
+  line-height: var(--line-height-base);
+}
+
 /** SERIF **/
 :root {
   --font-family-serif: 'Goudy Bookletter 1911', sans-serif;
+}
+
+@mixin serif-sm {
+  font-family: var(--font-family-serif);
+  font-size: var(--serif-sm);
+  line-height: var(--line-height-sm);
 }
 
 @mixin serif-base {
@@ -55,6 +67,6 @@
 
 @mixin display {
   font-family: "Mirra", sans-serif;
-  font-size: var(--sans-2xl);
+  font-size: var(--serif-3xl);
   line-height: var(--line-height-base);
 }

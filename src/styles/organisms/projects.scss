@@ -2,9 +2,10 @@
   @include container-with-insets;  
   display: flow-root;
   background-color: var(color--haze);
-  background-size: cover;
+  background-position-x: center;
+  background-attachment: fixed;  
   animation: var(--fadeIn);
-  animation-duration: .4s;
+  animation-duration: .2s;
 
   @media (prefers-reduced-motion: reduce) {
     animation: none;
@@ -39,6 +40,8 @@
     @include container-inset-margins;
     @include container-bottom-margin;
     background: var(--color-hazelight);
+    border: var(--border-haze-1-subtle);
+    border-radius: 10px;
   }
 
   .workstyle {

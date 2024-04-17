@@ -21,6 +21,11 @@
     p:first-child {
       @include serif-lg;
     }
+
+    span {      
+      background-clip: text;
+      color: transparent;
+    }
   }
 
   &__art {

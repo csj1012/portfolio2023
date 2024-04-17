@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 100">
+	<defs>
+    <rect id="shape" x="0" y="0" width="700" height="100" />
+    <filter id="noise">
+      <feTurbulence
+        type="fractalNoise"
+        baseFrequency=".62"
+        numOctaves="3"
+        result="turbulence"
+      />
+      <feComposite operator="in" in="turbulence" in2="SourceAlpha" result="composite"/>
+      <feColorMatrix in="composite" type="luminanceToAlpha" />
+      <feBlend in="SourceGraphic" in2="composite" mode="overlay" />
+      <feBlend in="SourceGraphic" in2="composite" mode="color-burn" />
+    </filter>
+    <filter id="blur">
+      <feGaussianBlur in="SourceGraphic" stdDeviation=".2"/>
+    </filter>    
+      <linearGradient id="gradient">
+        <stop offset="0%" stop-color="#735205ff" stop-opacity=".5" />
+        <stop offset="33%" stop-color="#053873ff" stop-opacity=".5" />              
+        <stop offset="66%" stop-color="#053873ff" stop-opacity=".5" />      
+        <stop offset="100%" stop-color="#735205ff" stop-opacity=".5" />
+      </linearGradient>
+      <use href="#shape" />    
+	</defs>
+	<use href="#shape" mask="url(#gradientFade)" fill="url(#gradient)" filter="url('#noise') url('#blur') " />
+</svg>

@@ -60,6 +60,11 @@
   --letter-spacing-lg: calc(var(--space-3xs) / 3);
 }
 
+.dark {
+  --letter-spacing-sm: calc(var(--space-3xs) / 10);
+  --letter-spacing-lg: calc(var(--space-3xs) / 2);
+}
+
 /** SCAFFOLDING **/
 @mixin container-top-padding {
   padding-top: var(--space-xl-2xl);

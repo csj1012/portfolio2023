@@ -1,11 +1,22 @@
-import { LayoutContext, useLayout } from '@views/LayoutContext'
-import ComputedBg from '@components/atoms/ComputedBg'
+import { LayoutContext, useLayout } from '@views/contexts/LayoutContext'
+import { ThemeContext } from '@views/contexts/ThemeContext'
+import { useState } from 'react'
+import { systemDarkModeSetting } from '@views/components/util/mediaqueries'
 
-export const Layout = ({ children }) => (
-  <LayoutContext.Provider value={true}>
-    {children}
-  </LayoutContext.Provider>
-)
+export const Layout = ({ children }) => {
+  const [theme, setTheme] = useState(systemDarkModeSetting)
+  const [showResetButton, setShowResetButton] = useState(false)
+
+  return (
+    <LayoutContext.Provider value={true}>
+      <ThemeContext.Provider value={{ theme, setTheme, showResetButton, setShowResetButton, systemDarkModeSetting }}>
+        <div className={theme}>
+          {children}
+        </div>
+      </ThemeContext.Provider>
+    </LayoutContext.Provider>
+  )
+}
 
 const HeaderElement = ({ children }) => <header className='header'>{children}</header>
 const NavElement = ({ children }) => <nav>{children}</nav>

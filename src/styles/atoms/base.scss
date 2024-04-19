@@ -6,8 +6,6 @@
 
 body {
   @include sans-base;
-  background: var(--color-hazelight);
-  color: var(--color-root);
   overflow-x: hidden;
 }
 
@@ -16,7 +14,6 @@ p:not(:last-of-type) {
 }
 
 a {
-  color: var(--color-jade);
   text-decoration: underline;
   text-underline-offset: 3px;
 
@@ -37,3 +34,20 @@ a {
   border-width: 0;
 }
 
+.light {
+  background: linear-gradient(90deg, var(--color-hazelight) 0%, var(--color-moonlight) 50%, var(--color-hazelight) 100%,);
+  color: var(--color-root);
+
+  a {
+    color: var(--color-jade);
+  }
+}
+
+.dark {
+  background: linear-gradient(90deg, var(--color-oceandark) 0%, var(--color-ocean) 50%, var(--color-oceandark) 100%,);
+  color: var(--color-seafoamdark);
+
+  a {
+    color: var(--color-seafoamdark);
+  }
+}

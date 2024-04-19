@@ -1,6 +1,6 @@
 import { Link, NavLink } from 'react-router-dom'
-import textImage from '/assets/svg/noiseDark.svg'
-import ComputedBg from '@components/atoms/ComputedBg'
+import bgImage from '/assets/images/nouveau-bg.png'
+import ThemeSelect from '@components/molecules/ThemeSelect'
 
 export default function MainMenu() {
   const items = [    
@@ -26,13 +26,17 @@ export default function MainMenu() {
   )
   
   return (
-    <menu className="main-menu" style={{backgroundImage: ComputedBg()}}>    
-      <h1 className="main-menu__title">        
-        <Link to="/" className='main-menu__title__link'>Chelsie Johnston</Link>        
-      </h1>
-      { < HeadingElement /> } 
-      <ul className='main-menu__menu bg-cover'  style={{backgroundImage: ComputedBg('haze')}}>{menuItems}</ul>
+    <menu className="main-menu" style={{backgroundImage: `url(${bgImage})`}}>
+      <div className="main-menu__branding">
+        <h1 className="main-menu__title">        
+          <Link to="/" className='main-menu__title__link'>Chelsie Johnston</Link>     
+        </h1>
+        <ThemeSelect />   
+      </div>      
+      { < HeadingElement /> }
+      <ul className='main-menu__menu bg-cover'>{menuItems}</ul>
     </menu>
   )
   
 }
+

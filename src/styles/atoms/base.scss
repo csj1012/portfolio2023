@@ -9,6 +9,19 @@ body {
   overflow-x: hidden;
 }
 
+.ui-wrapper {
+  background-blend-mode: overlay;
+  height: 100%;
+  width: 100vw;
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--color-indigo);
+}
+
+* {
+  scrollbar-color: var(--color-seafoamdark) var(--color-jade);
+}
+
 p:not(:last-of-type) {
   margin-bottom: var(--space-md);
 }

@@ -2,15 +2,19 @@ import { LayoutContext, useLayout } from '@views/contexts/LayoutContext'
 import { ThemeContext } from '@views/contexts/ThemeContext'
 import { useState } from 'react'
 import { systemDarkModeSetting } from '@views/components/util/mediaqueries'
+import ComputedBg from '@components/atoms/ComputedBg'
+import classNames from 'classnames'
 
 export const Layout = ({ children }) => {
   const [theme, setTheme] = useState(systemDarkModeSetting)
   const [showResetButton, setShowResetButton] = useState(false)
 
+  const classes = classNames(theme, 'ui-wrapper')
+
   return (
     <LayoutContext.Provider value={true}>
       <ThemeContext.Provider value={{ theme, setTheme, showResetButton, setShowResetButton, systemDarkModeSetting }}>
-        <div className={theme}>
+        <div className={classes} style={{ backgroundImage: ComputedBg('jade') }}>
           {children}
         </div>
       </ThemeContext.Provider>
@@ -18,10 +22,10 @@ export const Layout = ({ children }) => {
   )
 }
 
-const HeaderElement = ({ children }) => <header className='header'>{children}</header>
+const HeaderElement = ({ children }) => <header className='masthead'>{children}</header>
 const NavElement = ({ children }) => <nav>{children}</nav>
 const MainElement = ({ children }) => <main>{children}</main>
-const FooterElement = ({ children }) => <footer className='footer' style={{backgroundImage: ComputedBg('haze')}}>{children}</footer>
+const FooterElement = ({ children }) => <footer className='footer'>{children}</footer>
 
 // HOC for wrapping each section of the layout in the LayoutContext.
 // This is probably overkill for now.

@@ -1,17 +1,11 @@
-import { NavLink } from 'react-router-dom'
-
-export default function Menu({   
-    items, 
-    HeadingElement = () => <h2>Menu</h2>,
-    LinkElement = () => <NavLink {...props}/>,
-    ItemComponent = ({ text, className }) => <span className={className}>{text}</span>,
-    ...props
-}) {
+export default function Menu({ items, headingElement: HeadingElement = () => <h2>Menu</h2> }) {
   const menuItems = items.map((item) => {
+    const { linkElement: LinkElement, itemComponent: ItemComponent } = item.renderOptions
+    
     return (
       <li key={item.href}>
-        <LinkElement to={item.href} {...props}>
-          <ItemComponent {...item} />
+        <LinkElement to={item.href}>
+          <ItemComponent text={item.text} />
         </LinkElement>
       </li>
     )
@@ -19,8 +13,8 @@ export default function Menu({
 
   return (
     <div>
-      { < HeadingElement /> } 
-      <ul { ...props } >{menuItems}</ul>
+      <HeadingElement />
+      <ul>{menuItems}</ul>
     </div>
   )
 }

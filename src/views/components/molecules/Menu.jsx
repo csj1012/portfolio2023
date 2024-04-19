@@ -12,9 +12,9 @@ export default function Menu({ items, headingElement: HeadingElement = () => <h2
   })
 
   return (
-    <div>
+    <>
       <HeadingElement />
       <ul>{menuItems}</ul>
-    </div>
+    </>
   )
 }

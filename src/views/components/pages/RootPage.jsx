@@ -10,7 +10,7 @@ export default function RootPage({ outlet }) {
     <Layout>
       <ScrollRestoration />
       <Nav>
-        {/* <MainMenu /> */}
+        <MainMenu />
       </Nav>
       <Main>
         <div className="content" style={{ backgroundImage: ComputedBg('haze') }}>

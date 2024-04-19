@@ -51,7 +51,7 @@ export default function Masthead() {
         {topics ? (
           <UnorderedList
             items={topics}
-            className='teaser__list'
+            className='masthead__filters__list'
           />
         ) : (
           ''

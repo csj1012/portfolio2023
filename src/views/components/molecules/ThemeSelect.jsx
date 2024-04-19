@@ -36,7 +36,7 @@ export default function ThemeSelect() {
         }
         // style={{ backgroundImage: `url(${ reset })` }}
       >
-        Use default
+        Reset theme
       </button>
     )    
   }
@@ -59,6 +59,7 @@ export default function ThemeSelect() {
           checked = { theme === 'dark' ? true : false }
         />
         <label htmlFor="darkmode">Dark Mode</label> */}
+        <ResetThemeElement />
         <div className="switch">
           <input type="checkbox" id="toggle" className="toggle-input" onClick={ handleClick } checked = { theme === 'dark' ? true : false }/>
           <label htmlFor="toggle" className="toggle-label">
@@ -66,7 +67,6 @@ export default function ThemeSelect() {
             <span className="toggle-switch"></span>
           </label>
         </div>
-        <ResetThemeElement />
       </div>
     )
   }

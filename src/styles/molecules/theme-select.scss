@@ -1,17 +1,15 @@
 .theme-select {
-  @include container;
-  @include grid;
-  position: absolute;
   width: fit-content;
-  height: var(--space-3xl);
-  top: 0;
-  right: 0;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  z-index: 1;
   color: var(--color-seafoamdark);
-  flex-wrap: wrap;
+  flex-direction: row;
+  height: 48px; // min touch target size for mobile devices
+
+  @media screen and (min-width: 768px) {
+    // height: var(--space-3xl);
+  }
 
   input {
     margin-right: var(--space-2xs);
@@ -19,48 +17,24 @@
 
   button {
     background: transparent;
-    // border: 0;
     flex-basis: 100%;
     width: auto;
+    color: var(--color-seafoam);
+    height: 100%;
+    background: #43725487;
+    border: 0;
+    border-radius: 3rem;
+    padding: 0 1rem;
+    margin: 0 var(--space-2xs) 0 0;
   }
 
-  // button {
-  //   --button-padding-y: calc(calc((var(--space-3xl) - var(--space-md))) / 2);
-  //   background: transparent;
-  //   background-repeat: no-repeat;
-  //   background-position: center;
-  //   border: 0;
-  //   background-size: var(--space-md);
-  //   width: var(--space-md);
-  //   height: var(--space-md);
-  //   padding: var(--button-padding-y) var(--space-md);
-    
-  //   &:hover {
-  //     opacity: .5;
-  //     cursor: pointer;
-  //   }
-
-  //   @media screen and (min-width: 768px) {
-  //     &:first-of-type {
-  //       padding-right: 0;
-  //     }
-  //   }
-  // }
-  
-  // &__label--sr-only {
-  //   position: absolute;
-  //   width: 1px;
-  //   height: 1px;
-  //   margin: -1px;
-  //   padding: 0;
-  //   overflow: hidden;
-  //   clip: rect(0, 0, 0, 0);
-  //   border: 0;
-  // }
   &__theme-reset {
     display: block;
     &--hidden {
       display: none;
+    }
+    &:hover {
+      cursor: pointer;
     }
   }
 }
@@ -69,12 +43,20 @@
 .switch {
   display: inline-block;
   position: relative;
-  width: var(--space-xl);
-  height: var(--space-md);
+  width: 4.5rem;
+  min-width: 4.5rem;
+  height: 100%;
+  @media screen and (min-width: 768px) {
+  // height: var(--space-md);
+  }
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 /* Hide default checkbox */
 .switch input[type="checkbox"] {
+  position: absolute;
   opacity: 0;
   width: 0;
   height: 0;
@@ -110,11 +92,16 @@
   position: absolute;
   top: 1px;
   left: 0;
-  width: calc(var(--space-md) - 4px);
-  height: calc(var(--space-md) - 4px);
+  width: 2.5rem;
+  height: 100%;
   background: var(--color-jade);
   border-radius: 50%;
   transition: transform 0.8s ease-in-out;
+
+  @media screen and (min-width: 768px) {
+    // width: calc(var(--space-md) - 4px);
+    // height: calc(var(--space-md) - 4px);
+  }
 }
 
 .switch input[type="checkbox"]:checked + .toggle-label .toggle-switch {

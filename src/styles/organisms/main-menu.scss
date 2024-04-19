@@ -1,136 +1,46 @@
 .main-menu {
-  padding-inline-start: 0;
-  background-position-x: right;
-
-  > *:not(.theme-select) {
-    @include container;
-  }
+  @include container;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--space-sm);
 
   @media screen and (min-width: 768px) {
-    background-position-x: center;
-    > .theme-select {
-      @include container;
-    }
+    width: 100%;
+    align-items: baseline;
+    justify-content: flex-start;
+  }
+  
+  a {
+    color: var(--color-seafoam);
+    text-decoration: none;
   }
 
   &__title {
-    a {
-      @include display;
-      position: relative;
-      display: flex;
-      justify-content: center;      
-      padding-top: var(--space-2xs);
-      color: #020d0d;
-      opacity: .9;
-      text-decoration: none;
-      letter-spacing: var(--letter-spacing-lg);
-      line-height: var(--line-height-base);
-
-      @media screen and (min-width: 768px) {
-        width: fit-content;
-      }
-
-      &:hover {
-        opacity: .5;
-        transition: var(--fade);
-      }
-
-      &:after {
-        content: 'Chelsie Johnston';
-        font-family: "Mirra";
-        position: absolute;
-        color: #2a5b47;
-        z-index: -1;
-      }
-    }
+    @include sans-lg;
+    letter-spacing: .1rem;
+    font-weight: 450;
   }
 
-  &__menu {
+  h2 {
+    // DEBUG
+    display: none;
+  }
+
+  ul {
     @include list-inline;
-    justify-content: center;
-    position: relative;
+    display: none;
 
     @media screen and (min-width: 768px) {
-      justify-content: flex-end;
-    }
-
-    @media screen and (min-width: 1280px) {
-      border-radius: 14px 14px 0 0;
-    }
-
-    a {
-      @include sans-lg;
-      display: inline-block;
-      padding: var(--space-lg) var(--space-xs);
-      font-weight: 300;
-      text-decoration: none;
-      transition: var(--padding);
-
-      @media screen and (min-width: 768px) {
-        padding: var(--space-sm) var(--space-md);
-        transition: var(--padding);
-
-        &:last-child {
-          padding-right: 0;
-        }
-      }
-
-      &:hover {
-        text-decoration: underline;
-        text-underline-offset: 5px;
-      }
-
-      /* Active class provided by react-router-dom. */
-      &.active {
-        text-decoration: underline;
-        text-underline-offset: 5px;
-      }
-    }
-  }
-}
-
-.light .main-menu {
-  &__menu {
-    background: var(--color-haze);
-    border-bottom: var(--border-hazedark-1);
-
-    a {
-      color: var(--color-root);
-
-      &:hover {
-        text-decoration-color: var(--color-jade);
-        color: var(--color-jade);
-      }
-
-      /* Active class provided by react-router-dom. */
-      &.active {
-        text-decoration-color: var(--color-jade);
-      }
-    }
-  }
-}
-
-.dark .main-menu {
-  &__menu {
-    background: var(--color-oceandark);
-    border-bottom: solid 1px #041313;
-
-    a {
-      color: #98b7a3;
-
-      &:hover {
-        text-decoration-color: var(--color-periwinkle);
-        color: var(--color-periwinkle);
-      }
-
-      /* Active class provided by react-router-dom. */
-      &.active {
-        text-decoration-color: var(--color-periwinkle);
-      }
+      display: flex;
+      order: 2;
     }
   }
 
-  // a {
-  //   color: #98b7a3;
-  // }
+  .theme-select {
+    @media screen and (min-width: 768px) {
+      order: 3;
+      justify-self: flex-end;
+    }    
+  }
 }

@@ -1,5 +1,6 @@
 .main-menu {
   @include container;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -8,7 +9,10 @@
   @media screen and (min-width: 768px) {
     width: 100%;
     align-items: baseline;
-    justify-content: flex-start;
+    // justify-content: flex-start;
+    display: grid;
+    grid-template-columns: auto 1fr 1fr;
+    grid-gap: var(--grid-gutter);
   }
   
   a {
@@ -20,6 +24,10 @@
     @include sans-lg;
     letter-spacing: .1rem;
     font-weight: 450;
+
+    @media screen and (min-width: 768px) {
+      @include sans-base;
+    }
   }
 
   h2 {

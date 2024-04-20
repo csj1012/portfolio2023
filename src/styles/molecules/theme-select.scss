@@ -8,7 +8,7 @@
   height: 48px; // min touch target size for mobile devices
 
   @media screen and (min-width: 768px) {
-    // height: var(--space-3xl);
+    height: var(--space-md);
   }
 
   input {
@@ -47,7 +47,9 @@
   min-width: 4.5rem;
   height: 100%;
   @media screen and (min-width: 768px) {
-  // height: var(--space-md);
+    width: 3rem;
+    min-width: 3rem;
+    height: var(--space-md);
   }
   &:hover {
     cursor: pointer;
@@ -99,8 +101,8 @@
   transition: transform 0.8s ease-in-out;
 
   @media screen and (min-width: 768px) {
-    // width: calc(var(--space-md) - 4px);
-    // height: calc(var(--space-md) - 4px);
+    width: calc(var(--space-md) - 4px);
+    height: calc(var(--space-md) - 4px);
   }
 }
 

@@ -1,6 +1,8 @@
 import { Layout, Header, Nav, Main, Footer } from '@components/templates/Layout'
 import Masthead from '@components/organisms/Masthead'
 import FooterBar from '@components/organisms/Footer'
+import About from '@components/organisms/about'
+import Brands from '@components/organisms/brands'
 import MainMenu from '@components/organisms/MainMenu'
 import { ScrollRestoration } from 'react-router-dom'
 import ComputedBg from '@components/atoms/ComputedBg'
@@ -19,6 +21,8 @@ export default function RootPage({ outlet }) {
           </Header>
           { outlet }
         </div>
+        <About />
+        <Brands />
       </Main>
       <Footer>
         {/* <FooterBar /> */}

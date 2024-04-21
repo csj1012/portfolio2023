@@ -1,0 +1,25 @@
+.brands {
+  @include container-with-insets;
+  background: var(--color-haze);
+  // display: grid;
+  display: none;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  
+  padding: 1rem 0;
+  margin-bottom: 1rem;
+
+  .logos {
+    grid-column: 2 / 5;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: grid;
+    display: none;
+    grid-gap: 1rem;
+    grid-row-gap:4rem;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 0;
+    img {
+      // background: black;
+    }
+  }
+}

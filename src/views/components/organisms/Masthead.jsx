@@ -55,7 +55,7 @@ export default function Masthead() {
         />
         <div className='divider'></div>                             
       </div>
-      <div className='masthead__filters'>
+      {/* <div className='masthead__filters'>
         <p>With over 10 years of experience in:</p>
         {topics ? (
           <UnorderedList
@@ -65,7 +65,7 @@ export default function Masthead() {
         ) : (
           ''
         )}
-      </div>
+      </div> */}
     </>
   )
 }

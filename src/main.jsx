@@ -10,6 +10,7 @@ import projectsListLoader from '@routes/projectsList'
 import Project from '@components/organisms/ProjectDetail'
 import Contact from '@components/pages/Contact'
 import TaggedContent from '@components/organisms/TaggedContent'
+import FeaturedContent from '@components/organisms/FeaturedContent'
 import projectLoader from '@routes/project'
 
 const router = createHashRouter([
@@ -18,6 +19,11 @@ const router = createHashRouter([
     element: <Root />,
     errorElement: <Error />,
     children: [
+      {
+        path: '/',
+        element: <FeaturedContent />,
+        // loader: projectLoader, // Replace with 'all content' loader once we have blogs
+      },
       {
         path: '/tag/:tag',
         element: <TaggedContent />,

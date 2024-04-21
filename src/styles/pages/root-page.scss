@@ -6,6 +6,7 @@ main {
 
 .content {
   @include container;
+  padding-right: calc(var(--grid-gutter) * 1.75);
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -16,4 +17,8 @@ main {
   border-radius: 2rem;
   color: var(--color-haze);
   background-color: var(--color-hazelight);
+
+  @media screen and (min-width: 768px) {
+    padding-right: var(--grid-gutter);
+  }
 }

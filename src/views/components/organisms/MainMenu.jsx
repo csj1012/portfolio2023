@@ -21,7 +21,7 @@ export default function MainMenu() {
         <h1 className="main-menu__title">        
           <Link to="/" className='main-menu__title__link'>Chelsie Johnston</Link>     
         </h1>
-        <ThemeSelect />
+        {/* <ThemeSelect /> */}
         <Menu items={ items } headingElement={ HeadingElement } />
     </menu>
   )

@@ -1,10 +1,13 @@
 .main-menu {
   @include container;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: var(--space-sm);
+  padding-top: var(--space-2xs);
+  padding-bottom: var(--space-xs);
+  background: #0428287d;
+  border-radius: 5rem;
+  margin-top: 1rem;
 
   @media screen and (min-width: 768px) {
     width: 100%;

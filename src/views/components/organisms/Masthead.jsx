@@ -17,21 +17,30 @@ export default function Masthead() {
   ]
 
   const topics = [
-    'Drupal',
+    'Full stack development',
+    'Drupal development',
     'Accessiblity',
-    'Javascript',
-    'React',
+    'Design Systems',
     'CSS',
-    'Drupal',
-    'Accessiblity',
-    'Javascript',
+    'JavaScript',
+    'TypeScript',
+    'PHP',
     'React',
-    'CSS',
-    'Drupal',
-    'Accessiblity',
-    'Javascript',
-    'React',
-    'CSS',
+    'NodeJS',
+    'OOCSS',
+    'PatternLab',
+    'Storybook',
+    'Mannequin',
+    'UI/UX Design',
+    'Gulp',
+    'Composer',
+    'Twig',
+    'Atomic Design',
+    'Circle CI',
+    'BackstopJS',
+    'Decoupled Drupal',
+    'Material UI',
+    'CSS-in-JS',
   ]
 
   return (
@@ -47,7 +56,7 @@ export default function Masthead() {
         <div className='divider'></div>                             
       </div>
       <div className='masthead__filters'>
-        <p>Filter by topic:</p>
+        <p>With over 10 years of experience in:</p>
         {topics ? (
           <UnorderedList
             items={topics}

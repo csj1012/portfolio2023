@@ -1,0 +1,20 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Lorem Ipsum",
+      "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>",
+      "author": "John Doe",
+      "date": "2023-01-01",
+      "slug": "lorem-ipsum"
+    },
+    {
+      "id": 2,
+      "title": "Dolor Sit Amet",
+      "content": "<p>Dolor sit amet, consectetur adipiscing elit.</p>",
+      "author": "Jane Smith",
+      "date": "2023-01-02",
+      "slug": "dolor-sit-amet"
+    }
+  ]
+}

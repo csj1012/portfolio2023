@@ -5,6 +5,8 @@ import Root from '@routes/root'
 import Error from '@routes/error'
 import Project, { loader as projectLoader } from './controllers/routes/project'
 import ProjectsList, { loader as projectsListLoader } from './controllers/routes/projectsList'
+import Blog, { loader as blogLoader } from './controllers/routes/blog'
+import BlogList, { loader as blogPostsLoader } from './controllers/routes/blogList'
 import '/src/styles/index.scss'
 import FeaturedContent from '@components/organisms/FeaturedContent'
 import Design from '@components/pages/Design'
@@ -28,6 +30,18 @@ const router = createHashRouter([
             path: '/work/:slug',
             element: <Project />,
             loader: projectLoader,
+          },
+        ],
+      },
+      {
+        path: '/blog',
+        element: <BlogList />,
+        loader: blogPostsLoader,
+        children: [
+          {
+            path: '/blog/:slug',
+            element: <Blog />,
+            loader: blogLoader,
           },
         ],
       }

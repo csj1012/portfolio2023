@@ -1,11 +1,20 @@
 import Image from '@components/atoms/Image'
 import UnorderedList from '@components/atoms/UnorderedList'
 
-export default function BlogPostTeaser({ title, shortDescription, teaser, techs, featured }) {  
+export default function BlogPostTeaser({ title, summary, teaser, topics, featured, date }) {  
+
+  const formattedDate = new Date(date).toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    timeZone: 'UTC'
+  })
+
   return (
     <>
       <h3 className="teaser__title sr-hidden">{title} &#187;</h3>
-      <p className="teaser__short-description">{shortDescription}</p>
+      <p className="teaser__posted">{formattedDate}</p>
+      <p className="teaser__short-description">{summary}</p>
       <div className="teaser__image-wrapper">
       {featured ? (
           <span className='teaser__featured-chiclet'>Featured</span>
@@ -21,9 +30,9 @@ export default function BlogPostTeaser({ title, shortDescription, teaser, techs,
           ''
         )}
       </div>      
-      {techs ? (
-        <UnorderedList items={techs} className='teaser__list' />
-      ) : ''}
+      {/* {topics ? (
+        <UnorderedList items={topics} className='teaser__list' />
+      ) : ''} */}
     </>
   )
 }

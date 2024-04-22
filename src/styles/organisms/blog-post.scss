@@ -33,6 +33,7 @@
 
   &__tagline {
     @include sans-lg;
+    line-height: var(--space-lg);
     max-width: 44ch;
     // margin-bottom: var(--space-lg);
     grid-column: 1 / 4;

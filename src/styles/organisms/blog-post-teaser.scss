@@ -1,0 +1,21 @@
+.projects__menu--blog {
+  .teaser {
+    &__title {
+      @include serif-lg;
+      max-width: 50ch;
+    }
+    &__short-description {
+      display: none;
+      @include sans-lg;
+      line-height: var(--space-lg);
+      max-width: 72ch;
+    }
+    &__title,
+    &__short-description {
+      grid-column: 1 / 12;
+    }
+    &__image-wrapper {
+      display: none;
+    }
+  }
+}

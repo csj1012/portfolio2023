@@ -43,7 +43,7 @@ export default function BlogPostsMenu({ items, current }) {
       <section className="projects">
         <div className="inset">
           {<HeadingElement />}
-          <ul className="projects__menu">{menuItems}</ul>
+          <ul className="projects__menu projects__menu--blog">{menuItems}</ul>
         </div>
         <WorkStyle />
       </section>

@@ -3,8 +3,14 @@
   @include container-top-padding;
   @include container-bottom-margin;
   @include grid;
-
+  grid-column: 1 / 4;
+  padding-top: 0;
+  color: var(--color-abyss);
   animation: var(--fadeIn);
+
+  a {
+    color: var(--color-jade);
+  }
   
   @media (prefers-reduced-motion: reduce) {
     animation: none;

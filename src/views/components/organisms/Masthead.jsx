@@ -13,7 +13,7 @@ export default function Masthead() {
     { text: 'LinkedIn', href: 'https://www.linkedin.com/in/chelsiesjohnston', renderOptions },
     { text: 'GitHub', href: 'https://github.com/csj1012', renderOptions },
     { text: 'Mastodon', href: 'https://hachyderm.io/@chelsiejohnston', renderOptions },
-    { text: 'Contact', href: '/contact', renderOptions  }
+    { text: 'Email', href: 'mailto:chelsiesjohnston@gmail.com', renderOptions  }
   ]
 
   const topics = [

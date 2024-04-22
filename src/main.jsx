@@ -5,7 +5,6 @@ import Root from '@routes/root'
 import Error from '@routes/error'
 import Project, { loader as projectLoader } from './controllers/routes/project'
 import ProjectsList, { loader as projectsListLoader } from './controllers/routes/projectsList'
-import Contact from '@components/pages/Contact'
 import '/src/styles/index.scss'
 import FeaturedContent from '@components/organisms/FeaturedContent'
 import Design from '@components/pages/Design'
@@ -31,10 +30,6 @@ const router = createHashRouter([
             loader: projectLoader,
           },
         ],
-      },
-      {
-        path: '/contact',
-        element: <Contact />
       }
     ],
   },

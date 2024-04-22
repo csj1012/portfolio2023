@@ -5,6 +5,8 @@ import Menu from '@components/molecules/menu'
 export default function MainMenu() {
   const ItemComponent = ({text}) => <span className=''>{text}</span>
 
+  const NoClientSideRoutingLink = ({to, children}) => <a href={to}>{ children }</a>
+
   const HeadingElement = () => <h2 className='sr-only'>Main Menu:</h2>
 
   const renderOptions = { linkElement: Link, itemComponent: ItemComponent }
@@ -13,7 +15,7 @@ export default function MainMenu() {
     { text: 'About', href: '/', renderOptions },
     { text: 'Work', href: '/work', renderOptions },
     { text: 'Blog', href: '/blog', renderOptions },
-    { text: 'Contact', href: '/contact', renderOptions }
+    { text: 'Resume', href: '/files/Resume_ChelsieJohnston_2024.pdf', renderOptions: { linkElement: NoClientSideRoutingLink, itemComponent: ItemComponent } }
   ]
   
   return (

@@ -46,21 +46,3 @@ a {
   white-space: nowrap;
   border-width: 0;
 }
-
-.light {
-  background: linear-gradient(90deg, var(--color-hazelight) 0%, var(--color-moonlight) 50%, var(--color-hazelight) 100%,);
-  color: var(--color-root);
-
-  a {
-    color: var(--color-jade);
-  }
-}
-
-.dark {
-  background: linear-gradient(90deg, var(--color-oceandark) 0%, var(--color-ocean) 50%, var(--color-oceandark) 100%,);
-  color: var(--color-seafoamdark);
-
-  a {
-    color: var(--color-seafoamdark);
-  }
-}

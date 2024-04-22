@@ -46,9 +46,7 @@ export default function Masthead() {
   return (
     <>
       <div className='masthead__intro'>
-        <p>
-          Hello, I'm <span className='fancy'>Chelsie</span> A descriptor one, descriptor two, descriptor three.
-        </p>
+        <p>Hello, I'm <span className='fancy'>Chelsie Johnston</span> A Drupal, design systems, and accessiblity engineer.</p>
         <Menu
           items={items}
           headingElement={HeadingElement}

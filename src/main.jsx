@@ -1,17 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { createHashRouter, RouterProvider } from 'react-router-dom'
-import Error from '@routes/error'
-import Design from '@components/pages/Design'
 import Root from '@routes/root'
-import '/src/styles/index.scss'
-import ProjectsList from '@components/organisms/ProjectsMenu'
-import projectsListLoader from '@routes/projectsList'
-import Project from '@components/organisms/ProjectDetail'
+import Error from '@routes/error'
+import Project, { loader as projectLoader } from './controllers/routes/project'
+import ProjectsList, { loader as projectsListLoader } from './controllers/routes/projectsList'
 import Contact from '@components/pages/Contact'
-import TaggedContent from '@components/organisms/TaggedContent'
+import '/src/styles/index.scss'
 import FeaturedContent from '@components/organisms/FeaturedContent'
-import projectLoader from '@routes/project'
+import Design from '@components/pages/Design'
 
 const router = createHashRouter([
   {
@@ -21,13 +18,7 @@ const router = createHashRouter([
     children: [
       {
         path: '/',
-        element: <FeaturedContent />,
-        // loader: projectLoader, // Replace with 'all content' loader once we have blogs
-      },
-      {
-        path: '/tag/:tag',
-        element: <TaggedContent />,
-        loader: projectLoader, // Replace with 'all content' loader once we have blogs
+        element: <FeaturedContent />
       },
       {
         path: '/work',

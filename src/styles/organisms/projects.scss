@@ -1,6 +1,8 @@
 .projects {
   @include container-with-insets;  
+  padding-top: 0;
   display: flow-root;
+  grid-column: 1 / 4;
   background-color: var(color--haze);
   background-position-x: center;
   background-attachment: fixed;  
@@ -13,7 +15,9 @@
 
   &__title {
     @include heading-underline;
+    color: var(--color-abyss);
     grid-column: 1 / span 12;
+    margin-bottom: var(--space-lg);
   }
 
   &__menu {

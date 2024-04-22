@@ -2,7 +2,7 @@
   @include grid;
   gap: calc(var(--space-sm) / 2);
   padding: var(--space-lg) 0;
-  color: var(--color-root);
+  color: var(--color-abyss);
   text-decoration: none;
 
   > * {
@@ -10,7 +10,8 @@
   }
 
   &__title {
-    @include serif-base;    
+    @include serif-base;
+    
     font-weight: 400;
   }
 

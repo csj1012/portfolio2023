@@ -1,20 +1,26 @@
 {
   "posts": [
     {
-      "id": 1,
-      "title": "Lorem Ipsum",
-      "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>",
-      "author": "John Doe",
-      "date": "2023-01-01",
-      "slug": "lorem-ipsum"
+      "category": "Blog Post",
+      "slug": "on-ten-years-in-the-web-dev-industry",
+      "title": "On Ten Years in the Web Dev Industry",
+      "summary": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "tagline": "What I've learned, and where I'm going next",
+      "content": "<p>Of course, I've been writing code for longer—since 2000, when I built my first play-by-post forum RPG.</p>\n\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl ac luctus tincidunt, ipsum nunc tincidunt nunc, a tincidunt elit nunc id nunc. Nullam euismod, nunc id aliquam lacinia, nisl lectus tincidunt nunc, a tincidunt elit nunc id nunc.</p>\n\n<p>Phasellus auctor, nisl ac luctus tincidunt, ipsum nunc tincidunt nunc, a tincidunt elit nunc id nunc. Nullam euismod, nunc id aliquam lacinia, nisl lectus tincidunt nunc, a tincidunt elit nunc id nunc. Nullam auctor, nisl ac luctus tincidunt, ipsum nunc tincidunt nunc, a tincidunt elit nunc id nunc.</p>\n\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl ac luctus tincidunt, ipsum nunc tincidunt nunc, a tincidunt elit nunc id nunc. Nullam euismod, nunc id aliquam lacinia, nisl lectus tincidunt nunc, a tincidunt elit nunc id nunc.</p>\n\n<p>Phasellus auctor, nisl ac luctus tincidunt, ipsum nunc tincidunt nunc, a tincidunt elit nunc id nunc. Nullam euismod, nunc id aliquam lacinia, nisl lectus tincidunt nunc, a tincidunt elit nunc id nunc. Nullam auctor, nisl ac luctus tincidunt, ipsum nunc tincidunt nunc, a tincidunt elit nunc id nunc.</p>\n\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl ac luctus tincidunt, ipsum nunc tincidunt nunc, a tincidunt elit nunc id nunc. Nullam euismod, nunc id aliquam lacinia, nisl lectus tincidunt nunc, a tincidunt elit nunc id nunc.</p>\n\n<p>Phasellus auctor, nisl ac luctus tincidunt, ipsum nunc tincidunt nunc, a tincidunt elit nunc id nunc. Nullam euismod, nunc id aliquam lacinia, nisl lectus tincidunt nunc, a tincidunt elit nunc id nunc. Nullam auctor, nisl ac luctus tincidunt, ipsum nunc tincidunt nunc, a tincidunt elit nunc id nunc.</p>",
+      "link": {
+        "href": "/blog/lorem-ipsum",
+        "text": "Read full blog post"
+      },
+      "date": "2024-03-25T12:30:00Z"
     },
     {
-      "id": 2,
-      "title": "Dolor Sit Amet",
-      "content": "<p>Dolor sit amet, consectetur adipiscing elit.</p>",
-      "author": "Jane Smith",
-      "date": "2023-01-02",
-      "slug": "dolor-sit-amet"
+      "category": "Blog Post",
+      "slug": "that-time-i-tried-to-use-chatgpt-to-write",
+      "title": "That time I tried to use ChatGPT to write The Expanse, The Musical",
+      "link": {
+        "href": "/blog/lorem-ipsum",
+        "text": "Read full blog post"
+      }
     }
   ]
 }

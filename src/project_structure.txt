@@ -1,0 +1,90 @@
+.
+├── controllers
+│   ├── projects.js
+│   └── routes
+│       ├── contact.jsx
+│       ├── error.jsx
+│       ├── project.jsx
+│       ├── projectsList.jsx
+│       └── root.jsx
+├── main.jsx
+├── models
+│   ├── posts
+│   │   ├── src.js
+│   │   └── src.ts
+│   ├── projects
+│   │   ├── projects.json
+│   │   ├── projectsDummy.json
+│   │   ├── src.d.ts
+│   │   ├── src.js
+│   │   ├── src.ts
+│   │   ├── srcDummy.js
+│   │   ├── transform.js
+│   │   ├── transform.test.js
+│   │   └── transform.ts
+│   ├── tsconfig.json
+│   ├── tsconfig.node.json
+│   ├── types
+│   ├── util.d.ts
+│   └── util.js
+├── project-structure.txt
+├── project_structure.txt
+├── projects.json
+├── styles
+│   ├── atoms
+│   │   ├── aspect-ratios.scss
+│   │   ├── base.scss
+│   │   ├── borders.scss
+│   │   ├── colors.scss
+│   │   ├── font-styles.scss
+│   │   ├── grid.scss
+│   │   ├── reset.scss
+│   │   ├── space-scale.scss
+│   │   ├── transitions.scss
+│   │   └── type-scale.scss
+│   ├── index.scss
+│   ├── molecules
+│   │   ├── chiclets.scss
+│   │   ├── headings.scss
+│   │   ├── image-with-caption.scss
+│   │   ├── lists.scss
+│   │   ├── pull-text.scss
+│   │   └── video.scss
+│   └── organisms
+│       ├── chiclet-list.scss
+│       ├── contact.scss
+│       ├── footer.scss
+│       ├── intro.scss
+│       ├── main-menu.scss
+│       ├── project-detail.scss
+│       ├── projects.scss
+│       └── teaser.scss
+├── views
+│   ├── LayoutContext.jsx
+│   └── components
+│       ├── atoms
+│       │   ├── Image.jsx
+│       │   ├── Link.jsx
+│       │   ├── UnorderedList.jsx
+│       │   └── Video.jsx
+│       ├── molecules
+│       │   └── Menu.jsx
+│       ├── organisms
+│       │   ├── Footer.jsx
+│       │   ├── Intro.jsx
+│       │   ├── MainMenu.jsx
+│       │   ├── ProjectDetail.jsx
+│       │   ├── ProjectTeaser.jsx
+│       │   ├── ProjectsMenu.jsx
+│       │   └── WorkStyle.jsx
+│       ├── pages
+│       │   ├── Contact.jsx
+│       │   └── RootPage.jsx
+│       ├── templates
+│       │   └── Layout.jsx
+│       └── util
+│           └── mediaqueries.js
+├── vite-env.d.ts
+└── x_index.css
+
+19 directories, 69 files

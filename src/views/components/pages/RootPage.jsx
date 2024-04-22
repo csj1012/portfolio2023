@@ -25,7 +25,7 @@ export default function RootPage({ outlet }) {
         <Brands />
       </Main>
       <Footer>
-        {/* <FooterBar /> */}
+        <FooterBar />
       </Footer>
     </Layout>
   )

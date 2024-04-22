@@ -13,6 +13,7 @@ export default function ProjectsList() {
 
   return (
     <>
+      {/* <h2 className="content__section-heading">Projects:</h2> */}
       <Outlet />
       <ProjectsMenu items={projects} current={slug} />
     </>

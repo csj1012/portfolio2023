@@ -11,7 +11,17 @@
         "href": "/blog/lorem-ipsum",
         "text": "Read full blog post"
       },
-      "date": "2024-03-25T12:30:00Z"
+      "date": "2024-03-25T12:30:00Z",
+      "topics": [
+        "RPG",
+        "CSS",
+        "Life",
+        "Industry",
+        "JavaScript",
+        "React",
+        "UX",
+        "Design Systems"
+      ]
     },
     {
       "category": "Blog Post",

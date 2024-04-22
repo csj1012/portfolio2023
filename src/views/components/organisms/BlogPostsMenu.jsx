@@ -12,7 +12,7 @@ export default function BlogPostsMenu({ items, current }) {
     headingText = 'More Posts'
   }
 
-  const HeadingElement = () => <h2 className='projects__title'>{headingText}</h2>
+  const HeadingElement = () => <h3 className="projects__title">{headingText}</h3>
 
   console.log(items)
   posts = posts.map((item) => ({
@@ -21,11 +21,17 @@ export default function BlogPostsMenu({ items, current }) {
     href: `/blog/${item.slug}`,
   }))
 
-  const menuItems = posts.map((listItem) => { 
+  const menuItems = posts.map((listItem) => {
     const featuredClass = listItem.featured ? 'featured' : ''
     return (
-      <li key={listItem.href} className={featuredClass}>
-        <NavLink to={listItem.href} className='teaser'>
+      <li
+        key={listItem.href}
+        className={featuredClass}
+      >
+        <NavLink
+          to={listItem.href}
+          className="teaser"
+        >
           <BlogPostTeaser {...listItem} />
         </NavLink>
       </li>
@@ -33,12 +39,14 @@ export default function BlogPostsMenu({ items, current }) {
   })
 
   return (
-    <section className='projects'>
-      <div className='inset'>
-        { < HeadingElement /> } 
-        <ul className='projects__menu'>{menuItems}</ul>
-      </div>      
-      <WorkStyle />
-    </section>
+    <>
+      <section className="projects">
+        <div className="inset">
+          {<HeadingElement />}
+          <ul className="projects__menu">{menuItems}</ul>
+        </div>
+        <WorkStyle />
+      </section>
+    </>
   )
 }

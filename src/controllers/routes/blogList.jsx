@@ -13,6 +13,7 @@ export default function BlogList() {
 
   return (
     <>
+      <h2 className="content__section-heading">From the Blog:</h2>
       <Outlet />
       <BlogPostsMenu items={blogPosts} current={slug} />
     </>

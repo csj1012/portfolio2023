@@ -1,0 +1,59 @@
+.hamburger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+  .menu-wrapper {
+    display: none;
+    color: var(--color-seafoam);
+  }
+
+  .menu-wrapper.open {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    background: var(--color-oceandark);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+  }
+
+  button.hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 900;
+    position: relative;
+  }
+
+  button.hamburger:focus {
+    outline: 2px solid var(--color-seafoam);
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    grid-template-rows: auto;
+    height: 100vh;
+  }
+
+  li a {
+    @include sans-xl;
+    display: block;
+    height: 100%;
+    color: var(--color-seafoam);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  li a:hover,
+  li a:focus {
+    background-color: var(--color-ocean);
+    color: var(--color-jade);
+  }
+}

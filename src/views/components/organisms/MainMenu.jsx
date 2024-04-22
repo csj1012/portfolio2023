@@ -1,6 +1,7 @@
 import { Link, NavLink } from 'react-router-dom'
 import ThemeSelect from '@components/molecules/ThemeSelect'
-import Menu from '@components/molecules/menu'
+import Menu from '@components/molecules/Menu'
+import HamburgerMenu from '@components/organisms/HamburgerMenu'
 
 export default function MainMenu() {
   const ItemComponent = ({text}) => <span className=''>{text}</span>
@@ -24,7 +25,8 @@ export default function MainMenu() {
           <Link to="/" className='main-menu__title__link'>Chelsie Johnston</Link>     
         </h1>
         {/* <ThemeSelect /> */}
-        <Menu items={ items } headingElement={ HeadingElement } />
+        <Menu items={ items } headingElement={ HeadingElement } className='main-menu__nav' />
+        <HamburgerMenu />
     </menu>
   )
   

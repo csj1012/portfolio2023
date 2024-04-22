@@ -6,17 +6,16 @@ export default function WorkStyle() {
       <h2 className='workstyle__title'>How I Work</h2>
       <p className='workstyle__intro'>My favorite teams to be part of are ones made of people who consciously:</p>
       <ul>
-        <li>Lead by example</li>
-        <li>Maintain clean, sensible markup and styling (using BEM, SMACSS, modular CSS—whichever methodology fits the project)</li>
-        <li>Streamline development and deployment workflow—from local to live—using automated testing and deployment tools</li>
-        <li>Curate a well-organized, cohesive design pattern library</li>
         <li>Cultivate transparency and honesty in organizations, with clients, and especially among project teams</li>
         <li>Spend the time and energy to get the details right</li>
-        <li>Iterate often using nimble project methodologies (thinking outside the box!)</li>
         <li>Solve problems at the root</li>
-        <li>Use the right tools for the job (next time, I&#39;ll probably build this in Astro...)</li>
+        <li>Lead by example and foster a culture of doing</li>
+        <li>Carry a deep love and respect for the craft of web dev</li>
+        <li>Streamline development and deployment workflow automated testing and deployment tools</li>
+        <li>Curate well-organized, cohesive design pattern libraries</li>
+        <li>Iterate often using nimble project methodologies</li>
         <li>Do what works and improve what doesn&#39;t</li>
-        <li>Deliver quality (pull requests, code reviews, writing, and web projects) as painlessly as possible</li>
+        <li>Deliver quality (pull requests, code reviews, writing, and web projects)</li>
       </ul>
       <p className='workstyle__cta'>If we think the same, <Link to='/contact'>I'd love to get in touch!</Link></p>
     </aside>

@@ -1,0 +1,48 @@
+.workstyle {
+  @include container;
+  @include container-inset-margins;
+  @include grid;
+  @include serif-base;
+  margin-inline: var(--grid-gutter);
+  padding-top: var(--space-lg);
+  background: var(--color-haze);
+
+  > * {
+    grid-column: 1 / span 12;
+  }
+
+  @media screen and (min-width: 768px) {
+    &__intro {
+      grid-column: 1 / span 4;
+    }
+
+    ul {
+      grid-column: 5 / span 8;
+    }
+    
+  }
+
+  &__title {
+    @include heading-underline;
+    border-color: var(--color-rootlight);
+  }
+
+  &__intro {
+    @include serif-lg;
+  }
+
+  ul {
+    @include list-bullets;
+    max-width: var(--max-width-text);
+  }
+
+  &__cta {
+    @include pull-text;
+    display: inline-block;
+    margin-bottom: var(--space-lg);
+
+    a {
+      color: var(--color-root);
+    }
+  }
+}

@@ -1,8 +1,6 @@
 import ProjectTeaser from '@components/organisms/ProjectTeaser'
 import WorkStyle from '@components/organisms/WorkStyle'
-import gradient from '/assets/svg/noiseHaze.svg'
 import { NavLink } from 'react-router-dom'
-import ComputedBg from '@components/atoms/ComputedBg'
 
 export default function ProjectsMenu({ items, current }) {
   let headingText = 'Selected Projects'
@@ -34,8 +32,8 @@ export default function ProjectsMenu({ items, current }) {
 
   return (
     <section className='projects'>
-      { < HeadingElement /> } 
       <div className='inset'>
+        { < HeadingElement /> } 
         <ul className='projects__menu'>{menuItems}</ul>
       </div>      
       <WorkStyle />

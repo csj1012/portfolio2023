@@ -39,7 +39,7 @@
     display: none;
   }
 
-  &__nav {
+  &__nav ul {
     @include list-inline;
     display: none;
 

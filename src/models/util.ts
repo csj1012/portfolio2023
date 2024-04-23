@@ -6,41 +6,35 @@ import { IItem, IBuildItemReturn, IBuildImageReturn } from './UtilTypes'
 import { IProject } from './projects/ProjectTypes'
 import { ISizeCalculationResult } from 'image-size/dist/types/interface'
 
-const currentFileUrl = new URL(import.meta.url);
-const currentDir = path.dirname(currentFileUrl.pathname);
+const currentFileUrl = new URL(import.meta.url)
+const currentDir = path.dirname(currentFileUrl.pathname)
 
 const toSlug = (title: string, abbreviation?: string) => {
   let slug = title.toLowerCase().split(' ').join('-')
   slug = slug.replace(/[:.]/g, '')
-  slug = abbreviation ? `${abbreviation}--${slug}` : slug  
+  slug = abbreviation ? `${abbreviation}--${slug}` : slug
   console.log(slug)
   return slug
 }
 
 const getImageDimensions = async (src: string) => {
   const readFileAsAsync = promisify(fs.readFile)
-  try {
+  // try {
 
-    // DEBUG
-    return {
-      'width': 1,
-      'height': 1,
-      'type': 'png'
-    }
+  // // DEBUG
+  // return {
+  //   'width': 1,
+  //   'height': 1,
+  //   'type': 'png'
+  // }
 
-    const imagePath = path.resolve(currentDir, `../../public${src}`);
-    const data = await readFileAsAsync(imagePath)
-    const dimensions: ISizeCalculationResult = sizeOf(data)
-    if (dimensions.width === undefined || dimensions.height === undefined) {
-      throw new Error('Image dimensions are missing');
-    }
-    // if (dimensions.type !== 'string') {
-    //   dimensions.type = 'string'
-    // }
-    return dimensions
-  } catch (err) {
-    throw err
+  const imagePath = path.resolve(currentDir, `../../public${src}`)
+  const data = await readFileAsAsync(imagePath)
+  const dimensions: ISizeCalculationResult = sizeOf(data)
+  if (dimensions.width === undefined || dimensions.height === undefined) {
+    throw new Error('Image dimensions are missing')
   }
+  return dimensions
 }
 
 const buildImage = async (
@@ -74,7 +68,6 @@ function isValidImageSrc(src: string, extension: string): void {
 
   if (!validUrl) {
     throw new Error(`Invalid image source format, expected a URL or relative path: ${src}`)
-    
   }
   if (!validExtension) {
     throw new Error(`Invalid image source format, expected ${extension} file extension: ${src}`)
@@ -97,10 +90,10 @@ async function buildItem(item: IItem): Promise<IProject> {
     }
 
     const project = {
-      slug: toSlug(title, abbreviation),       
+      slug: toSlug(title, abbreviation),
       ...item,
     }
-    
+
     return Promise.resolve(project)
   } catch (error) {
     throw new Error(`${error as Error}`)
@@ -108,4 +101,3 @@ async function buildItem(item: IItem): Promise<IProject> {
 }
 
 export { buildImage, isValidImageSrc, buildItem, getImageDimensions, toSlug }
- 

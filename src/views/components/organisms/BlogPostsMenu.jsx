@@ -45,7 +45,6 @@ export default function BlogPostsMenu({ items, current }) {
           {<HeadingElement />}
           <ul className="projects__menu projects__menu--blog">{menuItems}</ul>
         </div>
-        <WorkStyle />
       </section>
     </>
   )

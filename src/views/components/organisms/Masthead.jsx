@@ -53,17 +53,6 @@ export default function Masthead() {
         />
         <div className='divider'></div>                             
       </div>
-      {/* <div className='masthead__filters'>
-        <p>With over 10 years of experience in:</p>
-        {topics ? (
-          <UnorderedList
-            items={topics}
-            className='masthead__filters__list'
-          />
-        ) : (
-          ''
-        )}
-      </div> */}
     </>
   )
 }

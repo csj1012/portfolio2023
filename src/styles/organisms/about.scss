@@ -13,13 +13,16 @@
   padding-bottom: 4rem;
   line-height: 3.5rem;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   text-align: left;
 
   .inset {
     display: grid;
-    grid-template-columns: 2fr 1fr;
     grid-column-gap: 5rem;
+
+    @media screen and (min-width: 768px) {
+      grid-template-columns: 2fr 1fr;
+    }
   }
 
   h2 {
@@ -29,5 +32,17 @@
     grid-column: 1/3;
     text-align: left;
     margin-left: 0 !important;
+  }
+
+
+  picture {
+    border: solid 3px var(--color-jade);
+    border-radius: 3px;
+    align-self: start;
+    grid-row: 1;
+
+    @media screen and (min-width: 768px) {
+      grid-column: 2;
+    }
   }
 }

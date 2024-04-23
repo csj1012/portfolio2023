@@ -8,18 +8,13 @@ export default function About() {
       <div className="inset">
         {/* <h2>Hello</h2> */}
         <div>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-            est laborum.
-          </p>
-          <p>
-            When I'm not trying to get back into the industry I've been in for ten years, I'm spending time on stage,
-            with my four cats, gardening, knitting, or sewing.
-          </p>
+        <p>I specialize in creating and maintaining design systems and component libraries with a focus on aesthetics, usability, and accessibility—as well as Drupal and general front end development. </p>
+
+<p>Offline, I perform in plays and musicals, sew and knit my own clothing, tend my vegetable and native plant garden, and hang out with my four cats.</p>
+
+<p>I love talking to people who are of a similar mind—feel free to drop me an email, and let's have coffee sometime! :)</p>
         </div>
         <Image
-          style={{ background: 'black' }}
           src={png}
           webp={webp}
           dimensions={{ height: 680, width: 680 }}

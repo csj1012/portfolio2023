@@ -5,7 +5,8 @@ export default [
         url: 'https://lastcallmedia.com'
       },
       id: 'creativeground',
-      title: 'CreativeGround: New England Foundation for the Arts',      
+      title: 'CreativeGround: New England Foundation for the Arts', 
+      featured: true,     
       shortDescription: 'A headless Drupal theme made with React, helping artists and patrons in New England foster creative partnerships.',
       image: {
         src: '/assets/images/creativeground.png',
@@ -106,7 +107,6 @@ export default [
       },
       title: 'Blackboard Corporate Rebrand',
       abbreviation: 'blackboard',
-      featured: true,
       shortDescription: 'An accessible, atomically-designed component library and Drupal theme for Blackboard\'s corporate rebranding effort.',
       image: {
         src: '/assets/images/blackboard.png',

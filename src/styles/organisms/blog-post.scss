@@ -82,10 +82,19 @@
     padding: 0 var(--space-lg) 0 0;
     position: relative;
 
+    h4 {
+      margin: var(--space-md) 0;
+    }
+
     @media screen and (min-width: 768px) {
       grid-column: 2 / 4;
       grid-row: 2 / 6;
       padding: 0 var(--space-lg);
+    }
+
+    img {
+      margin: var(--space-md) 0;
+      max-width: 40rem;
     }
 
     // padding-top: 2rem;

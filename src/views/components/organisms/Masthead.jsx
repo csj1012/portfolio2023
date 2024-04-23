@@ -16,37 +16,10 @@ export default function Masthead() {
     { text: 'Email', href: 'mailto:chelsiesjohnston@gmail.com', renderOptions  }
   ]
 
-  const topics = [
-    'Full stack development',
-    'Drupal development',
-    'Accessiblity',
-    'Design Systems',
-    'CSS',
-    'JavaScript',
-    'TypeScript',
-    'PHP',
-    'React',
-    'NodeJS',
-    'OOCSS',
-    'PatternLab',
-    'Storybook',
-    'Mannequin',
-    'UI/UX Design',
-    'Gulp',
-    'Composer',
-    'Twig',
-    'Atomic Design',
-    'Circle CI',
-    'BackstopJS',
-    'Decoupled Drupal',
-    'Material UI',
-    'CSS-in-JS',
-  ]
-
   return (
     <>
       <div className='masthead__intro'>
-        <p>Hello, I'm <span className='fancy'>Chelsie Johnston</span> A Drupal, design systems, and accessiblity engineer.</p>
+        <p>Hello, I'm <span className='fancy'>Chelsie Johnston</span> A front end, design systems, and accessiblity engineer.</p>
         <Menu
           items={items}
           headingElement={HeadingElement}

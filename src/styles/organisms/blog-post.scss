@@ -109,7 +109,7 @@
     // }
 
     p {
-      font-size: calc(var(--sans-base) * 1.15);
+      @include sans-base-lg;
       display: inline-block;
       max-width: 55ch;
     }

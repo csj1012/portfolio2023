@@ -20,6 +20,12 @@
   line-height: calc(var(--line-height-base) * 1.25);
 }
 
+@mixin sans-base-lg {
+  font-family: var(--font-family-sans);
+  font-size: calc(var(--sans-base) * 1.15);
+  line-height: calc(var(--line-height-base) * 1.25);
+}
+
 @mixin sans-lg {
   font-family: var(--font-family-sans);
   font-size: var(--sans-lg);

@@ -61,6 +61,10 @@ export default function FeaturedContent() {
   return (
     <>
       <TeaserList items={teaserItems} />
+      <div className="more-links">
+        <Link to='/blog'>All Blog Posts</Link>
+        <Link to='/work'>All Projects</Link>
+      </div>
     </>
   )
 }

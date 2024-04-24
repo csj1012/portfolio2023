@@ -22,6 +22,22 @@
     color: var(--color-seafoam);
     text-decoration: none;
     font-weight: 600;
+
+    &:hover {
+      color: var(--color-sexyorange);
+      transition: color .3s var(--cubic-bezier);
+    }
+
+    &:not(.main-menu__title__link).active {
+      color: var(--color-seafoam);
+      text-decoration: underline;
+      text-decoration-color: var(--color-sexyorange);
+      text-underline-offset: 7px;
+    }
+
+    &.active:hover {
+        color: var(--color-sexyorange);
+    }
   }
 
   &__title {

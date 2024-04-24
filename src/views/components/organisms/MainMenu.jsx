@@ -10,7 +10,7 @@ export default function MainMenu() {
 
   const HeadingElement = () => <h2 className='sr-only'>Main Menu:</h2>
 
-  const renderOptions = { linkElement: Link, itemComponent: ItemComponent }
+  const renderOptions = { linkElement: NavLink, itemComponent: ItemComponent }
 
   const items = [    
     { text: 'About', href: '/', renderOptions },
@@ -21,9 +21,9 @@ export default function MainMenu() {
   
   return (
     <menu className="main-menu">
-        <h1 className="main-menu__title">        
-          <Link to="/" className='main-menu__title__link'>Chelsie Johnston</Link>     
-        </h1>
+        <span className="main-menu__title">        
+          <NavLink to="/" className='main-menu__title__link'>Chelsie Johnston</NavLink>     
+        </span>
         {/* <ThemeSelect /> */}
         <Menu items={ items } headingElement={ HeadingElement } className='main-menu__nav' />
         <HamburgerMenu />

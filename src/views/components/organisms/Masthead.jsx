@@ -19,7 +19,7 @@ export default function Masthead() {
   return (
     <>
       <div className='masthead__intro'>
-        <p>Hello, I'm <span className='fancy'>Chelsie Johnston</span> A front end, design systems, and accessiblity engineer.</p>
+        <p>Hello, I'm <h1 className='fancy'>Chelsie Johnston</h1> A front end, design systems, and accessiblity engineer.</p>
         <Menu
           items={items}
           headingElement={HeadingElement}

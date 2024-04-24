@@ -12,7 +12,7 @@ export default function BlogPostTeaser({ title, summary, teaser, topics, feature
 
   return (
     <>
-      <h3 className="teaser__title sr-hidden">{title} &#187;</h3>
+      <h3 className="teaser__title sr-hidden">{title}</h3>
       <p className="teaser__posted">{formattedDate}</p>
       <p className="teaser__short-description">{summary}</p>
       <div className="teaser__image-wrapper">

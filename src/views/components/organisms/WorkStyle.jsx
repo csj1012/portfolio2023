@@ -17,7 +17,7 @@ export default function WorkStyle() {
         <li>Do what works and improve what doesn&#39;t</li>
         <li>Deliver quality (pull requests, code reviews, writing, and web projects)</li>
       </ul>
-      <p className='workstyle__cta'>If we think the same, <Link to='/contact'>I'd love to get in touch!</Link></p>
+      {/* <p className='workstyle__cta'>If we think the same, <Link to='/contact'>I'd love to get in touch!</Link></p> */}
     </aside>
   )
 }

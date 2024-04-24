@@ -34,6 +34,7 @@
   ul {
     @include list-bullets;
     max-width: var(--max-width-text);
+    margin-bottom: var(--space-lg);
   }
 
   &__cta {

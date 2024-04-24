@@ -22,8 +22,8 @@ export default function RootPage({ outlet }) {
           </Header>
           { outlet }
         </div>
-        <About />
         <Testimonial />
+        <About />
         <Brands />
       </Main>
       <Footer>

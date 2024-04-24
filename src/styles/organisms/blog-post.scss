@@ -109,8 +109,19 @@
     // }
 
     p {
+      font-size: calc(var(--sans-base) * 1.15);
       display: inline-block;
       max-width: 55ch;
+    }
+
+    h4 {
+      max-width: 44ch;
+    }
+
+    h5 {
+      max-width: 50ch;
+      margin-top: var(--space-sm);
+      margin-bottom: var(--space-md);
     }
   }
 }

@@ -9,7 +9,7 @@ export default function BlogPostsMenu({ items, current }) {
   // if we're currently viewing a post, don't include it in the menu
   if (current) {
     posts = posts.filter((item) => item.slug !== current)
-    headingText = 'No More Posts'
+    headingText = 'More Posts'
   }
 
   const HeadingElement = () => <h3 className="projects__title">{headingText}</h3>

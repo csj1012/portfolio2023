@@ -13,20 +13,46 @@ const teaserItems = [
   // },
   {
     'category': 'Blog Post',
-    'title': 'That time I tried to use ChatGPT to write The Expanse, The Musical',
-    "summary": "If we've ever spoken about the pitfalls of AI, you may have heard me reference the \"collective high-five:\" a somewhat tongue-in-cheek phrase I coined to characterize the \"training wheels\" that safeguard users from the darker potentials of LLMs. The \"high-five\" means that everything works out for everyone in the end; it's the silver lining, or maybe the toxic positivity sometimes found on your social media feed...",
+    'title': 'Four Takeaways from Eleven Years as a Professional Dev',
+    'summary': [
+      "Of course, I've been coding for much longer—since around 2000, when I built my own play-by-post RPG website. What would I tell my younger self, were she starting out today?"
+    ],
     'link': {
-      'href': '/blog/that-time-i-tried-to-use-chatgpt-to-write',
+      'href': '/blog/four-takeaways-after-eleven-years',
       'text': 'Read full blog post'
     }
   },
   {
     'category': 'Project',
     'title': 'An accessible, atomically-designed component library and Drupal theme for Blackboard\'s corporate rebranding effort',
-    'summary': 'Our team crafted a style guide using Mannequin, Last Call Media’s custom pattern library tool. This allowed us to construct user interfaces from the ground up, incorporating everything from theme palette colors to rich navigation menus. The new design system served as both the source of truth for our theme and the theme code itself, which saved us a ton of time...',
+    'summary': [
+      'The new design system served as both the source of truth for our theme and the theme code itself, which saved us a ton of time...'
+    ],
     'link': {
       'href': '/work/blackboard--blackboard-corporate-rebrand',
       'text': 'View project page'
+    }
+  },
+  {
+    'category': 'Project',
+    'title': 'Empowering the artists: building a headless React Drupal theme for \"CreativeGround\" by New England Foundation for the Arts',
+    'summary': [
+      'Much of the front-end work centered around the editor experience for artists: once signed in, artists can curate photo galleries, update contact information, and describe their art with ease.'
+    ],
+    'link': {
+      'href': '/work/creativeground-new-england-foundation-for-the-arts',
+      'text': 'View project page'
+    }
+  },
+  {
+    'category': 'Blog Post',
+    'title': 'That time I tried to use ChatGPT to write The Expanse, The Musical',
+    "summary": [
+      "If we've ever spoken about the pitfalls of AI, you may have heard me reference the \"collective high-five:\" a somewhat tongue-in-cheek phrase I coined to characterize the \"training wheels\" that safeguard users from the darker potentials of LLMs...",
+    ],
+    'link': {
+      'href': '/blog/that-time-i-tried-to-use-chatgpt-to-write',
+      'text': 'Read full blog post'
     }
   }
 ]

@@ -4,9 +4,9 @@ export default function Teaser({ className, ...props }) {
     <div className={className || ''}>
       <span className="chiclets">{ category }</span>
       <p className="title">{ title }</p>
-      <p>
-        {summary}
-      </p>
+      {summary.map((item, index) => (
+        <p key={index}>{item}</p>
+      ))}
       <span className='action-text'>{link.text}</span>
     </div>
   )

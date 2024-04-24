@@ -16,7 +16,7 @@ export default function MainMenu() {
     { text: 'About', href: '/', renderOptions },
     { text: 'Work', href: '/work', renderOptions },
     { text: 'Blog', href: '/blog', renderOptions },
-    { text: 'Resume', href: '/files/Resume_ChelsieJohnston_2024.pdf', renderOptions: { linkElement: NoClientSideRoutingLink, itemComponent: ItemComponent } }
+    { text: 'Resume (PDF)', href: '/files/Resume_ChelsieJohnston_2024.pdf', renderOptions: { linkElement: NoClientSideRoutingLink, itemComponent: ItemComponent } }
   ]
   
   return (

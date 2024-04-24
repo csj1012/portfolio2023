@@ -41,7 +41,7 @@
   }
 
   .inset {
-    @include container-inset-margins;
+    // @include container-inset-margins;
     @include container-bottom-margin;
     background: var(--color-hazelight);
     border: var(--border-haze-1-subtle);

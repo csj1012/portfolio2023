@@ -19,6 +19,10 @@
 
     &:hover {
       cursor: pointer;
+
+      .video__buttons {
+        background: var(--color-sexyorange);
+      }
       
       img {
         opacity: 100%;

@@ -5,6 +5,7 @@
   @include grid;
   grid-column: 1 / 4;
   padding-top: 0;
+  padding-inline: 0;
   color: var(--color-abyss);
   animation: var(--fadeIn);
 
@@ -80,7 +81,7 @@
   &__basics {
     &__title {
       @include serif-xl;
-      margin-bottom: var(--space-xs);
+      margin-bottom: var(--space-md);
 
       @media screen and (min-width: 768px) {
         line-height: var(--line-height-sm);
@@ -88,12 +89,36 @@
     }
 
     &__involvement {
-      margin-bottom: var(--space-xs);
+      @include sans-base-lg;
+      margin-bottom: var(--space-md);
+
+      strong {
+        display: block;
+      }
     }
 
     &__links {
-      @include list-bullets;
-      @include serif-base;
+      display: block;
+      margin-bottom: var(--space-lg);
+
+      strong {
+        @include sans-base-lg;
+      }
+
+      ul {
+        @include list-vertical-full;
+        @include sans-base-lg;
+        font-weight: 700;
+      }
+
+      li {
+        max-width: 25ch;
+      }
+
+      a {
+        display: inline-block;
+        line-height: var(--sans-base-lg);
+      }
     }
   }
 
@@ -113,10 +138,12 @@
   }
 
   &__description {
+    @include sans-base-lg;
     max-width: var(--max-width-text);
 
     p:first-of-type {
       @include sans-lg;
+      font-weight: 600;
     }
 
     @media screen and (min-width: 768px) {
@@ -129,6 +156,14 @@
     @include image-with-caption;
     max-width: 66%;
     order: 5;
+
+    &__partnership {
+      @include sans-base;
+      font-style: italic;
+      &:after {
+        content: '.';
+      }
+    }
 
     @media screen and (min-width: 768px) {
       max-width: 100%;

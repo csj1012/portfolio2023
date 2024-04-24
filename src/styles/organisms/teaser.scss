@@ -10,14 +10,20 @@
   }
 
   &__title {
-    @include serif-base;
-    
+    @include serif-lg;
     font-weight: 400;
   }
 
   // @todo: move me to a molecule
   &__list {    
     @include chiclet-list;
+    font-size: calc(var(--sans-sm) * 1.1);
+    margin-top: 0;
+    // font-size: calc(var(--sans-base) * .9);
+
+    li {
+      background: var(--color-jade)
+    }
   }
 
   &__image {
@@ -30,7 +36,7 @@
   }
 
     @media screen and (min-width: 1024px) {
-    gap: var(--space-md);
+    grid-column-gap: var(--space-xl);
 
     &__title,
     &__short-description,
@@ -53,23 +59,31 @@
 
     &__list {
       grid-row-start: 3;
-    
+      margin-top: 0;
+      padding-top: 0;
     }
   }
 
   &:hover {
     .teaser__title {
       text-decoration: underline;
-      color: var(--color-jade);
+      text-decoration-color: var(--color-sexyorange);
+      text-underline-offset: 7px;
+      // color: var(--color-jade);
     }
-    .teaser__image-wrapper {
+    .teaser__image {
       opacity: .5;
       transition: var(--fade);
+    }
+    .teaser__featured-chiclet {
+      background-color: var(--color-lilac);
     }
   }
 }
 
 .featured .teaser {  
+  padding-top: 0;
+
   &__featured-chiclet {
     @include featured-chiclet;
   }

@@ -138,16 +138,16 @@
   margin-top: 1rem;
 }
 
-.teaser__list {
-  margin-top: 1rem;
-  display: flex;
-  justify-content: flex-end;
-  li { 
-    @include sans-base;
-    font-size: calc(var(--sans-base) * .9);
-    background: var(--color-jade);
-  }
-}
+// .teaser__list {
+//   margin-top: 1rem;
+//   display: flex;
+//   justify-content: flex-end;
+//   li { 
+//     @include sans-base;
+//     font-size: calc(var(--sans-base) * .9);
+//     background: var(--color-jade);
+//   }
+// }
 
 .bullshit {
   // @include container-with-insets;

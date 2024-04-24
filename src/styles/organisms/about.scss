@@ -1,9 +1,9 @@
 .about {
-  margin-top: 4rem;
+  // margin-top: 4rem;
   @include pull-text;
   @include sans-lg;
   text-align: left;
-  padding-left: 0;
+  // padding-left: 0;
   grid-row: 4;
   grid-column: 1 / 4;
   @include container-with-insets;

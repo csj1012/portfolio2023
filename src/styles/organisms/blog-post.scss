@@ -76,10 +76,10 @@
 
   &__content {
     @include sans-lg;
-    // margin-top: var(--space-xl);
+    background: var(--color-moonlight);
     line-height: var(--space-lg);
     grid-column: 1 / 4;
-    padding: 0 var(--space-lg) 0 0;
+    padding: var(--space-lg);
     position: relative;
 
     h4 {
@@ -89,24 +89,12 @@
     @media screen and (min-width: 768px) {
       grid-column: 2 / 4;
       grid-row: 2 / 6;
-      padding: 0 var(--space-lg);
     }
 
     img {
       margin: var(--space-md) 0;
       max-width: 40rem;
     }
-
-    // padding-top: 2rem;
-
-    // &:before {
-    //   content: '';
-    //   width: calc(100% - 2rem);
-    //   height: 1px;
-    //   background-color: var(--color-jade);
-    //   position: absolute;
-    //   top: 0;
-    // }
 
     p {
       @include sans-base-lg;

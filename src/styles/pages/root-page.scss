@@ -6,21 +6,16 @@ main {
 
 .content {
   @include container;
-  padding-right: calc(var(--grid-gutter) * 1.75);
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: var(--space-md);
-  width: 100vw;
+  width: 100%;
   margin: 1rem;
   padding-bottom: 4rem;
   border-radius: 2rem;
   color: var(--color-abyss);
   background-color: var(--color-hazelight);
-
-  @media screen and (min-width: 768px) {
-    padding-right: var(--grid-gutter);
-  }
 
   &__section-heading {
     grid-column: 1 / 4;

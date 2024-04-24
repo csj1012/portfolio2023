@@ -1,4 +1,4 @@
-import blogPosts from '@models/posts/posts.json'
+import blogPosts from '@models/blog/posts.json'
 
 export async function getBlogPosts() {
   return blogPosts

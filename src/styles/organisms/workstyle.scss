@@ -2,7 +2,7 @@
   @include container;
   @include container-inset-margins;
   @include grid;
-  @include serif-base;
+  @include sans-base-lg;
   margin-inline: var(--grid-gutter);
   padding-top: var(--space-lg);
   background: var(--color-haze);
@@ -19,7 +19,6 @@
     ul {
       grid-column: 5 / span 8;
     }
-    
   }
 
   &__title {
@@ -33,7 +32,7 @@
 
   ul {
     @include list-bullets;
-    max-width: var(--max-width-text);
+    max-width: 45ch;
     margin-bottom: var(--space-lg);
   }
 

@@ -1,6 +1,6 @@
 #### Introduction
 
-##### How it Used to Be
+##### The Internet I Grew Up With
 
 Of course, I've been coding for much longer than the eleven years I've been working professionally as a dev—since around 2000, when I built a popular play-by-post RPG website.
 

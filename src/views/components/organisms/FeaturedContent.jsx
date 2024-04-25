@@ -4,7 +4,7 @@ import TeaserList from '@components/molecules/TeaserList'
 const teaserItems = [
   {
     'category': 'Blog Post',
-    'title': 'Four Takeaways from Eleven Years as a Professional Dev',
+    'title': 'Four Takeaways after Eleven Years as a Professional Dev',
     'summary': [
       "Of course, I've been coding for much longer—since around 2000, when I built my own play-by-post RPG website. What would I tell my younger self, were she starting out today?"
     ],

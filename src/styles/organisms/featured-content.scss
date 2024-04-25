@@ -29,6 +29,20 @@
     margin: 0;
     display: flex;
     position: relative;
+
+    .title {
+      @include sans-lg;
+      line-height: var(--space-lg);
+    }
+    
+    .chiclets {
+      @include featured-chiclet;
+      font-size: calc(var(--sans-sm) * 1.1);
+      position: relative;
+      margin-bottom: 1rem;
+      display: inline-block;
+      border-radius: 4px;
+    }
     
     .action-text {
       position: absolute;

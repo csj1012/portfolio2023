@@ -1,10 +1,10 @@
 .chatgpt-conversation {
   background-color: #f4f4f9;
-  border-left: 5px solid #0077cc;
+  border-left: 5px solid var(--color-lilac);
   padding: 10px 20px;
-  margin: 20px 0;
+  margin: var(--space-md) 0 var(--space-lg);
   font-family: Arial, sans-serif;
-  color: #333;
+  color: var(--color-abyss);
 }
 
 .chatgpt-message {
@@ -12,11 +12,11 @@
 }
 
 .chatgpt-message.user p {
-  color: #4a4a4a;
+  color: var(--color-abyss);
 }
 
 .chatgpt-message.gpt p {
-  color: #0056b3;
+  color: #395284;
 }
 
 .chatgpt-message p {
@@ -25,5 +25,6 @@
 }
 
 .chatgpt-message strong {
-  font-weight: bold;
+  font-weight: 700;
+  display: block;
 }

@@ -98,7 +98,6 @@
 
     p {
       @include sans-base-lg;
-      display: inline-block;
       max-width: 55ch;
     }
 
@@ -111,5 +110,32 @@
       margin-top: var(--space-sm);
       margin-bottom: var(--space-md);
     }
+
+    a {
+      color: var(--color-jade);
+      font-weight: 600;
+    }
+
+    > ul, ol {
+      @include sans-base-lg;
+      margin: var(--space-md) 0;
+      max-width: 55ch;
+    }
+
+    code {
+      font-size: var(--sans-base);
+      font-weight: 550;
+      background: var(--color-seafoam);
+    }
+  }
+
+  .pull {
+    // @include serif-lg;
+    color: var(--color-root);
+    display: block;
+    border: 1px solid var(--color-hazedark);
+    border-width: 1px 0;
+    padding: var(--space-sm) 0;
+    text-align: center;
   }
 }

@@ -3,30 +3,31 @@ import { Link } from 'react-router-dom'
 import UnorderedList from '@components/atoms/UnorderedList'
 
 export default function Masthead() {
-  const ItemComponent = ({text}) => <span className=''>{text}</span>
+  const ItemComponent = ({ text }) => <span className="">{text}</span>
 
-  const HeadingElement = () => <h2 className='sr-only'>Where to find me:</h2>
+  const HeadingElement = () => <h2 className="sr-only">Where to find me:</h2>
 
   const renderOptions = { linkElement: Link, itemComponent: ItemComponent }
 
-  const items = [    
+  const items = [
     { text: 'LinkedIn', href: 'https://www.linkedin.com/in/chelsiesjohnston', renderOptions },
     { text: 'GitHub', href: 'https://github.com/csj1012', renderOptions },
     { text: 'Mastodon', href: 'https://hachyderm.io/@chelsiejohnston', renderOptions },
-    { text: 'Email', href: 'mailto:chelsiesjohnston@gmail.com', renderOptions  }
+    { text: 'Email', href: 'mailto:chelsiesjohnston@gmail.com', renderOptions },
   ]
 
   return (
     <>
-      <div className='masthead__intro'>
-        <p>Hello, I'm <h1 className='fancy'>Chelsie Johnston</h1> A front end, design systems, and accessiblity engineer.</p>
+      <div className="masthead__intro">
+        <p>Hello, I'm </p>
+        <h1 className="fancy">Chelsie Johnston</h1>
+        <p>A front end, design systems, and accessiblity engineer.</p>
         <Menu
           items={items}
           headingElement={HeadingElement}
         />
-        <div className='divider'></div>                             
+        <div className="divider"></div>
       </div>
     </>
   )
 }
-

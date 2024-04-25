@@ -13,7 +13,8 @@ export default function BlogPostsMenu({ items, current }) {
   }
 
   const HeadingElement = () => <h3 className="projects__title">{headingText}</h3>
-
+  
+  posts.sort((a, b) => new Date(b.date) - new Date(a.date));
   posts = posts.map((item) => ({
     ...item,
     title: item.title,

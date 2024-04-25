@@ -9,7 +9,7 @@
     grid-column: 1 / 4;
     color: var(--color-abyss);
     margin-top: 3rem;
-    
+
     p {
       max-width: 60ch;
     }
@@ -29,6 +29,10 @@
       line-height: .9;
       margin-top: 1rem;
       word-wrap: normal;
+
+      &.safari {
+        font-synthesis: none;
+      }
     }
 
     strong {

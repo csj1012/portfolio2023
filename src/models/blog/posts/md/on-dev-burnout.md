@@ -1,8 +1,8 @@
 I'm very vocal about the idea of burnout. 
 
-I believe that the more transparent we can be with one another about how we're doing is vital to our success as developers; contrary to popular belief and stereotype, we are not people who can "just shut off our emotions" and write code.
+I believe that being transparent with one another about how we're holding up is critical to our success as developers. Contrary to popular belief and stereotype, I do not believe that we are people who can "just shut off our emotions" and write code.
 
-I also believe that when we don't speak about our burnout to anyone, it gets worse. 
+When we don't speak about our burnout to anyone, it gets worse. 
 
 I have a lot more thoughts about this, so maybe someday I'll make a follow up, but here are some ideas that work for me when I find myself feeling the dreaded, familiar feeling we all know so well:
 
@@ -12,7 +12,7 @@ I have a lot more thoughts about this, so maybe someday I'll make a follow up, b
 
 My roots are in play-by-post RPGs, the likes of which were popular in the early 2000s on. (I talk about this a lot, but as you'll see, it's very important to me.)
 
-This is how I got my start, as a kid: I'd imagine the world I wanted to create for other people to experience, the settings the characters would interact in, the lore... and I'd design a (at the time, table-based) layout in Paint Shop Pro (or later, _definitely not pirated_ Photoshop). 
+This is how I got my start, as a kid: I'd imagine the world I wanted to create for other people to experience, the settings the characters would interact in, the lore... and I'd design a (at that time, table-based) layout in Paint Shop Pro (or later, _definitely not pirated_ Photoshop). 
 
 And then I'd build it. 
 
@@ -20,7 +20,7 @@ There were no best practices on my radar then, except those for writing RPG foru
 
 I had my own strict visual standards after stalking (and participating in) forums where people would roast other people's designs. I wonder if any of those people suspected the person on the other end of the monitor was a literal child telling them their color scheme was too discordant and their text was too hard to read.
 
-These days, Modern Chelsie is very careful to document every function choice, architecture decision, and general thought. This is how good documentation is written; how salient, cohesive git logs are committed to history; this is how JIRA tickets are loaded with relevant detail for any future friends (or foes) needing to debug things. 
+These days, Modern Chelsie is very careful to document every function choice, architecture decision, and general thought. This is often how good documentation is written; how salient, cohesive git logs are committed to history; how JIRA tickets are loaded with relevant detail for any future friends (or foes) needing to debug things. 
 
 But sometimes...
 
@@ -44,10 +44,10 @@ I'll offer three examples, based on my own hobbies: performing in plays and musi
 
 As it turns out, everywhere you look, there are parallels to be found between coding and other arts:
 
-- **Performing arts:** Facing rejections from job hunting? What's the big deal; performers face rejection all the time! More transferrable skills include: improving public speaking skills/being in front of a crowd, learning to work seamlessly with others under immense pressure
-- **Sewing my own clothing:** Sewing patterns are one big documentation instance, for better or for worse. Interpreting the author's intent, highlighting gaps in understanding, and consulting peers and the Internet to supplement your knowledge? Figuring out how all the pieces fit together correctly? That has a lot of parallels to web dev, doesn't it?
+- **Performing arts:** Facing rejections from job hunting? What's the big deal; performers face rejection all the time! More transferable skills include: improving public speaking skills/being in front of a crowd, learning to work seamlessly with others under immense pressure
+- **Sewing my own clothing:** Sewing patterns are one big documentation instance, for better or for worse. Interpreting the author's intent, highlighting gaps in understanding, and consulting peers and the Internet to supplement your knowledge? The practice of figuring out how all the pieces fit together correctly can bear a lot of similarities to web dev.
 - **Knitting garments and accessories:** If sewing patterns are documentation, knitting patterns are algorithms. `x` series of stitches in `y` configuration times `n` equals a certain shape. Enough of those shapes and you have a sweater. Much has been written online about <a href="https://opensource.com/article/18/6/how-programming-evolved-knitting">programming and knitting</a>, and that's before we look at knitting machines (the practical physical application of the intersection of these two concepts).
-- **Gardening:** Systems, systems everywhere! The marigold you planted four years ago whose seeds keep popping up everywhere? If you leave the volunteer plants, they'll help repel pests from your veggies. But they'll also crowd out shorter plants, so it's lnecessary to thoughtfully manage them. Things affecting other things in the future that you might not anticipate, so you have to try and think ahead using established patterns? Design systems, anyone?
+- **Gardening:** Systems, systems everywhere! The marigold you planted four years ago whose seeds keep popping up everywhere? If you leave the volunteer plants, they'll help repel pests from your veggies. But they'll also crowd out shorter plants, so it's necessary to thoughtfully manage them. Things affecting other things in the future that you might not anticipate, so you have to try and think ahead using established patterns? Design systems, anyone?
 
 Maybe this sounds goofy, but I find inspiration for coding (and thinking about coding) in all of my disciplines outside work, and often find programming breakthroughts in the pursuit of excellece in other arts.
 

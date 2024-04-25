@@ -4,9 +4,9 @@ Cool, this post is for you.
 
 #### Everything is a skill
 
-Outside of building stuff for the web, I act in plays and musicals. I've been doing this all my life (much like coding), having taken my first dance lesson at 3, and having started singing around that time. 
+Outside of building stuff for the web, I act in plays and musicals. I've been doing this all my life, much like coding, starting with my first dance lesson and singing lessons around age 3.
 
-But in college I was cut from a BFA acting program; among other factors, I wasn't experienced enough in life yet to get much out of the training. I didn't know enough yet—about myself—to be able to really connect to the curriculum.
+But in college, I was cut from a BFA acting program, partly because I wasn't experienced enough in life yet to fully benefit from the training.
 
 What does this have to do with web development? 
 
@@ -22,7 +22,7 @@ And as it further turns out, *everything is a skill.*
 
 <p class="pull">Singing. Math. Coding. Writing algorithms. Juggling. Making friends. Needlepoint (you get the picture). Everything is a skill and can be learned.</p>
 
-Will you be a started-in-childhood "genius" praised by everyone for your natural prowess? Maybe not. And that is perfectly fine.
+Will you be a 'child prodigy,' praised by everyone for your natural prowess? Maybe not. And that is perfectly fine.
 
 Talent is the intersection of time spent, training, and skill. It's not necessarily something you're born with, and even if you are, it's not much without discipline (and ideally guidance) to refine it.
 
@@ -53,7 +53,7 @@ If you've received good feedback from a colleague about a particular skill you h
 
 For example, a colleague of mine remarked that I'm great at looking at the UIs I build with a designer's eye—as a result, he knows he can trust me to deliver something great, and we can truly collaborate. 
 
-Learning about this skill of mine has helped me figure out my role in tthe tech landscape, and while I'm always interested in both expanding and deepening my knowledge, knowing where I'm starting helps me chart out where to go next.
+Learning about this skill of mine has helped me figure out my role in the tech landscape, and while I'm always interested in both expanding and deepening my knowledge, knowing where I'm starting helps me chart out where to go next.
 
 ##### So you can know what to improve
 
@@ -74,15 +74,12 @@ Somewhat strangely, it was ChatGPT that helped me out with this one, a year ago:
 
 I can't find the actual conversation, as you may be able to tell (lol), but this was basically the gist.
 
-So I did! I devoted hours per day to structured learning via Udemy and other courses (I'll compile a list soon!). 
-
-If I got stuck because an instructor assumed prior knowledge that I didn't have, I started using GPT as a personalized learning tool when I had questions about something in more detail. Of course, I always made sure to double check its answers, cross-referencing them with documentation, blogs, official course material, and other online sources. Some
-times I'd catch it in a lie—which was, believe it or not, actually good for reinforcing my understanding of what I'd learned.
+So I devoted hours per day to structured learning. 
 
 As a result, I'm a much more confident developer because:
 - I know I can learn things I missed learning growing up (having taught myself to build websites without having studied computer science).
 - I now have a documented, solid process for holistic problem solving.
-- I have better foundational programming skills, data structure/algo knowledge, etc., which not only aid in my ability to perform front end tasks, but also help me gain footing in today's frameworks (many of which were written by people with traditional CS and lower-level progarmming backgrounds).
+- I have better foundational programming skills, data structure/algo knowledge, etc., which not only aid in my ability to perform front end tasks, but also help me gain footing in today's frameworks (many of which were written by people with traditional CS and lower-level programming backgrounds).
 
 #### Closing thoughts
 

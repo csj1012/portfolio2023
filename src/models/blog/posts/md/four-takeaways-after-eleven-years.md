@@ -12,7 +12,7 @@ It was also around that time that I started to build and theme my first freelanc
 
 Over the next 11 years I'd go on to build web projects alongside some amazing folks at <a href="https://www.uchicago.edu/en">The University of Chicago</a>, <a href="https://www.ama-assn.org/">The American Medical Association</a>, and later <a href="https://latcallmedia.com/">Last Call Media</a> (an awesome fully distributed agency supporting higher education, nonprofit, government, and international brands). 
 
-I'd worn several hats throughout the myriad projects this decade brought: a designer, a developer, a project lead, and often a person-who-lived-and-breathed-the-project and probably needed to step away for a moment and take a deep breath.</p>
+I'd worn several hats across the myriad projects this decade brought: a designer, a developer, a project lead, and often a person-who-lived-and-breathed-the-project and probably needed to step away for a moment and take a deep breath.</p>
 
 <p class="pull">The Web—and building stuff for it—is my number one passion and pastime, and has been for the past 24 years.
 
@@ -34,9 +34,9 @@ What would I like to tell *you?*
 
 ##### #1. You can learn The Thing
 
-I know it has been hard to learn "The Thing." Maybe you even consider yourself "bad" at The Thing.
+I know it has been hard to learn The Thing. 
 
-You've never been able to be good at The Thing, even while others around you excelled at it.
+Maybe you even consider yourself "bad" at it, whatever it is. You've never been able to be good at The Thing, even while others around you excelled at it.
 
 What "The Thing" is is different for everyone: math, algorithms, CSS, lifting weights, public speaking. 
 
@@ -86,7 +86,7 @@ Even outside the world of web dev, how many times have you seen a super popular 
 
 I think this happens more in our industry than in most online spaces. There is social and financial incentive to "disrupt." 
 
-Amid so many loud voices, It's important to be able to find what drives *you*, find the new techs and paradigms *you're* interested in, and let that inspiration guide you. 
+Amid so many voices, it's important to be able to find what drives *you*, find the new techs and paradigms *you're* interested in, and let that inspiration guide you. 
 
 <p class="pull">Define what *you* think is "good," be clear about that definition, and share it with others.</p>
 
@@ -121,7 +121,7 @@ More thoughts here: <a href="/#/blog/on-dev-burnout">On Dev Burnout</a>
 
 #### Looking ahead
 
-What's got me excited these days? For me, it's currently:
+What's got me excited these days?
 
 - New developments in design systems re: designer collaboration, accessibility, and reusability
 - Continuing my deep dive into OOP fundamentals/expanding skills lower down the stack

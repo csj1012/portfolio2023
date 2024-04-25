@@ -1,6 +1,6 @@
 #### Web technologies are constantly evolving
 
-When I started out in 2000, table layouts were the standard. You'd make a full image of your layout and code it up in an HTML table, with `overflow: auto;` scrollable areas for content. These layouts couldn't dream of being responsive (which wasn't really a concept yet, even though <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design#introducing_responsive_web_design">pure HTML has always been responsive.</a>)
+When I started out in 2000, table layouts were the standard. You'd make a full image of your layout and code it up in an HTML table, with `overflow: auto;` scrollable areas for content. These layouts couldn't dream of being responsive (which wasn't really a concept yet, even though <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design#introducing_responsive_web_design">pure HTML has always been responsive</a>).
 
 Then there was CSS Zen Garden. Then atomic design. Then design systems.
 
@@ -12,7 +12,7 @@ I used to groan at each new framework announcement until I realized that <em>you
 
 Frameworks give us capabilities to do complex operations more easily. It's not like there aren't reasons why these frameworks are developed.
 
-So it's absolutely worth your time to explore them and evaluate whether or not they work for you. 
+So it's absolutely worth your time to explore them and evaluate whether they work for you. 
 
 Does this mean you have to jump from buzzword to buzzword, learning whatever you think "employers are looking for?" No! The important thing is to pick something that intrigues you, explore it, and get your hands dirty in it. Compare it to other things you know.
 
@@ -31,7 +31,7 @@ When I first got into working in React in the real world (having built two portf
 
 How was anyone supposed to just know this stuff? 
 
-Turns out that admittedly, at the time, my JavaScript (vanilla) fundamentals were lacking. 
+Turns out that admittedly, at that time, my JavaScript (vanilla) fundamentals were lacking. After all, I'd already shipped many successful web projects, but I'd taught myself to build websites without having studied computer science. The concepts and best practices that came from lower-level programming languages were things I hadn't explicitly been exposed to before.
 
 Yes, I had done a lot with JS, including shipping lots of successful digital products. But embarrassingly, I didn't fully understand why I was doing certain things, or how those things worked—just that I knew to do them. 
 

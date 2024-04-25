@@ -1,6 +1,5 @@
 import Menu from '@components/molecules/menu'
 import { Link } from 'react-router-dom'
-import UnorderedList from '@components/atoms/UnorderedList'
 
 export default function Masthead() {
   const ItemComponent = ({ text }) => <span className="">{text}</span>
@@ -21,7 +20,7 @@ export default function Masthead() {
       <div className="masthead__intro">
         <p>Hello, I'm </p>
         <h1 className="fancy">Chelsie Johnston</h1>
-        <p>A full-stack <strong>Design Systems and UI Engineer</strong> with deep front end expertise, <br />thriving at the intersection of accessible code and inclusive design.<br /></p>
+        <p>A full-stack <strong>Design Systems and UI Engineer</strong> with deep front end expertise, thriving at the intersection of accessible code and inclusive design.<br /></p>
         <Menu
           items={items}
           headingElement={HeadingElement}

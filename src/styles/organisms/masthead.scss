@@ -5,11 +5,19 @@
   gap: var(--space-md);
 
   &__intro {
-    @include sans-lg;
-    line-height: calc(var(--sans-lg) * 1.5);
+    @include sans-base-lg;
     grid-column: 1 / 4;
     color: var(--color-abyss);
     margin-top: 3rem;
+    
+    p {
+      max-width: 60ch;
+    }
+
+    @media screen and (min-width: 768px) {
+      @include sans-lg;
+      line-height: calc(var(--sans-lg) * 1.5);
+    }
 
     .fancy {
       @include display;

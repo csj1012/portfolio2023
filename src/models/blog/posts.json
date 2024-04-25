@@ -4,7 +4,7 @@
       "category": "Blog Post",
       "slug": "you-can-learn-the-thing",
       "title": "You Can Learn The Thing",
-      "tagline": "Or, the story of how five characters all high-fived each other at the same time.",
+      "tagline": "You can learn stuff, and no, it isn't too late!",
       "summary": "If we've ever spoken about the pitfalls of AI, you may have heard me reference the \"collective high-five:\" a somewhat tongue-in-cheek phrase I coined to characterize the \"training wheels\" that safeguard users from the darker potentials of LLMs. The \"high-five\" means that everything works out for everyone in the end; it's the silver lining, or maybe the toxic positivity sometimes found on your social media feed. Today, I invite you on a quick ChatGPT-generated journey through space—to laugh along with me—as we try to generate \"The Expanse: The Musical (Unlicensed!)\", based on the hit novel and TV series by James S. A. Corey (authors Daniel Abraham and Ty Franck).",
       "date": "2024-03-14T12:30:00Z",
       "link": {
@@ -12,12 +12,11 @@
         "text": "Read full blog post"
       },
       "topics": [
-        "Fluff",
-        "The Expanse",
-        "AI",
-        "ChatGPT",
-        "Musicals",
-        "High Five"
+        "Learning",
+        "Skill building",
+        "JavaScript",
+        "DSA",
+        "Motivation"
       ]
     },
     {
@@ -102,12 +101,10 @@
         "text": "Read full blog post"
       },
       "topics": [
-        "Fluff",
-        "The Expanse",
-        "AI",
-        "ChatGPT",
-        "Musicals",
-        "High Five"
+        "People",
+        "Life",
+        "Frameworks",
+        "Motivation"
       ]
     },
     {

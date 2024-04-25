@@ -27,7 +27,7 @@
   }
 
   &__image {
-    border: var(--border-haze-2);    
+    border: var(--border-haze-2);  
   }
 
   &__short-description {
@@ -87,5 +87,11 @@
 
   &__title {
     @include serif-lg;
+  }
+}
+
+.windows {
+  .teaser__title {
+    font-size: 28px;
   }
 }

@@ -7,8 +7,15 @@ import Brands from '@components/organisms/brands'
 import MainMenu from '@components/organisms/MainMenu'
 import { ScrollRestoration } from 'react-router-dom'
 import ComputedBg from '@components/atoms/ComputedBg'
+import classNames from 'classnames'
 
 export default function RootPage({ outlet }) {
+  function isWindows() {
+    return navigator.platform.indexOf('Win') > -1;
+  }
+
+  const classes = classNames(isWindows() ? 'windows' : '', 'content')
+  
   return (
     <Layout>
       <ScrollRestoration />
@@ -16,7 +23,7 @@ export default function RootPage({ outlet }) {
         <MainMenu />
       </Nav>
       <Main>
-        <div className="content" style={{ backgroundImage: ComputedBg('haze') }}>
+        <div className={classes} style={{ backgroundImage: ComputedBg('haze') }}>
           <Header>
             <Masthead />
           </Header>

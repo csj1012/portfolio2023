@@ -21,7 +21,7 @@ export default function Masthead() {
       <div className="masthead__intro">
         <p>Hello, I'm </p>
         <h1 className="fancy">Chelsie Johnston</h1>
-        <p>A front end, design systems, and accessiblity engineer.</p>
+        <p>A full-stack <strong>Design Systems and UI Engineer</strong> with deep front end expertise, <br />thriving at the intersection of accessible code and inclusive design.<br /></p>
         <Menu
           items={items}
           headingElement={HeadingElement}

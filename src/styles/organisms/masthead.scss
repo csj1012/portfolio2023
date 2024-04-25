@@ -6,6 +6,7 @@
 
   &__intro {
     @include sans-lg;
+    line-height: calc(var(--sans-lg) * 1.5);
     grid-column: 1 / 4;
     color: var(--color-abyss);
     margin-top: 3rem;
@@ -20,6 +21,10 @@
       line-height: .9;
       margin-top: 1rem;
       word-wrap: normal;
+    }
+
+    strong {
+      color: var(--color-jade);
     }
 
     ul {

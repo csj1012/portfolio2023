@@ -9,13 +9,12 @@ export default function About() {
       <div className="inset">
         <div>
           <p>
-            I specialize in creating and maintaining design systems and component libraries with a focus on aesthetics,
-            usability, and accessibility—as well as Drupal and general front end development.{' '}
+            I've been building usable, accessible, projects for the web <Link to='/blog/four-takeaways-after-eleven-years'> for over eleven years</Link> after learning to design and code as a kid. While I'm comfy all across the stack, my deep knowledge lies in front end, design systems, and Drupal development.{' '}
           </p>
 
           <p>
             Offline, I perform in plays and musicals, sew and knit my own clothing, tend my vegetable and native plant
-            garden, and hang out with my four cats.
+            garden, noodle around on the guitar, and hang out with my four cats.
           </p>
 
           <p>

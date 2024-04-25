@@ -1,15 +1,17 @@
 .footer {
   @include sans-sm;
+  letter-spacing: 1px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   padding: var(--space-xs);
-  border-top: var(--border-haze-1);
+  border-top: var(--border-oceandark);
   margin-top: auto;
   background-attachment: fixed;
   background-position-x: center;
-  background-color: var(--color-haze);
+  background-color: var(--color-ocean);
   opacity: .8;
+  color: var(--color-moonlight);
 
   &__heart {
     margin-bottom: -2px;

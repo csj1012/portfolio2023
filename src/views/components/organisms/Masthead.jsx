@@ -21,10 +21,6 @@ export default function Masthead() {
     { text: 'Email', href: 'mailto:chelsiesjohnston@gmail.com', renderOptions },
   ]
 
-  console.log(isSafari(), isSafari)
-  const classes = classNames([isSafari(), 'fancy'])
-  console.log('classes', classes)
-
   return (
     <>
       <div className='masthead__intro'>

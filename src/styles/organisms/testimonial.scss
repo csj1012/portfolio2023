@@ -63,10 +63,14 @@
 
   p {
     max-width: 55ch;
-    letter-spacing: .02rem;
+    letter-spacing: .03rem;
   }
 
   &__attribution {
-    @include sans-base;
+    @include sans-base-lg;
+
+    a {
+      color: var(--color-lilaclight);
+    }
   }
 }

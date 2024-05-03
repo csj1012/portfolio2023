@@ -50,7 +50,7 @@ export default function Testimonial() {
             knowledge outside of her development discipline (design, accessibility, general empathy) to make sure the
             things she builds will be successful - A joy to work with&quot;
           </p>
-          <p className="testimonial__attribution">—Colin Panetta, Director of UX/UI at Last Call Media</p>
+          <p className="testimonial__attribution">— <Link to='https://www.linkedin.com/in/colinpanetta/'>Colin Panetta</Link>, Director of UX/UI, Last Call Media</p>
         </div>
       </div>
     </aside>

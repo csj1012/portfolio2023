@@ -48,7 +48,7 @@ That said: I am so happy to tell you the following:
 
 Yes! Seriously! Despite what you may believe about yourself, your innate abilities, and lack of current success, *it is possible* for you (yes, you!) to Learn The Thing.
 
-Full post here with more of the "how:" <a href="/#/blog/you-can-learn-the-thing">You Can Learn The Thing</a>
+<p class="more">Full post here with more of the "how:" <a href="/#/blog/you-can-learn-the-thing">You Can Learn The Thing</a></p>
 
 ##### #2. Frameworks come and go, but fundamentals are forever
 
@@ -68,7 +68,7 @@ If your HTML, CSS, JS, PHP (or your vanilla language of choice) is solid—if yo
 
 Whatever it is, just start getting your hands dirty in something—anything—and I bet you'll feel less overwhelmed. 
 
-More thoughts here: <a href="/#/blog/frameworks-come-and-go-fundamentals-are-forever">Frameworks Come and Go; Fundamentals are Forever</a>
+<p class="more">More thoughts here: <a href="/#/blog/frameworks-come-and-go-fundamentals-are-forever">Frameworks Come and Go; Fundamentals are Forever</a></p>
 
 Which brings me to...
 
@@ -90,7 +90,7 @@ Amid so many voices, it's important to be able to find what drives *you*, find t
 
 <p class="pull">Define what *you* think is "good," be clear about that definition, and share it with others.</p>
 
-More thoughts: <a href="/#/blog/people-will-always-disagree-about-how-to-build">People Will Always Disagree About How To Build Things</a>
+<p class="more">More thoughts: <a href="/#/blog/people-will-always-disagree-about-how-to-build">People Will Always Disagree About How To Build Things</a></p>
 
 And if I haven't convinced you that *it's all going to be okay* yet...
 
@@ -116,8 +116,7 @@ And lastly: I know it's tough to find the time sometimes, but mentoring or pairi
 
 <p class="pull">If we're lacking motivation, reaching out to and helping others can often be enough to get us unstuck.</p>
 
-
-More thoughts here: <a href="/#/blog/on-dev-burnout">On Dev Burnout</a>
+<p class="more">More thoughts here: <a href="/#/blog/on-dev-burnout">On Dev Burnout</a></p>
 
 #### Looking ahead
 

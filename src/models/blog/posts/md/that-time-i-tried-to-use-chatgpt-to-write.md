@@ -1,8 +1,10 @@
+<h4>The Collective High-Five</h4>
 <p>If we've ever spoken about the pitfalls of AI, you may have heard me reference the "collective high-five:" a somewhat tongue-in-cheek phrase I coined to characterize the "training wheels" that safeguard users from the darker potentials of LLMs.</p>
 <p>The "high-five" means that everything works out for everyone in the end; it's the silver lining, or maybe the toxic positivity sometimes found on your social media feed.</p>
 <p>Today, I invite you on a quick ChatGPT-generated journey through space—to laugh along with me—as we try to generate "The Expanse: The Musical (Unlicensed!)", based on the hit novel and TV series by James S. A. Corey (authors Daniel Abraham and Ty Franck).</p>
 <em class="pull">Caution: spoilers ahead, read at your own peril!</em>
 <h4>The Idea</h4>
+<h5>Could ChatGPT assist in creative writing, and to what degree?</h5>
 <p>Near the beginning of ChatGPT 3.5's release to the world, I wanted to test its creative limits. Maybe ChatGPT would be the writing buddy I'd always wanted.</p>
 <p>I also wanted to know: did it have a sense of humor? What could ChatGPT write, and where did it fall short?</p><p>Of course, the best way to test this was to generate a hit Broadway musical.</p><p>I blithely started a new chat:</p>
 <blockquote class="chatgpt-conversation">

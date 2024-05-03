@@ -1,8 +1,8 @@
-Do you have something in your life that you just *know* you'll never be good at? 
-
-Cool, this post is for you.
+*Do you have something in your life that you just know you'll never be good at? Cool, this post is for you!*
 
 #### Everything is a skill
+
+##### And how do we get skills? We build them!
 
 Outside of building stuff for the web, I act in plays and musicals. I've been doing this all my life, much like coding, starting with my first dance lesson and singing lessons around age 3.
 
@@ -18,16 +18,16 @@ It took me ten years, but on a whim one day, I returned to acting classes—ones
 
 As it turns out, *acting, like most things, is a skill.*
 
-And as it further turns out, *everything is a skill.*
+And as it further turns out, *everything is a skill.* Singing. Math. Coding. Writing algorithms. Juggling. Making friends. Needlepoint (you get the picture). Everything is a skill and can be learned.</p>
 
-<p class="pull">Singing. Math. Coding. Writing algorithms. Juggling. Making friends. Needlepoint (you get the picture). Everything is a skill and can be learned.</p>
+Will you be a "child prodigy," praised by everyone for your natural prowess? Maybe not. And that is perfectly fine.
 
-Will you be a 'child prodigy,' praised by everyone for your natural prowess? Maybe not. And that is perfectly fine.
+<p class="pull">Talent is the intersection of time spent, training, and skill.</p> 
 
-Talent is the intersection of time spent, training, and skill. It's not necessarily something you're born with, and even if you are, it's not much without discipline (and ideally guidance) to refine it.
+It's not necessarily something you're born with, and even if you are, it's not much without discipline (and ideally guidance) to refine it.
 
 
-#### Learning how to learn
+##### Learning is also a learnable skill
 
 When I applied this thinking to programming and increasing my back end proficiency (as well as front end modern practices, frameworks, etc.) my confidence and ability improved by leaps and bounds.
 
@@ -43,9 +43,9 @@ And it also allows me to jot down the "I don't have time to properly learn this"
 
 And once I do write them down? Sometimes, they go away. Or at least I can poke holes in them. I plan to write a post about this soon, too.
 
-#### Figure out what you're good at
+#### Figure out what you're already good at, and go from there
 
-##### So you can find your niche
+##### So you can find your niche and start there
 
 The world of web dev is so vast these days, with so many frameworks, tools, and best practices out there.
 

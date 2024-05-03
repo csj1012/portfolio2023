@@ -3,7 +3,6 @@
   padding-top: 0;
   display: flow-root;
   grid-column: 1 / 4;
-  // background-color: var(--color-hazelight);
   background-position-x: center;
   background-attachment: fixed;  
   animation: var(--fadeIn);
@@ -22,7 +21,6 @@
   &__title {
     @include serif-xl;
     max-width: 44ch;
-    // margin-bottom: var(--space-lg);
     grid-column: 1 / 4;
 
     @media screen and (min-width: 768px) {
@@ -35,7 +33,6 @@
     @include sans-lg;
     line-height: var(--space-lg);
     max-width: 44ch;
-    // margin-bottom: var(--space-lg);
     grid-column: 1 / 4;
     font-weight: 400;
     font-style: italic;
@@ -49,7 +46,6 @@
   &__authored {
     @include sans-base;
     display: inline-block;
-    // margin-bottom: var(--space-xl);
     grid-column: 1 / 4;
     @media screen and (min-width: 768px) {
       grid-column: 1 / 2;
@@ -82,10 +78,6 @@
     padding: var(--space-lg);
     position: relative;
 
-    h4 {
-      margin: var(--space-md) 0;
-    }
-
     @media screen and (min-width: 768px) {
       grid-column: 2 / 4;
       grid-row: 2 / 6;
@@ -99,16 +91,36 @@
     p {
       @include sans-base-lg;
       max-width: 55ch;
+
+      + h4, + h5 {
+        margin-top: var(--space-xl);
+      }
     }
 
     h4 {
+      margin: var(--space-md) 0;
       max-width: 44ch;
     }
 
     h5 {
-      max-width: 50ch;
+      max-width: 60ch;
       margin-top: var(--space-sm);
       margin-bottom: var(--space-md);
+      border-bottom: solid 3px var(--color-sexyorange);
+      padding-bottom: var(--space-2xs);
+      position: relative;
+      
+      &:first-of-type:after {
+        content: '';
+        position: absolute;
+        display: block;
+        background: url('public/assets/svg/cat.svg');
+        width: var(--space-2xl);
+        height: var(--space-2xl);
+        right: 0;
+        bottom: calc(var(--space-2xl)* -.4);
+        transform: scaleX(-1);
+      }
     }
 
     a {
@@ -126,16 +138,29 @@
       font-size: var(--sans-base);
       font-weight: 550;
       background: var(--color-seafoam);
+      padding: .3rem;
     }
   }
 
   .pull {
-    // @include serif-lg;
     color: var(--color-root);
     display: block;
     border: 1px solid var(--color-hazedark);
     border-width: 1px 0;
-    padding: var(--space-sm) 0;
+    padding: var(--space-lg) var(--space-md);
     text-align: center;
+    font-style: italic;
+    letter-spacing: .025rem;
+  }
+
+  .more {
+    background: #ffffff96;
+    display: block;
+    padding: 1rem 2rem 1rem 1rem;
+    font-size: var(--sans-base);
+    width: 100%;
+    border-left: solid 3px var(--color-jade);
+    border-radius: 4px;
+    min-width: 63ch;
   }
 }

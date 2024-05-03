@@ -1,14 +1,20 @@
-#### Opinions are everywhere
+*This one is kind of a directionless rant, so I apologize in advance...*
+
+#### Opinions vary about how to build stuff... and perhaps this is a reality of life.
+
+##### Yes, I realize *this* is also an opinion...
 
 For every ten people with Medium posts about the "so hot right now" framework-du-jour, there are ten more (okay, maybe two more) talking about how "we Will Never Need Frameworks Again."
 
 Who's right? 
 
-My opinion is: probably both people, and also it doesn't matter! 
+My opinion is: probably both people, and also it doesn't matter! How freeing is that? This isn't a particularly hot take, but it's something I've had to realize lately.
 
-How freeing is that?
+On that note...
 
-The thing I want to caution against is taking one person's word at gospel.
+##### Getting in the habit of evaluating opinions
+
+One thing I want to caution against is taking one person's word at gospel.
 
 This goes double for people telling you about your own self or work. To evaluate whether someone's advice is actually useful to you, here is some advice for fellow non-confrontational people with a tendency to just believe whatever they're told because others must know better:
 
@@ -19,9 +25,9 @@ This goes double for people telling you about your own self or work. To evaluate
 
 <p class="pull">It's vital to think critically about opinions you're going to take seriously.</p>
 
-And on that note:
+And on *that* note:
 
-#### Best practices are vital, but you have to define "best"
+##### Best practices are important, but you have to define "best"
 
 What's good for a small portfolio site may not be good for a large enterprise institution's internal platform. This sounds like a no-brainer, but when online discourse exists to suggest that <a href="https://news.ycombinator.com/item?id=35105528">Clean Code, touted as fundamental reading, is maybe not always the best way to do things actually</a>, it can help to focus on your own needs.
 
@@ -29,7 +35,7 @@ Early on in my career, I realized that it was important to share a "definition o
 
 What constitutes "good" design? Is it better to have an easily readable codebase that new collaborators can understand at a glance, that is slightly less cleverly written? Is fast code the top priority? That all depends on your project, and getting clear in your definition of "good" is vital for success.
 
-#### Identify when "good enough" is "good enough"
+##### Identify when "good enough" is "good enough"
 
 Yes, "done is better than perfect." And I should know. I'm a terrible perfectionist.
 

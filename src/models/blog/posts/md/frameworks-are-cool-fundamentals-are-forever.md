@@ -18,6 +18,8 @@ Does this mean you have to jump from buzzword to buzzword, learning whatever you
 
 Once you've done this a bunch, picking up new frameworks becomes easier, and the constant evolution feels less daunting.
 
+<p class="more">Related post: <a href="/#/blog/people-will-always-disagree-about-how-to-build">People Will Always Disagree About How To Build Things on the Internet</a></p>
+
 
 #### Fundamentals are forever
 
@@ -30,6 +32,8 @@ I don't mean that pejoratively.
 When I first got into working in React in the real world (having built two portfolios in it after going "I should learn this"), I was in for an unpleasant surprise: there were all these rules that didn't make any sense. 
 
 How was anyone supposed to just know this stuff? 
+
+##### Back to basics (or, an exercise in humility)
 
 Turns out that admittedly, at that time, my JavaScript (vanilla) fundamentals were lacking. After all, I'd already shipped many successful web projects, but I'd taught myself to build websites without having studied computer science. The concepts and best practices that came from lower-level programming languages were things I hadn't explicitly been exposed to before.
 

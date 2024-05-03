@@ -1,3 +1,7 @@
+#### Why I speak openly about burnout
+
+##### The necessity of honest conversation
+
 I'm very vocal about the idea of burnout. 
 
 I believe that being transparent with one another about how we're holding up is critical to our success as developers. Contrary to popular belief and stereotype, I do not believe that we are people who can "just shut off our emotions" and write code.
@@ -6,7 +10,7 @@ When we don't speak about our burnout to anyone, it gets worse.
 
 I have a lot more thoughts about this, so maybe someday I'll make a follow up, but here are some ideas that work for me when I find myself feeling the dreaded, familiar feeling we all know so well:
 
-#### Ways to restore your passion for web dev
+#### Ideas to restore your passion for web dev
 
 ##### Revisit your roots from time to time
 
@@ -26,6 +30,8 @@ But sometimes...
 
 <p class="pull">Sometimes you just have to go with the flow. Follow the passion and hyperfocus and *sheer joy* that comes with allowing creativity to run wild. Whatever that means to you.</p>
 
+##### Let go of perfectionism (temporarily)
+
 As for me, I've considered rebuilding my old RPG recently, using modern tools, frameworks, and best practices. 
 
 Have I done any analysis, competitor research, serious planning toward this goal? *No way!* I simply opened VSCode on a whim one night, created a file called `rpg.js`, and started writing out classes. 
@@ -38,22 +44,20 @@ Because prior to that, I'd been feeling utterly devastated at the state of the t
 
 If you spend all your time working on things for other people—or things other people think you should be working on—you may forget the love of learning and building that hopefully brought you here in the first place.
 
-#### Look at abstract disciplines that relate
+##### Look for related concepts in other disciplines
 
-I'll offer three examples, based on my own hobbies: performing in plays and musicals, making things with my hands (sewing and knitting my own clothing), and attempting to wrangle nature. 
+I'll offer a few examples based on my own hobbies: performing in plays and musicals, making things with my hands (sewing and knitting my own clothing), and attempting to wrangle nature. 
 
-As it turns out, everywhere you look, there are parallels to be found between coding and other arts:
+As it turns out, there are parallels to be found between coding and other arts <em>everywhere you look</em>:
 
 - **Performing arts:** Facing rejections from job hunting? What's the big deal; performers face rejection all the time! More transferable skills include: improving public speaking skills/being in front of a crowd, learning to work seamlessly with others under immense pressure
 - **Sewing my own clothing:** Sewing patterns are one big documentation instance, for better or for worse. Interpreting the author's intent, highlighting gaps in understanding, and consulting peers and the Internet to supplement your knowledge? The practice of figuring out how all the pieces fit together correctly can bear a lot of similarities to web dev.
 - **Knitting garments and accessories:** If sewing patterns are documentation, knitting patterns are algorithms. `x` series of stitches in `y` configuration times `n` equals a certain shape. Enough of those shapes and you have a sweater. Much has been written online about <a href="https://opensource.com/article/18/6/how-programming-evolved-knitting">programming and knitting</a>, and that's before we look at knitting machines (the practical physical application of the intersection of these two concepts).
 - **Gardening:** Systems, systems everywhere! The marigold you planted four years ago whose seeds keep popping up everywhere? If you leave the volunteer plants, they'll help repel pests from your veggies. But they'll also crowd out shorter plants, so it's necessary to thoughtfully manage them. Things affecting other things in the future that you might not anticipate, so you have to try and think ahead using established patterns? Design systems, anyone?
 
-Maybe this sounds goofy, but I find inspiration for coding (and thinking about coding) in all of my disciplines outside work, and often find programming breakthroughts in the pursuit of excellece in other arts.
+Maybe this sounds silly, but I find inspiration for coding (and thinking about coding) in all of my disciplines outside work, and often find programming breakthroughts in the pursuit of excellece in other arts.
 
-### Make time to be human and find balance
-
-#### Force yourself to take breaks!
+##### Force yourself to take breaks
 
 If I haven't talked your ear off about the <a href="https://en.wikipedia.org/wiki/Pomodoro_Technique">Pomodoro Method</a> for managing focus and productivity, suffice to say I've been a big fan of this concept for about a decade now. 
 
@@ -72,7 +76,7 @@ As well as mental benefits:
 - A "reset" for frustrated emotions
 - And, as a bonus for anyone relying on other developers for help: one Pomodoro instance is a great timer for "try solving the problem yourself before going to the person helping you" without spinning your wheels for hours! 
 
-#### Be honest: talk about (or write down) your struggles and mistakes
+##### Be honest: talk about (or write down) your struggles and mistakes
 
 Ask yourself, which internal monologue feels worse to imagine: 
 1. "I have no idea how to solve this complex problem, I'm a failure"
@@ -86,9 +90,7 @@ If you talk to peers about it, you'll likely find that others have felt the exac
 
 But even without a solution, writing down the problem can be critical to your well-being. At least then it can live somewhere else than inside your head.
 
-### When lost, help others
-
-#### Paying it forward
+##### When lost, help others
 
 Mentoring junior developers is so highly rewarding. 
 
@@ -102,7 +104,7 @@ When I was younger, I was always mystified at how people found the time to mento
 
 Maybe that's selfish, to the extent that any altruism can be? I don't know. I just know that I like helping other people, and I find that it often renews my energy and motivation.
 
-#### Solidify your knowledge; widen your perspective
+##### Solidify your knowledge; widen your perspective
 
 Teaching also forces you to figure out how to explain things in various ways, to people who may have different backgrounds or levels of understanding than you do. 
 
@@ -121,6 +123,8 @@ I've found that this skill, honed via working very closely with lots of stakehol
 Teaching also highlights gaps in your knowledge. If someone asks you "why?" and you don't have an answer, now you know what you don't have an answer to! And that's very, very valuable! 
 
 #### Final thoughts
+
+##### *If you can,* taking time off is the best way to avoid burnout
 
 I won't be coy about saying that the best way to combat burnout is to take a break, short or long. 
 

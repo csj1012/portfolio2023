@@ -3,8 +3,7 @@
   @include sans-lg;
   margin-top: calc(-3 * var(--space-sm));
   padding-top: calc(6* var(--space-sm));
-  padding-bottom: calc(6* var(--space-sm));
-  min-height: 80vh;
+  padding-bottom: calc(2* var(--space-2xl));
   width: 100%;
   line-height: var(--space-lg);
   background: linear-gradient(45deg, var(--color-oceandark), var(--color-ocean), var(--color-oceandark));

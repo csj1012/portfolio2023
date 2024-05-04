@@ -2,6 +2,7 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { fileURLToPath } from 'node:url'
 import { resolve, dirname } from 'path'
+import watchPostsPlugin from './tools/plugins/watchPostsPlugin'
 
 const __dirname = typeof __dirname !== 'undefined'
   ? __dirname
@@ -9,7 +10,13 @@ const __dirname = typeof __dirname !== 'undefined'
 
 // https://vitejs.dev/config/
 export default defineConfig({  
-  plugins: [react()],
+  plugins: [
+    react(),
+    watchPostsPlugin({
+      postsDirectory: resolve(__dirname, 'src/models/blog/posts/md'),
+      transformPostsScript: 'npm run transformPosts'
+    })
+  ],
   resolve: {
     alias: [
       {

@@ -1,5 +1,24 @@
+import hljs from 'highlight.js/lib/core'
+import javascript from 'highlight.js/lib/languages/javascript'
+import 'highlight.js/styles/base16/ros-pine-moon.min.css'
+import { useEffect, useRef } from 'react'
+
+hljs.registerLanguage('javascript', javascript)
+
 export default function BlogPost(data) {
   const { title, content, tagline, date, topics } = data
+  const containerRef = useRef(null)
+
+  useEffect(() => {
+    if (containerRef.current) {
+      const container = containerRef.current
+      const codeElements = container.querySelectorAll('pre code')
+
+      codeElements.forEach((code) => {
+        hljs.highlightElement(code)
+      })
+    }
+  }, [content])
 
   const formattedDate = new Date(date).toLocaleDateString('en-US', {
     year: 'numeric',
@@ -30,6 +49,7 @@ export default function BlogPost(data) {
       </ul>
       {/* Using dangerouslySetInnerHTML because the content is trusted and comes from a controlled source */}
       <div
+        ref={containerRef}
         dangerouslySetInnerHTML={{ __html: content }}
         className="blog-post__content"
       ></div>

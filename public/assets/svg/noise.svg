@@ -4,8 +4,8 @@
     <filter id="noise">
       <feTurbulence
         type="fractalNoise"
-        baseFrequency="2"
-        numOctaves="10"
+        baseFrequency="202"
+        numOctaves="100"
         result="turbulence"
       />
       <feComposite operator="in" in="turbulence" in2="SourceAlpha" result="composite"/>

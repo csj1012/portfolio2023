@@ -21,6 +21,29 @@
     },
     {
       "category": "Blog Post",
+      "slug": "optimizing-performance-perfect-lighthouse",
+      "title": "Optimizing the Performance of Chelsie.dev for a Perfect Lighthouse Score",
+      "tagline": "How I improved this site's Lighthouse Performance score from 99% to 100%",
+      "summary": "Coming soon~",
+      "date": "2024-01-14T12:30:00Z",
+      "link": {
+        "href": "/blog/lorem-ipsum",
+        "text": "Read full blog post"
+      },
+      "topics": [
+        "JavaScript",
+        "React",
+        "Performance",
+        "Lighthouse",
+        "Image Optimization",
+        "SVG",
+        "WebP",
+        "CSS",
+        "Adobe Illustrator"
+      ]
+    },
+    {
+      "category": "Blog Post",
       "slug": "that-time-i-tried-to-use-chatgpt-to-write",
       "title": "That time I tried to use ChatGPT to write The Expanse: The Musical",
       "tagline": "Or, the story of how five characters all high-fived each other at the same time.",

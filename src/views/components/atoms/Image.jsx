@@ -1,4 +1,4 @@
-export default function Image({ src, alt, dimensions, webp, ...props } ) {
+export default function Image({ src, alt, dimensions, webp, ...props }) {
   function getImageUrl(filePath) {
     const basePath = 'assets/'
     const name = filePath.includes(basePath) ? filePath.split(basePath)[1] : ''

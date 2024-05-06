@@ -2,7 +2,7 @@ import { test, expect, vi, beforeEach } from 'vitest'
 import fs from 'fs'
 import { promisify } from 'util'
 import sizeOf from 'image-size'
-import { getImageDimensions, buildImage, isValidImageSrc } from './util'
+import { getImageDimensions, buildImage, isValidImageSrc, Result } from './util'
 import { Buffer } from 'buffer'
 import path from 'path'
 
@@ -33,6 +33,46 @@ vi.mock('util.js', () => {
   }
 })
 
+test('buildImage builds an image object containing the correct data in the correct format', async () => {
+  const dummyImg = {
+    src: '../tests/images/dummy.png',
+    alt: 'Example alt.',
+    caption: "Example caption, lorem ipsum dolor sit amet."
+  }
+  const dummyTitle = 'Example Image Title'
+  const actualBuildImageResult = await buildImage(dummyImg, dummyTitle)
+  const expectedBuildImageResult = {
+    src: '../tests/images/dummy.png',
+    alt: 'Example alt.',
+    caption: 'Example caption, lorem ipsum dolor sit amet.',
+    dimensions: { width: 1, height: 1, type: 'png' },
+    webp: '../tests/images/dummy.webp'
+  }
+
+  expect(actualBuildImageResult).toEqual(expectedBuildImageResult)
+
+})
+
+test('Result class returns a result object on success', () => {
+  const value = 'Success value'
+  const result = Result.ok(value)
+
+  expect(result.success).toBe(true)
+  expect(result.value).toBe(value)
+  expect(result.error).toBeNull()
+  expect(result.errorMessage).toBe('')
+})
+
+test('Result class returns a result object on failure', () => {
+  const error = new Error('Something went wrong')
+  const errorMessage = 'Oops, an error occurred'
+  const result = Result.fail(error, errorMessage)
+
+  expect(result.success).toBe(false)
+  expect(result.value).toEqual([])
+  expect(result.error).toBe(error)
+  expect(result.errorMessage).toBe(errorMessage)
+})
 
 // beforeEach(() => {
 //   vi.clearModules();  // Clear module cache if necessary
@@ -58,26 +98,6 @@ vi.mock('util.js', () => {
 
 //   await expect(getImageDimensions(src, currentDir)).rejects.toThrow('Image dimensions are missing');
 // });
-
-test('buildImage builds an image object containing the correct data in the correct format', async () => {
-  const dummyImg = {
-    src: '../tests/images/dummy.png',
-    alt: 'Example alt.',
-    caption: "Example caption, lorem ipsum dolor sit amet."
-  }
-  const dummyTitle = 'Example Image Title'
-  const actualBuildImageResult = await buildImage(dummyImg, dummyTitle)
-  const expectedBuildImageResult = {
-    src: '../tests/images/dummy.png',
-    alt: 'Example alt.',
-    caption: 'Example caption, lorem ipsum dolor sit amet.',
-    dimensions: { width: 1, height: 1, type: 'png' },
-    webp: '../tests/images/dummy.webp'
-  }
-
-  expect(actualBuildImageResult).toEqual(expectedBuildImageResult)
-
-})
 
 // test('isValidImageSrc correctly validates a valid .png path ', () => {
 //   // arrange

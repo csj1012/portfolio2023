@@ -5,6 +5,7 @@ import path from 'path'
 import { IItem, IBuildItemReturn, IBuildImageReturn } from './UtilTypes'
 import { IProject } from './projects/ProjectTypes'
 import { ISizeCalculationResult } from 'image-size/dist/types/interface'
+import sharp, { FormatEnum } from 'sharp'
 
 const currentFileUrl = new URL(import.meta.url)
 const currentDir = path.dirname(currentFileUrl.pathname)
@@ -100,4 +101,58 @@ async function buildItem(item: IItem): Promise<IProject> {
   }
 }
 
-export { buildImage, isValidImageSrc, buildItem, getImageDimensions, toSlug }
+const convertToWebP = async (inputDir: string, outputDir: string, fileExtension: string) => {
+  const readdir: (path: string) => Promise<string[]> = promisify(fs.readdir)
+  // const inputDir = path.resolve('.')
+  // const outputDir = path.resolve('.')
+  // const fileExtension = '.png'
+  const format: string = 'webp'
+
+  const filesResult: Result<string[]> = await readdir(inputDir)
+    .then(Result.ok)
+    .catch((error) => Result.fail(error, 'Could not read input directory'))
+
+  if (!filesResult.success) {
+    console.error('Could not read input directory', filesResult.error)
+    return
+  }
+
+  for (const file of filesResult.value) {
+    if (path.extname(file).toLowerCase() === fileExtension) {
+      const inputFilePath = path.resolve(inputDir, file)
+      const outputFilePath = path.resolve(outputDir, path.basename(file, fileExtension) + `.${format}`)
+
+      const conversionResult = await sharp(inputFilePath)
+        .toFormat(format as keyof FormatEnum)
+        .toFile(outputFilePath)
+        .then(Result.ok)
+        .catch((error) => Result.fail(error, 'Could not convert image'))
+
+      if (!conversionResult.success) {
+        console.error('Could not convert image', file, conversionResult.error)
+        continue
+      }
+
+      console.log('Converted file ', file, 'to WebP')
+    }
+  }
+}
+
+class Result<T> {
+  constructor(
+    public success: boolean,
+    public value: T,
+    public error: any,
+    public errorMessage: string = '',
+  ) {}
+
+  static ok<T>(value: T): Result<T> {
+    return new Result<T>(true, value, null)
+  }
+
+  static fail<T>(error: any, errorMessage: string): Result<T> {
+    return new Result<T>(false, [] as T, error, errorMessage)
+  }
+}
+
+export { buildImage, isValidImageSrc, buildItem, getImageDimensions, toSlug, Result }

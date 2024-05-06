@@ -9,7 +9,6 @@ const toSlug = (title, abbreviation) => {
     let slug = title.toLowerCase().split(' ').join('-');
     slug = slug.replace(/[:.]/g, '');
     slug = abbreviation ? `${abbreviation}--${slug}` : slug;
-    console.log(slug);
     return slug;
 };
 const getImageDimensions = async (src) => {
@@ -33,18 +32,19 @@ const buildImage = async (img, title) => {
     try {
         const { alt, caption = null } = img;
         isValidImageSrc(img.src, '.png');
-        console.log(isValidImageSrc);
         const src = img.src || `${toSlug(title)}.png`;
-        const webp = src.replace(/\.png$/i, '.webp');
+        let webp;
+        await convertToWebP(src).then(() => {
+            webp = src.replace(/\.png$/i, '.webp');
+        });
         const dimensions = await getImageDimensions(src);
         return { src, alt, caption, dimensions, webp };
     }
     catch (err) {
-        throw new Error(`${err}`);
+        throw new Error(`in buildImage: ${err}`);
     }
 };
 function isValidImageSrc(src, extension) {
-    console.log(src, extension);
     const validUrl = /^http(s)?:\/\/|^\/\w+/.test(src);
     const validExtension = src.endsWith(extension);
     if (!validUrl) {
@@ -73,37 +73,23 @@ async function buildItem(item) {
         return Promise.resolve(project);
     }
     catch (error) {
-        throw new Error(`${error}`);
+        throw new Error(`in buildItem: ${error}`);
     }
 }
-const convertToWebP = async (inputDir, outputDir, fileExtension) => {
-    const readdir = promisify(fs.readdir);
-    // const inputDir = path.resolve('.')
-    // const outputDir = path.resolve('.')
-    // const fileExtension = '.png'
-    const format = 'webp';
-    const filesResult = await readdir(inputDir)
-        .then(Result.ok)
-        .catch((error) => Result.fail(error, 'Could not read input directory'));
-    if (!filesResult.success) {
-        console.error('Could not read input directory', filesResult.error);
+const convertToWebP = async (inputFile) => {
+    const imagePath = path.resolve(currentDir, `../../public${inputFile}`);
+    const outputFilePath = imagePath.replace(/\.[^/.]+$/, '') + '.webp';
+    const conversionResult = await sharp(imagePath)
+        .toFormat('webp')
+        .toFile(outputFilePath)
+        .then(() => {
+        console.log(Result.ok);
+        return Result.ok(undefined);
+    })
+        .catch((error) => Result.fail(error, 'Could not convert image'));
+    if (!conversionResult.success) {
+        console.error('Could not convert image', conversionResult.error);
         return;
-    }
-    for (const file of filesResult.value) {
-        if (path.extname(file).toLowerCase() === fileExtension) {
-            const inputFilePath = path.resolve(inputDir, file);
-            const outputFilePath = path.resolve(outputDir, path.basename(file, fileExtension) + `.${format}`);
-            const conversionResult = await sharp(inputFilePath)
-                .toFormat(format)
-                .toFile(outputFilePath)
-                .then(Result.ok)
-                .catch((error) => Result.fail(error, 'Could not convert image'));
-            if (!conversionResult.success) {
-                console.error('Could not convert image', file, conversionResult.error);
-                continue;
-            }
-            console.log('Converted file ', file, 'to WebP');
-        }
     }
 };
 class Result {
@@ -124,4 +110,4 @@ class Result {
         return new Result(false, [], error, errorMessage);
     }
 }
-export { buildImage, isValidImageSrc, buildItem, getImageDimensions, toSlug, Result };
+export { buildImage, isValidImageSrc, buildItem, getImageDimensions, toSlug, Result, convertToWebP };

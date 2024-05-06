@@ -14,7 +14,6 @@ const toSlug = (title: string, abbreviation?: string) => {
   let slug = title.toLowerCase().split(' ').join('-')
   slug = slug.replace(/[:.]/g, '')
   slug = abbreviation ? `${abbreviation}--${slug}` : slug
-  console.log(slug)
   return slug
 }
 
@@ -51,19 +50,22 @@ const buildImage = async (
     const { alt, caption = null } = img
 
     isValidImageSrc(img.src, '.png')
-    console.log(isValidImageSrc)
 
-    const src = img.src || `${toSlug(title)}.png`
-    const webp = src.replace(/\.png$/i, '.webp')
+    const src: string = img.src || `${toSlug(title)}.png`
+
+    let webp: string | undefined
+    await convertToWebP(src).then(() => {
+      webp = src.replace(/\.png$/i, '.webp')
+    })
+
     const dimensions = await getImageDimensions(src)
     return { src, alt, caption, dimensions, webp }
   } catch (err) {
-    throw new Error(`${err as Error}`)
+    throw new Error(`in buildImage: ${err as Error}`)
   }
 }
 
 function isValidImageSrc(src: string, extension: string): void {
-  console.log(src, extension)
   const validUrl = /^http(s)?:\/\/|^\/\w+/.test(src)
   const validExtension = src.endsWith(extension)
 
@@ -97,44 +99,26 @@ async function buildItem(item: IItem): Promise<IProject> {
 
     return Promise.resolve(project)
   } catch (error) {
-    throw new Error(`${error as Error}`)
+    throw new Error(`in buildItem: ${error as Error}`)
   }
 }
 
-const convertToWebP = async (inputDir: string, outputDir: string, fileExtension: string) => {
-  const readdir: (path: string) => Promise<string[]> = promisify(fs.readdir)
-  // const inputDir = path.resolve('.')
-  // const outputDir = path.resolve('.')
-  // const fileExtension = '.png'
-  const format: string = 'webp'
+const convertToWebP = async (inputFile: string) => {
+  const imagePath = path.resolve(currentDir, `../../public${inputFile}`)
+  const outputFilePath = imagePath.replace(/\.[^/.]+$/, '') + '.webp'
 
-  const filesResult: Result<string[]> = await readdir(inputDir)
-    .then(Result.ok)
-    .catch((error) => Result.fail(error, 'Could not read input directory'))
+  const conversionResult: Result<void> = await sharp(imagePath)
+    .toFormat('webp')
+    .toFile(outputFilePath)
+    .then(() => {
+      console.log(Result.ok)
+      return Result.ok<void>(undefined)
+    })
+    .catch((error) => Result.fail<void>(error, 'Could not convert image'))
 
-  if (!filesResult.success) {
-    console.error('Could not read input directory', filesResult.error)
+  if (!conversionResult.success) {
+    console.error('Could not convert image', conversionResult.error)
     return
-  }
-
-  for (const file of filesResult.value) {
-    if (path.extname(file).toLowerCase() === fileExtension) {
-      const inputFilePath = path.resolve(inputDir, file)
-      const outputFilePath = path.resolve(outputDir, path.basename(file, fileExtension) + `.${format}`)
-
-      const conversionResult = await sharp(inputFilePath)
-        .toFormat(format as keyof FormatEnum)
-        .toFile(outputFilePath)
-        .then(Result.ok)
-        .catch((error) => Result.fail(error, 'Could not convert image'))
-
-      if (!conversionResult.success) {
-        console.error('Could not convert image', file, conversionResult.error)
-        continue
-      }
-
-      console.log('Converted file ', file, 'to WebP')
-    }
   }
 }
 
@@ -155,4 +139,4 @@ class Result<T> {
   }
 }
 
-export { buildImage, isValidImageSrc, buildItem, getImageDimensions, toSlug, Result }
+export { buildImage, isValidImageSrc, buildItem, getImageDimensions, toSlug, Result, convertToWebP }

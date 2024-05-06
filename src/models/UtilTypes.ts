@@ -49,5 +49,5 @@ export interface IBuildImageReturn {
     height: number
     type: string;
   };
-  webp: string;
+  webp?: string;
 };

@@ -121,6 +121,11 @@
       }
     }
 
+    h6 {
+      @include sans-base-lg;
+      margin-bottom: var(--space-md);
+    }
+
     a {
       color: var(--color-jade);
       font-weight: 600;
@@ -142,6 +147,15 @@
     .hljs {
       line-height: 1.4;
       scrollbar-color: #c4a7e7 #121218;
+    }
+
+    // accessibility overrides for HJLS built-in theme
+    .hljs-built_in, .hljs-doctag, .hljs-keyword.hljs-atrule, .hljs-quote, .hljs-regexp {
+      color: #5bc7f3; 
+    }
+
+    .hljs-comment {
+      color: #d7d4e2;
     }
   }
 
@@ -196,11 +210,11 @@
     margin: var(--space-xs) 0 0 0;
   }
 
-  * + h4, * + h5 {
+  * + h4, * + h5, * + h6 {
     margin-top: var(--space-xl);
   }
 
-  h4 + h5 {
+  h4 + h5, h5 + h6 {
     margin-top: 0;
   }
 

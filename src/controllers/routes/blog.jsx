@@ -12,7 +12,7 @@ export async function getBlogPost(slug) {
   const { posts } = data
   const matched = posts.find((blogPost) => blogPost.slug === slug)
   const content = await getPostContent(matched.slug)
-  matched['content'] = content.html
+  matched['content'] = content
   
   return matched
 }

@@ -6,6 +6,18 @@ import process from 'process'
 const postsDirectory = 'src/models/blog/posts'
 const mdDirectory = path.join(postsDirectory, 'md')
 
+function extractHeadings(text) {
+  const tokens = marked.lexer(text)
+  const headings = tokens
+    .filter((token) => token.type === 'heading')
+    .map((heading) => {
+      const anchor = heading.text.toLowerCase().replace(/[^\w]+/g, '-')
+      return { level: heading.depth, title: heading.text, anchor }
+    })
+  return headings
+}
+
+
 export async function transformPosts() {
   fs.readdir(mdDirectory, (err, files) => {
     if (err) {
@@ -25,9 +37,17 @@ export async function transformPosts() {
           console.error(`Could not read file: ${file}`, err)
           return
         }
+
+        const updatedContent = content.replace(/(#+)\s+(.*)/g, (match, level, title) => {
+          const anchor = title.toLowerCase().replace(/[^\w]+/g, '-')
+          return `${level} ${title} <a id="${anchor}"></a>`
+        })
+
+        const htmlContent = marked(updatedContent)
   
-        const htmlContent = marked(content)
-        const jsonContent = JSON.stringify({ html: htmlContent })
+        // const htmlContent = marked(content)
+        const headings = extractHeadings(content)
+        const jsonContent = JSON.stringify({ html: htmlContent, toc: headings })
         const writeDirectory = 'public/files/blog/'
   
         fs.writeFile(path.join(writeDirectory, `${path.basename(file, '.md')}.json`), jsonContent, 'utf8', (err) => {

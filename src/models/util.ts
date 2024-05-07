@@ -58,8 +58,12 @@ const buildImage = async (
       webp = src.replace(/\.png$/i, '.webp')
     })
 
+    let webpHalf: Result<string> | string | null
+    webpHalf = await generateHalfSizeImage(src)
+    webpHalf = webpHalf?.success ? webpHalf.value : null
+
     const dimensions = await getImageDimensions(src)
-    return { src, alt, caption, dimensions, webp }
+    return { src, alt, caption, dimensions, webp, webpHalf }
   } catch (err) {
     throw new Error(`in buildImage: ${err as Error}`)
   }
@@ -103,15 +107,14 @@ async function buildItem(item: IItem): Promise<IProject> {
   }
 }
 
-const convertToWebP = async (inputFile: string) => {
-  const imagePath = path.resolve(currentDir, `../../public${inputFile}`)
-  const outputFilePath = imagePath.replace(/\.[^/.]+$/, '') + '.webp'
+const convertToWebP = async (inputFile: string): Promise<void> => {
+  const imagePath: string = path.resolve(currentDir, `../../public${inputFile}`)
+  const outputFilePath: string = imagePath.replace(/\.[^/.]+$/, '') + '.webp'
 
   const conversionResult: Result<void> = await sharp(imagePath)
     .toFormat('webp')
     .toFile(outputFilePath)
     .then(() => {
-      console.log(Result.ok)
       return Result.ok<void>(undefined)
     })
     .catch((error) => Result.fail<void>(error, 'Could not convert image'))
@@ -119,6 +122,24 @@ const convertToWebP = async (inputFile: string) => {
   if (!conversionResult.success) {
     console.error('Could not convert image', conversionResult.error)
     return
+  }
+}
+
+const generateHalfSizeImage = async (src: string): Promise<Result<string>> => {
+  try {
+    const dimensions = await getImageDimensions(src)
+    const { width, height } = dimensions
+    const halfWidth = Math.floor(width / 2)
+    const halfHeight = Math.floor(height / 2)
+    const inputFile = path.resolve(currentDir, `../../public${src}`)
+    const outputFilePath = inputFile.replace(/\.[^/.]+$/, '') + '-half.webp'
+    await sharp(inputFile)
+      .resize(halfWidth, halfHeight)
+      .toFormat('webp')
+      .toFile(outputFilePath)
+    return Result.ok(outputFilePath)
+  } catch (error) {
+    return Result.fail(error, `Error generating 1x image: ${error as Error}`)
   }
 }
 

@@ -33,12 +33,16 @@
       "topics": [
         "JavaScript",
         "React",
+        "TypeScript",
         "Performance",
         "Lighthouse",
         "Image Optimization",
         "SVG",
         "WebP",
+        "NodeJS",
+        "sharp",
         "CSS",
+        "HTML5",
         "Adobe Illustrator"
       ]
     },

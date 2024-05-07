@@ -37,8 +37,11 @@ const buildImage = async (img, title) => {
         await convertToWebP(src).then(() => {
             webp = src.replace(/\.png$/i, '.webp');
         });
+        let webpHalf;
+        webpHalf = await generateHalfSizeImage(src);
+        webpHalf = webpHalf?.success ? webpHalf.value : null;
         const dimensions = await getImageDimensions(src);
-        return { src, alt, caption, dimensions, webp };
+        return { src, alt, caption, dimensions, webp, webpHalf };
     }
     catch (err) {
         throw new Error(`in buildImage: ${err}`);
@@ -83,13 +86,30 @@ const convertToWebP = async (inputFile) => {
         .toFormat('webp')
         .toFile(outputFilePath)
         .then(() => {
-        console.log(Result.ok);
         return Result.ok(undefined);
     })
         .catch((error) => Result.fail(error, 'Could not convert image'));
     if (!conversionResult.success) {
         console.error('Could not convert image', conversionResult.error);
         return;
+    }
+};
+const generateHalfSizeImage = async (src) => {
+    try {
+        const dimensions = await getImageDimensions(src);
+        const { width, height } = dimensions;
+        const halfWidth = Math.floor(width / 2);
+        const halfHeight = Math.floor(height / 2);
+        const inputFile = path.resolve(currentDir, `../../public${src}`);
+        const outputFilePath = inputFile.replace(/\.[^/.]+$/, '') + '-half.webp';
+        await sharp(inputFile)
+            .resize(halfWidth, halfHeight)
+            .toFormat('webp')
+            .toFile(outputFilePath);
+        return Result.ok(outputFilePath);
+    }
+    catch (error) {
+        return Result.fail(error, `Error generating 1x image: ${error}`);
     }
 };
 class Result {

@@ -31,6 +31,9 @@ export default function ProjectDetail({
   const orgName = organization.name
   const orgUrl = organization.url
 
+  // from https://ausi.github.io/respimagelint/
+  const asideSizes = `(min-width: 1360px) ${Math.floor(aside.dimensions.width / 2)}w, (min-width: 1040px) ${Math.floor(aside.dimensions.width / 2)}w, (min-width: 780px) ${aside.dimensions.width}w, ${aside.dimensions.width}w`
+
   return (
     <article className='detail'>
       <section className='detail__basics'>
@@ -62,7 +65,7 @@ export default function ProjectDetail({
       <aside className='detail__aside'>
         {aside ? (
           <>
-            <Image {...aside} />
+            <Image {...aside} sizes={asideSizes} />
             <p className='detail__aside__caption'>{aside.caption}</p>
           </>
         ) : (

@@ -79,6 +79,8 @@
     padding: var(--space-md) var(--space-lg) var(--space-md) var(--space-md);
     border: solid 3px var(--color-hazedark);
     border-radius: 5px;
+    overflow-y: scroll;
+    scrollbar-color: var(--color-hazedark) var(--color-haze);
     
     ul {
       @include list-vertical-full;
@@ -198,6 +200,10 @@
     // accessibility overrides for HJLS built-in theme
     .hljs-built_in, .hljs-doctag, .hljs-keyword.hljs-atrule, .hljs-quote, .hljs-regexp {
       color: #5bc7f3; 
+    }
+
+    .hljs-tag {
+      color: #ada8c5;
     }
 
     .hljs-comment {

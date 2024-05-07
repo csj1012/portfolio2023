@@ -1,5 +1,5 @@
-#### Making a website about yourself is no easy feat.
-##### The cobbler's children have shoes, finally
+#### Introduction
+##### The cobbler's children have shoes, finally!
 
 The saying <a href="https://tvtropes.org/pmwiki/pmwiki.php/Main/TheCobblersChildrenHaveNoShoes">"the cobbler's children have no shoes"</a> described me for a number of years: a web developer with a kind of "meh," outdated personal website that lacked personality and didn't really reflect my work or what I'd learned throughout my lifetime making websites. 
 
@@ -9,7 +9,7 @@ Fortunately for me, crafting semantically correct and accessible markup has been
 
 <div class="images">
   <div>
-    <img src='public/assets/images/blog/lighthouse-99.png'>
+    <img src='public/assets/images/blog/lighthouse-99.png' alt='Screenshot showing a perfect lighthouse score - minus one point docked from the Performance category.'>
     <p class="caption">Ugh! So close!</p>
   </div>
 </div>
@@ -167,58 +167,124 @@ Inspired by this article from <a href="https://daniel.do/article/making-noisy-sv
 
 I wanted a noise that was multidimensional in tone; instead of just a green-light-green gradient, I wanted something with more depth, with hints of tones bordering on yellow and orange:
 
+Wanting to get moving quickly as I was designing this mostly in the browser, I made a PNG file version of the texture image in Photoshop:
+
 <div class='images'>
   <div class='img'>
-    <img src="public/assets/images/mucha-reverie.webp" alt="Art image, Rêverie by Alphonse Mucha.">
-    <p class="caption">Alphonse Mucha, <em>Rêverie</em>, 1898 (detail) © <a href="https://www.muchafoundation.org/en">Mucha Trust 2024</a></p>
+    <img src="public/assets/images/nouveau-bg.webp" alt="The original file.">
   </div>
 </div>
 
-Wanting to get moving quickly as I was designing this mostly in the browser, I made a PNG file version of the desired texture image. However, the image was larger than an SVG.:
+Once I was happy with the effect the old file gave the layout, I set about recreating it in SVG:
+
+```
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 100">
+	<defs>
+    <rect id="shape" x="0" y="0" width="1800" height="100" />
+    <filter id="noise">
+      <feTurbulence
+        type="fractalNoise"
+        baseFrequency="202"
+        numOctaves="100"
+        result="turbulence"
+      />
+      <feComposite operator="in" in="turbulence" in2="SourceAlpha" result="composite"/>
+      <feColorMatrix in="composite" type="luminanceToAlpha" />
+      <feBlend in="SourceGraphic" in2="composite" mode="overlay" />
+      <feBlend in="SourceGraphic" in2="composite" mode="color-burn" />
+    </filter>
+    <filter id="blur">
+      <feGaussianBlur in="SourceGraphic" stdDeviation=".13"/>
+    </filter>    
+      <linearGradient id="gradient">
+        <stop offset="0%" stop-color="#458767ff" />
+        <stop offset="33%" stop-color="#397558ff" />              
+        <stop offset="66%" stop-color="#1f5952ff" />      
+        <stop offset="100%" stop-color="#458767ff" />
+      </linearGradient>
+      <use href="#shape" />    
+	</defs>
+	<use href="#shape" mask="url(#gradientFade)" fill="url(#gradient)" filter="url('#noise') url('#blur') " />
+</svg>
+```
+
+I'm achieving the multidimensionality by overlaying two SVGs, altering blend modes and transparency. This makes the SVG really versatile to use in different contexts across the site.
+
+The SVG solution is markedly smaller, and since its code is easily editable from within my IDE, I was able to tweak it on the fly, with satisfying results:
 
 <div class='images'>
-  <div class='img'></div>
+  <div class='img'>
+    <img src="public/assets/svg/noise.svg" alt="SVG image, a color gradient with visual noise." style="width: 100%;">
+    <img src="public/assets/svg/noiseOverlay.svg" alt="The SVG overlay image, a color gradient with visual noise that differs in tone from the first." style="width: 100%;">
+    <p class="caption">The updated SVG files: one containing the main color gradient, and the other containing the tones to be subtly overlaid on top.</p>
+  </div>
 </div>
 
-I'm achieving the multidimensionality with blend modes and transparency. This makes the SVG really versatile to use in different contexts across the site.
+Simply combining them with the overlay on top looks like this:
 
-The SVG version is markedly smaller, and since it was code, I was able to edit it on the fly, with satisfying results.:
+<div class='images'>
+  <div class='img'>
+    <div style="background-image: url(/public/assets/svg/noiseOverlay.svg), url(/public/assets/svg/noise.svg); width: 100%;height: 100px;"></div>
+    <p class="caption">The two SVGs overlaid atop one another.</p>
+  </div>
+</div>
 
-<img src="public/assets/svg/noise.svg" alt="The SVG.">
 
-file size difference
+And then using a CSS blend mode property to blend the colors:
+
+```
+.example-grainy {
+  background-blend-mode: overlay;
+}
+```
+
+We get the finished product:
+
+<div class='images'>
+  <div class='img'>
+    <div style="background-image: url(/public/assets/svg/noiseOverlay.svg), url(/public/assets/svg/noise.svg); width: 100%;height: 100px; background-blend-mode: overlay;"></div>
+    <p class="caption">I think adding the orange and yellow tones back in gives it that little bit of earthiness that's so characteristic of the style.</p>
+  </div>
+</div>
+
+Maybe that difference is so subtle only combination-art-nouveau-and-CSS nerds would care, but I'm a happy camper. I love being able to combine artistic appreciation and technical detail into my work. 
+
+Best of all, the file size difference: 
+<ul>
+  <li>Old PNG file: 303 KB</li>
+  <li>New SVG files (each): 4 KB</li>
+</ul>
+
+This is a pretty miniscule difference, but a 4kb image is basically footprintless, which makes me pretty happy. This detail makes the site load that much faster and feel that much snappier (and nicer to use).
 
 ##### Preloading an image
 
-At the time there was an image on the About page:
+At the time of this effort there was an image (an art nouveau-inspired depiction of me, in fact!) on the About page:
 
-SCREENSHOT IMAGE
+<div class='images'>
+  <div class='img'>
+    <img src="public/assets/images/blog/image-home.png" alt="Screenshot of the previous design of the home page, featuring an image of the author." style="width: 100%;">
+    <p class="caption">The somewhat wordier older version of the About page of this site.</p>
+  </div>
+</div>
 
 While this image loaded quickly, the browser was still loading this image first, and then proceeding with the rest of its paint operations (meaning the image loading was holding up the time to First Contentful Paint).
 
 The quick fix was just to preload the image by adding a `<link rel="preload">` in the `<head>` tag of the page, in my case the parent `index.html` where the React app is rendered:
 
 ```
-<link rel="preload" as="image" href="/assets/images/nouveau.webp">
+<link rel="preload" as="image" href="/public/assets/images/nouveau.webp">
 ```
 
-This solution didn't support browsers that lacked `webp` support, though. Idk what to say about that.
+__FIX__ This solution didn't support browsers that lacked `webp` support, though. Idk what to say about that.
 
-##### Updating favicon.ico size and filename
-
-This is a no-brainer, but using a `.ico` file instead of a regular old SVG.
-
-While I was trying to figure out what to make my favicon, I messed around with different icon ideas. I ended up with a flourish I made in Adobe Illustrator - but it had a filename of `flourish.svg`. 
-
-Changing this to `favicon.ico` was a quick win that allowed:
-- Multiple file dimensions to be contained in the same file, so browsers can load and render it faster
-- Improved cacheability for repeat visitors
-
-##### Why I am not using a CDN for the images on this site right now
+__IS_LAZY_LOADING_BETTER?__
 
 #### Font management
 
-##### Using Fontsource npm package and regular font hosting methods to self-host fonts instead of using Google Fonts CDN
+##### Self-hosting fonts
+
+Using Fontsource npm package and regular font hosting methods to self-host fonts instead of using Google Fonts CDN
 
 This gave me less ability to take advantage of hinting (I think?)
 

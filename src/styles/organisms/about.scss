@@ -41,6 +41,11 @@
     @media screen and (min-width: 768px) {
       grid-column: 2;
     }
+
+    img {
+      height: auto;
+      width: auto;
+    }
   }
 
   a {

@@ -4,9 +4,9 @@ import TeaserList from '@components/molecules/TeaserList'
 const teaserItems = [
   {
     'category': 'Blog Post',
-    'title': 'Four Takeaways after Eleven Years as a Professional Dev',
+    'title': 'Four things I\'ve learned after eleven years as a professional web dev',
     'summary': [
-      "Of course, I've been coding for much longer—since around 2000, when I built my own play-by-post RPG website. What would I tell my younger self, were she starting out today?"
+      "Of course, I've been coding for much longer—since around 2000, when I built my own play-by-post RPG website. What would I tell someone just starting out today?"
     ],
     'link': {
       'href': '/blog/four-takeaways-after-eleven-years',
@@ -14,14 +14,14 @@ const teaserItems = [
     }
   },
   {
-    'category': 'Project',
-    'title': 'An accessible, atomically-designed component library and Drupal theme for Blackboard\'s corporate rebranding effort',
+    'category': 'Blog Post',
+    'title': 'Optimizing this site\'s fonts and images for a 100% lighthouse score',
     'summary': [
-      'The new design system served as both the source of truth for our theme and the theme code itself, which saved us a ton of time...'
+      'This effort required some simple adjustments to the quick and dirty way I\'d been handling fonts and images—so I figured I\'d share some insights into how I made its load time feel much smoother.'
     ],
     'link': {
-      'href': '/work/blackboard--blackboard-corporate-rebrand',
-      'text': 'View project page'
+      'href': '/blog/optimizing-performance-perfect-lighthouse',
+      'text': 'Read full blog post'
     }
   },
   {

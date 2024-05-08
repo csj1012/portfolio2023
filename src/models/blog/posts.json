@@ -22,10 +22,10 @@
     {
       "category": "Blog Post",
       "slug": "optimizing-performance-perfect-lighthouse",
-      "title": "Optimizing the Performance of Chelsie.dev for a Perfect Lighthouse Score",
-      "tagline": "How I improved this site's Lighthouse Performance score from 99% to 100%",
+      "title": "Optimizing Fonts and Images for a One Hundred Percent Lightouse Score",
+      "tagline": "Small, nuanced tweaks make a big difference, and they're worth spending time on.",
       "summary": "Coming soon~",
-      "date": "2024-01-14T12:30:00Z",
+      "date": "2024-05-08T12:30:00Z",
       "link": {
         "href": "/blog/lorem-ipsum",
         "text": "Read full blog post"
@@ -40,10 +40,12 @@
         "SVG",
         "WebP",
         "NodeJS",
+        "npm",
         "sharp",
         "CSS",
         "HTML5",
-        "Adobe Illustrator"
+        "Adobe Illustrator",
+        "Adobe Photoshop"
       ]
     },
     {

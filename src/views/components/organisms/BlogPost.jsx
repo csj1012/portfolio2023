@@ -51,12 +51,12 @@ export default function BlogPost(data) {
             </li>
           ))}
       </ul>
-      <div className="blog-post__toc">
+      {/* <div className="blog-post__toc">
         <div className="blog-post__toc__sticky-wrapper">
           <h4>Table of Contents</h4>
           <TableOfContents headings={toc} />
         </div>
-      </div>
+      </div> */}
       {/* Using dangerouslySetInnerHTML because the content is trusted and comes from a controlled source */}
       <div
         ref={containerRef}

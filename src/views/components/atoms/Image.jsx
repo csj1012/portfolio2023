@@ -16,14 +16,14 @@ export default function Image({ src, alt, dimensions, webp, webpHalf, sizes, ...
     webPSrcSet = `${updatedWebP} ${dimensions.width}w, ${updatedWebPHalf} ${Math.ceil(dimensions.width / 2)}w`
   }
   
-  // replace with worst-case scenario?
+  // @todo: replace with worst-case scenario?
   // const sizes = 'sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 547px"'
 
   return (
     <picture {...props} height={dimensions.height} width={dimensions.width}>
       <source type="image/webp" srcSet={webPSrcSet} sizes={sizes} />
       <source type="image/png" srcSet={updatedSrc} sizes={sizes} />
-      <img src={updatedSrc} alt={alt} />
+      <img src={updatedSrc} alt={alt} height={dimensions.height} width={dimensions.width} />
     </picture>
   )
 }

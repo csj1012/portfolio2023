@@ -1,26 +1,21 @@
 .main-menu {
-  @include container;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding-top: var(--space-2xs);
-  padding-bottom: var(--space-xs);
-  background: #0428287d;
-  border-radius: 5rem;
-  margin-top: 1rem;
+  background: var(--colors-surface-invert-brand-distinguished);
+  border-radius: var(--spacing-md);
 
   @media screen and (min-width: 768px) {
-    width: 100%;
-    align-items: baseline;
-    display: grid;
-    grid-template-columns: auto 1fr 1fr;
-    grid-gap: var(--grid-gutter);
+    margin: var(--spacing-2xs);
+    justify-content: space-between;
+    padding-right: var(--spacing-sm);
   }
   
   a {
+    display: inline-block;
     color: var(--color-seafoam);
     text-decoration: none;
     font-weight: 600;
+    padding: var(--spacing-3xs);
 
     &:hover {
       color: var(--color-sexyorange);
@@ -49,8 +44,15 @@
     }
   }
 
+  &__fleur {
+    display: none;
+    color: var(--color-sexyorange);
+    font-size: 0.75em;
+    margin-inline-end: 0.35em;
+  }
+
   h2 {
-    // DEBUG
+  
     display: none;
   }
 

@@ -1,0 +1,12 @@
+.elevator {
+  padding: var(--spacing-xs) var(--spacing-2xs);
+  border-radius: var(--spacing-xs);
+  background-color: var(--colors-surface-invert-body-subtle);
+  color: var(--colors-surface-body-bright);
+  @include sans-base;
+  letter-spacing: var(--font-scale--letter-spacing--base);
+
+  &__title {
+    font-weight: 600;
+  }
+}

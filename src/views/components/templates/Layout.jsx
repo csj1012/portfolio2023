@@ -1,30 +1,26 @@
 import { LayoutContext, useLayout } from '@views/contexts/LayoutContext'
-import { ThemeContext } from '@views/contexts/ThemeContext'
-import { useState } from 'react'
-import { systemDarkModeSetting } from '@views/components/util/mediaqueries'
-import ComputedBg from '@components/atoms/ComputedBg'
 import classNames from 'classnames'
+import { layoutClassName } from '../../../constants/layoutStyles'
+import { useLayoutStyle } from '@views/hooks/useLayoutStyle'
+import ComputedBg from '@components/atoms/ComputedBg'
 
 export const Layout = ({ children }) => {
-  const [theme, setTheme] = useState(systemDarkModeSetting)
-  const [showResetButton, setShowResetButton] = useState(false)
-
-  const classes = classNames(theme, 'ui-wrapper')
+  const layoutStyle = useLayoutStyle()
+  const classes = classNames('ui-wrapper', layoutClassName(layoutStyle))
 
   return (
     <LayoutContext.Provider value={true}>
-      <ThemeContext.Provider value={{ theme, setTheme, showResetButton, setShowResetButton, systemDarkModeSetting }}>
-        <div className={classes} style={{ backgroundImage: ComputedBg('jade') }}>
-          {children}
-        </div>
-      </ThemeContext.Provider>
+      <div className={classes} style={{ backgroundImage: ComputedBg('haze') }}>
+        {children}
+      </div>
     </LayoutContext.Provider>
   )
 }
 
-const HeaderElement = ({ children }) => <header className='masthead'>{children}</header>
 const NavElement = ({ children }) => <nav>{children}</nav>
+const HeaderElement = ({ children }) => <header className='masthead'>{children}</header>
 const MainElement = ({ children }) => <main>{children}</main>
+const AuxiliaryMenuElement = ({ children, style }) => <aside className='auxiliary-menu' style={style}>{children}</aside>
 const FooterElement = ({ children }) => <footer className='footer'>{children}</footer>
 
 // HOC for wrapping each section of the layout in the LayoutContext.
@@ -40,6 +36,7 @@ const layoutSections = [
   { name: 'Header', component: withLayout(HeaderElement, 'Header') },
   { name: 'Nav', component: withLayout(NavElement, 'Nav') },
   { name: 'Main', component: withLayout(MainElement, 'Main') },
+  { name: 'AuxiliaryMenu', component: withLayout(AuxiliaryMenuElement, 'AuxiliaryMenu') },
   { name: 'Footer', component: withLayout(FooterElement, 'Footer') }
 ]
 
@@ -48,6 +45,7 @@ export const {
   Header, 
   Nav, 
   Main, 
+  AuxiliaryMenu,
   Footer 
 } = layoutSections.reduce((acc, section) => {
   acc[section.name] = section.component

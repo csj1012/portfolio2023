@@ -1,0 +1,44 @@
+.ui-wrapper {
+  nav,
+  footer {
+    grid-column: 1 / 3;
+  }
+  main {
+    grid-column: 1 / 2;
+  }
+  .auxiliary-menu {
+    display: none;
+    height: 100%;
+    background-size: 400%;
+    background-position: center;
+    padding: var(--spacing-xs);
+
+    @media (min-width: 1024px) {
+      display: block;
+      grid-row: 1/3;
+      grid-column: 2 / 2;
+    }
+  }
+  &.layout--centered,
+  &.layout--full {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    @media (min-width: 1024px) {
+      grid-template-columns: 1fr min(25vw, var(--spacing-2xl));
+    }
+  }
+
+  &.layout--centered {
+    .content {
+      padding: var(--spacing-xl) var(--spacing-md);
+    }
+
+  }
+
+  &.layout--full {
+    .content {
+      padding: 0 var(--spacing-md);
+    }
+  }
+}

@@ -66,6 +66,7 @@
 	--colors-surface-contrast-subtle-primary: var(--color-haze-04);
 	--colors-surface-contrast-subtle-secondary: var(--color-haze-03);
 	--colors-surface-invert-brand-distinguished: var(--color-jade-05);
+	--colors-surface-invert-body-subtle: color-mix(in srgb, var(--color-jade-05) 40%, transparent);
 	--colors-text-body-primary: var(--color-neutral-03);
 	--colors-text-brand-distinguished: var(--color-jade-05);
 	--colors-text-brand-primary: var(--color-jade-03);

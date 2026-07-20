@@ -1,7 +1,10 @@
 .masthead {
-  grid-column: 1 / 4;
-  background: url('/assets/images/rectangles.svg') no-repeat center center;
+  grid-column: 1 / 2;
+  background: url('/assets/images/rectangles.svg') no-repeat top center;
   background-size: cover;
+  @media screen and (min-width: 768px) {
+    background-size: contain;
+  }
 
   &__contents {
     display: flex;
@@ -9,12 +12,19 @@
     align-items: center;
     justify-content: center;
     gap: var(--spacing-xs);
-    padding: var(--spacing-xs) 0;
+    padding: 10vh 0;
 
     @media screen and (min-width: 768px) {
-      gap: var(--spacing-xs);
-      padding: var(--spacing-2xl) 0;
+      padding: 20vh 0;
     }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-xs);
   }
 
   h1 {
@@ -25,6 +35,51 @@
 
   &__intro__description {
     @include serif-lg;
+    color: var(--colors-text-brand-distinguished);
+    text-align: center;
+
+    &__highlight {
+      color: var(--colors-text-brand-primary);
+      background: var(--colors-surface-body-distinguished);
+      padding: 0 .25rem;
+    }
+  }
+}
+
+.layout--full .masthead {
+  &__contents {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-sm) var(--spacing-2xs);
+
+    @media screen and (min-width: 768px) {
+      padding: var(--spacing-sm) var(--spacing-md);
+    }
+  }
+
+  &__contents {
+    align-items: center;
+    justify-content: start;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: var(--spacing-xs);
+  }
+
+  h1 {
+    color: var(--colors-text-brand-distinguished);
+    text-box: trim-both cap alphabetic;
+  }
+
+  &__intro__description {
+    @include serif-base;
     color: var(--colors-text-brand-distinguished);
     text-align: center;
 

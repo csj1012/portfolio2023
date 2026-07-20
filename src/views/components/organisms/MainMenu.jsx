@@ -22,7 +22,10 @@ export default function MainMenu() {
   return (
     <menu className="main-menu">
         <span className="main-menu__title">        
-          <NavLink to="/" className='main-menu__title__link'>Chelsie Johnston</NavLink>     
+          <NavLink to="/" className='main-menu__title__link'>
+            <span className="main-menu__fleur" aria-hidden="true">⚜</span>
+            Chelsie Johnston
+          </NavLink>     
         </span>
         {/* <ThemeSelect /> */}
         <Menu items={ items } headingElement={ HeadingElement } className='main-menu__nav' />

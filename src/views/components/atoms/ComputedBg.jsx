@@ -1,6 +1,5 @@
 import bgJade from '/assets/svg/noise.svg'
 import bgHaze from '/assets/svg/noiseHaze.svg'
-import fgJade from '/assets/svg/noiseOverlay.svg'
 import bgJadeFallback from '/assets/images/nouveau-bg.webp'
 import bgHazeFallback from '/assets/images/bg-noiseHaze.webp'
 
@@ -9,7 +8,7 @@ export default function ComputedBg(variant = 'jade') {
 
   const modern = variant === 'haze' ? 
     `url(${bgHaze})` :
-    `url(${fgJade}), url(${bgJade})`
+    `url(${bgJade})`
 
   const fallback = variant === 'haze' ?
     `url(${bgHazeFallback})` :

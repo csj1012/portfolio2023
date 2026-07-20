@@ -3,5 +3,13 @@
   gap: var(--space-xs);
   li {
     @include chiclet;
+
+    &:has(.chiclet) {
+      background: transparent;
+      padding: 0;
+      letter-spacing: normal;
+      font-weight: inherit;
+      color: inherit;
+    }
   }
 }

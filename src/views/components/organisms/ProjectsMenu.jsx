@@ -1,9 +1,11 @@
 import ProjectTeaser from '@components/organisms/ProjectTeaser'
 import WorkStyle from '@components/organisms/WorkStyle'
 import { NavLink } from 'react-router-dom'
+import { TextLabel } from '@components/atoms/TextLabel'
+import Divider from '@components/atoms/Divider'
 
 export default function ProjectsMenu({ items, current }) {
-  let headingText = 'Selected Projects'
+  let headingText = 'Selected Projects // Case Studies'
 
   // if we're currently viewing a project, don't include it in the menu
   if (current) {
@@ -11,19 +13,23 @@ export default function ProjectsMenu({ items, current }) {
     headingText = 'More Projects'
   }
 
-  const HeadingElement = () => <h2 className='projects__title'>{headingText}</h2>
-
   items = items.map((item) => ({
     ...item,
     title: item.title,
     href: `/work/${item.slug}`,
   }))
 
-  const menuItems = items.map((item) => { 
+  const menuItems = items.map((item) => {
     const featuredClass = item.featured ? 'featured' : ''
     return (
-      <li key={item.href} className={featuredClass}>
-        <NavLink to={item.href} className='teaser'>
+      <li
+        key={item.href}
+        className={featuredClass}
+      >
+        <NavLink
+          to={item.href}
+          className="teaser"
+        >
           <ProjectTeaser {...item} />
         </NavLink>
       </li>
@@ -31,11 +37,10 @@ export default function ProjectsMenu({ items, current }) {
   })
 
   return (
-    <section className='projects'>
-      <div className='inset'>
-        { < HeadingElement /> } 
-        <ul className='projects__menu'>{menuItems}</ul>
-      </div>      
+    <section className="projects">
+      {current && <Divider />}
+      <TextLabel as='h2'>{headingText}</TextLabel>
+      <ul className="projects__menu">{menuItems}</ul>
       <WorkStyle />
     </section>
   )

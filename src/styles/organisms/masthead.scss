@@ -6,6 +6,10 @@
     background-size: contain;
   }
 
+  @media screen and (min-width: 1024px) {
+    align-self: start;
+  }
+
   &__contents {
     display: flex;
     flex-direction: column;
@@ -16,6 +20,16 @@
 
     @media screen and (min-width: 768px) {
       padding: 20vh 0;
+    }
+
+    &--fade-in {
+      opacity: 0;
+      animation: fadeIn 0.2s ease-in forwards;
+
+      @media (prefers-reduced-motion: reduce) {
+        animation: none;
+        opacity: 1;
+      }
     }
   }
 
@@ -44,49 +58,52 @@
       padding: 0 .25rem;
     }
   }
+
+  .text-label {
+    margin-bottom: 0;
+  }
 }
 
-.layout--full .masthead {
-  &__contents {
-    display: flex;
+.masthead__contents--centered {
+  padding: var(--spacing-sm) var(--spacing-2xs);
+}
+
+.masthead__contents--full {
+  padding: var(--spacing-xs);
+
+  @media screen and (min-width: 768px) {
     flex-direction: row;
-    align-items: start;
-    justify-content: center;
-    gap: var(--spacing-xs);
-    padding: var(--spacing-sm) var(--spacing-2xs);
-
-    @media screen and (min-width: 768px) {
-      padding: var(--spacing-sm) var(--spacing-md);
-    }
-  }
-
-  &__contents {
-    align-items: center;
+    align-items: stretch;
     justify-content: start;
-  }
-
-  &__text {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
     gap: var(--spacing-xs);
-  }
+    padding: var(--spacing-2xs) var(--spacing-xs) var(--spacing-xs);
 
-  h1 {
-    color: var(--colors-text-brand-distinguished);
-    text-box: trim-both cap alphabetic;
-  }
+    .avatar {
+      --avatar-stroke: clamp(0.125rem, 0.0231rem + 0.5093vw, 0.4688rem);
+      display: block;
+      flex-shrink: 0;
+      align-self: stretch;
+      height: auto;
 
-  &__intro__description {
-    @include serif-base;
-    color: var(--colors-text-brand-distinguished);
-    text-align: center;
-
-    &__highlight {
-      color: var(--colors-text-brand-primary);
-      background: var(--colors-surface-body-distinguished);
-      padding: 0 .25rem;
+      img {
+        height: 100%;
+        width: auto;
+        aspect-ratio: 1;
+        object-fit: cover;
+      }
     }
+
+    .masthead__text {
+      align-items: start;
+    }
+
+    .masthead__intro__description {
+      @include serif-base;
+      text-align: left;
+    }
+  }
+
+  @media screen and (min-width: 1700px) {
+    padding: var(--spacing-sm) var(--spacing-md);
   }
 }

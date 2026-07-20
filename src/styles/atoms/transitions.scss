@@ -7,6 +7,15 @@
   }
 }
 
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
 @keyframes keyframes--border-vertical {
   from {
     height: 50px;
@@ -20,19 +29,6 @@
   }
 }
 
-@keyframes keyframes--border-horizontal {
-  from {
-    width: 50px;
-    left: 40%;
-    right: 40%;
-  }
-  to {
-    width: 100%;
-    left: 0;
-    right: 40%;
-  }
-}
-
 @mixin animation--border-vertical {
   animation: keyframes--border-vertical .9s var(--cubic-bezier) forwards;
   animation-delay: .4s;
@@ -40,16 +36,6 @@
   @media (prefers-reduced-motion: reduce) {
     animation: none;
     height: 100%;
-  }
-}
-
-@mixin animation--border-horizontal {
-  animation: keyframes--border-horizontal .9s var(--cubic-bezier) forwards;
-  animation-delay: .4s;
-
-  @media (prefers-reduced-motion: reduce) {
-    animation: none;
-    width: 100%;
   }
 }
 

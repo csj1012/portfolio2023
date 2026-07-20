@@ -15,14 +15,14 @@
   }
 
   // @todo: move me to a molecule
-  &__list {    
+  &__list {
     @include chiclet-list;
     font-size: calc(var(--sans-sm) * 1.1);
     margin-top: 0;
-    // font-size: calc(var(--sans-base) * .9);
 
     li {
-      background: var(--color-jade)
+      background: transparent;
+      padding: 0;
     }
   }
 

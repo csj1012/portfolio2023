@@ -1,6 +1,7 @@
 import BlogPostTeaser from '@components/organisms/BlogPostTeaser'
-import WorkStyle from '@components/organisms/WorkStyle'
 import { NavLink } from 'react-router-dom'
+import { TextLabel } from '@components/atoms/TextLabel'
+import Divider from '@components/atoms/Divider'
 
 export default function BlogPostsMenu({ items, current }) {
   let headingText = 'Recent Posts'
@@ -11,8 +12,6 @@ export default function BlogPostsMenu({ items, current }) {
     posts = posts.filter((item) => item.slug !== current)
     headingText = 'More Posts'
   }
-
-  const HeadingElement = () => <h3 className="projects__title">{headingText}</h3>
   
   posts.sort((a, b) => new Date(b.date) - new Date(a.date));
   posts = posts.map((item) => ({
@@ -42,7 +41,8 @@ export default function BlogPostsMenu({ items, current }) {
     <>
       <section className="projects">
         <div className="inset">
-          {<HeadingElement />}
+          {current && <Divider />}
+          <TextLabel as='h2'>From the Blog // {headingText}</TextLabel>
           <ul className="projects__menu projects__menu--blog">{menuItems}</ul>
         </div>
       </section>

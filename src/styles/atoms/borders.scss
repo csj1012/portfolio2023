@@ -17,4 +17,9 @@
 	--border-radius-sm: 8px;
 	--border-radius-xl: 80px;
 	--border-radius-xs: 4px;
+  --border-radius-mixed: var(--border-radius-xs) var(--border-radius-md) var(--border-radius-xs) var(--border-radius-md);
+}
+
+@mixin border-radius-mixed {
+  border-radius: var(--border-radius-mixed);
 }

@@ -4,8 +4,33 @@
   background: var(--color-lilac);
   color: var(--color-hazelight);
   padding: var(--space-2xs);
-  border-radius: 2px;
+  @include border-radius-mixed;
   font-weight: 700;
+}
+
+.chiclet {
+  @include chiclet;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+@mixin chiclet-static {
+  @include sans-sm;
+  letter-spacing: calc(var(--letter-spacing-lg) / 2);
+  background: var(--colors-surface-body-bright);
+  color: var(--colors-text-body-primary);
+  border: 1px solid var(--colors-border-contrast-subtle-secondary);
+  padding: var(--space-2xs) var(--space-xs);
+  border-radius: var(--border-radius-sm);
+  font-weight: 600;
+  cursor: default;
+  display: inline-block;
+}
+
+.chiclet--static {
+  @include chiclet-static;
 }
 
 @mixin featured-chiclet {
@@ -15,6 +40,6 @@
   background: var(--color-grape);
   color: var(--color-hazelight);
   padding: var(--space-xs) var(--space-sm);
-  border-radius: 1px;
+  @include border-radius-mixed;
   font-weight: 700;
 }

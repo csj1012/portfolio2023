@@ -1,3 +1,9 @@
+.ui-wrapper .projects {
+  .divider {
+    margin-block: 0 var(--spacing-sm);
+  }
+}
+
 .projects {
   padding-top: 0;
   display: flow-root;
@@ -9,12 +15,12 @@
     animation: none;
   }
 
-  &__title {
-    @include heading-underline;
-    color: var(--color-abyss);
-    grid-column: 1 / span 12;
-    margin-bottom: var(--space-lg);
-  }
+  // &__title {
+  //   @include heading-underline-caps;
+  //   color: var(--color-abyss);
+  //   grid-column: 1 / span 12;
+  //   margin-bottom: var(--space-lg);
+  // }
 
   &__menu {
     @include grid;
@@ -36,14 +42,21 @@
     }
   }
 
+  &__menu--tagged > li {
+    order: unset;
+  }
+
   .inset {
     @include container-bottom-margin;
-    border: var(--border-haze-1-subtle);
     border-radius: 10px;
 
     &:last-child {
       margin-bottom: 0;
     }
+  }
+
+  &__empty {
+    @include sans-base;
   }
 
 }

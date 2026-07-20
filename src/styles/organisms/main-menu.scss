@@ -3,10 +3,12 @@
   align-items: center;
   background: var(--colors-surface-invert-brand-distinguished);
   border-radius: var(--spacing-md);
+  margin: var(--spacing-3xs);
+  padding: 0 var(--spacing-2xs);
+  justify-content: space-between;
 
   @media screen and (min-width: 768px) {
     margin: var(--spacing-2xs);
-    justify-content: space-between;
     padding-right: var(--spacing-sm);
   }
   

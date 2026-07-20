@@ -1,7 +1,7 @@
-export const TextLabel = ({ children }) => {
+export const TextLabel = ({ children, as: Element = 'span' }) => {
   return (
-    <span className='text-label'>
+    <Element className='text-label'>
       {children}
-    </span>
+    </Element>
   )
 }

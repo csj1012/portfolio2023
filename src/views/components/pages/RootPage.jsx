@@ -22,23 +22,25 @@ export default function RootPage({ outlet }) {
   return (
     <Layout>
       <ScrollRestoration />
-      <Header>
-        <Nav>
-          <MainMenu />
-        </Nav>
-        <Masthead />
-        <Divider />
-      </Header>
-      <Main>
-        <div
-          className={classes}          
-        >
-          {outlet}
-        </div>
-        {/* <Testimonial />
+      <div className="primary">
+        <Header>
+          <Nav>
+            <MainMenu />
+          </Nav>
+          <Masthead />
+          <Divider />
+        </Header>
+        <Main>
+          <div
+            className={classes}          
+          >
+            {outlet}
+          </div>
+          {/* <Testimonial />
         <About />
         <Brands /> */}
-      </Main>
+        </Main>
+      </div>
       <AuxiliaryMenu
         style={{
           backgroundImage: `linear-gradient(var(--colors-surface-invert-body-subtle), var(--colors-surface-invert-body-subtle)), ${ComputedBg(

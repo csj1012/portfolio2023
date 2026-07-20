@@ -1,5 +1,6 @@
 import Image from '@components/atoms/Image'
 import UnorderedList from '@components/atoms/UnorderedList'
+import TagChiclet from '@components/molecules/TagChiclet'
 
 export default function ProjectTeaser({ title, shortDescription, teaser, techs, featured }) {  
   return (
@@ -22,7 +23,12 @@ export default function ProjectTeaser({ title, shortDescription, teaser, techs, 
         )}
       </div>      
       {techs ? (
-        <UnorderedList items={techs} className='teaser__list' />
+        <UnorderedList
+          items={techs.map((tech) => (
+            <TagChiclet key={tech} tag={tech} isStatic />
+          ))}
+          className='teaser__list'
+        />
       ) : ''}
     </>
   )

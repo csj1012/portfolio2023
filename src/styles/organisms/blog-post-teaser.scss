@@ -1,4 +1,5 @@
-.projects__menu--blog {
+.projects__menu--blog,
+.projects__menu--tagged > li.post {
   .teaser {
     &__title {
       @include serif-lg;

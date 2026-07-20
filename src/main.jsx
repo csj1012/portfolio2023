@@ -9,7 +9,7 @@ import Blog, { loader as blogLoader } from './controllers/routes/blog'
 import BlogList, { loader as blogPostsLoader } from './controllers/routes/blogList'
 import '/src/styles/index.scss'
 import FeaturedContent from '@components/organisms/FeaturedContent'
-import Design from '@components/pages/Design'
+// import Design from '@components/pages/Design'
 
 const router = createHashRouter([
   {
@@ -46,11 +46,7 @@ const router = createHashRouter([
         ],
       }
     ],
-  },
-  {
-    path: '/design',
-    element: <Design />
-  },
+  }
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(

@@ -1,0 +1,7 @@
+.text-label {
+  @include sans-sm;
+  font-size: clamp(var(--font-scale--size--sans--xs), calc(0.5rem + 0.714vw), var(--font-scale--size--sans--base));
+  color: var(--colors-text-brand-distinguished);
+  letter-spacing: var(--font-scale--letter-spacing--md);
+  text-transform: uppercase;
+}

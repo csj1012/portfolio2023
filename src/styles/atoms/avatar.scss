@@ -1,0 +1,40 @@
+.avatar {
+  /* 4px → 15px between 320px and 1400px viewports */
+  --avatar-stroke: clamp(0.25rem, 0.0463rem + 1.0185vw, 0.9375rem);
+  position: relative;
+  display: inline-block;
+  border-radius: 50%;
+
+  img {
+    display: block;
+    border-radius: 50%;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    padding: var(--avatar-stroke);
+    background-color: var(--color-haze-03);
+    background-image:
+      linear-gradient(
+        to bottom right,
+        color-mix(in srgb, var(--color-pumpkin-01) 20%, transparent),
+        color-mix(in srgb, var(--color-jade-03) 20%, transparent)
+      ),
+      url('/assets/svg/noiseHaze.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+}

@@ -1,109 +1,37 @@
 .masthead {
-  display: grid;
   grid-column: 1 / 4;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: var(--space-md);
+  background: url('/assets/images/rectangles.svg') no-repeat center center;
+  background-size: cover;
 
-  &__intro {
-    @include sans-base-lg;
-    grid-column: 1 / 4;
-    color: var(--color-abyss);
-    margin-top: 3rem;
-
-    p {
-      max-width: 60ch;
-    }
+  &__contents {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-xs) 0;
 
     @media screen and (min-width: 768px) {
-      @include sans-lg;
-      line-height: calc(var(--sans-lg) * 1.5);
-    }
-
-    .fancy {
-      @include display;
-      display: block;
-      color: var(--color-jade);
-      font-size: var(--serif-3xl);
-      font-weight: 600;
-      letter-spacing: 9px;
-      line-height: .9;
-      margin-top: 1rem;
-      word-wrap: normal;
-
-      &.safari {
-        font-synthesis: none;
-      }
-    }
-
-    strong {
-      color: var(--color-jade);
-    }
-
-    ul {
-      @include list-inline;
-      @include sans-base;
-      margin-top: 1rem;
-      font-weight: 800;
-      letter-spacing: .05rem;
-    
-      a {
-        color: var(--color-jade);        
-        text-decoration-color: var(--color-jade);
-      }
+      gap: var(--spacing-xs);
+      padding: var(--spacing-2xl) 0;
     }
   }
 
-  &__filters {
-    grid-column: 1 / 4;    
-
-    @media screen and (min-width: 768px) {
-      grid-column: 3 / 4;
-      grid-row: 1;
-      margin-top: 5rem;
-    }
-
-    p {
-      @include sans-base;
-      font-weight: 700;
-      color: var(--color-abyss);
-      margin-bottom: 1rem;
-
-      @media screen and (min-width: 768px) {
-        text-align: right;
-      }
-      
-    }
-
-    &__list {
-      @include chiclet-list;
-      margin-top: 2rem;
-
-      @media screen and (min-width: 768px) {
-        @include list-inline;
-        justify-content: flex-end;
-        gap: .5rem;
-      }
-
-      li { 
-        @include serif-sm;
-        color: var(--color-ocean);
-        font-weight: 300;
-        background: transparent;
-
-        &:not(:last-child):after {
-          margin-left: 1rem;
-        }
-      }
-    }
+  h1 {
+    @include display;
+    color: var(--colors-text-brand-distinguished);
+    text-box: trim-both cap alphabetic;
   }
 
-  .divider {
-    @include animation--border-horizontal;
-    height: 3px;
-    border: var(--border-haze-1-subtle);
-    
-    @media screen and (min-width: 768px) {
-      margin: var(--space-md) 0;
+  &__intro__description {
+    @include serif-lg;
+    color: var(--colors-text-brand-distinguished);
+    text-align: center;
+
+    &__highlight {
+      color: var(--colors-text-brand-primary);
+      background: var(--colors-surface-body-distinguished);
+      padding: 0 .25rem;
     }
   }
 }

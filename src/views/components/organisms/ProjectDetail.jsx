@@ -1,6 +1,7 @@
 import Image from '@components/atoms/Image'
 import Video from '@components/atoms/Video'
 import UnorderedList from '@components/atoms/UnorderedList'
+import TagChiclet from '@components/molecules/TagChiclet'
 import { Link } from 'react-router-dom'
 
 export default function ProjectDetail({
@@ -57,7 +58,9 @@ export default function ProjectDetail({
         )}
         <p className='detail__masthead-caption'>{image.caption}</p>
         <UnorderedList
-          items={techs}
+          items={(techs || []).map((tech) => (
+            <TagChiclet key={tech} tag={tech} />
+          ))}
           className='detail__list'
         />
       </aside>

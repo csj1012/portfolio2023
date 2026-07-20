@@ -4,6 +4,7 @@ import xml from 'highlight.js/lib/languages/xml'
 import css from 'highlight.js/lib/languages/css'
 import 'highlight.js/styles/base16/ros-pine-moon.min.css'
 import TableOfContents from '@components/molecules/TableOfContents'
+import TagChiclet from '@components/molecules/TagChiclet'
 import { useEffect, useRef } from 'react'
 
 hljs.registerLanguage('javascript', javascript)
@@ -45,9 +46,9 @@ export default function BlogPost(data) {
       </p>
       <ul className="blog-post__topics">
         {topics &&
-          topics.map((topic, index) => (
-            <li key={index} className="chiclet">
-              {topic}
+          topics.map((topic) => (
+            <li key={topic}>
+              <TagChiclet tag={topic} />
             </li>
           ))}
       </ul>

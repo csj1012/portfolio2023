@@ -50,7 +50,13 @@ const router = createHashRouter([
             loader: blogLoader,
           },
         ],
-      }
+      },
+      {
+        path: '/tags/:tag',
+        element: <TaggedContent />,
+        loader: taggedContentLoader,
+        handle: { layoutStyle: 'full' },
+      },
     ],
   }
 ])

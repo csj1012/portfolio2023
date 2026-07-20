@@ -1,5 +1,6 @@
 import Image from '@components/atoms/Image'
 import UnorderedList from '@components/atoms/UnorderedList'
+import TagChiclet from '@components/molecules/TagChiclet'
 
 export default function BlogPostTeaser({ title, summary, teaser, topics, featured, date }) {  
 
@@ -30,9 +31,14 @@ export default function BlogPostTeaser({ title, summary, teaser, topics, feature
           ''
         )}
       </div>      
-      {/* {topics ? (
-        <UnorderedList items={topics} className='teaser__list' />
-      ) : ''} */}
+      {topics ? (
+        <UnorderedList
+          items={topics.map((topic) => (
+            <TagChiclet key={topic} tag={topic} isStatic />
+          ))}
+          className='teaser__list'
+        />
+      ) : ''}
     </>
   )
 }

@@ -1,3 +1,4 @@
+// Legacy palette
 :root {
   --color-haze: #dfd4d8;
   --color-hazelight: #f8f4f6;
@@ -17,4 +18,57 @@
   --color-seafoamdark: #aeb9af;
   --color-rootlight: #3d313140;
   --color-sexyorange: #dcac49;
+}
+
+// 2026 palette
+:root {
+	--color-haze-00: #fcf8fa80;
+	--color-haze-01: #fcf8fa;
+	--color-haze-02: #f8f4f6;
+	--color-haze-03: #dfd4d8;
+	--color-haze-04: #d4c7cb;
+	--color-jade-01: #e4ede5;
+	--color-jade-02: #aeb9af;
+	--color-jade-03: #32774b;
+	--color-jade-04: #265a39;
+	--color-jade-05: #042828;
+	--color-lilac-01: #c6e4f6;
+	--color-lilac-02: #8ea7d6;
+	--color-lilac-03: #486aaa;
+	--color-neutral-01: #ffffff;
+	--color-neutral-02: #7e7f81;
+	--color-neutral-03: #041313;
+	--color-poppy-01: #d4444a;
+	--color-pumpkin-01: #dcac49;
+	--color-pumpkin-01-30: #dcac494d;
+	--color-pumpkin-02: #a56f00;
+	--color-pumpkin-03: #3d3131;
+}
+
+:root {
+	--colors-border-accent-bold-1: var(--color-pumpkin-01);
+	--colors-border-accent-bold-2: var(--color-poppy-01);
+	--colors-border-contrast-subtle-primary: var(--color-haze-04);
+	--colors-border-contrast-subtle-secondary: var(--color-haze-03);
+	--colors-image-overlay-dark: var(--color-neutral-03);
+	--colors-image-overlay-desaturated: var(--color-neutral-02);
+	--colors-link-decoration-contrast-primary: var(--color-pumpkin-01);
+	--colors-link-text-contrast-primary: var(--color-pumpkin-01);
+	--colors-link-text-invert-primary: var(--color-jade-01);
+	--colors-surface-body-bright: var(--color-neutral-01);
+	--colors-surface-body-distinguished: var(--color-haze-00);
+	--colors-surface-body-primary: var(--color-haze-01);
+	--colors-surface-body-subtle: var(--color-haze-02);
+	--colors-surface-contrast-invert-distinguished: var(--color-jade-04);
+	--colors-surface-contrast-invert-primary: var(--color-jade-03);
+	--colors-surface-contrast-primary: var(--color-pumpkin-01-30);
+	--colors-surface-contrast-secondary: var(--color-lilac-02);
+	--colors-surface-contrast-subtle-primary: var(--color-haze-04);
+	--colors-surface-contrast-subtle-secondary: var(--color-haze-03);
+	--colors-surface-invert-brand-distinguished: var(--color-jade-05);
+	--colors-text-body-primary: var(--color-neutral-03);
+	--colors-text-brand-distinguished: var(--color-jade-05);
+	--colors-text-brand-primary: var(--color-jade-03);
+	--colors-text-contrast-primary: var(--color-pumpkin-02);
+	--colors-text-invert-primary: var(--color-jade-01);
 }

@@ -1,31 +1,85 @@
 /* Mirra OTF font for heading is inlined to reduce FOUC - see index.html. */
 @import "@fontsource/goudy-bookletter-1911";
 @import "@fontsource-variable/mulish";
+@import url('https://fonts.cdnfonts.com/css/mirra-auriolic');
 
 /** SANS **/
 :root {
   --font-family-sans: 'Mulish Variable', sans-serif;
+  --font-family-serif: 'Goudy Bookletter 1911', serif;
+  --font-family-display: 'Mirra Auriolic', sans-serif;
+
+/* Text-sizes */
+/* base size: sans--base (16px) */
+--font-scale--size--display--bold: 5.94rem;           // 95.04px
+--font-scale--size--display--medium: 3rem;            // 48px
+--font-scale--size--display--sm: 2.13rem;             // 34.08px
+--font-scale--size--sans--base: 1rem;                 // 16px
+--font-scale--size--sans--base--lg: 1.41rem;          // 22.56px
+--font-scale--size--sans--base--bold: 1rem;           // 16px
+--font-scale--size--sans--lg: 1.41rem;                // 22.56px
+--font-scale--size--sans--lg--bold: 1.41rem;          // 22.56px
+--font-scale--size--sans--lg--actually--bold: 1.41rem;// 22.56px
+--font-scale--size--sans--lg--extra-bold--italic: 1.25rem; // 20px
+--font-scale--size--sans--sm: 0.78rem;                // 12.48px
+--font-scale--size--sans--sm--bold: 0.78rem;          // 12.48px
+--font-scale--size--sans--xs: 0.625rem;               // 10px
+--font-scale--size--serif--lg: 3rem;                  // 48px
+--font-scale--size--serif-base: 2rem;                 // 32px
+--font-scale--size--serif--lg--mobile: 2rem;          // 32px
+--font-scale--size--code-inline: 1.25rem;             // 20px
+--font-scale--size--code--inline--mobile: 0.94rem;    // 15.04px
+--font-scale--size--poster: 1.5rem;                   // 24px
+--font-scale--size--serif-base--mobile: 1.5rem;       // 24px
+--font-scale--size--sans--xl: 2.25rem;                // 36px
+--font-scale--line-height--sans--base: 24px;
+--font-scale--letter-spacing--md: 0.12em;
 }
 
+// sans-sm
+// Font family: var(--font-family-sans) (likely 'Mulish Variable', sans-serif)
+// Font size: var(--font-scale--size--sans--sm) (0.625rem = 10px)
+// Line height: var(--line-height-base)
+@mixin sans-xs {
+  font-family: var(--font-family-sans);
+  font-size: var(--font-scale--size--sans--sm);
+  letter-spacing: var(--font-scale--letter-spacing--md);
+}
+
+// sans-sm
+// Font family: var(--font-family-sans) (likely 'Mulish Variable', sans-serif)
+// Font size: var(--sans-sm) (0.78rem ≈ 12.48px)
+// Line height: var(--line-height-base)
 @mixin sans-sm {
   font-family: var(--font-family-sans);
-  font-size: var(--sans-sm);
-  line-height: var(--line-height-base);
-  letter-spacing: var(--letter-spacing-sm);
+  font-size: var(--font-scale--size--sans--sm);
+  line-height: var(--font-scale--line-height--sans--base);
 }
 
+// sans-base
+// Font family: var(--font-family-sans) (likely 'Mulish Variable', sans-serif)
+// Font size: var(--sans-base) (1rem = 16px)
+// Line height: calc(var(--line-height-base) * 1.25)
 @mixin sans-base {
   font-family: var(--font-family-sans);
   font-size: var(--sans-base);
   line-height: calc(var(--line-height-base) * 1.25);
 }
 
+// sans-base-lg
+// Font family: var(--font-family-sans) (likely 'Mulish Variable', sans-serif)
+// Font size: calc(var(--sans-base) * 1.15) (1.15rem ≈ 18.4px)
+// Line height: calc(var(--line-height-base) * 1.25)
 @mixin sans-base-lg {
   font-family: var(--font-family-sans);
   font-size: calc(var(--sans-base) * 1.15);
   line-height: calc(var(--line-height-base) * 1.25);
 }
 
+// sans-lg
+// Font family: var(--font-family-sans) (likely 'Mulish Variable', sans-serif)
+// Font size: var(--sans-lg) (1.41rem ≈ 22.56px)
+// Line height: calc(var(--line-height-base) * 1.25)
 @mixin sans-lg {
   font-family: var(--font-family-sans);
   font-size: var(--sans-lg);
@@ -57,7 +111,7 @@
 
 @mixin serif-lg {
   font-family: var(--font-family-serif);
-  font-size: var(--serif-lg);
+  font-size: clamp(var(--font-scale--size--serif-base--mobile), calc(0.875rem + 1.25vw), var(--font-scale--size--serif-base));
   font-weight: 400;
   line-height: var(--line-height-base);
 }
@@ -72,7 +126,10 @@
 /** DISPLAY **/
 
 @mixin display {
-  font-family: "Mirra", sans-serif;
-  font-size: var(--serif-3xl);
-  line-height: var(--line-height-base);
+  font-family: var(--font-family-display);
+  // font-size: var(--serif-3xl);
+  font-size: clamp(var(--font-scale--size--display--sm), calc(1.116rem + 5.357vw), var(--font-scale--size--display--bold));
+  line-height: 1;
+  font-weight: 400;
+  letter-spacing: .25rem;
 }

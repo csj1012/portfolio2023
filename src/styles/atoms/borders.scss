@@ -1,4 +1,5 @@
 :root {
+  // Legacy
   --border-haze-1: solid 1px var(--color-hazedark);
   --border-haze-1-subtle: solid 1px rgba(223, 212, 216, .8);
   --border-hazedark-1: solid 1px var(--color-hazedark);
@@ -9,4 +10,11 @@
   --border-lilac-2: 2px solid var(--color-lilac);
   --border-oceandark-2: 2px solid var(--color-oceandark);
   --border-rootlight-2: 2px solid var(--color-rootlight);
+
+  // 2026
+  --border-radius-lg: 32px;
+	--border-radius-md: 16px;
+	--border-radius-sm: 8px;
+	--border-radius-xl: 80px;
+	--border-radius-xs: 4px;
 }

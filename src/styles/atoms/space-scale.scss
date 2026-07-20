@@ -1,5 +1,6 @@
 /* @link https://utopia.fyi/space/calculator?c=320,14,1.414,1400,16,1.414,1,1,768&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
 
+/** LEGACY **/
 :root {
   /* Space 3xs: 4px → 4px */
   --space-3xs: clamp(0.25rem, 0.25rem + 0vw, 0.25rem);
@@ -52,6 +53,20 @@
 
   /* Space 2xl-3xl: 56px → 96px */
   --space-2xl-3xl: clamp(3.5rem, 2.7593rem + 3.7037vw, 6rem);
+}
+
+/** 2026 **/
+:root {
+	--layout-max-width-xl: 80rem;     /* 1280px */
+	--spacing-2xs: 1rem;              /* 16px */
+	--spacing-3xs: 0.5rem;            /* 8px */
+	--spacing-lg: 11.25rem;           /* 180px */
+	--spacing-md: 8rem;               /* 128px */
+	--spacing-sm: 4rem;               /* 64px */
+	--spacing-xl: 13.75rem;           /* 220px */
+	--spacing-xs: 2rem;               /* 32px */
+  --spacing-2xl: 20rem;             /* 320px */
+	--spacing-3xl: 31.25rem;          /* 500px */
 }
 
 /** LETTER SPACING **/

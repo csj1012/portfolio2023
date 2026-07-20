@@ -40,9 +40,9 @@ export default [
         'Material UI',        
         'CSS-in-JS',
         'Circle CI',
-        'Backstop JS',
-        'Javascript',
-        'Typescript'
+        'BackstopJS',
+        'JavaScript',
+        'TypeScript'
       ],
       role: 'Front end development',
       links: [
@@ -64,7 +64,7 @@ export default [
       image: {
         src: '/assets/images/instantbrands.png',
         alt: 'Image alt.',
-        caption: 'We enhanced Instant Brands\' ecommerce site theming to accommodate the dynamic addition of new brands, ensuring a cohesive user experience during a pivotal sales period.'
+        caption: 'We enhanced Instant Brands\' ecommerce site theming to accommodate the dynamic addition of new brands, promising a cohesive user experience during a pivotal sales period.'
       },
       video: {
         src: '/assets/instantbrands.mp4'
@@ -88,7 +88,7 @@ export default [
       techs: [
         'Drupal 8',        
         'SCSS',        
-        'Javascript',        
+        'JavaScript',
         'HTML',
         'OOCSS'
       ],
@@ -142,7 +142,7 @@ export default [
         'SCSS',
         'Circle CI',
         'BackstopJS',
-        'Javascript',
+        'JavaScript',
         'PHP'
       ],
       role: 'Front end development',
@@ -199,7 +199,8 @@ export default [
         'PHP',
         'HTML',
         'PatternLab',
-        'Atomic design'
+        'Atomic design',
+        'Design Systems'
       ],
       role: 'Drupal development, front end development',
       links: [
@@ -256,7 +257,8 @@ export default [
         'HTML',
         'CSS/SCSS',
         'PHP',
-        'Javascript/JQuery'
+        'JavaScript',
+        'jQuery'
       ],
       
       description: [

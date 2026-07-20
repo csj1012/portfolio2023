@@ -1,3 +1,5 @@
+<p class="more"><strong>Note:</strong> In case you checked (yes, you!) this site no longer has a perfect score. I redesigned it in a hurry, and this post is from two years ago. I'll fix it soon; life's busy! But the contents herein are still relevant, and I'm sure I'll enjoy referring to them when the time comes. :)</p>
+
 #### Introduction
 ##### The cobbler's children have shoes, finally!
 

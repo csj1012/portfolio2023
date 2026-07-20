@@ -132,12 +132,13 @@ const generateHalfSizeImage = async (src: string): Promise<Result<string>> => {
     const halfWidth = Math.floor(width / 2)
     const halfHeight = Math.floor(height / 2)
     const inputFile = path.resolve(currentDir, `../../public${src}`)
-    const outputFilePath = inputFile.replace(/\.[^/.]+$/, '') + '-half.webp'
+    const publicPath = src.replace(/\.[^/.]+$/, '') + '-half.webp'
+    const outputFilePath = path.resolve(currentDir, `../../public${publicPath}`)
     await sharp(inputFile)
       .resize(halfWidth, halfHeight)
       .toFormat('webp')
       .toFile(outputFilePath)
-    return Result.ok(outputFilePath)
+    return Result.ok(publicPath)
   } catch (error) {
     return Result.fail(error, `Error generating 1x image: ${error as Error}`)
   }

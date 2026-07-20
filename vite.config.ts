@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react'
 import { fileURLToPath } from 'node:url'
 import { resolve, dirname } from 'path'
 import watchPostsPlugin from './tools/plugins/watchPostsPlugin'
+import watchProjectsPlugin from './tools/plugins/watchProjectsPlugin'
 
 const __dirname = typeof __dirname !== 'undefined'
   ? __dirname
@@ -15,6 +16,10 @@ export default defineConfig({
     watchPostsPlugin({
       postsDirectory: resolve(__dirname, 'src/models/blog/posts/md'),
       transformPostsScript: 'npm run transformPosts'
+    }),
+    watchProjectsPlugin({
+      projectsSrcPath: resolve(__dirname, 'src/models/projects/src.js'),
+      transformScript: 'npm run transform'
     })
   ],
   resolve: {

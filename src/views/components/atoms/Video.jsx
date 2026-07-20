@@ -15,24 +15,13 @@ export default function Video({ src, ...props } ) {
 
   const handleClick = () => {
     setPlaying(playing ? false : true)
-  }  
-
-  function getVideoUrl(filePath) {
-    const basePath = 'assets/'
-    const name = filePath.includes(basePath) ? filePath.split(basePath)[1] : ''
-    const url = new URL(`${name}`, import.meta.url).href
-    return url
   }
-
-  const updatedSrc = getVideoUrl(src)
-
-  
 
   return (
     <div className='player-wrapper video'>
       <ReactPlayer
         className={classes}
-        url={updatedSrc}        
+        url={src}
         playing={playing}
         muted={true}
         width='100%'

@@ -41,6 +41,13 @@
       line-height: var(--space-lg);
       max-width: 31ch;
     }
+
+    .posted {
+      @include sans-base;
+      display: block;
+      margin: 0.25rem 0 0.75rem;
+      font-style: italic;
+    }
     
     .chiclets {
       @include featured-chiclet;

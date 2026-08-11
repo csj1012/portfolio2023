@@ -5,6 +5,7 @@ const teaserItems = [
   {
     'category': 'Blog Post',
     'title': 'Four things I\'ve learned after eleven years as a professional web dev',
+    'date': '2024-04-22T12:30:00Z',
     'summary': [
       "Of course, I've been coding for much longer—since around 2000, when I built my own play-by-post RPG website. What would I tell someone just starting out today?"
     ],
@@ -16,6 +17,7 @@ const teaserItems = [
   {
     'category': 'Blog Post',
     'title': 'Optimizing this site\'s fonts and images for a 100% lighthouse score',
+    'date': '2024-05-08T12:30:00Z',
     'summary': [
       'This effort required some simple adjustments to the quick and dirty way I\'d been handling fonts and images—so I figured I\'d share some insights into how I made its load time feel much smoother.'
     ],
@@ -38,6 +40,7 @@ const teaserItems = [
   {
     'category': 'Blog Post',
     'title': 'That time I tried to use ChatGPT to write The Expanse, The Musical',
+    'date': '2024-02-15T12:30:00Z',
     "summary": [
       "If we've ever spoken about the pitfalls of AI, you may have heard me reference the \"collective high-five:\" a somewhat tongue-in-cheek phrase I coined to characterize the \"training wheels\" that safeguard users from the darker potentials of LLMs...",
     ],

@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Blog source markdown (local-only; commit generated JSON instead)
+src/models/blog/posts/md/
